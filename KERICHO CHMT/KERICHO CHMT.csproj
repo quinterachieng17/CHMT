@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9DC8089-BC23-490F-AE44-93E85766F4DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KERICHO_CHMT</RootNamespace>
+    <AssemblyName>KERICHO CHMT</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\User\Desktop\itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cmbloginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver.Designer.cs">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditVehicle.Designer.cs">
+      <DependentUpon>EditVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Officers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Officers.Designer.cs">
+      <DependentUpon>Officers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Register.Designer.cs">
+      <DependentUpon>Patient Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDetails.Designer.cs">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackRecords.Designer.cs">
+      <DependentUpon>TrackRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStaffDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStaffDetails.Designer.cs">
+      <DependentUpon>UpdateStaffDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVehicleDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateVehicleDetails.Designer.cs">
+      <DependentUpon>UpdateVehicleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleRegistration.Designer.cs">
+      <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTicketSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkTicketSummary.Designer.cs">
+      <DependentUpon>WorkTicketSummary.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver.resx">
+      <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditVehicle.resx">
+      <DependentUpon>EditVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Officers.resx">
+      <DependentUpon>Officers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Register.resx">
+      <DependentUpon>Patient Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDetails.resx">
+      <DependentUpon>StaffDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackRecords.resx">
+      <DependentUpon>TrackRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStaffDetails.resx">
+      <DependentUpon>UpdateStaffDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateVehicleDetails.resx">
+      <DependentUpon>UpdateVehicleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleRegistration.resx">
+      <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkTicketSummary.resx">
+      <DependentUpon>WorkTicketSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="cmbloginDataSet.xsc">
+      <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet.xss">
+      <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user%281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-camera.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

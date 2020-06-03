@@ -1,0 +1,23 @@
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\KERICHO CHMT.exe
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\KERICHO CHMT.pdb
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.LOGIN.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Properties.Resources.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.csproj.GenerateResource.Cache
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.exe
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.pdb
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Doctor.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Driver.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Register.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.VehicleRegistration.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.SignUp.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.EditVehicle.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.StaffDetails.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.TrackRecords.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.csprojResolveAssemblyReference.cache
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\KERICHO CHMT.exe.config
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.WorkTicketSummary.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Officers.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.UpdateStaffDetails.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.UpdateVehicleDetails.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Nurse.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Patient_Register.resources
