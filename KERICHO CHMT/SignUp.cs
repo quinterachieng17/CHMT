@@ -36,6 +36,7 @@ namespace KERICHO_CHMT
 
                     sqlCon.Open();
                     SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
                     sqlCmd.Parameters.AddWithValue("@IDNumber", txtIDNumber.Text.Trim());
