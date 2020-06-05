@@ -105,6 +105,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(170, 20);
             this.txtUsername.TabIndex = 21;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // label9
             // 
@@ -145,6 +146,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(170, 20);
             this.txtLastName.TabIndex = 17;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLastName_KeyPress);
             // 
             // panel2
             // 
@@ -216,6 +218,7 @@
             this.txtConfirmPassword.Size = new System.Drawing.Size(170, 20);
             this.txtConfirmPassword.TabIndex = 11;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
+            this.txtConfirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // label5
             // 
@@ -234,6 +237,7 @@
             this.txtPassword.Size = new System.Drawing.Size(170, 20);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // label4
             // 
@@ -251,6 +255,7 @@
             this.txtIDNumber.Name = "txtIDNumber";
             this.txtIDNumber.Size = new System.Drawing.Size(170, 20);
             this.txtIDNumber.TabIndex = 7;
+            this.txtIDNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDNumber_KeyPress);
             // 
             // label3
             // 
@@ -299,6 +304,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(170, 20);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // label1
             // 

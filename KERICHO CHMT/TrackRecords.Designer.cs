@@ -41,13 +41,13 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtDriverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMileageReading = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtOilDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFuelDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFuelDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtOilDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtMileageReading = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtRegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDriverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,6 +135,7 @@
             // 
             // dgv1
             // 
+            this.dgv1.AllowUserToAddRows = false;
             this.dgv1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -208,36 +209,12 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // txtUserID
+            // Destination
             // 
-            this.txtUserID.DataPropertyName = "UserID";
-            this.txtUserID.HeaderText = "UserID";
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Visible = false;
-            // 
-            // txtDriverID
-            // 
-            this.txtDriverID.DataPropertyName = "DriverID";
-            this.txtDriverID.HeaderText = "Driver ID";
-            this.txtDriverID.Name = "txtDriverID";
-            // 
-            // txtRegNo
-            // 
-            this.txtRegNo.DataPropertyName = "RegNo";
-            this.txtRegNo.HeaderText = "Registration Number";
-            this.txtRegNo.Name = "txtRegNo";
-            // 
-            // txtMileageReading
-            // 
-            this.txtMileageReading.DataPropertyName = "MileageReading";
-            this.txtMileageReading.HeaderText = "Mileage Reading";
-            this.txtMileageReading.Name = "txtMileageReading";
-            // 
-            // txtOilDrawn
-            // 
-            this.txtOilDrawn.DataPropertyName = "OilDrawn";
-            this.txtOilDrawn.HeaderText = "Oil Drawn";
-            this.txtOilDrawn.Name = "txtOilDrawn";
+            this.Destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Destination.DataPropertyName = "Destination";
+            this.Destination.HeaderText = "Destination Details";
+            this.Destination.Name = "Destination";
             // 
             // txtFuelDrawn
             // 
@@ -245,12 +222,36 @@
             this.txtFuelDrawn.HeaderText = "Fuel Drawn";
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             // 
-            // Destination
+            // txtOilDrawn
             // 
-            this.Destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destination.DataPropertyName = "Destination";
-            this.Destination.HeaderText = "Destination Details";
-            this.Destination.Name = "Destination";
+            this.txtOilDrawn.DataPropertyName = "OilDrawn";
+            this.txtOilDrawn.HeaderText = "Oil Drawn";
+            this.txtOilDrawn.Name = "txtOilDrawn";
+            // 
+            // txtMileageReading
+            // 
+            this.txtMileageReading.DataPropertyName = "MileageReading";
+            this.txtMileageReading.HeaderText = "Mileage Reading";
+            this.txtMileageReading.Name = "txtMileageReading";
+            // 
+            // txtRegNo
+            // 
+            this.txtRegNo.DataPropertyName = "RegNo";
+            this.txtRegNo.HeaderText = "Registration Number";
+            this.txtRegNo.Name = "txtRegNo";
+            // 
+            // txtDriverID
+            // 
+            this.txtDriverID.DataPropertyName = "DriverID";
+            this.txtDriverID.HeaderText = "Driver ID";
+            this.txtDriverID.Name = "txtDriverID";
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.DataPropertyName = "UserID";
+            this.txtUserID.HeaderText = "UserID";
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Visible = false;
             // 
             // TrackRecords
             // 

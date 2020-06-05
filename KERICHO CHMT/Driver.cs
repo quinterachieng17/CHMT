@@ -70,5 +70,37 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void txtDriverID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtVehicleReg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtMileage_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtDestination_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

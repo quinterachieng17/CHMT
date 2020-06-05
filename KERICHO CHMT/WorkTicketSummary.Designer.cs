@@ -38,6 +38,8 @@
             this.DriverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtfuelConsumed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtoilComsumed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,9 @@
             this.dgv2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DriverID,
             this.RegNo,
-            this.Destination});
+            this.Destination,
+            this.txtfuelConsumed,
+            this.txtoilComsumed});
             this.dgv2.Location = new System.Drawing.Point(12, 73);
             this.dgv2.Name = "dgv2";
             this.dgv2.ReadOnly = true;
@@ -61,13 +65,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv2.RowHeadersWidth = 100;
-            this.dgv2.Size = new System.Drawing.Size(705, 317);
+            this.dgv2.Size = new System.Drawing.Size(925, 354);
             this.dgv2.TabIndex = 0;
             this.dgv2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellContentClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(619, 21);
+            this.button1.Location = new System.Drawing.Point(862, 22);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
@@ -77,7 +81,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(528, 21);
+            this.button2.Location = new System.Drawing.Point(771, 22);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 7;
@@ -88,7 +92,7 @@
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(12, 47);
+            this.button10.Location = new System.Drawing.Point(12, 45);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 27);
             this.button10.TabIndex = 42;
@@ -104,6 +108,7 @@
             this.DriverID.HeaderText = "Driver No";
             this.DriverID.Name = "DriverID";
             this.DriverID.ReadOnly = true;
+            this.DriverID.Width = 150;
             // 
             // RegNo
             // 
@@ -111,6 +116,7 @@
             this.RegNo.HeaderText = "Reg No.";
             this.RegNo.Name = "RegNo";
             this.RegNo.ReadOnly = true;
+            this.RegNo.Width = 150;
             // 
             // Destination
             // 
@@ -124,11 +130,25 @@
             this.Destination.Name = "Destination";
             this.Destination.ReadOnly = true;
             // 
+            // txtfuelConsumed
+            // 
+            this.txtfuelConsumed.HeaderText = "Fuel Consumption";
+            this.txtfuelConsumed.Name = "txtfuelConsumed";
+            this.txtfuelConsumed.ReadOnly = true;
+            this.txtfuelConsumed.Width = 150;
+            // 
+            // txtoilComsumed
+            // 
+            this.txtoilComsumed.HeaderText = "Oil Consumption";
+            this.txtoilComsumed.Name = "txtoilComsumed";
+            this.txtoilComsumed.ReadOnly = true;
+            this.txtoilComsumed.Width = 150;
+            // 
             // WorkTicketSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 472);
+            this.ClientSize = new System.Drawing.Size(970, 472);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -151,5 +171,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtfuelConsumed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtoilComsumed;
     }
 }

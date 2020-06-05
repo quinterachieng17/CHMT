@@ -42,10 +42,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.viewStaff = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmbloginDataSet = new KERICHO_CHMT.cmbloginDataSet();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.IDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +49,10 @@
             this.cbxRegion = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbloginDataSet = new KERICHO_CHMT.cmbloginDataSet();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet)).BeginInit();
             this.SuspendLayout();
@@ -200,6 +200,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDNumber,
@@ -216,43 +217,6 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // cmbloginDataSet
-            // 
-            this.cmbloginDataSet.DataSetName = "cmbloginDataSet";
-            this.cmbloginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button9.Location = new System.Drawing.Point(12, 433);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(356, 38);
-            this.button9.TabIndex = 54;
-            this.button9.Text = "View Officers";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(428, 143);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 27);
-            this.button10.TabIndex = 55;
-            this.button10.Text = "Export to pdf";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(990, 136);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(91, 28);
-            this.button11.TabIndex = 56;
-            this.button11.Text = "Update Details";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // IDNumber
             // 
@@ -303,6 +267,43 @@
             this.Password.HeaderText = "Password";
             this.Password.Name = "Password";
             this.Password.Visible = false;
+            // 
+            // cmbloginDataSet
+            // 
+            this.cmbloginDataSet.DataSetName = "cmbloginDataSet";
+            this.cmbloginDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button9.Location = new System.Drawing.Point(12, 433);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(356, 38);
+            this.button9.TabIndex = 54;
+            this.button9.Text = "View Officers";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(428, 143);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 27);
+            this.button10.TabIndex = 55;
+            this.button10.Text = "Export to pdf";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(990, 136);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(91, 28);
+            this.button11.TabIndex = 56;
+            this.button11.Text = "Update Details";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // StaffDetails
             // 

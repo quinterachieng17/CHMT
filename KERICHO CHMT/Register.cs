@@ -120,5 +120,34 @@ namespace KERICHO_CHMT
         {
             cbxDesignation.Text = cbxRegion.Text = txtFirstName.Text = txtLastName.Text = txtIDNumber.Text =  txtPassword.Text = txtConfirmPassword.Text = "";
         }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIDNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

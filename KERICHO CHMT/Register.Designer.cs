@@ -82,6 +82,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(244, 26);
             this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // button1
             // 
@@ -175,6 +176,7 @@
             this.txtIDNumber.Name = "txtIDNumber";
             this.txtIDNumber.Size = new System.Drawing.Size(244, 26);
             this.txtIDNumber.TabIndex = 9;
+            this.txtIDNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIDNumber_KeyPress);
             // 
             // label4
             // 
@@ -194,6 +196,8 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(244, 26);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label5
             // 
@@ -213,6 +217,7 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(244, 26);
             this.txtConfirmPassword.TabIndex = 13;
+            this.txtConfirmPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // button2
             // 
@@ -394,6 +399,7 @@
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(244, 26);
             this.txtLastName.TabIndex = 30;
+            this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
             // 
             // Register
             // 

@@ -53,6 +53,7 @@
             this.txtDriverID.Name = "txtDriverID";
             this.txtDriverID.Size = new System.Drawing.Size(200, 20);
             this.txtDriverID.TabIndex = 30;
+            this.txtDriverID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDriverID_KeyPress);
             // 
             // DriverID
             // 
@@ -93,6 +94,7 @@
             this.txtMileage.Size = new System.Drawing.Size(200, 20);
             this.txtMileage.TabIndex = 22;
             this.txtMileage.TextChanged += new System.EventHandler(this.txtMileage_TextChanged);
+            this.txtMileage.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMileage_KeyPress);
             // 
             // lblMileageReading
             // 
@@ -112,6 +114,7 @@
             this.txtVehicleReg.Name = "txtVehicleReg";
             this.txtVehicleReg.Size = new System.Drawing.Size(200, 20);
             this.txtVehicleReg.TabIndex = 20;
+            this.txtVehicleReg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVehicleReg_KeyPress);
             // 
             // lblRegNo
             // 
@@ -174,6 +177,7 @@
             this.txtOilDrawn.Name = "txtOilDrawn";
             this.txtOilDrawn.Size = new System.Drawing.Size(200, 20);
             this.txtOilDrawn.TabIndex = 34;
+            this.txtOilDrawn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMileage_KeyPress);
             // 
             // txtFuelDrawn
             // 
@@ -181,6 +185,7 @@
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             this.txtFuelDrawn.Size = new System.Drawing.Size(200, 20);
             this.txtFuelDrawn.TabIndex = 36;
+            this.txtFuelDrawn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMileage_KeyPress);
             // 
             // label2
             // 
@@ -201,6 +206,7 @@
             this.txtDestination.Name = "txtDestination";
             this.txtDestination.Size = new System.Drawing.Size(200, 91);
             this.txtDestination.TabIndex = 38;
+            this.txtDestination.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDestination_KeyPress);
             // 
             // label3
             // 

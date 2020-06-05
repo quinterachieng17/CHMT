@@ -79,5 +79,37 @@ namespace KERICHO_CHMT
            LOGIN ss = new LOGIN();
             ss.Show();
         }
+
+        //Accepts only characters at FirstName
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsControl(e.KeyChar)&& !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtIDNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar)&& !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

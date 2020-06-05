@@ -12,6 +12,7 @@ namespace KERICHO_CHMT
 {
     public partial class LOGIN : Form
     {
+        int attempt = 1;
         public LOGIN()
         {
             InitializeComponent();
@@ -28,52 +29,60 @@ namespace KERICHO_CHMT
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        
-            
+
+        {
+            if (attempt < 4)
             {
 
-            SqlConnection con = new SqlConnection("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("select * from StaffRegister where username='" + txtboxUsername.Text + "' and password = '" + txtboxPassword.Text + "'",con);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            string cmbItemValue = comboBox1.SelectedItem.ToString();
-            if(dt.Rows.Count > 0)
-            {
-                for(int i =0; i<dt.Rows.Count; i++)
+                SqlConnection con = new SqlConnection("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
+                SqlCommand cmd = new SqlCommand("select * from StaffRegister where username='" + txtboxUsername.Text + "' and password = '" + txtboxPassword.Text + "'", con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                string cmbItemValue = comboBox1.SelectedItem.ToString();
+                if (dt.Rows.Count > 0)
                 {
-                    if (dt.Rows[i]["DesignationID"].ToString() == cmbItemValue)
+                    for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                       MessageBox.Show("you are login as a " + dt.Rows[i][6], "Login");
-                        if (comboBox1.SelectedIndex == 0)
+                        if (dt.Rows[i]["DesignationID"].ToString() == cmbItemValue)
                         {
-                            this.Hide();
-                            Doctor ss = new Doctor();
-                            ss.Show();
-                        }
-                        else if(comboBox1.SelectedIndex ==1)
-                        {
-                            this.Hide();
-                            Nurse ss = new Nurse();
-                            ss.Show();
-                        }
-                        /*else if(comboBox1.SelectedIndex ==2)
-                        {
-                            this.Hide();
-                            Driver ss = new Driver();
-                            ss.Show();
-                        }*/
-                        
-                    }
-                   
-                }
-            }
-            else
-            {
-                MessageBox.Show("error: Check login details","Error Message");
+                            MessageBox.Show("you are login as a " + dt.Rows[i][6], "Login");
+                            if (comboBox1.SelectedIndex == 0)
+                            {
+                                this.Hide();
+                                Doctor ss = new Doctor();
+                                ss.Show();
+                            }
+                            else if (comboBox1.SelectedIndex == 1)
+                            {
+                                this.Hide();
+                                Nurse ss = new Nurse();
+                                ss.Show();
+                            }
+                            /*else if(comboBox1.SelectedIndex ==2)
+                            {
+                                this.Hide();
+                                Driver ss = new Driver();
+                                ss.Show();
+                            }*/
 
+                        }
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Try again. " + attempt, "Information", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information);
+                }
+            }else if(attempt ==4)
+            {
+                MessageBox.Show("Login attempts exceeded");
+                txtboxUsername.Enabled = false;
+                txtboxPassword.Enabled = false;
+                this.Close();
             }
-       }
+            attempt ++;
+        }
             
         
 
@@ -89,6 +98,13 @@ namespace KERICHO_CHMT
             ss.Show();
         }
 
+        private void txtboxUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 
 }

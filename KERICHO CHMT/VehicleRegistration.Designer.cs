@@ -99,6 +99,7 @@
             this.txtRegNo.Size = new System.Drawing.Size(201, 20);
             this.txtRegNo.TabIndex = 4;
             this.txtRegNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtRegNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // linkLabel1
             // 
@@ -138,6 +139,7 @@
             this.txtMake.Size = new System.Drawing.Size(201, 20);
             this.txtMake.TabIndex = 9;
             this.txtMake.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtMake.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // label4
             // 
@@ -156,6 +158,7 @@
             this.txtChasisNo.Name = "txtChasisNo";
             this.txtChasisNo.Size = new System.Drawing.Size(201, 20);
             this.txtChasisNo.TabIndex = 11;
+            this.txtChasisNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // label5
             // 
@@ -183,6 +186,7 @@
             this.txtEngineNo.Name = "txtEngineNo";
             this.txtEngineNo.Size = new System.Drawing.Size(201, 20);
             this.txtEngineNo.TabIndex = 15;
+            this.txtEngineNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // label7
             // 
@@ -210,6 +214,7 @@
             this.txtModel.Name = "txtModel";
             this.txtModel.Size = new System.Drawing.Size(201, 20);
             this.txtModel.TabIndex = 17;
+            this.txtModel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // label8
             // 
@@ -229,6 +234,7 @@
             this.txtPlateNo.Size = new System.Drawing.Size(201, 20);
             this.txtPlateNo.TabIndex = 19;
             this.txtPlateNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtPlateNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRegNo_KeyPress);
             // 
             // label9
             // 

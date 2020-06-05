@@ -85,5 +85,13 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void txtRegNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

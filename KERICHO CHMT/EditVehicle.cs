@@ -124,9 +124,9 @@ namespace KERICHO_CHMT
             pdftable.WidthPercentage = 100;
             pdftable.HorizontalAlignment = Element.ALIGN_LEFT;
             pdftable.DefaultCell.BorderWidth = 1;
-
+            
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-            //For header
+            //For Cell header
             foreach (DataGridViewColumn column in dgvVehicle.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
