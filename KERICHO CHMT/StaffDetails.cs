@@ -155,11 +155,11 @@ namespace KERICHO_CHMT
         public void exportgridviewtopdf(DataGridView dataGridView1, string filename)
         {
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-            PdfPTable pdftable = new PdfPTable(dataGridView1.Columns.Count);
-            pdftable.DefaultCell.Padding = 3;
-            pdftable.WidthPercentage = 100;
-            pdftable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdftable.DefaultCell.BorderWidth = 1;
+            PdfPTable pdftableStaff = new PdfPTable(dataGridView1.Columns.Count);
+            pdftableStaff.DefaultCell.Padding = 3;
+            pdftableStaff.WidthPercentage = 100;
+            pdftableStaff.HorizontalAlignment = Element.ALIGN_LEFT;
+            pdftableStaff.DefaultCell.BorderWidth = 1;
 
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
             //For header
@@ -167,7 +167,7 @@ namespace KERICHO_CHMT
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-                pdftable.AddCell(cell);
+                pdftableStaff.AddCell(cell);
 
             }
             //Add datarow
@@ -175,7 +175,7 @@ namespace KERICHO_CHMT
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdftable.AddCell(new Phrase(cell.Value.ToString(), text));
+                    pdftableStaff.AddCell(new Phrase(cell.Value?.ToString(), text));
 
                 }
             }
@@ -190,7 +190,7 @@ namespace KERICHO_CHMT
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    pdfdoc.Add(pdftable);
+                    pdfdoc.Add(pdftableStaff);
                     pdfdoc.Close();
                     stream.Close();
 

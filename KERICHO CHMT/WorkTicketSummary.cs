@@ -27,7 +27,7 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT DriverID,RegNo,Destination,MileageReading,OilDrawn,FuelDrawn,Destination FROM RecordMileage", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM RecordMileage", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -79,7 +79,7 @@ namespace KERICHO_CHMT
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdftable2.AddCell(new Phrase(cell.Value.ToString(), text));
+                    pdftable2.AddCell(new Phrase(cell.Value?.ToString(), text));
 
                 }
             }

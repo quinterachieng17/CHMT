@@ -100,7 +100,7 @@ namespace KERICHO_CHMT
                     {
                         sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgvRow.Cells["txtUserID"].Value));
                         sqlCmd.Parameters.AddWithValue("@DesignationID", Convert.ToInt64(dgvRow.Cells["cbxDesignation"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbxDesignation"].Value.ToString()));
-                        sqlCmd.Parameters.AddWithValue("@RegionID", Convert.ToInt32(dgvRow.Cells["cbxRegion"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbxRegion"].Value.ToString()));
+                        sqlCmd.Parameters.AddWithValue("@RegionID", Convert.ToInt64(dgvRow.Cells["cbxRegion"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbxRegionID"].Value.ToString()));
                         sqlCmd.Parameters.AddWithValue("@FirstName", dgvRow.Cells["txtFirstName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtFirstName"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@LastName", dgvRow.Cells["txtLastName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtLastName"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@IDNumber", Convert.ToInt32(dgvRow.Cells["txtIDNumber"].Value == DBNull.Value ? "0" : dgvRow.Cells["txtIDNumber"].Value.ToString()));

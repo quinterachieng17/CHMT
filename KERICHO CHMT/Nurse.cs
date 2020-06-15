@@ -38,8 +38,26 @@ namespace KERICHO_CHMT
 
         private void button5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Patient_Register ff = new Patient_Register();
             ff.Show();
+        }
+
+        private void btnReferralCases_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Referrals rr = new Referrals();
+            rr.Show();
+        }
+
+        private void Nurse_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
