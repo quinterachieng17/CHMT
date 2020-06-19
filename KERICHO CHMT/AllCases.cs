@@ -13,47 +13,29 @@ using System.IO;
 
 namespace KERICHO_CHMT
 {
-    public partial class Nurse : Form
+    public partial class AllCases : Form
     {
         string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
-        public Nurse()
+        public AllCases()
         {
             InitializeComponent();
         }
 
-        private void btnRegisterStaff_Click(object sender, EventArgs e)
+        //Dialog Box Custom
+        static AllCases MsgBox; static DialogResult result = DialogResult.No;
+        public static DialogResult Show(string Text, string Caption, string btnDownload, string btnCancel)
         {
+            MsgBox = new AllCases();
+            MsgBox.label1.Text = Text;
+            MsgBox.btnCancel.Text = btnCancel;
+            MsgBox.btnOK.Text = btnDownload;
+            MsgBox.ShowDialog();
+            return result;
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void AllCases_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Patient_Register.Show("Patient Name","PATIENT REGISTRATION", "OK", "Cancel");
-        }
-
-        private void btnReferralCases_Click(object sender, EventArgs e)
-        {
-            Referrals.Show("Enter Patient Number", "Search Patient Details", "OK", "Cancel");
-        }
-
-        private void Nurse_Load(object sender, EventArgs e)
-        {
-
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
@@ -62,67 +44,24 @@ namespace KERICHO_CHMT
                 sqlDa.Fill(dtbl);
 
                 // Displays only the selected columns
-                dgvPatientDetails.AutoGenerateColumns = false;
-                dgvPatientDetails.DataSource = dtbl;
+                dgvAllCases.AutoGenerateColumns = false;
+                dgvAllCases.DataSource = dtbl;
 
             }
-          
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                // Displays only the selected columns
-                dgvPatientDetails.AutoGenerateColumns = false;
-                dgvPatientDetails.DataSource = dtbl;
-
-            }
-
-            label2.Text = "Incomming Referral Cases";
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-
-                // Displays only the selected columns
-                dgvPatientDetails.AutoGenerateColumns = false;
-                dgvPatientDetails.DataSource = dtbl;
-
-            }
-            label2.Text = "Outgoing Referral cases";
         }
 
         //To export the dataGridView to pdf
         public void exportgridviewtopdf(DataGridView dgvPatientDetails, string filename)
         {
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-           
+
             PdfPTable referrals = new PdfPTable(dgvPatientDetails.Columns.Count);
             referrals.DefaultCell.Padding = 3;
             referrals.WidthPercentage = 100;
             referrals.HorizontalAlignment = Element.ALIGN_LEFT;
             referrals.DefaultCell.BorderWidth = 1;
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-           
+
             //For cell header
             foreach (DataGridViewColumn column in dgvPatientDetails.Columns)
             {
@@ -160,27 +99,12 @@ namespace KERICHO_CHMT
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            exportgridviewtopdf(dgvPatientDetails, "Referral Case for ");
+            exportgridviewtopdf(dgvAllCases, "Referral Case for ");
         }
 
-       
-        private void dgvPatientDetails_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
-            Msg1.Show("View All Cases", "", "OK", "Cancel");
-            
-        }
-
-        private void dgvPatientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-         
-
-        private void label2_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

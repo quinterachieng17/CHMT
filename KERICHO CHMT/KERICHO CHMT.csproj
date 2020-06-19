@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllCases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllCases.Designer.cs">
+      <DependentUpon>AllCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllTransfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllTransfers.Designer.cs">
+      <DependentUpon>AllTransfers.cs</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Msg1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Msg1.Designer.cs">
+      <DependentUpon>Msg1.cs</DependentUpon>
     </Compile>
     <Compile Include="Officers.cs">
       <SubType>Form</SubType>
@@ -158,6 +176,12 @@
     <Compile Include="WorkTicketSummary.Designer.cs">
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllCases.resx">
+      <DependentUpon>AllCases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllTransfers.resx">
+      <DependentUpon>AllTransfers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Msg1.resx">
+      <DependentUpon>Msg1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Officers.resx">
       <DependentUpon>Officers.cs</DependentUpon>

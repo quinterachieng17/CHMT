@@ -58,13 +58,7 @@ namespace KERICHO_CHMT
                                 this.Hide();
                                 Nurse ss = new Nurse();
                                 ss.Show();
-                            }
-                            /*else if(comboBox1.SelectedIndex ==2)
-                            {
-                                this.Hide();
-                                Driver ss = new Driver();
-                                ss.Show();
-                            }*/
+                            }                          
 
                         }
 
@@ -104,6 +98,11 @@ namespace KERICHO_CHMT
             {
                 e.Handled = true;
             }
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

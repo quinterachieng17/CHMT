@@ -18,6 +18,19 @@ namespace KERICHO_CHMT
         {
             InitializeComponent();
         }
+        
+        //Dialog Box Custom
+        static Referrals MsgBox; static DialogResult result = DialogResult.No;
+        public static DialogResult Show(string Text, string  Caption, string btnOk, string btnCancel)
+        {
+            MsgBox = new Referrals();
+            MsgBox.label1.Text = Text;
+            MsgBox.button1.Text = btnCancel;
+            MsgBox.button2.Text = btnOk;
+            MsgBox.ShowDialog();
+            return result;
+
+        }
 
         private void Referrals_Load(object sender, EventArgs e)
         {
@@ -31,9 +44,9 @@ namespace KERICHO_CHMT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Nurse nn = new Nurse();
-            nn.Show();
+
+            //Search Operation goes here
+            result = DialogResult.Yes; MsgBox.Close();
 
         }
     }

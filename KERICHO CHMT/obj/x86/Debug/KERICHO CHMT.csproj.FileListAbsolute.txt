@@ -22,3 +22,6 @@ D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Up
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Nurse.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Patient_Register.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Referrals.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.AllCases.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Msg1.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.AllTransfers.resources
