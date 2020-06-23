@@ -48,7 +48,10 @@ namespace KERICHO_CHMT
 
         private void btnReferralCases_Click(object sender, EventArgs e)
         {
-            Referrals.Show("Enter Patient Number", "Search Patient Details", "OK", "Cancel");
+            
+            SpecificSearch.Show("Select Case to View", "PATIENT SEARCH", "OK", "Cancel");
+            
+            //Referrals.Show("Enter Patient Number", "Search Patient Details", "OK", "Cancel");
         }
 
         private void Nurse_Load(object sender, EventArgs e)

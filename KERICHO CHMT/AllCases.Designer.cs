@@ -63,6 +63,7 @@
             this.dgvAllCases.Name = "dgvAllCases";
             this.dgvAllCases.Size = new System.Drawing.Size(1411, 515);
             this.dgvAllCases.TabIndex = 0;
+            this.dgvAllCases.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllCases_CellContentClick);
             // 
             // PatientID
             // 

@@ -18,9 +18,10 @@ namespace KERICHO_CHMT
         {
 
             InitializeComponent();
+           
         }
-        
 
+        // Register Patient Form as a customed message box
         static Patient_Register MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnOk, string btnCancel)
         {
@@ -88,9 +89,9 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@ReasonForReferral", txtReasonForReferral.Text.Trim());                       
                         sqlCmd.Parameters.AddWithValue("@Facility", txtFacility.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@NurseReceiving", txtNurseAttending.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@DriverIncharge", txtDriverIncharge.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@DriverNo", txtDriverNo.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@DriverIncharge",cmbDriverIncharge.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Patient successfully added");
@@ -111,9 +112,9 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@ReasonForReferral", txtReasonForReferral.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Facility", txtFacility.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@NurseReferring", txtNurseAttending.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@DriverIncharge", txtDriverIncharge.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@DriverNo", txtDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverIncharge", cmbDriverIncharge.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Transfer Recorded successfully");
@@ -125,7 +126,7 @@ namespace KERICHO_CHMT
             }
             void Clear()
         {
-            txtPatientName.Text = txtPatientNo.Text = txtReasonForReferral.Text = cmbFacility.Text = txtNurseAttending.Text = txtRegNo.Text = txtDriverIncharge.Text = txtDriverNo.Text = txtNurseOnTransit.Text = txtFacility.Text = "";
+            txtPatientName.Text = txtPatientNo.Text = txtReasonForReferral.Text = cmbFacility.Text = txtNurseAttending.Text = cmbRegNo.Text = cmbDriverIncharge.Text = cmbDriverNo.Text = txtNurseOnTransit.Text = txtFacility.Text = "";
             
         }
 

@@ -126,6 +126,12 @@
     <Compile Include="Referrals.Designer.cs">
       <DependentUpon>Referrals.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpecificSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecificSearch.Designer.cs">
+      <DependentUpon>SpecificSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="StaffDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,12 @@
     </Compile>
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfers.Designer.cs">
+      <DependentUpon>Transfers.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateStaffDetails.cs">
       <SubType>Form</SubType>
@@ -209,6 +221,9 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SpecificSearch.resx">
+      <DependentUpon>SpecificSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StaffDetails.resx">
       <DependentUpon>StaffDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfers.resx">
+      <DependentUpon>Transfers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStaffDetails.resx">
       <DependentUpon>UpdateStaffDetails.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace KERICHO_CHMT
         {
             InitializeComponent();
         }
-
+        
         //Dialog Box Custom
         static Msg1 MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnDownload, string btnCancel)
@@ -39,13 +39,23 @@ namespace KERICHO_CHMT
         {
             if (cmbCase.SelectedIndex == 0)
             {
-                AllCases.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All incoming Referral Cases", "Download", "Cancel"); 
+                AllCases.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All incoming Referral Cases", "Download", "Cancel"); MsgBox.Close();
             }
+            else if(cmbCase.SelectedIndex == 1)
+            {
+                AllTransfers.Show("ALL TRANSFERRED REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All Outgoing Referral Cases", "Download", "Cancel"); MsgBox.Close();
+            }
+
             else
             {
-                AllTransfers.Show("ALL TRANSFERRED REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All Outgoing Referral Cases", "Download", "Cancel"); 
+                MessageBox.Show("Please Select at least one Case to view");
             }
-            MsgBox.Close();
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

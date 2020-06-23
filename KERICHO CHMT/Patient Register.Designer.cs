@@ -43,9 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNurseOnTransit = new System.Windows.Forms.TextBox();
-            this.txtDriverNo = new System.Windows.Forms.TextBox();
-            this.txtDriverIncharge = new System.Windows.Forms.TextBox();
-            this.txtRegNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -53,9 +50,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.cmbFacility = new System.Windows.Forms.ComboBox();
             this.txtFacility = new System.Windows.Forms.TextBox();
+            this.cmbFacility = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.cmbRegNo = new System.Windows.Forms.ComboBox();
+            this.cmbDriverIncharge = new System.Windows.Forms.ComboBox();
+            this.cmbDriverNo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,33 +215,6 @@
             this.txtNurseOnTransit.TabIndex = 23;
             this.txtNurseOnTransit.TextChanged += new System.EventHandler(this.txtNurseOnTransit_TextChanged);
             // 
-            // txtDriverNo
-            // 
-            this.txtDriverNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDriverNo.Location = new System.Drawing.Point(709, 269);
-            this.txtDriverNo.Name = "txtDriverNo";
-            this.txtDriverNo.Size = new System.Drawing.Size(224, 25);
-            this.txtDriverNo.TabIndex = 22;
-            this.txtDriverNo.TextChanged += new System.EventHandler(this.txtDriverNo_TextChanged);
-            // 
-            // txtDriverIncharge
-            // 
-            this.txtDriverIncharge.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDriverIncharge.Location = new System.Drawing.Point(709, 231);
-            this.txtDriverIncharge.Name = "txtDriverIncharge";
-            this.txtDriverIncharge.Size = new System.Drawing.Size(224, 25);
-            this.txtDriverIncharge.TabIndex = 21;
-            this.txtDriverIncharge.TextChanged += new System.EventHandler(this.txtDriverIncharge_TextChanged);
-            // 
-            // txtRegNo
-            // 
-            this.txtRegNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegNo.Location = new System.Drawing.Point(709, 193);
-            this.txtRegNo.Name = "txtRegNo";
-            this.txtRegNo.Size = new System.Drawing.Size(224, 25);
-            this.txtRegNo.TabIndex = 20;
-            this.txtRegNo.TextChanged += new System.EventHandler(this.txtRegNo_TextChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -314,6 +287,13 @@
             this.label13.Text = "Date";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
+            // txtFacility
+            // 
+            this.txtFacility.Location = new System.Drawing.Point(193, 297);
+            this.txtFacility.Name = "txtFacility";
+            this.txtFacility.Size = new System.Drawing.Size(250, 20);
+            this.txtFacility.TabIndex = 28;
+            // 
             // cmbFacility
             // 
             this.cmbFacility.FormattingEnabled = true;
@@ -326,13 +306,6 @@
             this.cmbFacility.TabIndex = 27;
             this.cmbFacility.SelectedIndexChanged += new System.EventHandler(this.cmbFacility_SelectedIndexChanged);
             // 
-            // txtFacility
-            // 
-            this.txtFacility.Location = new System.Drawing.Point(193, 297);
-            this.txtFacility.Name = "txtFacility";
-            this.txtFacility.Size = new System.Drawing.Size(250, 20);
-            this.txtFacility.TabIndex = 28;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -344,6 +317,39 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Please Indicate Incoming / Outgoing Case";
             // 
+            // cmbRegNo
+            // 
+            this.cmbRegNo.FormattingEnabled = true;
+            this.cmbRegNo.Items.AddRange(new object[] {
+            "Incoming Referral",
+            "Outgoing Referral"});
+            this.cmbRegNo.Location = new System.Drawing.Point(709, 200);
+            this.cmbRegNo.Name = "cmbRegNo";
+            this.cmbRegNo.Size = new System.Drawing.Size(224, 21);
+            this.cmbRegNo.TabIndex = 30;
+            // 
+            // cmbDriverIncharge
+            // 
+            this.cmbDriverIncharge.FormattingEnabled = true;
+            this.cmbDriverIncharge.Items.AddRange(new object[] {
+            "Incoming Referral",
+            "Outgoing Referral"});
+            this.cmbDriverIncharge.Location = new System.Drawing.Point(709, 231);
+            this.cmbDriverIncharge.Name = "cmbDriverIncharge";
+            this.cmbDriverIncharge.Size = new System.Drawing.Size(224, 21);
+            this.cmbDriverIncharge.TabIndex = 31;
+            // 
+            // cmbDriverNo
+            // 
+            this.cmbDriverNo.FormattingEnabled = true;
+            this.cmbDriverNo.Items.AddRange(new object[] {
+            "Incoming Referral",
+            "Outgoing Referral"});
+            this.cmbDriverNo.Location = new System.Drawing.Point(709, 265);
+            this.cmbDriverNo.Name = "cmbDriverNo";
+            this.cmbDriverNo.Size = new System.Drawing.Size(224, 21);
+            this.cmbDriverNo.TabIndex = 32;
+            // 
             // Patient_Register
             // 
             this.AcceptButton = this.btnSubmit;
@@ -351,15 +357,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1023, 502);
+            this.Controls.Add(this.cmbDriverNo);
+            this.Controls.Add(this.cmbDriverIncharge);
+            this.Controls.Add(this.cmbRegNo);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtFacility);
             this.Controls.Add(this.cmbFacility);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.txtNurseOnTransit);
-            this.Controls.Add(this.txtDriverNo);
-            this.Controls.Add(this.txtDriverIncharge);
-            this.Controls.Add(this.txtRegNo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -407,17 +413,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNurseOnTransit;
-        private System.Windows.Forms.TextBox txtDriverNo;
-        private System.Windows.Forms.TextBox txtDriverIncharge;
-        private System.Windows.Forms.TextBox txtRegNo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbFacility;
         private System.Windows.Forms.TextBox txtFacility;
+        private System.Windows.Forms.ComboBox cmbFacility;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbRegNo;
+        private System.Windows.Forms.ComboBox cmbDriverIncharge;
+        private System.Windows.Forms.ComboBox cmbDriverNo;
     }
 }

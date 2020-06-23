@@ -108,5 +108,10 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void dgvAllCases_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

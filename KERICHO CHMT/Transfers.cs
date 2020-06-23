@@ -10,11 +10,10 @@ using System.Data.SqlClient;
 
 namespace KERICHO_CHMT
 {
-    public partial class Referrals : Form
+    public partial class Transfers : Form
     {
         string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
-
-        public Referrals()
+        public Transfers()
         {
             InitializeComponent();
         }
@@ -23,25 +22,24 @@ namespace KERICHO_CHMT
         DataTable dtbl;
 
         //Dialog Box Custom
-        static Referrals MsgBox; static DialogResult result = DialogResult.No;
-        public static DialogResult Show(string Text, string  Caption, string btnDownload, string btnCancel)
+        static Transfers MsgBox; static DialogResult result = DialogResult.No;
+        public static DialogResult Show(string Text, string Caption, string btnDownload, string btnCancel)
         {
-            MsgBox = new Referrals();
+            MsgBox = new Transfers();
             MsgBox.label1.Text = Text;
             MsgBox.btnCancel.Text = btnCancel;
-            MsgBox.btnDownload.Text = btnDownload;
+            MsgBox.btnOK.Text = btnDownload;
             MsgBox.ShowDialog();
             return result;
 
         }
 
-        private void Referrals_Load(object sender, EventArgs e)
+        private void Transfers_Load(object sender, EventArgs e)
         {
-
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
                 dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -50,24 +48,24 @@ namespace KERICHO_CHMT
                 dgvSpecificSearch.DataSource = dtbl;
 
             }
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtPatientNo_TextChanged(object sender, EventArgs e)
         {
             DataView DV = new DataView(dtbl);
             DV.RowFilter = string.Format("PatientNo LIKE '%{0}'", txtPatientNo.Text);
             dgvSpecificSearch.DataSource = DV;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
 
             //Search Operation goes here
-            if(txtPatientNo.Text == "")
+            if (txtPatientNo.Text == "")
             {
-                MessageBox.Show("Please Enter Patient Number to search"); 
+                MessageBox.Show("Please Enter Patient Number to search");
             }
-            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
