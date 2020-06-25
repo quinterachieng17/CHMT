@@ -6,15 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
 
 namespace KERICHO_CHMT
 {
     public partial class SpecificSearch : Form
 
-    {
-        string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
-        public SpecificSearch()
+    {        public SpecificSearch()
         {
             InitializeComponent();
         }

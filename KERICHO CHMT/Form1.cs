@@ -31,6 +31,13 @@ namespace KERICHO_CHMT
         private void btnLogin_Click(object sender, EventArgs e)
 
         {
+            //
+            if (txtboxUsername.Text == "" || txtboxPassword.Text == "" || comboBox1.Text == "")
+            {
+                MessageBox.Show("Login Details cannot be blank");
+            }
+            //
+
             if (attempt < 4)
             {
 
@@ -39,8 +46,9 @@ namespace KERICHO_CHMT
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                string cmbItemValue = comboBox1.SelectedItem.ToString();
-                if (dt.Rows.Count > 0)
+                string cmbItemValue = comboBox1.SelectedItem?.ToString();
+               
+                 if (dt.Rows.Count > 0)
                 {
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
@@ -58,8 +66,8 @@ namespace KERICHO_CHMT
                                 this.Hide();
                                 Nurse ss = new Nurse();
                                 ss.Show();
-                            }                          
-
+                            }
+  
                         }
 
                     }

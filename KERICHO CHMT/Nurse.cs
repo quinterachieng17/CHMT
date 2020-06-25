@@ -178,17 +178,14 @@ namespace KERICHO_CHMT
        
         private void dgvPatientDetails_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
-            Msg1.Show("View All Cases", "", "OK", "Cancel");
-            
+           
+            Msg1.Show("View All Cases", "", "OK", "Cancel");           
         }
 
         private void dgvPatientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-         
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -198,6 +195,18 @@ namespace KERICHO_CHMT
         private void chartTransfers_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void chartReferrals_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            Doctor ss = new Doctor();
+            ss.Show();
         }
     }
 }

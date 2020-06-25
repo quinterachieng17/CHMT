@@ -89,5 +89,12 @@ namespace KERICHO_CHMT
             Driver ss = new Driver();
             ss.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Nurse nn = new Nurse();
+            nn.Show();
+        }
     }
 }

@@ -21,6 +21,12 @@ namespace KERICHO_CHMT
            
         }
 
+        /*void Fillcombo()
+        {
+           
+
+        }*/
+
         // Register Patient Form as a customed message box
         static Patient_Register MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnOk, string btnCancel)

@@ -87,6 +87,7 @@
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Name = "Msg1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Msg1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

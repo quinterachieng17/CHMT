@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
             this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(272, 59);
+            this.lblDashboard.Location = new System.Drawing.Point(206, 59);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(252, 20);
             this.lblDashboard.TabIndex = 1;
@@ -72,7 +73,7 @@
             // 
             this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.Menu;
             this.btnRegisterStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterStaff.Location = new System.Drawing.Point(209, 104);
+            this.btnRegisterStaff.Location = new System.Drawing.Point(178, 104);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
             this.btnRegisterStaff.Size = new System.Drawing.Size(356, 33);
             this.btnRegisterStaff.TabIndex = 3;
@@ -84,7 +85,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Menu;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(209, 199);
+            this.button1.Location = new System.Drawing.Point(178, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(356, 33);
             this.button1.TabIndex = 4;
@@ -96,7 +97,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(209, 231);
+            this.button2.Location = new System.Drawing.Point(178, 231);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(356, 33);
             this.button2.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Menu;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(209, 295);
+            this.button3.Location = new System.Drawing.Point(178, 295);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(356, 33);
             this.button3.TabIndex = 6;
@@ -120,7 +121,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.Menu;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(209, 263);
+            this.button4.Location = new System.Drawing.Point(178, 263);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(356, 33);
             this.button4.TabIndex = 7;
@@ -132,7 +133,7 @@
             // 
             this.button5.BackColor = System.Drawing.SystemColors.Menu;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(209, 167);
+            this.button5.Location = new System.Drawing.Point(178, 167);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(356, 33);
             this.button5.TabIndex = 8;
@@ -142,7 +143,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(652, 349);
+            this.button6.Location = new System.Drawing.Point(652, 388);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(87, 32);
             this.button6.TabIndex = 9;
@@ -152,7 +153,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(541, 349);
+            this.button7.Location = new System.Drawing.Point(541, 388);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 32);
             this.button7.TabIndex = 10;
@@ -163,7 +164,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(562, 58);
+            this.label1.Location = new System.Drawing.Point(505, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 11;
@@ -171,7 +172,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(598, 58);
+            this.dateTimePicker1.Location = new System.Drawing.Point(547, 58);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -201,7 +202,7 @@
             // 
             this.button8.BackColor = System.Drawing.SystemColors.Menu;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(209, 136);
+            this.button8.Location = new System.Drawing.Point(178, 136);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(356, 33);
             this.button8.TabIndex = 14;
@@ -209,12 +210,25 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.Menu;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(178, 327);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(356, 33);
+            this.button9.TabIndex = 15;
+            this.button9.Text = "Referral Cases";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
             // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(806, 393);
+            this.ClientSize = new System.Drawing.Size(743, 431);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dateTimePicker1);
@@ -258,5 +272,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
