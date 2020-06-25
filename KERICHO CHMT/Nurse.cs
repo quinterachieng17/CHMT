@@ -67,10 +67,17 @@ namespace KERICHO_CHMT
                 // Displays only the selected columns
                 dgvPatientDetails.AutoGenerateColumns = false;
                 dgvPatientDetails.DataSource = dtbl;
-
             }
-          
-            
+            chartReferrals.Series["chartReferrals"].Points.AddXY("TopHill",1000 );
+            chartReferrals.Series["chartReferrals"].Points.AddXY("MediHill", 1200);
+            chartReferrals.Series["chartReferrals"].Points.AddXY("Real", 3000);
+            chartReferrals.Series["chartReferrals"].Points.AddXY("Tenwek", 11000);
+            chartReferrals.Series["chartReferrals"].Points.AddXY("Nairobi Hospital", 11000);
+            //
+            chartTransfers.Series["ChartTransfers"].Points.AddXY("Moi Referral Hospital", 1000);
+            chartTransfers.Series["ChartTransfers"].Points.AddXY("Kenyatta Hospital", 1200);
+            chartTransfers.Series["ChartTransfers"].Points.AddXY("Kericho CHMT", 3000);
+            chartTransfers.Series["ChartTransfers"].Points.AddXY("Sigowet TTC", 11000);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -184,6 +191,11 @@ namespace KERICHO_CHMT
          
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartTransfers_Click(object sender, EventArgs e)
         {
 
         }

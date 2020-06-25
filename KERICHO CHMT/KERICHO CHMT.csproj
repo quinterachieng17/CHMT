@@ -37,8 +37,24 @@
     <Reference Include="itextsharp">
       <HintPath>C:\Users\User\Desktop\itextsharp\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net40\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7\lib\net40\LiveCharts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net40\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +63,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllCases.cs">
@@ -126,6 +144,11 @@
     <Compile Include="Referrals.Designer.cs">
       <DependentUpon>Referrals.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SpecificSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +204,12 @@
     </Compile>
     <Compile Include="VehicleRegistration.Designer.cs">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReports.Designer.cs">
+      <DependentUpon>ViewReports.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkTicketSummary.cs">
       <SubType>Form</SubType>
@@ -258,6 +287,9 @@
     <EmbeddedResource Include="VehicleRegistration.resx">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ViewReports.resx">
+      <DependentUpon>ViewReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WorkTicketSummary.resx">
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +306,7 @@
     <None Include="cmbloginDataSet.xss">
       <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -285,6 +318,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Report.xsc">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
+    <None Include="Report.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Report.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Report.xss">
+      <DependentUpon>Report.xsd</DependentUpon>
+    </None>
     <None Include="Resources\user%281%29.png" />
   </ItemGroup>
   <ItemGroup>

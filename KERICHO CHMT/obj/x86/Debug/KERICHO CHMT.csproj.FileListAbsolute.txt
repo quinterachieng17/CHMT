@@ -13,7 +13,6 @@ D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Si
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.EditVehicle.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.StaffDetails.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.TrackRecords.resources
-D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.csprojResolveAssemblyReference.cache
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\KERICHO CHMT.exe.config
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.WorkTicketSummary.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Officers.resources
@@ -27,3 +26,14 @@ D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Ms
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.AllTransfers.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.SpecificSearch.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Transfers.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.ViewReports.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.dll
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.WinForms.dll
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.Wpf.dll
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.pdb
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.xml
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.WinForms.pdb
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.WinForms.xml
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.Wpf.pdb
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\bin\Debug\LiveCharts.Wpf.xml
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO CHMT.csprojResolveAssemblyReference.cache
