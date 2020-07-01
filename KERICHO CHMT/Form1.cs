@@ -16,6 +16,7 @@ namespace KERICHO_CHMT
         public LOGIN()
         {
             InitializeComponent();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,13 +59,13 @@ namespace KERICHO_CHMT
                             if (comboBox1.SelectedIndex == 0)
                             {
                                 this.Hide();
-                                Doctor ss = new Doctor();
-                                ss.Show();
+                                Doctor ss = new Doctor("Welcome : "+txtboxUsername.Text);
+                                ss.ShowDialog();
                             }
                             else if (comboBox1.SelectedIndex == 1)
                             {
                                 this.Hide();
-                                Nurse ss = new Nurse();
+                                Nurse ss = new Nurse("Welcome : " + txtboxUsername.Text);
                                 ss.Show();
                             }
   

@@ -14,6 +14,14 @@ namespace KERICHO_CHMT
         public Doctor()
         {
             InitializeComponent();
+           
+        }
+
+
+        public Doctor(string username)
+        {
+            InitializeComponent();
+            label2.Text = username;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

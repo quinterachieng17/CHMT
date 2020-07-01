@@ -19,6 +19,15 @@ namespace KERICHO_CHMT
         public Nurse()
         {
             InitializeComponent();
+
+        }
+
+        public Nurse(string username)
+        {
+            InitializeComponent();
+            label3.Text = username;
+
+
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
@@ -82,7 +91,9 @@ namespace KERICHO_CHMT
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Reports rr = new Reports();
+            rr.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

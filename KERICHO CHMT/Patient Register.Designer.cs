@@ -365,6 +365,7 @@
             this.cmbRegNo.Name = "cmbRegNo";
             this.cmbRegNo.Size = new System.Drawing.Size(224, 21);
             this.cmbRegNo.TabIndex = 30;
+            this.cmbRegNo.SelectedIndexChanged += new System.EventHandler(this.cmbRegNo_SelectedIndexChanged);
             // 
             // cmbDriverIncharge
             // 
@@ -374,6 +375,7 @@
             this.cmbDriverIncharge.Name = "cmbDriverIncharge";
             this.cmbDriverIncharge.Size = new System.Drawing.Size(224, 21);
             this.cmbDriverIncharge.TabIndex = 31;
+            this.cmbDriverIncharge.SelectedIndexChanged += new System.EventHandler(this.cmbDriverIncharge_SelectedIndexChanged);
             // 
             // cmbDriverNo
             // 
@@ -515,6 +517,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(960, 53);
             this.tableLayoutPanel7.TabIndex = 39;
+            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // Patient_Register
             // 

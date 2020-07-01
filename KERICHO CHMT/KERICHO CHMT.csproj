@@ -84,6 +84,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +153,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Report.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
     <Compile Include="SpecificSearch.cs">
       <SubType>Form</SubType>
@@ -250,6 +261,9 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SpecificSearch.resx">
       <DependentUpon>SpecificSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +319,17 @@
     </None>
     <None Include="cmbloginDataSet.xss">
       <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet1.xsc">
+      <DependentUpon>cmbloginDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet1.xss">
+      <DependentUpon>cmbloginDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

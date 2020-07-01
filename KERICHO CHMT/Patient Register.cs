@@ -13,6 +13,7 @@ namespace KERICHO_CHMT
     public partial class Patient_Register : Form
     {
 
+        SqlConnection con = new SqlConnection(@"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
         string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
         public Patient_Register()
         {
@@ -20,12 +21,6 @@ namespace KERICHO_CHMT
             InitializeComponent();
            
         }
-
-        /*void Fillcombo()
-        {
-           
-
-        }*/
 
         // Register Patient Form as a customed message box
         static Patient_Register MsgBox; static DialogResult result = DialogResult.No;
@@ -38,9 +33,9 @@ namespace KERICHO_CHMT
             MsgBox.label5.Text = "Facility";
             MsgBox.label6.Text = "Referring/Receiving Nurse";
             MsgBox.label9.Text = "Nurse(s) on Transit";
-            MsgBox.label10.Text = "Reg. No";
+            MsgBox.label10.Text = "Driver's No.";
             MsgBox.label11.Text = "Driver In Charge";
-            MsgBox.label12.Text = "Driver's No.";
+            MsgBox.label12.Text = "Reg. No";
             MsgBox.label13.Text = "Date";
             MsgBox.btnCancel.Text = btnCancel;
             MsgBox.btnSubmit.Text = btnOk;
@@ -51,7 +46,9 @@ namespace KERICHO_CHMT
 
         private void Patient_Register_Load(object sender, EventArgs e)
         {
-                    
+            rr();
+            di();
+            dr();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -237,6 +234,79 @@ namespace KERICHO_CHMT
         }
 
         private void cmbFacility_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRegNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        //For regNo combo box
+        public void rr()
+        {
+            cmbRegNo.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select RegNo from VehicleRegistration";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbRegNo.Items.Add(dr["RegNo"].ToString());
+            }
+            con.Close();
+        }
+
+        //For Driver Number combo box
+        public void dr()
+        {
+            cmbDriverNo.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select IDNumber from StaffRegister";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbDriverNo.Items.Add(dr["IDNumber"].ToString());
+            }
+            con.Close();
+        }
+        //For Driver incharge combo box
+        public void di()
+        {
+            cmbDriverIncharge.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select LastName from StaffRegister";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbDriverIncharge.Items.Add(dr["LastName"].ToString());
+            }
+            con.Close();
+        }
+
+        //To do. Create a table for registering drivers
+
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cmbDriverIncharge_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
