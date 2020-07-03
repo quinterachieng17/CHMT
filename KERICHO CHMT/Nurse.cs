@@ -20,15 +20,19 @@ namespace KERICHO_CHMT
         {
             InitializeComponent();
 
-        }
-
-        public Nurse(string username)
+        }       
+        public Nurse(string cmb)
         {
             InitializeComponent();
-            label3.Text = username;
-
-
+            label3.Text =cmb;          
         }
+
+        //public Nurse(string username)
+        //{
+        //    InitializeComponent();
+        //    label3.Text = username;
+        //}
+
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
@@ -65,7 +69,13 @@ namespace KERICHO_CHMT
 
         private void Nurse_Load(object sender, EventArgs e)
         {
+            if (label3.Text == "Nurse")
+            {
+                pictureBoxBack.Hide();
+            }
 
+
+            //Loading to the dataGridView                    
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
@@ -77,6 +87,7 @@ namespace KERICHO_CHMT
                 dgvPatientDetails.AutoGenerateColumns = false;
                 dgvPatientDetails.DataSource = dtbl;
             }
+                //Loading the charts
             chartReferrals.Series["chartReferrals"].Points.AddXY("TopHill",1000 );
             chartReferrals.Series["chartReferrals"].Points.AddXY("MediHill", 1200);
             chartReferrals.Series["chartReferrals"].Points.AddXY("Real", 3000);
@@ -87,6 +98,9 @@ namespace KERICHO_CHMT
             chartTransfers.Series["ChartTransfers"].Points.AddXY("Kenyatta Hospital", 1200);
             chartTransfers.Series["ChartTransfers"].Points.AddXY("Kericho CHMT", 3000);
             chartTransfers.Series["ChartTransfers"].Points.AddXY("Sigowet TTC", 11000);
+            //
+
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -215,9 +229,16 @@ namespace KERICHO_CHMT
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            Doctor ss = new Doctor();
-            ss.Show();
+            
+                this.Hide();
+                Doctor ss = new Doctor(label3.Text);
+                ss.Show();
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -22,5 +22,17 @@ namespace KERICHO_CHMT
             this.patientRegisterTableAdapter.Fill(this.cmbloginDataSet1.PatientRegister);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Nurse nn = new Nurse();
+            nn.ShowDialog();
+        }
+
+        private void chart3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

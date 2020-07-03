@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nurse));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPatientDetails = new System.Windows.Forms.DataGridView();
             this.PatientNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +67,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatientDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartReferrals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).BeginInit();
@@ -77,6 +78,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +88,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(555, 14);
+            this.label1.Location = new System.Drawing.Point(548, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(350, 31);
             this.label1.TabIndex = 31;
@@ -195,7 +197,7 @@
             // btnIncommingCase
             // 
             this.btnIncommingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIncommingCase.Location = new System.Drawing.Point(927, 8);
+            this.btnIncommingCase.Location = new System.Drawing.Point(925, 8);
             this.btnIncommingCase.Name = "btnIncommingCase";
             this.btnIncommingCase.Size = new System.Drawing.Size(114, 23);
             this.btnIncommingCase.TabIndex = 35;
@@ -222,7 +224,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(382, 9);
+            this.label2.Location = new System.Drawing.Point(381, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 44;
@@ -287,45 +289,45 @@
             // chartReferrals
             // 
             this.chartReferrals.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            chartArea5.Name = "ChartArea1";
-            this.chartReferrals.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartReferrals.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chartReferrals.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartReferrals.Legends.Add(legend3);
             this.chartReferrals.Location = new System.Drawing.Point(3, 3);
             this.chartReferrals.Name = "chartReferrals";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Legend = "Legend1";
-            series5.Name = "chartReferrals";
-            this.chartReferrals.Series.Add(series5);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "chartReferrals";
+            this.chartReferrals.Series.Add(series3);
             this.chartReferrals.Size = new System.Drawing.Size(595, 337);
             this.chartReferrals.TabIndex = 46;
             this.chartReferrals.Text = "chart1";
-            title5.Name = "Title1";
-            title5.Text = "Referrals";
-            this.chartReferrals.Titles.Add(title5);
+            title3.Name = "Title1";
+            title3.Text = "Referrals";
+            this.chartReferrals.Titles.Add(title3);
             this.chartReferrals.Click += new System.EventHandler(this.chartReferrals_Click);
             // 
             // chartTransfers
             // 
             this.chartTransfers.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            chartArea6.Name = "ChartArea1";
-            this.chartTransfers.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartTransfers.Legends.Add(legend6);
+            chartArea4.Name = "ChartArea1";
+            this.chartTransfers.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartTransfers.Legends.Add(legend4);
             this.chartTransfers.Location = new System.Drawing.Point(604, 3);
             this.chartTransfers.Name = "chartTransfers";
-            series6.ChartArea = "ChartArea1";
-            series6.IsXValueIndexed = true;
-            series6.Legend = "Legend1";
-            series6.Name = "ChartTransfers";
-            this.chartTransfers.Series.Add(series6);
+            series4.ChartArea = "ChartArea1";
+            series4.IsXValueIndexed = true;
+            series4.Legend = "Legend1";
+            series4.Name = "ChartTransfers";
+            this.chartTransfers.Series.Add(series4);
             this.chartTransfers.Size = new System.Drawing.Size(596, 336);
             this.chartTransfers.TabIndex = 47;
             this.chartTransfers.Text = "chart2";
-            title6.Name = "Title1";
-            title6.Text = "Transfers";
-            this.chartTransfers.Titles.Add(title6);
+            title4.Name = "Title1";
+            title4.Text = "Transfers";
+            this.chartTransfers.Titles.Add(title4);
             this.chartTransfers.Click += new System.EventHandler(this.chartTransfers_Click);
             // 
             // button2
@@ -356,10 +358,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1004F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1018F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxBack, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxBack, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -437,7 +439,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.817351F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.18265F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
             this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 0);
@@ -466,14 +468,29 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(15, 84);
+            this.label3.Location = new System.Drawing.Point(83, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 19);
             this.label3.TabIndex = 56;
             this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(15, 72);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(216, 34);
+            this.tableLayoutPanel7.TabIndex = 57;
             // 
             // Nurse
             // 
@@ -482,7 +499,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1483, 703);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -506,8 +523,9 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -542,5 +560,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     }
 }

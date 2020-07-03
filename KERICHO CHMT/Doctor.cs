@@ -16,13 +16,20 @@ namespace KERICHO_CHMT
             InitializeComponent();
            
         }
-
-
-        public Doctor(string username)
+        
+        public Doctor(string cmb)
         {
             InitializeComponent();
-            label2.Text = username;
+            label2.Text = cmb;            
         }
+
+        //public Doctor(string username)
+        //{
+        //    InitializeComponent();
+        //    label2.Text = username;
+
+        //}
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -66,7 +73,7 @@ namespace KERICHO_CHMT
 
         private void Doctor_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -100,9 +107,10 @@ namespace KERICHO_CHMT
 
         private void button9_Click(object sender, EventArgs e)
         {
+
             this.Hide();
-            Nurse nn = new Nurse();
-            nn.Show();
+            Nurse nn = new Nurse(label2.Text);
+            nn.ShowDialog();
         }
     }
 }

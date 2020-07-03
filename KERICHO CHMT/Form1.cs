@@ -55,17 +55,18 @@ namespace KERICHO_CHMT
                     {
                         if (dt.Rows[i]["DesignationID"].ToString() == cmbItemValue)
                         {
-                            MessageBox.Show("you are login as a " + dt.Rows[i][6], "Login");
+                            MessageBox.Show("You are login as a " + dt.Rows[i][6], "LOGIN");
                             if (comboBox1.SelectedIndex == 0)
                             {
                                 this.Hide();
-                                Doctor ss = new Doctor("Welcome : "+txtboxUsername.Text);
+                                Doctor ss = new Doctor(comboBox1.Text);
                                 ss.ShowDialog();
                             }
                             else if (comboBox1.SelectedIndex == 1)
                             {
+                                
                                 this.Hide();
-                                Nurse ss = new Nurse("Welcome : " + txtboxUsername.Text);
+                                Nurse ss = new Nurse(comboBox1.Text);
                                 ss.Show();
                             }
   
@@ -110,6 +111,11 @@ namespace KERICHO_CHMT
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
