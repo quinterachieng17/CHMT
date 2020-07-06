@@ -72,6 +72,7 @@ namespace KERICHO_CHMT
             if (label3.Text == "Nurse")
             {
                 pictureBoxBack.Hide();
+                btnEdit.Hide();
             }
 
 

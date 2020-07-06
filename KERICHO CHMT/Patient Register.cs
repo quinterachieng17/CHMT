@@ -96,6 +96,7 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@DriverIncharge",cmbDriverIncharge.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker2.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Patient successfully added");
                         Clear();
@@ -119,6 +120,7 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@DriverIncharge", cmbDriverIncharge.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker2.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Transfer Recorded successfully");
                     Clear();

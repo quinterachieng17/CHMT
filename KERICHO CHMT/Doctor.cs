@@ -22,15 +22,7 @@ namespace KERICHO_CHMT
             InitializeComponent();
             label2.Text = cmb;            
         }
-
-        //public Doctor(string username)
-        //{
-        //    InitializeComponent();
-        //    label2.Text = username;
-
-        //}
-
-
+      
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
