@@ -107,7 +107,7 @@ namespace KERICHO_CHMT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports rr = new Reports();
+            Reports rr = new Reports(label3.Text);
             rr.Show();
         }
 
