@@ -124,7 +124,8 @@
             "Ainamoi",
             "Chepseon",
             "Kabianga",
-            "Kapsoit"});
+            "Kapsoit",
+            "Kericho"});
             this.cbxRegion.Location = new System.Drawing.Point(230, 255);
             this.cbxRegion.Name = "cbxRegion";
             this.cbxRegion.Size = new System.Drawing.Size(170, 21);
@@ -281,6 +282,7 @@
             // 
             this.cbxDesignation.FormattingEnabled = true;
             this.cbxDesignation.Items.AddRange(new object[] {
+            "Chief Nurse",
             "Transport Officer",
             "Nurse"});
             this.cbxDesignation.Location = new System.Drawing.Point(230, 221);

@@ -37,6 +37,7 @@ namespace KERICHO_CHMT
             MsgBox.label11.Text = "Driver In Charge";
             MsgBox.label12.Text = "Reg. No";
             MsgBox.label13.Text = "Date";
+            MsgBox.label15.Text = "Time Of Call";
             MsgBox.btnCancel.Text = btnCancel;
             MsgBox.btnSubmit.Text = btnOk;
             MsgBox.ShowDialog();
@@ -46,9 +47,9 @@ namespace KERICHO_CHMT
 
         private void Patient_Register_Load(object sender, EventArgs e)
         {
-            rr();
-            di();
-            dr();
+            RegNo();
+            DriverIncharge();
+            DriverName();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -75,8 +76,8 @@ namespace KERICHO_CHMT
         {
             
             
-                if (txtPatientName.Text == "" || txtPatientNo.Text == "" || cmbFacility.Text == "" || txtFacility.Text =="")
-                    MessageBox.Show("Patient Details and Facility From cannot be blank");
+                if (txtPatientName.Text == "" || txtPatientNo.Text == "" || cmbFacility.Text == "" || txtFacility.Text =="" || txtTimeOfCall.Text == "")
+                    MessageBox.Show("Patient Details, Facility From and Time of call cannot be blank");
 
                
                 else if (cmbFacility.SelectedIndex == 0)
@@ -97,6 +98,7 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker2.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@TimeOfCall", txtTimeOfCall.Text.Trim());
                         sqlCmd.ExecuteNonQuery();
                         MessageBox.Show("Patient successfully added");
                         Clear();
@@ -121,6 +123,7 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@DriverNo", cmbDriverNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@NurseOnTransit", txtNurseOnTransit.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker2.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@TimeOfCall", txtTimeOfCall.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Transfer Recorded successfully");
                     Clear();
@@ -131,7 +134,7 @@ namespace KERICHO_CHMT
             }
             void Clear()
         {
-            txtPatientName.Text = txtPatientNo.Text = txtReasonForReferral.Text = cmbFacility.Text = txtNurseAttending.Text = cmbRegNo.Text = cmbDriverIncharge.Text = cmbDriverNo.Text = txtNurseOnTransit.Text = txtFacility.Text = "";
+            txtPatientName.Text = txtPatientNo.Text = txtReasonForReferral.Text = cmbFacility.Text = txtNurseAttending.Text = cmbRegNo.Text = cmbDriverIncharge.Text = cmbDriverNo.Text = txtNurseOnTransit.Text = txtFacility.Text = txtTimeOfCall.Text ="";
             
         }
 
@@ -246,7 +249,7 @@ namespace KERICHO_CHMT
         }
 
         //For regNo combo box
-        public void rr()
+        public void RegNo()
         {
             cmbRegNo.Items.Clear();
             con.Open();
@@ -265,7 +268,7 @@ namespace KERICHO_CHMT
         }
 
         //For Driver Number combo box
-        public void dr()
+        public void DriverName()
         {
             cmbDriverNo.Items.Clear();
             con.Open();
@@ -283,7 +286,7 @@ namespace KERICHO_CHMT
             con.Close();
         }
         //For Driver incharge combo box
-        public void di()
+        public void DriverIncharge()
         {
             cmbDriverIncharge.Items.Clear();
             con.Open();

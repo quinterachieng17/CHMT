@@ -69,12 +69,15 @@ namespace KERICHO_CHMT
 
         private void Nurse_Load(object sender, EventArgs e)
         {
-            if (label3.Text == "Nurse")
+            //Hidding columns on page load
+            dgvPatientDetails.Columns["NurseReceiving"].Visible = false;
+            dgvPatientDetails.Columns["NurseReferring"].Visible = false;
+
+            if (label3.Text == "Nurse" || label3.Text == "Chief Nurse")
             {
                 pictureBoxBack.Hide();
                 btnEdit.Hide();
             }
-
 
             //Loading to the dataGridView                    
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -113,9 +116,11 @@ namespace KERICHO_CHMT
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+              using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
+                //Hides column referring nurse
+                //dgvPatientDetails.Columns["NurseReferring"].Visible = false;
+
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
                 DataTable dtbl = new DataTable();
@@ -125,15 +130,21 @@ namespace KERICHO_CHMT
                 dgvPatientDetails.AutoGenerateColumns = false;
                 dgvPatientDetails.DataSource = dtbl;
 
+
             }
 
             label2.Text = "Incomming Referral Cases";
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
+                //Hides Receiving nurse
+                //dgvPatientDetails.Columns["NurseReceiving"].Visible = false;
+
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
                 DataTable dtbl = new DataTable();
@@ -238,6 +249,11 @@ namespace KERICHO_CHMT
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
         {
 
         }

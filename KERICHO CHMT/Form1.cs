@@ -59,17 +59,26 @@ namespace KERICHO_CHMT
                             if (comboBox1.SelectedIndex == 0)
                             {
                                 this.Hide();
-                                Doctor ss = new Doctor(comboBox1.Text);
-                                ss.ShowDialog();
+                                ChiefNurse cn = new ChiefNurse(comboBox1.Text);
+                                cn.Show();
+                                
                             }
                             else if (comboBox1.SelectedIndex == 1)
                             {
+                                this.Hide();
+                                Doctor ss = new Doctor(comboBox1.Text);
+                                ss.ShowDialog();
                                 
+                            }
+
+                            else if (comboBox1.SelectedIndex == 2)
+                            {
                                 this.Hide();
                                 Nurse ss = new Nurse(comboBox1.Text);
                                 ss.Show();
+
                             }
-  
+
                         }
 
                     }

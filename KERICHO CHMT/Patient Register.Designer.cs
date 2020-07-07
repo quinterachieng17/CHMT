@@ -63,6 +63,8 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtTimeOfCall = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -341,19 +343,19 @@
             this.cmbFacility.Items.AddRange(new object[] {
             "Incoming Referral",
             "Outgoing Referral"});
-            this.cmbFacility.Location = new System.Drawing.Point(483, 6);
+            this.cmbFacility.Location = new System.Drawing.Point(269, 6);
             this.cmbFacility.Name = "cmbFacility";
-            this.cmbFacility.Size = new System.Drawing.Size(224, 21);
+            this.cmbFacility.Size = new System.Drawing.Size(223, 21);
             this.cmbFacility.TabIndex = 27;
             this.cmbFacility.SelectedIndexChanged += new System.EventHandler(this.cmbFacility_SelectedIndexChanged);
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(222, 8);
+            this.label14.Location = new System.Drawing.Point(3, 8);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(255, 17);
             this.label14.TabIndex = 29;
@@ -434,11 +436,15 @@
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.73494F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26506F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmbFacility, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label15, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.txtTimeOfCall, 3, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(15, 389);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
@@ -521,6 +527,26 @@
             this.tableLayoutPanel7.TabIndex = 39;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(645, 8);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 17);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Time of Call";
+            // 
+            // txtTimeOfCall
+            // 
+            this.txtTimeOfCall.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtTimeOfCall.Location = new System.Drawing.Point(731, 7);
+            this.txtTimeOfCall.Name = "txtTimeOfCall";
+            this.txtTimeOfCall.Size = new System.Drawing.Size(225, 20);
+            this.txtTimeOfCall.TabIndex = 31;
+            // 
             // Patient_Register
             // 
             this.AcceptButton = this.btnSubmit;
@@ -594,5 +620,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtTimeOfCall;
     }
 }

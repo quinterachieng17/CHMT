@@ -52,11 +52,11 @@
             this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(15, 6);
+            this.lblLogin.Location = new System.Drawing.Point(197, 6);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(575, 32);
+            this.lblLogin.Size = new System.Drawing.Size(778, 32);
             this.lblLogin.TabIndex = 0;
-            this.lblLogin.Text = "KERICHO COUNTY REFERRAL SYSTEM";
+            this.lblLogin.Text = "REFERRALS AND AMBULANCE MONITORING SYSTEM";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // lblUsername
@@ -165,6 +165,7 @@
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "Chief Nurse",
             "Transport Officer",
             "Nurse"});
             this.comboBox1.Location = new System.Drawing.Point(147, 9);
@@ -219,11 +220,11 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.lblLogin, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(374, 12);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(55, 12);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(606, 45);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1173, 45);
             this.tableLayoutPanel3.TabIndex = 14;
             // 
             // LOGIN

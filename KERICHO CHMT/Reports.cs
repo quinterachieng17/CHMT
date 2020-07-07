@@ -24,8 +24,19 @@ namespace KERICHO_CHMT
 
         private void Reports_Load(object sender, EventArgs e)
         {
+            if (label2.Text == "Chief Nurse")
+            {
+                button1.Hide();               
+            }
+            //
+            if (label2.Text == "Nurse")
+            {
+                button3.Hide();
+            }
+
+
             // TODO: This line of code loads data into the 'cmbloginDataSet2.CasesByHospital' table. You can move, or remove it, as needed.
-            
+
             // TODO: This line of code loads data into the 'cmbloginDataSet1.PatientRegister' table. You can move, or remove it, as needed.
             this.patientRegisterTableAdapter.Fill(this.cmbloginDataSet1.PatientRegister);
 

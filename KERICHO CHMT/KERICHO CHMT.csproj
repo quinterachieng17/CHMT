@@ -82,6 +82,12 @@
     <Compile Include="AllTransfers.Designer.cs">
       <DependentUpon>AllTransfers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiefNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiefNurse.Designer.cs">
+      <DependentUpon>ChiefNurse.cs</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllTransfers.resx">
       <DependentUpon>AllTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiefNurse.resx">
+      <DependentUpon>ChiefNurse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>

@@ -114,7 +114,7 @@ namespace KERICHO_CHMT
 
         private void Officers_Load(object sender, EventArgs e)
         {
-
+            dgvOfficers.Columns["Password"].Visible = false;
         }
     }
 }

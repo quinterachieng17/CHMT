@@ -11,6 +11,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
 
+
 namespace KERICHO_CHMT
 {
     public partial class AllCases : Form
@@ -115,6 +116,11 @@ namespace KERICHO_CHMT
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
