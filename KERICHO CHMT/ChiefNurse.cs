@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace KERICHO_CHMT
 {
@@ -28,8 +31,19 @@ namespace KERICHO_CHMT
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Reports rr = new Reports(label1.Text);
             rr.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ApproveMsg.Show("Select Case to Approve", "", "OK", "Cancel");
         }
     }
 }

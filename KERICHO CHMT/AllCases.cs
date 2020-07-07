@@ -22,6 +22,13 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        //Parse username to next form
+        public AllCases(string username)
+        {
+            InitializeComponent();
+            label2.Text = username;
+        }
+
         //Dialog Box Custom
         static AllCases MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnDownload, string btnCancel)
@@ -121,6 +128,11 @@ namespace KERICHO_CHMT
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

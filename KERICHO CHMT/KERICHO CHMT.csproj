@@ -82,6 +82,24 @@
     <Compile Include="AllTransfers.Designer.cs">
       <DependentUpon>AllTransfers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApproveMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveMsg.Designer.cs">
+      <DependentUpon>ApproveMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproverReferrals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproverReferrals.Designer.cs">
+      <DependentUpon>ApproverReferrals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveTransfers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveTransfers.Designer.cs">
+      <DependentUpon>ApproveTransfers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiefNurse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +265,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllTransfers.resx">
       <DependentUpon>AllTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveMsg.resx">
+      <DependentUpon>ApproveMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproverReferrals.resx">
+      <DependentUpon>ApproverReferrals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveTransfers.resx">
+      <DependentUpon>ApproveTransfers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChiefNurse.resx">
       <DependentUpon>ChiefNurse.cs</DependentUpon>

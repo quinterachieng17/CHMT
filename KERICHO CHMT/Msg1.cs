@@ -19,12 +19,12 @@ namespace KERICHO_CHMT
         
         //Dialog Box Custom
         static Msg1 MsgBox; static DialogResult result = DialogResult.No;
-        public static DialogResult Show(string Text, string Caption, string btnDownload, string btnCancel)
+        public static DialogResult Show(string Text, string Caption, string btnOk, string btnCancel)
         {
             MsgBox = new Msg1();
             MsgBox.label1.Text = Text;
             MsgBox.btnCancel.Text = btnCancel;
-            MsgBox.btnOK.Text = btnDownload;
+            MsgBox.btnOK.Text = btnOk;
             MsgBox.ShowDialog();
             return result;
 

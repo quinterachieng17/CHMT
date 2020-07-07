@@ -117,55 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="CasesByHospitalBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>383, 56</value>
+  <metadata name="Date.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="cmbloginDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>231, 56</value>
+  <metadata name="RegNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="cmbloginDataSet2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>231, 56</value>
+  <metadata name="DriverNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="patientRegisterBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>169, 17</value>
+  <metadata name="DriverIncharge.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="cmbloginDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="NurseOnTransit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="cmbloginDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="PatientID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="patientRegisterTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>382, 17</value>
+  <metadata name="PatientNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAA1NJREFUWEe9
-        mFtrE0EUx9cXL6CifhQvT4r2QcxuSmsRfajxTURF/ADii34AL61VELS7G6po7O72YgsWWihp0xdRQ0u1
-        SaW2IAqtlypGa2HHczajSdazyd7/8HsIe2bmn5mdmXNWCCqpZ3i7KGv7JNlokxQ9hSRV/Wgy3bsXn/Gw
-        GMXYBimtH0rKxm0wMwuwBsyKit6VVLSD2Jb3Er6kzuFNSVk/BwPO2wx4YV5UtbPYF+82HEmqIWHntsEC
-        oBXFdG+Cd+9f1qwpegc9SHBE1UifyGS28OG8KXEvswuWY5LqOGSyzQ+e7uTDuhOag4Z5W0dRkndtskmW
-        N8c0c3ayrjYPvMB3iMbxoBqd3AYtvlvpxh5oSfexJ9MFtvT1GxspLrLjDwfJOBrjCLdTK1xaCAh8lKC5
-        ycX3rFpjb5fIWAfmYGdv5LYqAufniWBPUOZQyz9KZLwjsn6G2+LC6yvg7DmZQw3PLZBt6lCouRZF2Wgi
-        glxTz9z0xxV2rGeAbFcPMa0f4PYEgV/8ZGAjojBnUb2jJVV/QwY1IDJzZWbK5iBngx+m7WFDIjaHmK33
-        +7fB+wfJJh3gSAzmLBLd2m4Bs1/qoROQ3bCJd7S5/Idl1tbTT7bzhdzXIkDKc4p86MCV0Ry3U6vQzZVJ
-        eTbYkXvBLdWqa+olGR+QlOclbn88xFZ/rXFbFZmmya5PPCfb+MZaYh+b5MLAKG0SuJULbyatTeL3mHE0
-        CTN5LRvKTJpNmcxW6yyEnfmaCGhIxCanLXMorFuJAFdEZRKLNW4PbhMoxKkgt0RjUtvP7YGsdEsr0oHu
-        uDg4xr6v/ebWKkKTV0enyDZ1qE23UFbFTwe7xsnkwudVMt4JUTFOc1sVYUUVdBYRymRx5QsZSwKZFZny
-        o/BzBNnII2jyU+mnZa60vs4uPcuScQRmQtUOczu0guzoarCSuzwywdofDZHPaYwb3IazyksNRTTZQaSM
-        Oy6tXfgZAhrE9ukD8oFXbbKxgw/vTtxkHDM57tncX1V9fvN8V7tDu+t6WesJP0dAh4X/B/AJHCUNd6tX
-        4T/Fij/gWVnAQziUWXMUXEFYVPOln7EZsIOvxgz8sZtWIW6/vuIQlobNirFHVLTWpKydRDATxmTzXz7n
-        W4LwB6vSKLbnvD4fAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="patientRegisterTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+  <metadata name="PatientName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="CasesByHospitalTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+  <metadata name="ReasonForReferral.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+  <metadata name="Facility.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NurseAttending.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

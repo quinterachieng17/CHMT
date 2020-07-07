@@ -60,5 +60,12 @@ namespace KERICHO_CHMT
             this.CasesByHospitalTableAdapter.Fill(this.cmbloginDataSet2.CasesByHospital,textBox1.Text);
             this.reportViewer1.RefreshReport();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChiefNurse cn = new ChiefNurse(label2.Text);
+            cn.ShowDialog();
+        }
     }
 }
