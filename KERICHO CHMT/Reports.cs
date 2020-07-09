@@ -67,5 +67,32 @@ namespace KERICHO_CHMT
             ChiefNurse cn = new ChiefNurse(label2.Text);
             cn.ShowDialog();
         }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            
+            //this.CasesByHospitalTableAdapter.Fill(this.cmbloginDataSet2.CasesByHospital, textBox1.Text);
+            //this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

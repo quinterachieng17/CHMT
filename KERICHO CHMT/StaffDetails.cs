@@ -145,9 +145,9 @@ namespace KERICHO_CHMT
 
         private void button9_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Officers ss = new Officers();
-            ss.Show();
+            //this.Hide();
+            //Officers ss = new Officers();
+            //ss.Show();
 
         }
 

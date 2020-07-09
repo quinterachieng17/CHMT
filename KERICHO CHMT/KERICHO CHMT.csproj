@@ -100,6 +100,11 @@
     <Compile Include="ApproveTransfers.Designer.cs">
       <DependentUpon>ApproveTransfers.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaseByPatient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaseByPatient.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ChiefNurse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +125,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
     </Compile>
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
@@ -156,12 +176,6 @@
     </Compile>
     <Compile Include="Msg1.Designer.cs">
       <DependentUpon>Msg1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Officers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Officers.Designer.cs">
-      <DependentUpon>Officers.cs</DependentUpon>
     </Compile>
     <Compile Include="Nurse.cs">
       <SubType>Form</SubType>
@@ -293,9 +307,6 @@
     <EmbeddedResource Include="Msg1.resx">
       <DependentUpon>Msg1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Officers.resx">
-      <DependentUpon>Officers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Nurse.resx">
       <DependentUpon>Nurse.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,6 +317,7 @@
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportByPatient.rdlc" />
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +365,17 @@
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
+    <None Include="CaseByPatient.xsc">
+      <DependentUpon>CaseByPatient.xsd</DependentUpon>
+    </None>
+    <None Include="CaseByPatient.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CaseByPatient.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CaseByPatient.xss">
+      <DependentUpon>CaseByPatient.xsd</DependentUpon>
+    </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="cmbloginDataSet.xsc">
       <DependentUpon>cmbloginDataSet.xsd</DependentUpon>
@@ -386,6 +409,39 @@
     </None>
     <None Include="cmbloginDataSet2.xss">
       <DependentUpon>cmbloginDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet3.xsc">
+      <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet3.xss">
+      <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet4.xsc">
+      <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet4.xss">
+      <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet5.xsc">
+      <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet5.xss">
+      <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

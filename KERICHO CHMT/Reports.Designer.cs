@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.CasesByHospitalBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet2 = new KERICHO_CHMT.cmbloginDataSet2();
+            this.PatientRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CaseByPatient = new KERICHO_CHMT.CaseByPatient();
             this.patientRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet1 = new KERICHO_CHMT.cmbloginDataSet1();
             this.patientRegisterTableAdapter = new KERICHO_CHMT.cmbloginDataSet1TableAdapters.PatientRegisterTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.patientRegisterTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet1TableAdapters.PatientRegisterTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.CasesByHospitalTableAdapter = new KERICHO_CHMT.cmbloginDataSet2TableAdapters.CasesByHospitalTableAdapter();
@@ -49,8 +50,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.PatientRegisterApprovedTableAdapter = new KERICHO_CHMT.CaseByPatientTableAdapters.PatientRegisterApprovedTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CasesByHospitalBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientRegisterApprovedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CaseByPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -68,6 +73,16 @@
             // 
             this.cmbloginDataSet2.DataSetName = "cmbloginDataSet2";
             this.cmbloginDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // PatientRegisterApprovedBindingSource
+            // 
+            this.PatientRegisterApprovedBindingSource.DataMember = "PatientRegisterApproved";
+            this.PatientRegisterApprovedBindingSource.DataSource = this.CaseByPatient;
+            // 
+            // CaseByPatient
+            // 
+            this.CaseByPatient.DataSetName = "CaseByPatient";
+            this.CaseByPatient.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patientRegisterBindingSource
             // 
@@ -98,7 +113,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(129, 18);
+            this.label1.Location = new System.Drawing.Point(128, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 3;
@@ -107,22 +122,11 @@
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(174, 14);
+            this.textBox1.Location = new System.Drawing.Point(173, 14);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 20);
+            this.textBox1.Size = new System.Drawing.Size(231, 20);
             this.textBox1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(412, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Preview";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // patientRegisterTableAdapter1
             // 
@@ -133,14 +137,15 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.CasesByHospitalBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.CasesByHospitalBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(3, 3);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(591, 403);
+            this.reportViewer1.Size = new System.Drawing.Size(1326, 403);
             this.reportViewer1.TabIndex = 6;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // CasesByHospitalTableAdapter
             // 
@@ -165,11 +170,11 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.83267F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.16733F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 184F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 98);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(80, 104);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -181,11 +186,11 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.reportViewer1, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 158);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(80, 158);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(597, 409);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1332, 409);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // label2
@@ -229,6 +234,22 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1469, 31);
             this.tableLayoutPanel4.TabIndex = 13;
             // 
+            // PatientRegisterApprovedTableAdapter
+            // 
+            this.PatientRegisterApprovedTableAdapter.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(410, 13);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Preview";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +265,8 @@
             this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CasesByHospitalBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientRegisterApprovedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CaseByPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -263,7 +286,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
         private cmbloginDataSet1TableAdapters.PatientRegisterTableAdapter patientRegisterTableAdapter1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource CasesByHospitalBindingSource;
@@ -275,5 +297,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.BindingSource PatientRegisterApprovedBindingSource;
+        private CaseByPatient CaseByPatient;
+        private CaseByPatientTableAdapters.PatientRegisterApprovedTableAdapter PatientRegisterApprovedTableAdapter;
+        private System.Windows.Forms.Button button2;
     }
 }

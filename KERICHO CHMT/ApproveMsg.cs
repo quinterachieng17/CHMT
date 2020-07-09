@@ -40,12 +40,12 @@ namespace KERICHO_CHMT
         {
             if (cmbCase.SelectedIndex == 0)
             {
-                ApproverReferrals.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "", "Save", "Cancel"); MsgBox.Close();
+                ApproverReferrals.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "", "Approve", "Cancel"); MsgBox.Close();
                 
             }
             else if (cmbCase.SelectedIndex == 1)
             {
-                ApproveTransfers.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "", "Save", "Cancel"); MsgBox.Close();
+                ApproveTransfers.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "", "Approve", "Cancel"); MsgBox.Close();
                               
             }
 
