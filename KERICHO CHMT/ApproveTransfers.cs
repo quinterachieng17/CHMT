@@ -29,20 +29,10 @@ namespace KERICHO_CHMT
             return result;
 
         }
-        // Adding checkbox to the datagrideview for approval
-        public void update()
-        {
-            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
-            chk.HeaderText = "Approved";
-            chk.Name = "CheckBox";
-            dgvAllTransfersApprove.Columns.Add(chk);
-        }
-
+       
         private void ApproveTransfers_Load(object sender, EventArgs e)
         {
-            Update();
-
-            //Loads data from PatienRegister table
+            //Loads data from ReferralRegister table
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
@@ -54,6 +44,15 @@ namespace KERICHO_CHMT
                 dgvAllTransfersApprove.AutoGenerateColumns = false;
                 dgvAllTransfersApprove.DataSource = dtbl;
 
+                //Pending Approval Status
+                foreach (DataGridViewRow row in dgvAllTransfersApprove.Rows)
+                {
+                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count - 1; i++)
+                    {
+                        row.Cells[12].Value = "Pending Approval";
+                    }
+                }
+
                 // Adding checkbox to the datagrideview for approval
                 DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
                 chk.HeaderText = "Approved";
@@ -63,8 +62,56 @@ namespace KERICHO_CHMT
             }
         }
 
-        
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                foreach (DataGridViewRow row in dgvAllTransfersApprove.Rows)
+                {
+                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count - 1; i++)
+                    {
+                        //bool isCellChecked = (bool)dgvAllCasesApproved.Rows[i].Cells[11].Value;
 
+                        if (row.Cells[12].Value != null)
+                        {
+                            row.Cells[12].Value = "Approved";
+                            //if ((Boolean)row.Cells[11].Value == true)
+
+                            sqlCon.Open();
+                            SqlCommand sqlCmd = new SqlCommand("ReferralApprovedAdd", sqlCon);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                            sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllTransfersApprove.Rows[i].Cells[1].Value);
+                            sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllTransfersApprove.Rows[i].Cells[2].Value);
+                            sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllTransfersApprove.Rows[i].Cells[3].Value);
+                            sqlCmd.Parameters.AddWithValue("@Facility", dgvAllTransfersApprove.Rows[i].Cells[4].Value);
+                            sqlCmd.Parameters.AddWithValue("@NurseReferring", dgvAllTransfersApprove.Rows[i].Cells[5].Value);
+                            sqlCmd.Parameters.AddWithValue("@NurseOnTransit", dgvAllTransfersApprove.Rows[i].Cells[6].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverIncharge", dgvAllTransfersApprove.Rows[i].Cells[7].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverNo", dgvAllTransfersApprove.Rows[i].Cells[8].Value);
+                            sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllTransfersApprove.Rows[i].Cells[9].Value);
+                            sqlCmd.Parameters.AddWithValue("@Date", dgvAllTransfersApprove.Rows[i].Cells[10].Value);
+                            sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllTransfersApprove.Rows[i].Cells[11].Value);
+                            sqlCmd.Parameters.AddWithValue("@TransferStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);
+                            sqlCmd.Parameters.AddWithValue("@Approved", dgvAllTransfersApprove.Rows[i].Cells[13].Value);
+                            sqlCmd.ExecuteNonQuery();
+                            MessageBox.Show("Patient details approved");
+                            sqlCon.Close();
+                        }
+
+                    }
+                    // To do; create a new windows form and in the datagridview hide approved. This will be the final Approved referral report
+                }
+
+            }
+
+
+        }
+
+        private void dgvAllTransfersApprove_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
  }
 

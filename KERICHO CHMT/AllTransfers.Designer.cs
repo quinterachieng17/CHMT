@@ -45,6 +45,7 @@
             this.DriverNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeOfCall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTransfers)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // dgvAllTransfers
             // 
+            this.dgvAllTransfers.AllowUserToAddRows = false;
             this.dgvAllTransfers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllTransfers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllTransfers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -86,7 +88,8 @@
             this.DriverIncharge,
             this.DriverNo,
             this.RegNo,
-            this.Date});
+            this.Date,
+            this.TimeOfCall});
             this.dgvAllTransfers.Location = new System.Drawing.Point(3, 83);
             this.dgvAllTransfers.Name = "dgvAllTransfers";
             this.dgvAllTransfers.Size = new System.Drawing.Size(1447, 438);
@@ -206,8 +209,15 @@
             // 
             // Date
             // 
+            this.Date.DataPropertyName = "Date";
             this.Date.HeaderText = "Date Registered";
             this.Date.Name = "Date";
+            // 
+            // TimeOfCall
+            // 
+            this.TimeOfCall.DataPropertyName = "TimeOfCall";
+            this.TimeOfCall.HeaderText = "Time of Call";
+            this.TimeOfCall.Name = "TimeOfCall";
             // 
             // AllTransfers
             // 
@@ -245,5 +255,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeOfCall;
     }
 }

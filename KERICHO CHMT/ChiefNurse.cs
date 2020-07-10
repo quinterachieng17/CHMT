@@ -38,7 +38,9 @@ namespace KERICHO_CHMT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LOGIN lg = new LOGIN();
+            lg.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)

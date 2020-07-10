@@ -142,9 +142,7 @@ namespace KERICHO_CHMT
             
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                //Hides Receiving nurse
-                //dgvPatientDetails.Columns["NurseReceiving"].Visible = false;
-
+                
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
                 DataTable dtbl = new DataTable();
@@ -256,6 +254,13 @@ namespace KERICHO_CHMT
         private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            LOGIN lg = new LOGIN();
+            lg.Show();
         }
     }
 }

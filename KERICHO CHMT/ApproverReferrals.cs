@@ -110,10 +110,11 @@ namespace KERICHO_CHMT
                                 sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells[11].Value);
                                 sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllCasesApproved.Rows[i].Cells[12].Value);
                                 sqlCmd.Parameters.AddWithValue("@Approved", dgvAllCasesApproved.Rows[i].Cells[13].Value);
-                                sqlCmd.ExecuteNonQuery();                          
+                                sqlCmd.ExecuteNonQuery();
+                                MessageBox.Show("Patient details approved");
+                                sqlCon.Close();
                         }
-                        MessageBox.Show("Patient details approved");
-                        sqlCon.Close();                      
+                                   
                     }
                     // To do; create a new windows form and in the datagridview hide approved. This will be the final Approved referral report
                 }

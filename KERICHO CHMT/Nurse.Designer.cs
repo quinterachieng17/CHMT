@@ -59,29 +59,30 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.btnReferralCases = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnReferralCases = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatientDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartReferrals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -216,7 +217,7 @@
             // btnIncommingCase
             // 
             this.btnIncommingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIncommingCase.Location = new System.Drawing.Point(921, 8);
+            this.btnIncommingCase.Location = new System.Drawing.Point(920, 8);
             this.btnIncommingCase.Name = "btnIncommingCase";
             this.btnIncommingCase.Size = new System.Drawing.Size(114, 23);
             this.btnIncommingCase.TabIndex = 35;
@@ -243,7 +244,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(379, 9);
+            this.label2.Location = new System.Drawing.Point(378, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 44;
@@ -346,6 +347,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1454, 60);
             this.tableLayoutPanel1.TabIndex = 50;
             // 
+            // pictureBoxBack
+            // 
+            this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBack.Image")));
+            this.pictureBoxBack.Location = new System.Drawing.Point(3, 10);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(42, 40);
+            this.pictureBoxBack.TabIndex = 56;
+            this.pictureBoxBack.TabStop = false;
+            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            // 
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -408,13 +420,57 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(216, 518);
             this.tableLayoutPanel4.TabIndex = 53;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(3, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(210, 132);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "\r\n\r\n\r\n\r\n\r\nRegister Patient Details";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // btnReferralCases
+            // 
+            this.btnReferralCases.BackColor = System.Drawing.Color.White;
+            this.btnReferralCases.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReferralCases.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReferralCases.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnReferralCases.Image = ((System.Drawing.Image)(resources.GetObject("btnReferralCases.Image")));
+            this.btnReferralCases.Location = new System.Drawing.Point(3, 156);
+            this.btnReferralCases.Name = "btnReferralCases";
+            this.btnReferralCases.Size = new System.Drawing.Size(210, 167);
+            this.btnReferralCases.TabIndex = 33;
+            this.btnReferralCases.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSearch previous Case";
+            this.btnReferralCases.UseVisualStyleBackColor = false;
+            this.btnReferralCases.Click += new System.EventHandler(this.btnReferralCases_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(3, 356);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(210, 159);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nView Reports";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 4;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.817351F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.18265F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 0);
@@ -468,60 +524,18 @@
             this.tableLayoutPanel7.TabIndex = 57;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
-            // button5
+            // button4
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(3, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(210, 132);
-            this.button5.TabIndex = 30;
-            this.button5.Text = "\r\n\r\n\r\n\r\n\r\nRegister Patient Details";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btnReferralCases
-            // 
-            this.btnReferralCases.BackColor = System.Drawing.Color.White;
-            this.btnReferralCases.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReferralCases.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReferralCases.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnReferralCases.Image = ((System.Drawing.Image)(resources.GetObject("btnReferralCases.Image")));
-            this.btnReferralCases.Location = new System.Drawing.Point(3, 156);
-            this.btnReferralCases.Name = "btnReferralCases";
-            this.btnReferralCases.Size = new System.Drawing.Size(210, 167);
-            this.btnReferralCases.TabIndex = 33;
-            this.btnReferralCases.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nSearch previous Case";
-            this.btnReferralCases.UseVisualStyleBackColor = false;
-            this.btnReferralCases.Click += new System.EventHandler(this.btnReferralCases_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(3, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 159);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nView Reports";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBoxBack
-            // 
-            this.pictureBoxBack.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.pictureBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBack.Image")));
-            this.pictureBoxBack.Location = new System.Drawing.Point(3, 10);
-            this.pictureBoxBack.Name = "pictureBoxBack";
-            this.pictureBoxBack.Size = new System.Drawing.Size(42, 40);
-            this.pictureBoxBack.TabIndex = 56;
-            this.pictureBoxBack.TabStop = false;
-            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBox1_Click_1);
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(1395, 55);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 58;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Nurse
             // 
@@ -530,6 +544,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1483, 703);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel5);
@@ -547,6 +562,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -555,7 +571,6 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,5 +610,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.Button button4;
     }
 }
