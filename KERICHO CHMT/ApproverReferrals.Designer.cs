@@ -34,7 +34,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.dgvAllCasesApproved = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PatientNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeOfCall = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ApprovalStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCasesApproved)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -101,6 +101,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -137,22 +138,6 @@
             this.dgvAllCasesApproved.Size = new System.Drawing.Size(1566, 511);
             this.dgvAllCasesApproved.TabIndex = 9;
             this.dgvAllCasesApproved.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllCases_CellContentClick);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1429F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, -1);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1524, 57);
-            this.tableLayoutPanel1.TabIndex = 11;
             // 
             // PatientID
             // 
@@ -238,6 +223,22 @@
             // 
             this.ApprovalStatus.HeaderText = "Status";
             this.ApprovalStatus.Name = "ApprovalStatus";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 1429F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, -1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1524, 57);
+            this.tableLayoutPanel1.TabIndex = 11;
             // 
             // ApproverReferrals
             // 

@@ -82,6 +82,18 @@
     <Compile Include="AllTransfers.Designer.cs">
       <DependentUpon>AllTransfers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ApprovedReferralReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovedReferralReport.Designer.cs">
+      <DependentUpon>ApprovedReferralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApprovedTransferReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovedTransferReport.Designer.cs">
+      <DependentUpon>ApprovedTransferReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApproveMsg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet7.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -194,11 +216,6 @@
     </Compile>
     <Compile Include="Referrals.Designer.cs">
       <DependentUpon>Referrals.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Report.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Report.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports.cs">
       <SubType>Form</SubType>
@@ -262,12 +279,6 @@
     <Compile Include="VehicleRegistration.Designer.cs">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewReports.Designer.cs">
-      <DependentUpon>ViewReports.cs</DependentUpon>
-    </Compile>
     <Compile Include="WorkTicketSummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllTransfers.resx">
       <DependentUpon>AllTransfers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovedReferralReport.resx">
+      <DependentUpon>ApprovedReferralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApprovedTransferReport.resx">
+      <DependentUpon>ApprovedTransferReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApproveMsg.resx">
       <DependentUpon>ApproveMsg.cs</DependentUpon>
@@ -316,8 +333,6 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="ReportByPatient.rdlc" />
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,9 +372,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleRegistration.resx">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ViewReports.resx">
-      <DependentUpon>ViewReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTicketSummary.resx">
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
@@ -443,6 +455,28 @@
     <None Include="cmbloginDataSet5.xss">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
     </None>
+    <None Include="cmbloginDataSet6.xsc">
+      <DependentUpon>cmbloginDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet6.xss">
+      <DependentUpon>cmbloginDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet7.xsc">
+      <DependentUpon>cmbloginDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet7.xss">
+      <DependentUpon>cmbloginDataSet7.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -455,17 +489,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Report.xsc">
-      <DependentUpon>Report.xsd</DependentUpon>
-    </None>
-    <None Include="Report.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Report.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Report.xss">
-      <DependentUpon>Report.xsd</DependentUpon>
-    </None>
     <None Include="Resources\user%281%29.png" />
   </ItemGroup>
   <ItemGroup>

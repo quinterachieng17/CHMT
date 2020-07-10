@@ -98,7 +98,7 @@ namespace KERICHO_CHMT
                             MessageBox.Show("Patient details approved");
                             sqlCon.Close();
                         }
-
+                        
                     }
                     // To do; create a new windows form and in the datagridview hide approved. This will be the final Approved referral report
                 }
