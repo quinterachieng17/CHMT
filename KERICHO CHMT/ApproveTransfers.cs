@@ -93,8 +93,9 @@ namespace KERICHO_CHMT
                             sqlCmd.Parameters.AddWithValue("@Date", dgvAllTransfersApprove.Rows[i].Cells[10].Value);
                             sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllTransfersApprove.Rows[i].Cells[11].Value);
                             sqlCmd.Parameters.AddWithValue("@TransferStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);
+                            sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);
                             sqlCmd.Parameters.AddWithValue("@Approved", dgvAllTransfersApprove.Rows[i].Cells[13].Value);
-                            sqlCmd.ExecuteNonQuery();
+                            //sqlCmd.ExecuteNonQuery();
                             MessageBox.Show("Patient details approved");
                             sqlCon.Close();
                         }

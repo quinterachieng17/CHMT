@@ -116,6 +116,7 @@
             // 
             // dgvAllCasesApproved
             // 
+            this.dgvAllCasesApproved.AllowUserToAddRows = false;
             this.dgvAllCasesApproved.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAllCasesApproved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

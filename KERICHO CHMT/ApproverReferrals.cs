@@ -86,17 +86,15 @@ namespace KERICHO_CHMT
                 {
                     for (int i = 0; i < dgvAllCasesApproved.Rows.Count-1; i++)
                     {
-                        //bool isCellChecked = (bool)dgvAllCasesApproved.Rows[i].Cells[11].Value;
+                        
                                              
                         if (row.Cells[12].Value != null)
                         {
                             row.Cells[12].Value = "Approved";
-                            //if ((Boolean)row.Cells[11].Value == true)
                             
                                 sqlCon.Open();
                                 SqlCommand sqlCmd = new SqlCommand("PatientApprovedAdd", sqlCon);
                                 sqlCmd.CommandType = CommandType.StoredProcedure;
-
                                 sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllCasesApproved.Rows[i].Cells[1].Value);
                                 sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllCasesApproved.Rows[i].Cells[2].Value);                              
                                 sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllCasesApproved.Rows[i].Cells[3].Value);
@@ -110,18 +108,16 @@ namespace KERICHO_CHMT
                                 sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells[11].Value);
                                 sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllCasesApproved.Rows[i].Cells[12].Value);
                                 sqlCmd.Parameters.AddWithValue("@Approved", dgvAllCasesApproved.Rows[i].Cells[13].Value);
-                                sqlCmd.ExecuteNonQuery();
-                                MessageBox.Show("Patient details approved");
+                                sqlCmd.ExecuteNonQuery();                               
                                 sqlCon.Close();
                         }
                                    
                     }
-                    // To do; create a new windows form and in the datagridview hide approved. This will be the final Approved referral report
+                   
                 }
                
             }
-                
-           
+          
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
