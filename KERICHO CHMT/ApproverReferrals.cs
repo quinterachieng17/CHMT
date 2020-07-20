@@ -58,7 +58,7 @@ namespace KERICHO_CHMT
                 //Pending Approval Status
                 foreach (DataGridViewRow row in dgvAllCasesApproved.Rows)
                 {
-                    for (int i = 0; i < dgvAllCasesApproved.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
                         row.Cells[12].Value = "Pending Approval";
                     }
@@ -78,13 +78,12 @@ namespace KERICHO_CHMT
         }
 
         private void btnOK_Click(object sender, EventArgs e)
-        {
-            
+        {            
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 foreach(DataGridViewRow row in dgvAllCasesApproved.Rows)
                 {
-                    for (int i = 0; i < dgvAllCasesApproved.Rows.Count-1; i++)
+                    for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
                         
                                              

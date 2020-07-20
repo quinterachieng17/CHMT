@@ -47,7 +47,7 @@ namespace KERICHO_CHMT
                 //Pending Approval Status
                 foreach (DataGridViewRow row in dgvAllTransfersApprove.Rows)
                 {
-                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count - 1; i++)
+                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count; i++)
                     {
                         row.Cells[12].Value = "Pending Approval";
                     }
@@ -68,19 +68,17 @@ namespace KERICHO_CHMT
             {
                 foreach (DataGridViewRow row in dgvAllTransfersApprove.Rows)
                 {
-                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count - 1; i++)
-                    {
-                        //bool isCellChecked = (bool)dgvAllCasesApproved.Rows[i].Cells[11].Value;
+                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count; i++)
+                    {                  
 
                         if (row.Cells[12].Value != null)
                         {
                             row.Cells[12].Value = "Approved";
-                            //if ((Boolean)row.Cells[11].Value == true)
+                            
 
                             sqlCon.Open();
                             SqlCommand sqlCmd = new SqlCommand("ReferralApprovedAdd", sqlCon);
                             sqlCmd.CommandType = CommandType.StoredProcedure;
-
                             sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllTransfersApprove.Rows[i].Cells[1].Value);
                             sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllTransfersApprove.Rows[i].Cells[2].Value);
                             sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllTransfersApprove.Rows[i].Cells[3].Value);
@@ -92,16 +90,14 @@ namespace KERICHO_CHMT
                             sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllTransfersApprove.Rows[i].Cells[9].Value);
                             sqlCmd.Parameters.AddWithValue("@Date", dgvAllTransfersApprove.Rows[i].Cells[10].Value);
                             sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllTransfersApprove.Rows[i].Cells[11].Value);
-                            sqlCmd.Parameters.AddWithValue("@TransferStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);
-                            sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);
+                            sqlCmd.Parameters.AddWithValue("@TransferStatus", dgvAllTransfersApprove.Rows[i].Cells[12].Value);                            
                             sqlCmd.Parameters.AddWithValue("@Approved", dgvAllTransfersApprove.Rows[i].Cells[13].Value);
-                            //sqlCmd.ExecuteNonQuery();
-                            MessageBox.Show("Patient details approved");
+                            sqlCmd.ExecuteNonQuery();                           
                             sqlCon.Close();
                         }
                         
                     }
-                    // To do; create a new windows form and in the datagridview hide approved. This will be the final Approved referral report
+                   
                 }
 
             }

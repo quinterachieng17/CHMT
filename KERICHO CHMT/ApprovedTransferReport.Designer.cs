@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cmbloginDataSet7 = new KERICHO_CHMT.cmbloginDataSet7();
             this.referralRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet7 = new KERICHO_CHMT.cmbloginDataSet7();
             this.referralRegisterApprovedTableAdapter = new KERICHO_CHMT.cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,10 +48,11 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeOfCallDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transferStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommentsDelays = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -81,26 +83,40 @@
             this.driverNoDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn,
             this.timeOfCallDataGridViewTextBoxColumn,
-            this.transferStatusDataGridViewTextBoxColumn});
+            this.transferStatusDataGridViewTextBoxColumn,
+            this.ArrivalTime,
+            this.CommentsDelays});
             this.dataGridView1.DataSource = this.referralRegisterApprovedBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(21, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1438, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(1493, 435);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // cmbloginDataSet7
-            // 
-            this.cmbloginDataSet7.DataSetName = "cmbloginDataSet7";
-            this.cmbloginDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // referralRegisterApprovedBindingSource
             // 
             this.referralRegisterApprovedBindingSource.DataMember = "ReferralRegisterApproved";
             this.referralRegisterApprovedBindingSource.DataSource = this.cmbloginDataSet7;
             // 
+            // cmbloginDataSet7
+            // 
+            this.cmbloginDataSet7.DataSetName = "cmbloginDataSet7";
+            this.cmbloginDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // referralRegisterApprovedTableAdapter
             // 
             this.referralRegisterApprovedTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(598, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Transfer Cases Approved";
             // 
             // patientIDDataGridViewTextBoxColumn
             // 
@@ -183,23 +199,21 @@
             this.transferStatusDataGridViewTextBoxColumn.HeaderText = "TransferStatus";
             this.transferStatusDataGridViewTextBoxColumn.Name = "transferStatusDataGridViewTextBoxColumn";
             // 
-            // label1
+            // ArrivalTime
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(598, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Transfer Cases Approved";
+            this.ArrivalTime.HeaderText = "Arrival Time";
+            this.ArrivalTime.Name = "ArrivalTime";
+            // 
+            // CommentsDelays
+            // 
+            this.CommentsDelays.HeaderText = "Comments/ Reasons for Delays";
+            this.CommentsDelays.Name = "CommentsDelays";
             // 
             // ApprovedTransferReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1484, 581);
+            this.ClientSize = new System.Drawing.Size(1514, 581);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -207,8 +221,8 @@
             this.Text = "ApprovedTransferReport";
             this.Load += new System.EventHandler(this.ApprovedTransferReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,6 +235,7 @@
         private cmbloginDataSet7 cmbloginDataSet7;
         private System.Windows.Forms.BindingSource referralRegisterApprovedBindingSource;
         private cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter referralRegisterApprovedTableAdapter;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientNoDataGridViewTextBoxColumn;
@@ -234,6 +249,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeOfCallDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transferStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivalTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommentsDelays;
     }
 }
