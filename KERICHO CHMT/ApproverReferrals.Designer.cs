@@ -34,20 +34,22 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.dgvAllCasesApproved = new System.Windows.Forms.DataGridView();
-            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReasonForReferral = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Facility = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NurseAttending = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NurseOnTransit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DriverIncharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DriverNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeOfCall = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ApprovalStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CommentsDelays = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ApprovalStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeOfCall = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DriverNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DriverIncharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NurseOnTransit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NurseAttending = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Facility = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReasonForReferral = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PatientID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCasesApproved)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -133,97 +135,14 @@
             this.RegNo,
             this.Date,
             this.TimeOfCall,
-            this.ApprovalStatus});
+            this.ApprovalStatus,
+            this.ArrivalTime,
+            this.CommentsDelays});
             this.dgvAllCasesApproved.Location = new System.Drawing.Point(7, 87);
             this.dgvAllCasesApproved.Name = "dgvAllCasesApproved";
-            this.dgvAllCasesApproved.Size = new System.Drawing.Size(1566, 511);
+            this.dgvAllCasesApproved.Size = new System.Drawing.Size(1465, 511);
             this.dgvAllCasesApproved.TabIndex = 9;
             this.dgvAllCasesApproved.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllCases_CellContentClick);
-            // 
-            // PatientID
-            // 
-            this.PatientID.DataPropertyName = "PatientID";
-            this.PatientID.HeaderText = "Patient ID";
-            this.PatientID.Name = "PatientID";
-            this.PatientID.Visible = false;
-            // 
-            // PatientNo
-            // 
-            this.PatientNo.DataPropertyName = "PatientNo";
-            this.PatientNo.HeaderText = "Patient Number";
-            this.PatientNo.Name = "PatientNo";
-            // 
-            // PatientName
-            // 
-            this.PatientName.DataPropertyName = "PatientName";
-            this.PatientName.HeaderText = "Patient Name";
-            this.PatientName.Name = "PatientName";
-            this.PatientName.Width = 150;
-            // 
-            // ReasonForReferral
-            // 
-            this.ReasonForReferral.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReasonForReferral.DataPropertyName = "ReasonForReferral";
-            this.ReasonForReferral.HeaderText = "Reason For Referral";
-            this.ReasonForReferral.Name = "ReasonForReferral";
-            // 
-            // Facility
-            // 
-            this.Facility.DataPropertyName = "Facility";
-            this.Facility.HeaderText = "From Facility";
-            this.Facility.Name = "Facility";
-            this.Facility.Width = 150;
-            // 
-            // NurseAttending
-            // 
-            this.NurseAttending.DataPropertyName = "NurseReceiving";
-            this.NurseAttending.HeaderText = "Receiving Nurse";
-            this.NurseAttending.Name = "NurseAttending";
-            this.NurseAttending.Width = 150;
-            // 
-            // NurseOnTransit
-            // 
-            this.NurseOnTransit.DataPropertyName = "NurseOnTransit";
-            this.NurseOnTransit.HeaderText = "Nurse On Transit";
-            this.NurseOnTransit.Name = "NurseOnTransit";
-            this.NurseOnTransit.Width = 150;
-            // 
-            // DriverIncharge
-            // 
-            this.DriverIncharge.DataPropertyName = "DriverIncharge";
-            this.DriverIncharge.HeaderText = "Driver In Charge";
-            this.DriverIncharge.Name = "DriverIncharge";
-            this.DriverIncharge.Width = 150;
-            // 
-            // DriverNo
-            // 
-            this.DriverNo.DataPropertyName = "DriverNo";
-            this.DriverNo.HeaderText = "Driver Number";
-            this.DriverNo.Name = "DriverNo";
-            // 
-            // RegNo
-            // 
-            this.RegNo.DataPropertyName = "RegNo";
-            this.RegNo.HeaderText = "Reg. No.";
-            this.RegNo.Name = "RegNo";
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date Registered";
-            this.Date.Name = "Date";
-            // 
-            // TimeOfCall
-            // 
-            this.TimeOfCall.DataPropertyName = "TimeOfCall";
-            this.TimeOfCall.HeaderText = "Time of Call";
-            this.TimeOfCall.Name = "TimeOfCall";
-            this.TimeOfCall.Width = 70;
-            // 
-            // ApprovalStatus
-            // 
-            this.ApprovalStatus.HeaderText = "Status";
-            this.ApprovalStatus.Name = "ApprovalStatus";
             // 
             // tableLayoutPanel1
             // 
@@ -240,6 +159,106 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1524, 57);
             this.tableLayoutPanel1.TabIndex = 11;
+            // 
+            // CommentsDelays
+            // 
+            this.CommentsDelays.DataPropertyName = "@CommentsDelays";
+            this.CommentsDelays.HeaderText = "Comments/ Reasons for Delays";
+            this.CommentsDelays.Name = "CommentsDelays";
+            this.CommentsDelays.Visible = false;
+            // 
+            // ArrivalTime
+            // 
+            this.ArrivalTime.DataPropertyName = "@ArrivalTime";
+            this.ArrivalTime.HeaderText = "Arrival Time";
+            this.ArrivalTime.Name = "ArrivalTime";
+            this.ArrivalTime.Visible = false;
+            // 
+            // ApprovalStatus
+            // 
+            this.ApprovalStatus.HeaderText = "Status";
+            this.ApprovalStatus.Name = "ApprovalStatus";
+            this.ApprovalStatus.Visible = false;
+            // 
+            // TimeOfCall
+            // 
+            this.TimeOfCall.DataPropertyName = "TimeOfCall";
+            this.TimeOfCall.HeaderText = "Time of Call";
+            this.TimeOfCall.Name = "TimeOfCall";
+            this.TimeOfCall.Width = 70;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date Registered";
+            this.Date.Name = "Date";
+            // 
+            // RegNo
+            // 
+            this.RegNo.DataPropertyName = "RegNo";
+            this.RegNo.HeaderText = "Reg. No.";
+            this.RegNo.Name = "RegNo";
+            // 
+            // DriverNo
+            // 
+            this.DriverNo.DataPropertyName = "DriverNo";
+            this.DriverNo.HeaderText = "Driver Number";
+            this.DriverNo.Name = "DriverNo";
+            // 
+            // DriverIncharge
+            // 
+            this.DriverIncharge.DataPropertyName = "DriverIncharge";
+            this.DriverIncharge.HeaderText = "Driver In Charge";
+            this.DriverIncharge.Name = "DriverIncharge";
+            this.DriverIncharge.Width = 150;
+            // 
+            // NurseOnTransit
+            // 
+            this.NurseOnTransit.DataPropertyName = "NurseOnTransit";
+            this.NurseOnTransit.HeaderText = "Nurse On Transit";
+            this.NurseOnTransit.Name = "NurseOnTransit";
+            this.NurseOnTransit.Width = 150;
+            // 
+            // NurseAttending
+            // 
+            this.NurseAttending.DataPropertyName = "NurseReceiving";
+            this.NurseAttending.HeaderText = "Receiving Nurse";
+            this.NurseAttending.Name = "NurseAttending";
+            this.NurseAttending.Width = 150;
+            // 
+            // Facility
+            // 
+            this.Facility.DataPropertyName = "Facility";
+            this.Facility.HeaderText = "From Facility";
+            this.Facility.Name = "Facility";
+            this.Facility.Width = 150;
+            // 
+            // ReasonForReferral
+            // 
+            this.ReasonForReferral.DataPropertyName = "ReasonForReferral";
+            this.ReasonForReferral.HeaderText = "Reason For Referral";
+            this.ReasonForReferral.Name = "ReasonForReferral";
+            this.ReasonForReferral.Width = 200;
+            // 
+            // PatientName
+            // 
+            this.PatientName.DataPropertyName = "PatientName";
+            this.PatientName.HeaderText = "Patient Name";
+            this.PatientName.Name = "PatientName";
+            this.PatientName.Width = 150;
+            // 
+            // PatientNo
+            // 
+            this.PatientNo.DataPropertyName = "PatientNo";
+            this.PatientNo.HeaderText = "Patient Number";
+            this.PatientNo.Name = "PatientNo";
+            // 
+            // PatientID
+            // 
+            this.PatientID.DataPropertyName = "PatientID";
+            this.PatientID.HeaderText = "Patient ID";
+            this.PatientID.Name = "PatientID";
+            this.PatientID.Visible = false;
             // 
             // ApproverReferrals
             // 
@@ -282,5 +301,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeOfCall;
         private System.Windows.Forms.DataGridViewTextBoxColumn ApprovalStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivalTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommentsDelays;
     }
 }

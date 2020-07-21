@@ -213,8 +213,10 @@ namespace KERICHO_CHMT
        
         private void dgvPatientDetails_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-           
-            Msg1.Show("View All Cases", "", "OK", "Cancel");           
+
+            this.Hide();
+            Msg1 msg = new Msg1();
+            msg.ShowDialog();          
         }
 
         private void dgvPatientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -163,6 +163,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -476,6 +481,17 @@
     </None>
     <None Include="cmbloginDataSet7.xss">
       <DependentUpon>cmbloginDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet8.xsc">
+      <DependentUpon>cmbloginDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet8.xss">
+      <DependentUpon>cmbloginDataSet8.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

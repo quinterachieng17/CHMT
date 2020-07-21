@@ -12,6 +12,8 @@ namespace KERICHO_CHMT
 {
     public partial class Msg1 : Form
     {
+        // SqlConnection con = new SqlConnection(@"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
+        string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
         public Msg1()
         {
             InitializeComponent();
@@ -22,7 +24,9 @@ namespace KERICHO_CHMT
         public static DialogResult Show(string Text, string Caption, string btnOk, string btnCancel)
         {
             MsgBox = new Msg1();
-            MsgBox.label1.Text = Text;
+            MsgBox.label4.Text = Text;
+            MsgBox.label5.Text = Text;
+            MsgBox.label6.Text = Text;
             MsgBox.btnCancel.Text = btnCancel;
             MsgBox.btnOK.Text = btnOk;
             MsgBox.ShowDialog();
@@ -32,28 +36,36 @@ namespace KERICHO_CHMT
 
         private void Msg1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet8.PatientRegister' table. You can move, or remove it, as needed.
+            this.patientRegisterTableAdapter.Fill(this.cmbloginDataSet8.PatientRegister);
 
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (cmbCase.SelectedIndex == 0)
-            {
-                AllCases.Show("ALL INCOMING REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All incoming Referral Cases", "Download", "Cancel"); MsgBox.Close();
-            }
-            else if(cmbCase.SelectedIndex == 1)
-            {
-                AllTransfers.Show("ALL TRANSFERRED REFERRAL CASES AT KERICHO COUNTY REFERRAL HOSPITAL", "All Outgoing Referral Cases", "Download", "Cancel"); MsgBox.Close();
-            }
-
-            else
-            {
-                MessageBox.Show("Please Select at least one Case to view");
-            }
             
+            //send to patientRegisterApprove and TransferRegisterApprove tables
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlCommand sqlCmd = new SqlCommand("ArrivalTimeAdd", sqlCon);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@PatientID", 0);
+                sqlCmd.Parameters.AddWithValue("@Arrivaltime", txtArrivalTime.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@CommentsDelays", txtCommentsDelays.Text.Trim());
+                sqlCmd.ExecuteNonQuery();
+                MessageBox.Show("Details added");
+
+            }
+          
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
