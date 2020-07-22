@@ -15,6 +15,7 @@ namespace KERICHO_CHMT
 {
     public partial class ApproverReferrals : Form
     {
+        string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
         SqlConnection sqlcon = new SqlConnection ("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
         public ApproverReferrals()
         {
@@ -41,10 +42,7 @@ namespace KERICHO_CHMT
         }
 
         private void ApproverReferrals_Load(object sender, EventArgs e)
-        {
-            //Loads data from PatienRegister table and CommentsTable
-            //SqlConnection sqlCon = new SqlConnection("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
-            {
+        {           
                 String query = "select * from PatientRegister,CommentsTable";
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
 
@@ -62,16 +60,15 @@ namespace KERICHO_CHMT
                 {
                     for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
-                        row.Cells["Approved"].Value = "Pending Approval";
+                        row.Cells["Status"].Value = "Pending Approval";
                     }
                 }
 
-                // Adding checkbox to the datagrideview for approval
-                DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
-                chk.HeaderText = "Approve";
-                chk.Name = "CheckBox";
-                dgvAllCasesApproved.Columns.Add(chk);
-            }
+            // Adding checkbox to the datagrideview for approval
+            DataGridViewCheckBoxColumn chk = new DataGridViewCheckBoxColumn();
+            chk.HeaderText = "Approve";
+            chk.Name = "CheckBox";
+            dgvAllCasesApproved.Columns.Add(chk);
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -81,39 +78,35 @@ namespace KERICHO_CHMT
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                foreach(DataGridViewRow row in dgvAllCasesApproved.Rows)
+                foreach (DataGridViewRow row in dgvAllCasesApproved.Rows)
                 {
                     for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
-                        
-                                             
+
                         if (row.Cells[15].Value != null)
                         {
-                            row.Cells[12].Value = "Approved";
-                            
+                            row.Cells["Status"].Value = "Approved";
+
                             sqlCon.Open();
                             SqlCommand sqlCmd = new SqlCommand("PatientApprovedAdd", sqlCon);
-                            sqlCmd.CommandType = CommandType.StoredProcedure;
-                            //sqlCmd.Parameters.AddWithValue("@PatientNo",0);
-                            sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllCasesApproved.Rows[i].Cells[1].Value);
-                            sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllCasesApproved.Rows[i].Cells[2].Value);
-                            sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllCasesApproved.Rows[i].Cells[3].Value);
-                            sqlCmd.Parameters.AddWithValue("@Facility", dgvAllCasesApproved.Rows[i].Cells[4].Value);
-                            sqlCmd.Parameters.AddWithValue("@NurseReceiving", dgvAllCasesApproved.Rows[i].Cells[5].Value);
-                            sqlCmd.Parameters.AddWithValue("@NurseOnTransit", dgvAllCasesApproved.Rows[i].Cells[6].Value);
-                            sqlCmd.Parameters.AddWithValue("@DriverIncharge", dgvAllCasesApproved.Rows[i].Cells[7].Value);
-                            sqlCmd.Parameters.AddWithValue("@DriverNo", dgvAllCasesApproved.Rows[i].Cells[8].Value);
-                            sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllCasesApproved.Rows[i].Cells[9].Value);
-                            sqlCmd.Parameters.AddWithValue("@Date", dgvAllCasesApproved.Rows[i].Cells[10].Value);
-                            sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells[11].Value);
-                            sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllCasesApproved.Rows[i].Cells[12].Value);
-                            sqlCmd.Parameters.AddWithValue("@ArrivalTime", dgvAllCasesApproved.Rows[i].Cells[13].Value);
-                            sqlCmd.Parameters.AddWithValue("@CommentsDelays", dgvAllCasesApproved.Rows[i].Cells[14].Value);
-                           // sqlCmd.Parameters.AddWithValue("@Approved", dgvAllCasesApproved.Rows[i].Cells[15].Value);                              
-                            sqlCmd.ExecuteNonQuery();
-                            MessageBox.Show("Approved");
+                            sqlCmd.CommandType = CommandType.StoredProcedure;                           
+                            sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllCasesApproved.Rows[i].Cells["PatientName"].Value);
+                            sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllCasesApproved.Rows[i].Cells["PatientNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllCasesApproved.Rows[i].Cells["ReasonForReferral"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Facility", dgvAllCasesApproved.Rows[i].Cells["Facility"].Value);
+                            sqlCmd.Parameters.AddWithValue("@NurseOnTransit", dgvAllCasesApproved.Rows[i].Cells["NurseOnTransit"].Value);
+                            sqlCmd.Parameters.AddWithValue("@NurseReceiving", dgvAllCasesApproved.Rows[i].Cells["NurseAttending"].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverIncharge", dgvAllCasesApproved.Rows[i].Cells["DriverIncharge"].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverNo", dgvAllCasesApproved.Rows[i].Cells["DriverNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllCasesApproved.Rows[i].Cells["RegNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Date", dgvAllCasesApproved.Rows[i].Cells["Date"].Value);
+                            sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells["TimeOfCall"].Value);
+                            sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllCasesApproved.Rows[i].Cells["Status"].Value);
+                            sqlCmd.Parameters.AddWithValue("@ArrivalTime", dgvAllCasesApproved.Rows[i].Cells["ArrivalTime"].Value);
+                            sqlCmd.Parameters.AddWithValue("@CommentsDelays", dgvAllCasesApproved.Rows[i].Cells["CommentsDelays"].Value);                                                         
+                            sqlCmd.ExecuteNonQuery();                            
                             sqlCon.Close();
                            
                         }         

@@ -70,8 +70,8 @@ namespace KERICHO_CHMT
         private void Nurse_Load(object sender, EventArgs e)
         {
             //Hidding columns on page load
-            dgvPatientDetails.Columns["NurseReceiving"].Visible = false;
-            dgvPatientDetails.Columns["NurseReferring"].Visible = false;
+            //dgvPatientDetails.Columns["NurseReceiving"].Visible = true;
+            //dgvPatientDetails.Columns["NurseReferring"].Visible = true;
 
             if (label3.Text == "Nurse" || label3.Text == "Chief Nurse")
             {
@@ -213,10 +213,9 @@ namespace KERICHO_CHMT
        
         private void dgvPatientDetails_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            AddDataMsg.Show("Select Patient for Incoming/Outgoing Case", "", "OK", "Cancel");
 
-            this.Hide();
-            Msg1 msg = new Msg1();
-            msg.ShowDialog();          
+                   
         }
 
         private void dgvPatientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)

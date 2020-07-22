@@ -25,6 +25,8 @@ namespace KERICHO_CHMT
 
         private void ApprovedReferralReport_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet9.PatientRegisterApproved' table. You can move, or remove it, as needed.
+            this.patientRegisterApprovedTableAdapter1.Fill(this.cmbloginDataSet9.PatientRegisterApproved);
             // TODO: This line of code loads data into the 'cmbloginDataSet6.PatientRegisterApproved' table. You can move, or remove it, as needed.
             this.patientRegisterApprovedTableAdapter.Fill(this.cmbloginDataSet6.PatientRegisterApproved);
 
