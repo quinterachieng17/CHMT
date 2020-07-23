@@ -139,6 +139,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -438,6 +448,28 @@
     </None>
     <None Include="cmbloginDataSet1.xss">
       <DependentUpon>cmbloginDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet10.xsc">
+      <DependentUpon>cmbloginDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet10.xss">
+      <DependentUpon>cmbloginDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet11.xsc">
+      <DependentUpon>cmbloginDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet11.xss">
+      <DependentUpon>cmbloginDataSet11.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet2.xsc">
       <DependentUpon>cmbloginDataSet2.xsd</DependentUpon>

@@ -40,13 +40,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.cmbloginDataSet10 = new KERICHO_CHMT.cmbloginDataSet10();
+            this.referralRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.referralRegisterTableAdapter = new KERICHO_CHMT.cmbloginDataSet10TableAdapters.ReferralRegisterTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbPatientNo
             // 
-            this.cmbPatientNo.DataSource = this.patientRegisterBindingSource;
+            this.cmbPatientNo.DataSource = this.referralRegisterBindingSource;
             this.cmbPatientNo.DisplayMember = "PatientNo";
             this.cmbPatientNo.FormattingEnabled = true;
             this.cmbPatientNo.Location = new System.Drawing.Point(270, 13);
@@ -134,6 +139,20 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Time of Arrival";
             // 
+            // cmbloginDataSet10
+            // 
+            this.cmbloginDataSet10.DataSetName = "cmbloginDataSet10";
+            this.cmbloginDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // referralRegisterBindingSource
+            // 
+            this.referralRegisterBindingSource.DataMember = "ReferralRegister";
+            this.referralRegisterBindingSource.DataSource = this.cmbloginDataSet10;
+            // 
+            // referralRegisterTableAdapter
+            // 
+            this.referralRegisterTableAdapter.ClearBeforeFill = true;
+            // 
             // Msg2
             // 
             this.AcceptButton = this.btnOK;
@@ -152,8 +171,11 @@
             this.Name = "Msg2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Msg2";
+            this.Load += new System.EventHandler(this.Msg2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +194,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private cmbloginDataSet10 cmbloginDataSet10;
+        private System.Windows.Forms.BindingSource referralRegisterBindingSource;
+        private cmbloginDataSet10TableAdapters.ReferralRegisterTableAdapter referralRegisterTableAdapter;
     }
 }

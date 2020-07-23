@@ -29,12 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.referralRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet7 = new KERICHO_CHMT.cmbloginDataSet7();
             this.referralRegisterApprovedTableAdapter = new KERICHO_CHMT.cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbloginDataSet11 = new KERICHO_CHMT.cmbloginDataSet11();
+            this.referralRegisterApprovedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.referralRegisterApprovedTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet11TableAdapters.ReferralRegisterApprovedTableAdapter();
             this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,22 +51,25 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeOfCallDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transferStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommentsDelays = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.Location = new System.Drawing.Point(1366, 534);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.Location = new System.Drawing.Point(1366, 534);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 0;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -84,9 +90,9 @@
             this.dateDataGridViewTextBoxColumn,
             this.timeOfCallDataGridViewTextBoxColumn,
             this.transferStatusDataGridViewTextBoxColumn,
-            this.ArrivalTime,
-            this.CommentsDelays});
-            this.dataGridView1.DataSource = this.referralRegisterApprovedBindingSource;
+            this.timeDataGridViewTextBoxColumn,
+            this.commentsDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.referralRegisterApprovedBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(21, 93);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1493, 435);
@@ -118,6 +124,20 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Transfer Cases Approved";
             // 
+            // cmbloginDataSet11
+            // 
+            this.cmbloginDataSet11.DataSetName = "cmbloginDataSet11";
+            this.cmbloginDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // referralRegisterApprovedBindingSource1
+            // 
+            this.referralRegisterApprovedBindingSource1.DataMember = "ReferralRegisterApproved";
+            this.referralRegisterApprovedBindingSource1.DataSource = this.cmbloginDataSet11;
+            // 
+            // referralRegisterApprovedTableAdapter1
+            // 
+            this.referralRegisterApprovedTableAdapter1.ClearBeforeFill = true;
+            // 
             // patientIDDataGridViewTextBoxColumn
             // 
             this.patientIDDataGridViewTextBoxColumn.DataPropertyName = "PatientID";
@@ -129,21 +149,21 @@
             // patientNameDataGridViewTextBoxColumn
             // 
             this.patientNameDataGridViewTextBoxColumn.DataPropertyName = "PatientName";
-            this.patientNameDataGridViewTextBoxColumn.HeaderText = "PatientName";
+            this.patientNameDataGridViewTextBoxColumn.HeaderText = "Patient Name";
             this.patientNameDataGridViewTextBoxColumn.Name = "patientNameDataGridViewTextBoxColumn";
             // 
             // patientNoDataGridViewTextBoxColumn
             // 
             this.patientNoDataGridViewTextBoxColumn.DataPropertyName = "PatientNo";
-            this.patientNoDataGridViewTextBoxColumn.HeaderText = "PatientNo";
+            this.patientNoDataGridViewTextBoxColumn.HeaderText = "Patient No";
             this.patientNoDataGridViewTextBoxColumn.Name = "patientNoDataGridViewTextBoxColumn";
             // 
             // reasonForReferralDataGridViewTextBoxColumn
             // 
-            this.reasonForReferralDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.reasonForReferralDataGridViewTextBoxColumn.DataPropertyName = "ReasonForReferral";
-            this.reasonForReferralDataGridViewTextBoxColumn.HeaderText = "ReasonForReferral";
+            this.reasonForReferralDataGridViewTextBoxColumn.HeaderText = "Reason For Referral";
             this.reasonForReferralDataGridViewTextBoxColumn.Name = "reasonForReferralDataGridViewTextBoxColumn";
+            this.reasonForReferralDataGridViewTextBoxColumn.Width = 200;
             // 
             // facilityDataGridViewTextBoxColumn
             // 
@@ -154,7 +174,7 @@
             // nurseReferringDataGridViewTextBoxColumn
             // 
             this.nurseReferringDataGridViewTextBoxColumn.DataPropertyName = "NurseReferring";
-            this.nurseReferringDataGridViewTextBoxColumn.HeaderText = "NurseReferring";
+            this.nurseReferringDataGridViewTextBoxColumn.HeaderText = "Nurse Referring";
             this.nurseReferringDataGridViewTextBoxColumn.Name = "nurseReferringDataGridViewTextBoxColumn";
             // 
             // regNoDataGridViewTextBoxColumn
@@ -166,19 +186,19 @@
             // driverInchargeDataGridViewTextBoxColumn
             // 
             this.driverInchargeDataGridViewTextBoxColumn.DataPropertyName = "DriverIncharge";
-            this.driverInchargeDataGridViewTextBoxColumn.HeaderText = "DriverIncharge";
+            this.driverInchargeDataGridViewTextBoxColumn.HeaderText = "Driver In Charge";
             this.driverInchargeDataGridViewTextBoxColumn.Name = "driverInchargeDataGridViewTextBoxColumn";
             // 
             // nurseOnTransitDataGridViewTextBoxColumn
             // 
             this.nurseOnTransitDataGridViewTextBoxColumn.DataPropertyName = "NurseOnTransit";
-            this.nurseOnTransitDataGridViewTextBoxColumn.HeaderText = "NurseOnTransit";
+            this.nurseOnTransitDataGridViewTextBoxColumn.HeaderText = "Nurse On Transit";
             this.nurseOnTransitDataGridViewTextBoxColumn.Name = "nurseOnTransitDataGridViewTextBoxColumn";
             // 
             // driverNoDataGridViewTextBoxColumn
             // 
             this.driverNoDataGridViewTextBoxColumn.DataPropertyName = "DriverNo";
-            this.driverNoDataGridViewTextBoxColumn.HeaderText = "DriverNo";
+            this.driverNoDataGridViewTextBoxColumn.HeaderText = "Driver No";
             this.driverNoDataGridViewTextBoxColumn.Name = "driverNoDataGridViewTextBoxColumn";
             // 
             // dateDataGridViewTextBoxColumn
@@ -190,39 +210,44 @@
             // timeOfCallDataGridViewTextBoxColumn
             // 
             this.timeOfCallDataGridViewTextBoxColumn.DataPropertyName = "TimeOfCall";
-            this.timeOfCallDataGridViewTextBoxColumn.HeaderText = "TimeOfCall";
+            this.timeOfCallDataGridViewTextBoxColumn.HeaderText = "Time Of Call";
             this.timeOfCallDataGridViewTextBoxColumn.Name = "timeOfCallDataGridViewTextBoxColumn";
             // 
             // transferStatusDataGridViewTextBoxColumn
             // 
             this.transferStatusDataGridViewTextBoxColumn.DataPropertyName = "TransferStatus";
-            this.transferStatusDataGridViewTextBoxColumn.HeaderText = "TransferStatus";
+            this.transferStatusDataGridViewTextBoxColumn.HeaderText = "Transfer Status";
             this.transferStatusDataGridViewTextBoxColumn.Name = "transferStatusDataGridViewTextBoxColumn";
             // 
-            // ArrivalTime
+            // timeDataGridViewTextBoxColumn
             // 
-            this.ArrivalTime.HeaderText = "Arrival Time";
-            this.ArrivalTime.Name = "ArrivalTime";
+            this.timeDataGridViewTextBoxColumn.DataPropertyName = "Time";
+            this.timeDataGridViewTextBoxColumn.HeaderText = "Arrival Time";
+            this.timeDataGridViewTextBoxColumn.Name = "timeDataGridViewTextBoxColumn";
             // 
-            // CommentsDelays
+            // commentsDataGridViewTextBoxColumn
             // 
-            this.CommentsDelays.HeaderText = "Comments/ Reasons for Delays";
-            this.CommentsDelays.Name = "CommentsDelays";
+            this.commentsDataGridViewTextBoxColumn.DataPropertyName = "Comments";
+            this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments/ Delays";
+            this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
             // 
             // ApprovedTransferReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1514, 581);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Name = "ApprovedTransferReport";
             this.Text = "ApprovedTransferReport";
             this.Load += new System.EventHandler(this.ApprovedTransferReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,12 +255,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.DataGridView dataGridView1;
         private cmbloginDataSet7 cmbloginDataSet7;
         private System.Windows.Forms.BindingSource referralRegisterApprovedBindingSource;
         private cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter referralRegisterApprovedTableAdapter;
         private System.Windows.Forms.Label label1;
+        private cmbloginDataSet11 cmbloginDataSet11;
+        private System.Windows.Forms.BindingSource referralRegisterApprovedBindingSource1;
+        private cmbloginDataSet11TableAdapters.ReferralRegisterApprovedTableAdapter referralRegisterApprovedTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn patientNoDataGridViewTextBoxColumn;
@@ -249,7 +277,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeOfCallDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn transferStatusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivalTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CommentsDelays;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
     }
 }

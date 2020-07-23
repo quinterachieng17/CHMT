@@ -34,9 +34,8 @@ namespace KERICHO_CHMT
         private void ApproveTransfers_Load(object sender, EventArgs e)
         {
             //Loads data from ReferralRegister table
-            String query = "select * from ReferralRegister,CommentsTable";
+            String query = "select * from ReferralRegister,CommentsTableTransfers where ReferralRegister.PatientNo = CommentsTableTransfers.PatientNo";
             SqlCommand cmd = new SqlCommand(query, sqlcon);
-
             sqlcon.Open();
             cmd.ExecuteNonQuery();
             DataTable dtbl = new DataTable();
@@ -60,41 +59,37 @@ namespace KERICHO_CHMT
             chk.HeaderText = "Approve";
             chk.Name = "CheckBox";
             dgvAllTransfersApprove.Columns.Add(chk);
-
-        
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
-                foreach (DataGridViewRow row in dgvAllCasesApproved.Rows)
+                foreach (DataGridViewRow row in dgvAllTransfersApprove.Rows)
                 {
-                    for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
+                    for (int i = 0; i < dgvAllTransfersApprove.Rows.Count; i++)
                     {
 
-                        if (row.Cells[15].Value != null)
+                        if (row.Cells["CheckBox"].Value != null)
                         {
-                            row.Cells["TransferStatus"].Value = "Approved";
-
-
+                            row.Cells["TransferStatus"].Value = "Approved";                            
                             sqlCon.Open();
                             SqlCommand sqlCmd = new SqlCommand("ReferralApprovedAdd", sqlCon);
                             sqlCmd.CommandType = CommandType.StoredProcedure;
-                            sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllCasesApproved.Rows[i].Cells["PatientName"].Value);
-                            sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllCasesApproved.Rows[i].Cells["PatientNo"].Value);
-                            sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllCasesApproved.Rows[i].Cells["ReasonForReferral"].Value);
-                            sqlCmd.Parameters.AddWithValue("@Facility", dgvAllCasesApproved.Rows[i].Cells["Facility"].Value);
-                            sqlCmd.Parameters.AddWithValue("@NurseOnTransit", dgvAllCasesApproved.Rows[i].Cells["NurseOnTransit"].Value);
-                            sqlCmd.Parameters.AddWithValue("@Nursereferring", dgvAllCasesApproved.Rows[i].Cells["NurseAttending"].Value);
-                            sqlCmd.Parameters.AddWithValue("@DriverIncharge", dgvAllCasesApproved.Rows[i].Cells["DriverIncharge"].Value);
-                            sqlCmd.Parameters.AddWithValue("@DriverNo", dgvAllCasesApproved.Rows[i].Cells["DriverNo"].Value);
-                            sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllCasesApproved.Rows[i].Cells["RegNo"].Value);
-                            sqlCmd.Parameters.AddWithValue("@Date", dgvAllCasesApproved.Rows[i].Cells["Date"].Value);
-                            sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells["TimeOfCall"].Value);
-                            sqlCmd.Parameters.AddWithValue("@Status", dgvAllCasesApproved.Rows[i].Cells["TransferStatus"].Value);
-                            sqlCmd.Parameters.AddWithValue("@ArrivalTime", dgvAllCasesApproved.Rows[i].Cells["Time"].Value);
-                            sqlCmd.Parameters.AddWithValue("@CommentsDelays", dgvAllCasesApproved.Rows[i].Cells["Comments"].Value);
+                            sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllTransfersApprove.Rows[i].Cells["PatientName"].Value);
+                            sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllTransfersApprove.Rows[i].Cells["PatientNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllTransfersApprove.Rows[i].Cells["ReasonForReferral"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Facility", dgvAllTransfersApprove.Rows[i].Cells["Facility"].Value);
+                            sqlCmd.Parameters.AddWithValue("@NurseOnTransit", dgvAllTransfersApprove.Rows[i].Cells["NurseOnTransit"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Nursereferring", dgvAllTransfersApprove.Rows[i].Cells["NurseAttending"].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverIncharge", dgvAllTransfersApprove.Rows[i].Cells["DriverIncharge"].Value);
+                            sqlCmd.Parameters.AddWithValue("@DriverNo", dgvAllTransfersApprove.Rows[i].Cells["DriverNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@RegNo", dgvAllTransfersApprove.Rows[i].Cells["RegNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Date", dgvAllTransfersApprove.Rows[i].Cells["Date"].Value);
+                            sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllTransfersApprove.Rows[i].Cells["TimeOfCall"].Value);
+                            sqlCmd.Parameters.AddWithValue("@TransferStatus", dgvAllTransfersApprove.Rows[i].Cells["TransferStatus"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Time", dgvAllTransfersApprove.Rows[i].Cells["Time"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Comments", dgvAllTransfersApprove.Rows[i].Cells["Comments"].Value);
                             sqlCmd.ExecuteNonQuery();                           
                             sqlCon.Close();
                         }

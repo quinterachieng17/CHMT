@@ -42,10 +42,10 @@ namespace KERICHO_CHMT
         }
 
         private void ApproverReferrals_Load(object sender, EventArgs e)
-        {           
-                String query = "select * from PatientRegister,CommentsTable";
+        {      
+                //Loads data from PatientRegister table and Comments Table
+                String query = "select * from PatientRegister,CommentsTable where PatientRegister.PatientNo = CommentsTable.PatientNo";           
                 SqlCommand cmd = new SqlCommand(query, sqlcon);
-
                 sqlcon.Open();
                 cmd.ExecuteNonQuery();              
                 DataTable dtbl = new DataTable();
@@ -85,7 +85,7 @@ namespace KERICHO_CHMT
                     for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
 
-                        if (row.Cells[15].Value != null)
+                        if (row.Cells["Status"].Value != null)
                         {
                             row.Cells["Status"].Value = "Approved";
 

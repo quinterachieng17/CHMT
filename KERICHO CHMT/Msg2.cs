@@ -22,26 +22,30 @@ namespace KERICHO_CHMT
         {
             if (cmbPatientNo.Text != null || txtArrivalTime.Text != null || txtCommentsDelays.Text != null)
             {
-
-
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
                     SqlCommand sqlCmd = new SqlCommand("CommentsAdd", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@PatientID", 0);
-                    sqlCmd.Parameters.AddWithValue("@PatientNo", txtArrivalTime.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@PatientNo", cmbPatientNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Arrivaltime", txtArrivalTime.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@CommentsDelays", txtCommentsDelays.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Details added");
-
                 }
             }
             else
             {
                 MessageBox.Show("These fields are Mandatory");
             }
+        }
+
+        private void Msg2_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'cmbloginDataSet10.ReferralRegister' table. You can move, or remove it, as needed.
+            this.referralRegisterTableAdapter.Fill(this.cmbloginDataSet10.ReferralRegister);
+
         }
     }
 }
