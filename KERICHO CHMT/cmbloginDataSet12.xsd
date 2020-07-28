@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="cmbloginDataSet12" targetNamespace="http://tempuri.org/cmbloginDataSet12.xsd" xmlns:mstns="http://tempuri.org/cmbloginDataSet12.xsd" xmlns="http://tempuri.org/cmbloginDataSet12.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cmbloginConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cmbloginConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.KERICHO_CHMT.Properties.Settings.GlobalReference.Default.cmbloginConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PatientRegisterApprovedTableAdapter" GeneratorDataComponentClassName="PatientRegisterApprovedTableAdapter" Name="PatientRegisterApproved" UserDataComponentName="PatientRegisterApprovedTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cmbloginConnectionString (Settings)" DbObjectName="cmblogin.dbo.PatientRegisterApproved" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ReasonForReferral, Facility FROM dbo.PatientRegisterApproved</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ReasonForReferral" DataSetColumn="ReasonForReferral" />
+              <Mapping SourceColumn="Facility" DataSetColumn="Facility" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="cmbloginDataSet12" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="cmbloginDataSet12" msprop:Generator_UserDSName="cmbloginDataSet12">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PatientRegisterApproved" msprop:Generator_TableClassName="PatientRegisterApprovedDataTable" msprop:Generator_TableVarName="tablePatientRegisterApproved" msprop:Generator_TablePropName="PatientRegisterApproved" msprop:Generator_RowDeletingName="PatientRegisterApprovedRowDeleting" msprop:Generator_RowChangingName="PatientRegisterApprovedRowChanging" msprop:Generator_RowEvHandlerName="PatientRegisterApprovedRowChangeEventHandler" msprop:Generator_RowDeletedName="PatientRegisterApprovedRowDeleted" msprop:Generator_UserTableName="PatientRegisterApproved" msprop:Generator_RowChangedName="PatientRegisterApprovedRowChanged" msprop:Generator_RowEvArgName="PatientRegisterApprovedRowChangeEvent" msprop:Generator_RowClassName="PatientRegisterApprovedRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ReasonForReferral" msprop:Generator_ColumnVarNameInTable="columnReasonForReferral" msprop:Generator_ColumnPropNameInRow="ReasonForReferral" msprop:Generator_ColumnPropNameInTable="ReasonForReferralColumn" msprop:Generator_UserColumnName="ReasonForReferral">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Facility" msprop:Generator_ColumnVarNameInTable="columnFacility" msprop:Generator_ColumnPropNameInRow="Facility" msprop:Generator_ColumnPropNameInTable="FacilityColumn" msprop:Generator_UserColumnName="Facility">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

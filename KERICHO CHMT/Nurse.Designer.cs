@@ -217,7 +217,7 @@
             // btnIncommingCase
             // 
             this.btnIncommingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIncommingCase.Location = new System.Drawing.Point(916, 8);
+            this.btnIncommingCase.Location = new System.Drawing.Point(915, 4);
             this.btnIncommingCase.Name = "btnIncommingCase";
             this.btnIncommingCase.Size = new System.Drawing.Size(114, 23);
             this.btnIncommingCase.TabIndex = 35;
@@ -229,9 +229,9 @@
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(3, 6);
+            this.button10.Location = new System.Drawing.Point(3, 3);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 27);
+            this.button10.Size = new System.Drawing.Size(75, 25);
             this.button10.TabIndex = 43;
             this.button10.Text = "Export to pdf";
             this.button10.UseVisualStyleBackColor = false;
@@ -244,7 +244,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(376, 9);
+            this.label2.Location = new System.Drawing.Point(375, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 44;
@@ -254,7 +254,7 @@
             // btnOutgoingCase
             // 
             this.btnOutgoingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnOutgoingCase.Location = new System.Drawing.Point(1091, 8);
+            this.btnOutgoingCase.Location = new System.Drawing.Point(1091, 4);
             this.btnOutgoingCase.Name = "btnOutgoingCase";
             this.btnOutgoingCase.Size = new System.Drawing.Size(114, 23);
             this.btnOutgoingCase.TabIndex = 45;
@@ -470,16 +470,16 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.817351F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.18265F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.button10, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(261, 76);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(261, 84);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1208, 39);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1208, 31);
             this.tableLayoutPanel5.TabIndex = 54;
             // 
             // tableLayoutPanel6
@@ -529,9 +529,9 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(1395, 55);
+            this.button4.Location = new System.Drawing.Point(1394, 60);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(75, 27);
             this.button4.TabIndex = 58;
             this.button4.Text = "Logout";
             this.button4.UseVisualStyleBackColor = true;

@@ -44,10 +44,9 @@ namespace KERICHO_CHMT
         //send to patientRegisterApprove and TransferRegisterApprove tables
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (cmbPatientNo.Text == null || txtArrivalTime.Text == null || txtCommentsDelays.Text == null)
-            {
+            if (cmbPatientNo.Text == "" || txtArrivalTime.Text == "" || txtCommentsDelays.Text == "")           
                 MessageBox.Show("These fields are Mandatory");
-            }
+            
             else
             { 
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -60,12 +59,19 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@Arrivaltime", txtArrivalTime.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@CommentsDelays", txtCommentsDelays.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    sqlCon.Close();                 
+                    sqlCon.Close();
+                    MessageBox.Show("Details added");
+                    Clear();                
                 }
-                MessageBox.Show("Details added");
+                
             }
            
           
+        }
+        void Clear()
+        {
+          cmbPatientNo.Text = txtArrivalTime.Text = txtCommentsDelays.Text =  "";
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

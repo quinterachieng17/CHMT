@@ -85,13 +85,18 @@ namespace KERICHO_CHMT
                     for (int i = 0; i < dgvAllCasesApproved.Rows.Count; i++)
                     {
 
-                        if (row.Cells["Status"].Value != null)
+                        if (row.Cells["Status"].Value == null)
+                        {
+
+                        }
+
+                        else if (row.Cells["Status"].Value != null)
                         {
                             row.Cells["Status"].Value = "Approved";
 
                             sqlCon.Open();
                             SqlCommand sqlCmd = new SqlCommand("PatientApprovedAdd", sqlCon);
-                            sqlCmd.CommandType = CommandType.StoredProcedure;                           
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
                             sqlCmd.Parameters.AddWithValue("@PatientName", dgvAllCasesApproved.Rows[i].Cells["PatientName"].Value);
                             sqlCmd.Parameters.AddWithValue("@PatientNo", dgvAllCasesApproved.Rows[i].Cells["PatientNo"].Value);
                             sqlCmd.Parameters.AddWithValue("@ReasonForReferral", dgvAllCasesApproved.Rows[i].Cells["ReasonForReferral"].Value);
@@ -105,10 +110,10 @@ namespace KERICHO_CHMT
                             sqlCmd.Parameters.AddWithValue("@TimeOfCall", dgvAllCasesApproved.Rows[i].Cells["TimeOfCall"].Value);
                             sqlCmd.Parameters.AddWithValue("@ApprovalStatus", dgvAllCasesApproved.Rows[i].Cells["Status"].Value);
                             sqlCmd.Parameters.AddWithValue("@ArrivalTime", dgvAllCasesApproved.Rows[i].Cells["ArrivalTime"].Value);
-                            sqlCmd.Parameters.AddWithValue("@CommentsDelays", dgvAllCasesApproved.Rows[i].Cells["CommentsDelays"].Value);                                                         
-                            sqlCmd.ExecuteNonQuery();                            
+                            sqlCmd.Parameters.AddWithValue("@CommentsDelays", dgvAllCasesApproved.Rows[i].Cells["CommentsDelays"].Value);
+                            sqlCmd.ExecuteNonQuery();
                             sqlCon.Close();
-                           
+
                         }         
                     }
                    

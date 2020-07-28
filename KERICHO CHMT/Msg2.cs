@@ -20,7 +20,9 @@ namespace KERICHO_CHMT
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (cmbPatientNo.Text != null || txtArrivalTime.Text != null || txtCommentsDelays.Text != null)
+            if (cmbPatientNo.Text == "" || txtArrivalTime.Text == "" || txtCommentsDelays.Text == "")
+                MessageBox.Show("These fields are Mandatory");
+            else
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
@@ -33,12 +35,14 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@CommentsDelays", txtCommentsDelays.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Details added");
+                    Clear();
                 }
             }
-            else
-            {
-                MessageBox.Show("These fields are Mandatory");
-            }
+        }
+        void Clear()
+        {
+            cmbPatientNo.Text = txtArrivalTime.Text = txtCommentsDelays.Text = "";
+
         }
 
         private void Msg2_Load(object sender, EventArgs e)
