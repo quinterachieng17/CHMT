@@ -46,7 +46,7 @@ namespace KERICHO_CHMT
         }
 
         private void Patient_Register_Load(object sender, EventArgs e)
-        {
+        {           
             RegNo();
             DriverIncharge();
             DriverName();
@@ -274,7 +274,7 @@ namespace KERICHO_CHMT
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select IDNumber from StaffRegister";
+            cmd.CommandText = "select IDNumber from UserRegister";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -292,19 +292,17 @@ namespace KERICHO_CHMT
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select LastName from StaffRegister";
+            cmd.CommandText = "select FirstName from UserRegister";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                cmbDriverIncharge.Items.Add(dr["LastName"].ToString());
+                cmbDriverIncharge.Items.Add(dr["FirstName"].ToString());
             }
             con.Close();
         }
-
-        //To do. Create a table for registering drivers
 
         private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
         {

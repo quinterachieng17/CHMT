@@ -65,6 +65,11 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmbloginDataSet20 = new KERICHO_CHMT.cmbloginDataSet20();
+            this.cmbloginDataSet21 = new KERICHO_CHMT.cmbloginDataSet21();
+            this.cmbloginDataSet22 = new KERICHO_CHMT.cmbloginDataSet22();
+            this.cmbloginDataSet23 = new KERICHO_CHMT.cmbloginDataSet23();
+            this.cmbloginDataSet24 = new KERICHO_CHMT.cmbloginDataSet24();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -73,6 +78,11 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet24)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -343,7 +353,7 @@
             this.cmbFacility.Items.AddRange(new object[] {
             "Incoming Referral",
             "Outgoing Referral"});
-            this.cmbFacility.Location = new System.Drawing.Point(266, 6);
+            this.cmbFacility.Location = new System.Drawing.Point(265, 6);
             this.cmbFacility.Name = "cmbFacility";
             this.cmbFacility.Size = new System.Drawing.Size(220, 21);
             this.cmbFacility.TabIndex = 27;
@@ -440,7 +450,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.73494F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26506F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmbFacility, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label15, 2, 0);
@@ -458,7 +468,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(639, 8);
+            this.label15.Location = new System.Drawing.Point(638, 8);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(80, 17);
             this.label15.TabIndex = 30;
@@ -467,7 +477,7 @@
             // txtTimeOfCall
             // 
             this.txtTimeOfCall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTimeOfCall.Location = new System.Drawing.Point(725, 7);
+            this.txtTimeOfCall.Location = new System.Drawing.Point(724, 7);
             this.txtTimeOfCall.Name = "txtTimeOfCall";
             this.txtTimeOfCall.Size = new System.Drawing.Size(225, 20);
             this.txtTimeOfCall.TabIndex = 31;
@@ -547,6 +557,31 @@
             this.tableLayoutPanel7.TabIndex = 39;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
+            // cmbloginDataSet20
+            // 
+            this.cmbloginDataSet20.DataSetName = "cmbloginDataSet20";
+            this.cmbloginDataSet20.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbloginDataSet21
+            // 
+            this.cmbloginDataSet21.DataSetName = "cmbloginDataSet21";
+            this.cmbloginDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbloginDataSet22
+            // 
+            this.cmbloginDataSet22.DataSetName = "cmbloginDataSet22";
+            this.cmbloginDataSet22.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbloginDataSet23
+            // 
+            this.cmbloginDataSet23.DataSetName = "cmbloginDataSet23";
+            this.cmbloginDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbloginDataSet24
+            // 
+            this.cmbloginDataSet24.DataSetName = "cmbloginDataSet24";
+            this.cmbloginDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Patient_Register
             // 
             this.AcceptButton = this.btnSubmit;
@@ -579,6 +614,11 @@
             this.tableLayoutPanel6.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet24)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -622,5 +662,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtTimeOfCall;
+        private cmbloginDataSet21 cmbloginDataSet21;
+        private cmbloginDataSet20 cmbloginDataSet20;
+        private cmbloginDataSet22 cmbloginDataSet22;
+        private cmbloginDataSet23 cmbloginDataSet23;
+        private cmbloginDataSet24 cmbloginDataSet24;
     }
 }

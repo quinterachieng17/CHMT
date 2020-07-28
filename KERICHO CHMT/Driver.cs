@@ -21,7 +21,7 @@ namespace KERICHO_CHMT
      
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtDriverID.Text == "" || txtMileage.Text == "")
+            if (cmbDriverNo.Text == "" || txtMileage.Text == "")
                 MessageBox.Show("Driver's ID or Mileage cannot be blank");
 
             else
@@ -32,9 +32,10 @@ namespace KERICHO_CHMT
                     SqlCommand sqlCmd = new SqlCommand("MileageAdd", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
-                    sqlCmd.Parameters.AddWithValue("@DriverID", txtDriverID.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@RegNo", txtVehicleReg.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
@@ -46,7 +47,7 @@ namespace KERICHO_CHMT
         }
         void Clear()
         {
-            txtDriverID.Text = txtMileage.Text =  txtVehicleReg.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = "";
+            cmbDriverNo.Text = txtMileage.Text =  cmbRegNo.Text=cmbStation.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -58,6 +59,10 @@ namespace KERICHO_CHMT
 
         private void Driver_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet21.VehicleRegistration' table. You can move, or remove it, as needed.
+            this.vehicleRegistrationTableAdapter.Fill(this.cmbloginDataSet21.VehicleRegistration);
+            // TODO: This line of code loads data into the 'cmbloginDataSet20.UserRegister' table. You can move, or remove it, as needed.
+            this.userRegisterTableAdapter.Fill(this.cmbloginDataSet20.UserRegister);
 
         }
 

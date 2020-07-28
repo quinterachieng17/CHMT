@@ -59,6 +59,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -78,7 +80,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(675, 307);
+            this.txtFirstName.Location = new System.Drawing.Point(675, 277);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(244, 26);
             this.txtFirstName.TabIndex = 1;
@@ -99,9 +101,7 @@
             this.cbxDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDesignation.FormattingEnabled = true;
             this.cbxDesignation.Items.AddRange(new object[] {
-            "",
-            "Authorizing Officer",
-            "Secretary",
+            "Nurse",
             "Driver"});
             this.cbxDesignation.Location = new System.Drawing.Point(675, 202);
             this.cbxDesignation.Name = "cbxDesignation";
@@ -125,7 +125,7 @@
             this.lblRegion.AutoSize = true;
             this.lblRegion.BackColor = System.Drawing.Color.Transparent;
             this.lblRegion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegion.Location = new System.Drawing.Point(495, 255);
+            this.lblRegion.Location = new System.Drawing.Point(495, 242);
             this.lblRegion.Name = "lblRegion";
             this.lblRegion.Size = new System.Drawing.Size(66, 20);
             this.lblRegion.TabIndex = 7;
@@ -141,7 +141,7 @@
             "Kipkelion",
             "Kericho",
             "Sigowet"});
-            this.cbxRegion.Location = new System.Drawing.Point(675, 256);
+            this.cbxRegion.Location = new System.Drawing.Point(675, 243);
             this.cbxRegion.Name = "cbxRegion";
             this.cbxRegion.Size = new System.Drawing.Size(244, 28);
             this.cbxRegion.TabIndex = 6;
@@ -151,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(495, 309);
+            this.label2.Location = new System.Drawing.Point(495, 279);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 8;
@@ -163,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(495, 386);
+            this.label3.Location = new System.Drawing.Point(495, 356);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 10;
@@ -172,7 +172,7 @@
             // txtIDNumber
             // 
             this.txtIDNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDNumber.Location = new System.Drawing.Point(675, 384);
+            this.txtIDNumber.Location = new System.Drawing.Point(675, 354);
             this.txtIDNumber.Name = "txtIDNumber";
             this.txtIDNumber.Size = new System.Drawing.Size(244, 26);
             this.txtIDNumber.TabIndex = 9;
@@ -305,7 +305,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 217);
+            this.label7.Location = new System.Drawing.Point(20, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 20);
             this.label7.TabIndex = 23;
@@ -386,7 +386,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(495, 349);
+            this.label9.Location = new System.Drawing.Point(495, 319);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 20);
             this.label9.TabIndex = 31;
@@ -395,11 +395,30 @@
             // txtLastName
             // 
             this.txtLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLastName.Location = new System.Drawing.Point(675, 347);
+            this.txtLastName.Location = new System.Drawing.Point(675, 317);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(244, 26);
             this.txtLastName.TabIndex = 30;
             this.txtLastName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFirstName_KeyPress);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(495, 390);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(675, 390);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(244, 26);
+            this.txtUsername.TabIndex = 33;
             // 
             // Register
             // 
@@ -407,6 +426,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1467, 690);
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.pictureBox1);
@@ -484,5 +505,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtUsername;
     }
 }

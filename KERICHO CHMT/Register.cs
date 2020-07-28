@@ -95,7 +95,8 @@ namespace KERICHO_CHMT
             else if (txtPassword.Text != txtConfirmPassword.Text)
                 MessageBox.Show("Passwords do not match!");
 
-            else
+            //Adds nurse to StaffReister Table
+            else if (cbxDesignation.SelectedIndex==0)
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
@@ -108,9 +109,33 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@LastName", txtLastName.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@IDNumber", txtIDNumber.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    MessageBox.Show("Staff successfully added");
+                    MessageBox.Show("Staff added successfully");
+                    Clear();
+
+                }
+            }
+
+            //Add Driver to UserRegister Table
+            else if (cbxDesignation.SelectedIndex == 1)
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("UserAdd", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                    sqlCmd.Parameters.AddWithValue("@DesignationID", cbxDesignation.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@RegionID", cbxRegion.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@LastName", txtLastName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@IDNumber", txtIDNumber.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("User added successfully");
                     Clear();
 
                 }
@@ -118,7 +143,7 @@ namespace KERICHO_CHMT
         }
         void Clear()
         {
-            cbxDesignation.Text = cbxRegion.Text = txtFirstName.Text = txtLastName.Text = txtIDNumber.Text =  txtPassword.Text = txtConfirmPassword.Text = "";
+            cbxDesignation.Text = cbxRegion.Text = txtFirstName.Text = txtLastName.Text = txtIDNumber.Text = txtUsername.Text =  txtPassword.Text = txtConfirmPassword.Text = "";
         }
 
         private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
