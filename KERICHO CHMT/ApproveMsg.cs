@@ -48,6 +48,11 @@ namespace KERICHO_CHMT
                 ApproveTransfers.Show("ALL TRANSFERRED REFERRAL CASES FROM KERICHO COUNTY REFERRAL HOSPITAL", "", "Approve", "Cancel"); MsgBox.Close();
                               
             }
+            else if (cmbCase.SelectedIndex == 2)
+            {
+                EditPatientDetails.Show("EDIT TRANSFERRED REFERRAL CASE FROM KERICHO COUNTY REFERRAL HOSPITAL", "", "Edit", "Cancel"); MsgBox.Close();
+
+            }
 
             else
             {

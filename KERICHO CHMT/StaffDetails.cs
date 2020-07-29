@@ -136,6 +136,8 @@ namespace KERICHO_CHMT
 
         private void StaffDetails_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet25.StaffRegister' table. You can move, or remove it, as needed.
+          //  this.staffRegisterTableAdapter.Fill(this.cmbloginDataSet25.StaffRegister);
 
             // TODO: This line of code loads data into the 'cmbloginDataSet.RegisterStaff' table. You can move, or remove it, as needed.
             //this.registerStaffTableAdapter.Fill(this.cmbloginDataSet.RegisterStaff);
@@ -230,6 +232,23 @@ namespace KERICHO_CHMT
                 e.ThrowException = false;
 
              }
+        }
+
+        private void viewDrivers_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                // Displays only the selected columns
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dtbl;
+
+            }
         }
     }
 }

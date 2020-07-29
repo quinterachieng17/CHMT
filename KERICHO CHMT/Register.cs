@@ -20,7 +20,13 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        public Register(string username)
+        {
+            InitializeComponent();
+            label6.Text = username;
+        }
+
+    private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -33,7 +39,7 @@ namespace KERICHO_CHMT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label6.Text);
             ss.Show();
         }
 

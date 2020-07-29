@@ -39,7 +39,8 @@
             this.cmbCase.FormattingEnabled = true;
             this.cmbCase.Items.AddRange(new object[] {
             "Incoming Referrals",
-            "Outgoing Referrals"});
+            "Outgoing Referrals",
+            "Edit Patient Details"});
             this.cmbCase.Location = new System.Drawing.Point(273, 86);
             this.cmbCase.Name = "cmbCase";
             this.cmbCase.Size = new System.Drawing.Size(205, 21);

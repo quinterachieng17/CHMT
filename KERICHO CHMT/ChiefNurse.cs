@@ -47,5 +47,10 @@ namespace KERICHO_CHMT
         {
             ApproveMsg.Show("Select Case to Approve", "", "OK", "Cancel");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

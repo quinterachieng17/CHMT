@@ -219,6 +219,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet24.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet25.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -271,6 +276,12 @@
     </Compile>
     <Compile Include="Driver.Designer.cs">
       <DependentUpon>Driver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPatientDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPatientDetails.Designer.cs">
+      <DependentUpon>EditPatientDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="EditVehicle.cs">
       <SubType>Form</SubType>
@@ -426,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driver.resx">
       <DependentUpon>Driver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPatientDetails.resx">
+      <DependentUpon>EditPatientDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditVehicle.resx">
       <DependentUpon>EditVehicle.cs</DependentUpon>
@@ -710,6 +724,17 @@
     </None>
     <None Include="cmbloginDataSet24.xss">
       <DependentUpon>cmbloginDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet25.xsc">
+      <DependentUpon>cmbloginDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet25.xss">
+      <DependentUpon>cmbloginDataSet25.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet3.xsc">
       <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>

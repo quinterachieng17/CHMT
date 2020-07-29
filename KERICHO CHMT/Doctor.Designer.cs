@@ -46,9 +46,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -71,11 +71,11 @@
             // 
             // lblDashboard
             // 
-            this.lblDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDashboard.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
             this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(119, 5);
+            this.lblDashboard.Location = new System.Drawing.Point(236, 5);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(238, 20);
             this.lblDashboard.TabIndex = 1;
@@ -244,8 +244,8 @@
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.button8, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.button2, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.button5, 0, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(178, 82);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -290,6 +290,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(131, 150);
             this.tableLayoutPanel3.TabIndex = 19;
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(41, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 19);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "label2";
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -321,18 +333,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(722, 30);
             this.tableLayoutPanel5.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 128);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 19);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "label2";
             // 
             // Doctor
             // 

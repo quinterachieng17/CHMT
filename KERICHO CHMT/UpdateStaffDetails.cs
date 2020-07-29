@@ -167,6 +167,30 @@ namespace KERICHO_CHMT
                 e.Cancel = true;
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StaffRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvEmployee.DataSource = dtbl;
+            }
+            label1.Text = "Update Staff Details";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvEmployee.DataSource = dtbl;
+            }
+            label1.Text = "Update Driver Details";
+        }
     }
 }

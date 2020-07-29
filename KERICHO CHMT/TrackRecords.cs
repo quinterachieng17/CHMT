@@ -229,6 +229,9 @@ namespace KERICHO_CHMT
             exportgridviewtopdf(dgv1, "KTIMS Records");
         }
 
-       
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

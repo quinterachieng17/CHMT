@@ -14,9 +14,9 @@ namespace KERICHO_CHMT
         public Doctor()
         {
             InitializeComponent();
-           
         }
-        
+
+        //Parsing username to the next page
         public Doctor(string cmb)
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace KERICHO_CHMT
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register ss = new Register();
+            Register ss = new Register(label2.Text);
             ss.Show();
         }
 
@@ -59,7 +59,7 @@ namespace KERICHO_CHMT
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-           TrackRecords ss = new TrackRecords();
+            WorkTicketSummary ss = new WorkTicketSummary();
             ss.Show();
         }
 

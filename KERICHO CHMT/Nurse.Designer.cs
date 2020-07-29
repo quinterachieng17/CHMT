@@ -60,7 +60,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBoxBack = new System.Windows.Forms.PictureBox();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -68,10 +67,10 @@
             this.btnReferralCases = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.button4 = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatientDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartReferrals)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).BeginInit();
@@ -217,7 +216,7 @@
             // btnIncommingCase
             // 
             this.btnIncommingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIncommingCase.Location = new System.Drawing.Point(915, 4);
+            this.btnIncommingCase.Location = new System.Drawing.Point(826, 4);
             this.btnIncommingCase.Name = "btnIncommingCase";
             this.btnIncommingCase.Size = new System.Drawing.Size(114, 23);
             this.btnIncommingCase.TabIndex = 35;
@@ -231,7 +230,7 @@
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button10.Location = new System.Drawing.Point(3, 3);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 25);
+            this.button10.Size = new System.Drawing.Size(62, 25);
             this.button10.TabIndex = 43;
             this.button10.Text = "Export to pdf";
             this.button10.UseVisualStyleBackColor = false;
@@ -244,7 +243,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(375, 5);
+            this.label2.Location = new System.Drawing.Point(332, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 44;
@@ -254,7 +253,7 @@
             // btnOutgoingCase
             // 
             this.btnOutgoingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnOutgoingCase.Location = new System.Drawing.Point(1091, 4);
+            this.btnOutgoingCase.Location = new System.Drawing.Point(953, 4);
             this.btnOutgoingCase.Name = "btnOutgoingCase";
             this.btnOutgoingCase.Size = new System.Drawing.Size(114, 23);
             this.btnOutgoingCase.TabIndex = 45;
@@ -338,7 +337,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxBack, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnEdit, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(15, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -357,16 +355,6 @@
             this.pictureBoxBack.TabIndex = 56;
             this.pictureBoxBack.TabStop = false;
             this.pictureBoxBack.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(1323, 34);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(128, 23);
-            this.btnEdit.TabIndex = 57;
-            this.btnEdit.Text = "Edit Patient Details";
-            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -466,21 +454,36 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 4;
+            this.tableLayoutPanel5.ColumnCount = 5;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.817351F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.18265F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-            this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.button10, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button4, 4, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(261, 84);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1208, 31);
             this.tableLayoutPanel5.TabIndex = 54;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button4.Location = new System.Drawing.Point(1130, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 25);
+            this.button4.TabIndex = 58;
+            this.button4.Text = "Logout";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // tableLayoutPanel6
             // 
@@ -524,19 +527,6 @@
             this.tableLayoutPanel7.TabIndex = 57;
             this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(1394, 60);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 27);
-            this.button4.TabIndex = 58;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
-            // 
             // Nurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -544,7 +534,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1483, 703);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel5);
@@ -598,7 +587,6 @@
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn PatientNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PatientName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReasonForReferral;

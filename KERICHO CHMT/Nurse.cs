@@ -27,12 +27,7 @@ namespace KERICHO_CHMT
             label3.Text =cmb;          
         }
 
-        //public Nurse(string username)
-        //{
-        //    InitializeComponent();
-        //    label3.Text = username;
-        //}
-
+        
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
@@ -56,7 +51,14 @@ namespace KERICHO_CHMT
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Patient_Register.Show("Patient Name","PATIENT REGISTRATION", "OK", "Cancel");
+            if (label3.Text == "Transport Officer" || label3.Text == "Chief Nurse")
+            {
+                MessageBox.Show("Please ask a nurse to register the patient");
+            }
+            else
+            {
+                Patient_Register.Show("Patient Name", "PATIENT REGISTRATION", "OK", "Cancel");
+            }
         }
 
         private void btnReferralCases_Click(object sender, EventArgs e)
@@ -75,10 +77,9 @@ namespace KERICHO_CHMT
 
             if (label3.Text == "Nurse" || label3.Text == "Chief Nurse")
             {
-                pictureBoxBack.Hide();
-                btnEdit.Hide();
+                pictureBoxBack.Hide();               
             }
-
+            
             //Loading to the dataGridView                    
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
@@ -213,9 +214,14 @@ namespace KERICHO_CHMT
        
         private void dgvPatientDetails_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            AddDataMsg.Show("Select Patient for Incoming/Outgoing Case", "", "OK", "Cancel");
-
-                   
+            if (label3.Text == "Transport Officer" || label3.Text == "Chief Nurse")
+            {
+                MessageBox.Show("Please ask a nurse to add patient Details");
+            }
+            else
+            {
+                AddDataMsg.Show("Select Patient for Incoming/Outgoing Case", "", "OK", "Cancel");
+            }
         }
 
         private void dgvPatientDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
