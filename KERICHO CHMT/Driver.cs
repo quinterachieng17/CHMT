@@ -24,12 +24,13 @@ namespace KERICHO_CHMT
             if (cmbDriverNo.Text == "" || txtMileage.Text == "")
                 MessageBox.Show("Driver's ID or Mileage cannot be blank");
 
-            else
+            //Jumbo lpg
+            else if (cmbStation.SelectedIndex == 0)
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    SqlCommand sqlCmd = new SqlCommand("MileageAdd", sqlCon);
+                    SqlCommand sqlCmd = new SqlCommand("JumboAdd", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
                     sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
@@ -39,11 +40,59 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Mileage Recorded succsessfully");
+                    Clear();
+                }
+
+            }
+            //Kipsigis lpg
+            else if (cmbStation.SelectedIndex == 1)
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("KipsigisAdd", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                    sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
+                    sqlCmd.ExecuteNonQuery();
+                    MessageBox.Show("Mileage Recorded succsessfully");
+                    Clear();
+                }
+
+            }
+            //Homeline lpg
+            else if (cmbStation.SelectedIndex == 2)
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlCommand sqlCmd = new SqlCommand("HomelineAdd", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                    sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Mileage Recorded succsessfully");
                     Clear();
                 }
             }
+           
         }
         void Clear()
         {

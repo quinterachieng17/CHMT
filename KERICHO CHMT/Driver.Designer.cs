@@ -155,7 +155,8 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(125, 3);
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSubmit.Location = new System.Drawing.Point(166, 3);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 26);
             this.btnSubmit.TabIndex = 31;
@@ -165,8 +166,9 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(3, 3);
+            this.btnCancel.Location = new System.Drawing.Point(44, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 26);
             this.btnCancel.TabIndex = 32;
@@ -220,10 +222,10 @@
             // 
             // txtDestination
             // 
-            this.txtDestination.Location = new System.Drawing.Point(278, 3);
+            this.txtDestination.Location = new System.Drawing.Point(230, 3);
             this.txtDestination.Multiline = true;
             this.txtDestination.Name = "txtDestination";
-            this.txtDestination.Size = new System.Drawing.Size(637, 44);
+            this.txtDestination.Size = new System.Drawing.Size(683, 44);
             this.txtDestination.TabIndex = 38;
             this.txtDestination.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDestination_KeyPress);
             // 
@@ -312,7 +314,7 @@
             this.cmbStation.Items.AddRange(new object[] {
             "Jumbo",
             "Kipsigis",
-            "Homelins"});
+            "Homeline"});
             this.cmbStation.Location = new System.Drawing.Point(690, 6);
             this.cmbStation.Name = "cmbStation";
             this.cmbStation.Size = new System.Drawing.Size(225, 21);
@@ -380,8 +382,8 @@
             // 
             this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.8366F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.1634F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtDestination, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 188);
@@ -421,8 +423,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Driver";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Driver";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.Load += new System.EventHandler(this.Driver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).EndInit();

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.AddByFacilityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet19 = new KERICHO_CHMT.cmbloginDataSet19();
             this.AddByNursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -160,9 +160,9 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(10, 219);
+            this.button1.Location = new System.Drawing.Point(5, 216);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 33);
+            this.button1.Size = new System.Drawing.Size(190, 39);
             this.button1.TabIndex = 3;
             this.button1.Text = "All Approved Referral Cases";
             this.button1.UseVisualStyleBackColor = true;
@@ -171,9 +171,9 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(9, 264);
+            this.button2.Location = new System.Drawing.Point(7, 262);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(182, 33);
+            this.button2.Size = new System.Drawing.Size(186, 37);
             this.button2.TabIndex = 4;
             this.button2.Text = "All Approved Transferred Cases";
             this.button2.UseVisualStyleBackColor = true;
@@ -222,8 +222,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.button8, 0, 2);
@@ -248,9 +247,9 @@
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.Location = new System.Drawing.Point(10, 115);
+            this.button8.Location = new System.Drawing.Point(5, 110);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(179, 29);
+            this.button8.Size = new System.Drawing.Size(190, 39);
             this.button8.TabIndex = 12;
             this.button8.Text = "Driver/ Vehicle";
             this.button8.UseVisualStyleBackColor = true;
@@ -259,9 +258,9 @@
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(3, 63);
+            this.button5.Location = new System.Drawing.Point(3, 56);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(193, 29);
+            this.button5.Size = new System.Drawing.Size(193, 43);
             this.button5.TabIndex = 6;
             this.button5.Text = "Nurses";
             this.button5.UseVisualStyleBackColor = true;
@@ -270,20 +269,21 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(10, 13);
+            this.button4.Location = new System.Drawing.Point(5, 9);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 26);
+            this.button4.Size = new System.Drawing.Size(190, 34);
             this.button4.TabIndex = 5;
             this.button4.Text = " Facility";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_MouseClick);
             // 
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Location = new System.Drawing.Point(9, 164);
+            this.button6.Location = new System.Drawing.Point(4, 164);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(182, 40);
+            this.button6.Size = new System.Drawing.Size(191, 40);
             this.button6.TabIndex = 7;
             this.button6.Text = "Ambulance Report";
             this.button6.UseVisualStyleBackColor = true;
@@ -311,17 +311,17 @@
             this.chartReferrals.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.chartReferrals.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
             this.chartReferrals.BorderlineColor = System.Drawing.Color.Gray;
-            chartArea3.Name = "ChartArea1";
-            this.chartReferrals.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            legend3.Title = "Referrals Chart";
-            this.chartReferrals.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartReferrals.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            legend1.Title = "Referrals Chart";
+            this.chartReferrals.Legends.Add(legend1);
             this.chartReferrals.Location = new System.Drawing.Point(23, 3);
             this.chartReferrals.Name = "chartReferrals";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartReferrals.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartReferrals.Series.Add(series1);
             this.chartReferrals.Size = new System.Drawing.Size(300, 223);
             this.chartReferrals.TabIndex = 0;
             this.chartReferrals.Text = "Referrals";
@@ -332,22 +332,22 @@
             this.chartTransfers.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.chartTransfers.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
             this.chartTransfers.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            chartArea4.Name = "ChartArea1";
-            this.chartTransfers.ChartAreas.Add(chartArea4);
-            legend4.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend4.Name = "Legend1";
-            legend4.Title = "Transfer Chart";
-            this.chartTransfers.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chartTransfers.ChartAreas.Add(chartArea2);
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend2.Name = "Legend1";
+            legend2.Title = "Transfer Chart";
+            this.chartTransfers.Legends.Add(legend2);
             this.chartTransfers.Location = new System.Drawing.Point(23, 232);
             this.chartTransfers.Name = "chartTransfers";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series4.IsXValueIndexed = true;
-            series4.Legend = "Legend1";
-            series4.Name = "Cases Vs Facility";
-            series4.XValueMember = "ReasonForReferral";
-            series4.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chartTransfers.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.IsXValueIndexed = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Cases Vs Facility";
+            series2.XValueMember = "ReasonForReferral";
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.chartTransfers.Series.Add(series2);
             this.chartTransfers.Size = new System.Drawing.Size(300, 224);
             this.chartTransfers.TabIndex = 1;
             this.chartTransfers.Text = "Transfers";
@@ -423,10 +423,13 @@
             // 
             // reportViewer1
             // 
+            this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.AutoSize = true;
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.AddByFacilityBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.AddByFacilityBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByFacility.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(427, 142);
             this.reportViewer1.Name = "reportViewer1";
@@ -447,12 +450,15 @@
             // 
             // reportViewer2
             // 
+            this.reportViewer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer2.AutoSize = true;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.AddByNursesBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.AddByNursesBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByNurses.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(427, 142);
+            this.reportViewer2.Location = new System.Drawing.Point(427, 139);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.Size = new System.Drawing.Size(778, 386);
             this.reportViewer2.TabIndex = 12;
@@ -463,11 +469,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer3.AutoSize = true;
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.AddByDriversBindingSource;
-            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.AddByDriversBindingSource;
+            this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByDriver.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(427, 142);
+            this.reportViewer3.Location = new System.Drawing.Point(427, 140);
             this.reportViewer3.Name = "reportViewer3";
             this.reportViewer3.Size = new System.Drawing.Size(778, 386);
             this.reportViewer3.TabIndex = 13;

@@ -224,10 +224,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet25.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet29.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet34.xsd</DependentUpon>
     </Compile>
     <Compile Include="cmbloginDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -295,17 +340,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="LPG Stations.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LPG Stations.Designer.cs">
-      <DependentUpon>LPG Stations.cs</DependentUpon>
-    </Compile>
     <Compile Include="LPG.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LPG.Designer.cs">
       <DependentUpon>LPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LPGStations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LPGStations.Designer.cs">
+      <DependentUpon>LPGStations.cs</DependentUpon>
     </Compile>
     <Compile Include="Msg1.cs">
       <SubType>Form</SubType>
@@ -447,11 +492,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LPG Stations.resx">
-      <DependentUpon>LPG Stations.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralFacilityReport.rdlc" />
     <EmbeddedResource Include="LPG.resx">
       <DependentUpon>LPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LPGStations.resx">
+      <DependentUpon>LPGStations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Msg1.resx">
       <DependentUpon>Msg1.cs</DependentUpon>
@@ -468,6 +514,9 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportByRegNoH.rdlc" />
+    <EmbeddedResource Include="ReportByRegNoK.rdlc" />
+    <EmbeddedResource Include="ReportByRegNo.rdlc" />
     <EmbeddedResource Include="ReportByDriver.rdlc" />
     <EmbeddedResource Include="ReportByFacility.rdlc" />
     <EmbeddedResource Include="ReportByNurses.rdlc" />
@@ -736,6 +785,50 @@
     <None Include="cmbloginDataSet25.xss">
       <DependentUpon>cmbloginDataSet25.xsd</DependentUpon>
     </None>
+    <None Include="cmbloginDataSet26.xsc">
+      <DependentUpon>cmbloginDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet26.xss">
+      <DependentUpon>cmbloginDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet27.xsc">
+      <DependentUpon>cmbloginDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet27.xss">
+      <DependentUpon>cmbloginDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet28.xsc">
+      <DependentUpon>cmbloginDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet28.xss">
+      <DependentUpon>cmbloginDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet29.xsc">
+      <DependentUpon>cmbloginDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet29.xss">
+      <DependentUpon>cmbloginDataSet29.xsd</DependentUpon>
+    </None>
     <None Include="cmbloginDataSet3.xsc">
       <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
     </None>
@@ -746,6 +839,61 @@
     </None>
     <None Include="cmbloginDataSet3.xss">
       <DependentUpon>cmbloginDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet30.xsc">
+      <DependentUpon>cmbloginDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet30.xss">
+      <DependentUpon>cmbloginDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet31.xsc">
+      <DependentUpon>cmbloginDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet31.xss">
+      <DependentUpon>cmbloginDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet32.xsc">
+      <DependentUpon>cmbloginDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet32.xss">
+      <DependentUpon>cmbloginDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet33.xsc">
+      <DependentUpon>cmbloginDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet33.xss">
+      <DependentUpon>cmbloginDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet34.xsc">
+      <DependentUpon>cmbloginDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet34.xss">
+      <DependentUpon>cmbloginDataSet34.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet4.xsc">
       <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>

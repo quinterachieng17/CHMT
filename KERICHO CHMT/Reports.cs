@@ -22,14 +22,13 @@ namespace KERICHO_CHMT
         }
 
         private void Reports_Load(object sender, EventArgs e)
-        {
-            reportViewer1.Show();
-            // TODO: This line of code loads data into the 'cmbloginDataSet16.AddByNurses' table. You can move, or remove it, as needed.
-            // this.AddByNursesTableAdapter.Fill(this.cmbloginDataSet16.AddByNurses);
+        {    
+            reportViewer1.Hide();
+            reportViewer2.Hide();
+            reportViewer3.Hide();
+            
             chartTransfers.Show();
-            chartReferrals.Show();
-
-            //this.reportViewer2.RefreshReport();
+            chartReferrals.Show();           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,21 +59,20 @@ namespace KERICHO_CHMT
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //Loads report per Facility on clicking repaort by cases
+            //Loads report per Facility on clicking report by cases
             if (lblFacility.Text == "Facility")
                 this.AddByFacilityTableAdapter.Fill(this.cmbloginDataSet19.AddByFacility, textBox1.Text);
                 this.reportViewer1.RefreshReport();
-            //Loads report per Nurses on clicking repaort by cases
+            //Loads report per Nurses on clicking report by cases
 
             if (lblFacility.Text == "Nurses")
                 this.AddByNursesTableAdapter.Fill(this.cmbloginDataSet16.AddByNurses, textBox1.Text);
                 this.reportViewer2.RefreshReport();
 
-            //Loads report per drivers on clicking repaort by cases
+            //Loads report per drivers on clicking report by cases
             if (lblFacility.Text == "Driver")            
                 this.AddByDriversTableAdapter.Fill(this.cmbloginDataSet15.AddByDrivers, textBox1.Text);
                 this.reportViewer3.RefreshReport();
-            
         }
 
         private void button5_MouseClick(object sender, MouseEventArgs e)
@@ -82,8 +80,7 @@ namespace KERICHO_CHMT
             lblFacility.Text = "Nurses";
             reportViewer1.Hide();
             reportViewer2.Show();
-            reportViewer3.Hide();
-
+            reportViewer3.Hide();        
         }
 
         private void button4_MouseClick(object sender, MouseEventArgs e)
@@ -91,7 +88,7 @@ namespace KERICHO_CHMT
             lblFacility.Text = "Facility";
             reportViewer1.Show();
             reportViewer2.Hide();
-            reportViewer3.Hide();
+            reportViewer3.Hide();            
         }
 
         private void button8_MouseClick(object sender, MouseEventArgs e)
@@ -99,12 +96,17 @@ namespace KERICHO_CHMT
             lblFacility.Text = "Driver";
             reportViewer1.Hide();
             reportViewer2.Hide();
-            reportViewer3.Show();
+            reportViewer3.Show();            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             LPG.Show("Select LPG Station", "", "OK", "Cancel");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -216,7 +216,7 @@
             // btnIncommingCase
             // 
             this.btnIncommingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnIncommingCase.Location = new System.Drawing.Point(826, 4);
+            this.btnIncommingCase.Location = new System.Drawing.Point(886, 4);
             this.btnIncommingCase.Name = "btnIncommingCase";
             this.btnIncommingCase.Size = new System.Drawing.Size(114, 23);
             this.btnIncommingCase.TabIndex = 35;
@@ -243,7 +243,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(332, 5);
+            this.label2.Location = new System.Drawing.Point(387, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(194, 21);
             this.label2.TabIndex = 44;
@@ -253,7 +253,7 @@
             // btnOutgoingCase
             // 
             this.btnOutgoingCase.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnOutgoingCase.Location = new System.Drawing.Point(953, 4);
+            this.btnOutgoingCase.Location = new System.Drawing.Point(1007, 4);
             this.btnOutgoingCase.Name = "btnOutgoingCase";
             this.btnOutgoingCase.Size = new System.Drawing.Size(114, 23);
             this.btnOutgoingCase.TabIndex = 45;
@@ -457,19 +457,19 @@
             this.tableLayoutPanel5.ColumnCount = 5;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.817351F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.18265F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel5.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.button10, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnIncommingCase, 2, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnOutgoingCase, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.button4, 4, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(261, 84);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(264, 84);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1208, 31);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1205, 31);
             this.tableLayoutPanel5.TabIndex = 54;
             // 
             // button4
@@ -477,7 +477,7 @@
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Location = new System.Drawing.Point(1130, 3);
+            this.button4.Location = new System.Drawing.Point(1127, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 25);
             this.button4.TabIndex = 58;

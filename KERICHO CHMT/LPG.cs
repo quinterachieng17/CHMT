@@ -42,15 +42,15 @@ namespace KERICHO_CHMT
             }
             else if (cmbLPG.SelectedIndex == 1)
             {
-                LPGStations.Show("ALL AMBULANCES FUELING AT KIPSIGIS(TOTAL) PETROL STATION", "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
             }
             else if (cmbLPG.SelectedIndex == 2)
             {
-                LPGStations.Show("ALL AMBULANCES FUELING AT HOTLINE PETROL STATION", "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
             }
             else if (cmbLPG.SelectedIndex == 3)
             {
-                LPGStations.Show("ALL AMBULANCES AT KERICHO DISTRICT REFERRAL HOSPITAL", "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
             }
 
             else

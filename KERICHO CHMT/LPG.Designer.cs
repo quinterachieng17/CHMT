@@ -48,10 +48,10 @@
             // 
             this.cmbLPG.FormattingEnabled = true;
             this.cmbLPG.Items.AddRange(new object[] {
-            "Jumbo",
-            "Kipsigis",
-            "Homeline",
-            "All LPGs"});
+            "Jumbo Petrol Station",
+            "Kipsigis Petrol Station",
+            "Homeline Petrol Station",
+            "All Filling Stations"});
             this.cmbLPG.Location = new System.Drawing.Point(188, 72);
             this.cmbLPG.Name = "cmbLPG";
             this.cmbLPG.Size = new System.Drawing.Size(217, 21);
