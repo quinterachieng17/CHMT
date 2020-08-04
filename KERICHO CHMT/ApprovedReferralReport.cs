@@ -16,10 +16,16 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public ApprovedReferralReport(string username)
+        {
+            InitializeComponent();
+            label2.Text = username;
+        }
+
+    private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports rr = new Reports();
+            Reports rr = new Reports(label2.Text);
             rr.ShowDialog();
         }
 

@@ -126,7 +126,7 @@ namespace KERICHO_CHMT
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ChiefNurse cn = new ChiefNurse();
+            ChiefNurse cn = new ChiefNurse(label2.Text);
             cn.Show();
         }
     }

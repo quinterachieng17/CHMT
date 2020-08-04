@@ -353,9 +353,9 @@
             this.cmbFacility.Items.AddRange(new object[] {
             "Incoming Referral",
             "Outgoing Referral"});
-            this.cmbFacility.Location = new System.Drawing.Point(265, 6);
+            this.cmbFacility.Location = new System.Drawing.Point(264, 6);
             this.cmbFacility.Name = "cmbFacility";
-            this.cmbFacility.Size = new System.Drawing.Size(220, 21);
+            this.cmbFacility.Size = new System.Drawing.Size(219, 21);
             this.cmbFacility.TabIndex = 27;
             this.cmbFacility.SelectedIndexChanged += new System.EventHandler(this.cmbFacility_SelectedIndexChanged);
             // 
@@ -450,7 +450,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.73494F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26506F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 238F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmbFacility, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label15, 2, 0);
@@ -468,7 +468,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(638, 8);
+            this.label15.Location = new System.Drawing.Point(636, 8);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(80, 17);
             this.label15.TabIndex = 30;
@@ -477,7 +477,7 @@
             // txtTimeOfCall
             // 
             this.txtTimeOfCall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTimeOfCall.Location = new System.Drawing.Point(724, 7);
+            this.txtTimeOfCall.Location = new System.Drawing.Point(722, 7);
             this.txtTimeOfCall.Name = "txtTimeOfCall";
             this.txtTimeOfCall.Size = new System.Drawing.Size(225, 20);
             this.txtTimeOfCall.TabIndex = 31;

@@ -251,10 +251,10 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 9);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(254, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(602, 32);
+            this.label2.Size = new System.Drawing.Size(665, 36);
             this.label2.TabIndex = 1;
             this.label2.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
             // 

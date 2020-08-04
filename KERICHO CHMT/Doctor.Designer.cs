@@ -61,33 +61,34 @@
             // 
             this.lblHead.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHead.AutoSize = true;
-            this.lblHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHead.ForeColor = System.Drawing.Color.White;
-            this.lblHead.Location = new System.Drawing.Point(138, 6);
+            this.lblHead.Location = new System.Drawing.Point(133, 4);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(443, 25);
+            this.lblHead.Size = new System.Drawing.Size(518, 29);
             this.lblHead.TabIndex = 0;
-            this.lblHead.Text = "KERICHO COUNTY REFERRAL SYSTEM";
+            this.lblHead.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
             // 
             // lblDashboard
             // 
             this.lblDashboard.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
-            this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(236, 5);
+            this.lblDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(267, 3);
             this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(238, 20);
+            this.lblDashboard.Size = new System.Drawing.Size(273, 24);
             this.lblDashboard.TabIndex = 1;
             this.lblDashboard.Text = "Transport Officer Dashboard";
             // 
             // btnRegisterStaff
             // 
+            this.btnRegisterStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.Menu;
             this.btnRegisterStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterStaff.Location = new System.Drawing.Point(3, 3);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
-            this.btnRegisterStaff.Size = new System.Drawing.Size(356, 30);
+            this.btnRegisterStaff.Size = new System.Drawing.Size(412, 35);
             this.btnRegisterStaff.TabIndex = 3;
             this.btnRegisterStaff.Text = "Register Staff";
             this.btnRegisterStaff.UseVisualStyleBackColor = false;
@@ -95,11 +96,12 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.SystemColors.Menu;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(3, 81);
+            this.button1.Location = new System.Drawing.Point(3, 85);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(356, 33);
+            this.button1.Size = new System.Drawing.Size(412, 35);
             this.button1.TabIndex = 4;
             this.button1.Text = "New Vehicle Registration";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,11 +109,12 @@
             // 
             // button2
             // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 123);
+            this.button2.Location = new System.Drawing.Point(3, 126);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(356, 30);
+            this.button2.Size = new System.Drawing.Size(412, 35);
             this.button2.TabIndex = 5;
             this.button2.Text = "Edit Vehicle Details";
             this.button2.UseVisualStyleBackColor = false;
@@ -119,11 +122,12 @@
             // 
             // button3
             // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.BackColor = System.Drawing.SystemColors.Menu;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(3, 236);
+            this.button3.Location = new System.Drawing.Point(3, 249);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(356, 31);
+            this.button3.Size = new System.Drawing.Size(412, 35);
             this.button3.TabIndex = 6;
             this.button3.Text = "Track Records";
             this.button3.UseVisualStyleBackColor = false;
@@ -131,11 +135,12 @@
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button4.BackColor = System.Drawing.SystemColors.Menu;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(3, 39);
+            this.button4.Location = new System.Drawing.Point(3, 44);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(356, 33);
+            this.button4.Size = new System.Drawing.Size(412, 35);
             this.button4.TabIndex = 7;
             this.button4.Text = "Edit Staff Details";
             this.button4.UseVisualStyleBackColor = false;
@@ -143,11 +148,12 @@
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.BackColor = System.Drawing.SystemColors.Menu;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(3, 197);
+            this.button5.Location = new System.Drawing.Point(3, 208);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(356, 33);
+            this.button5.Size = new System.Drawing.Size(412, 35);
             this.button5.TabIndex = 8;
             this.button5.Text = "View Work Ticket";
             this.button5.UseVisualStyleBackColor = false;
@@ -179,7 +185,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(546, 8);
+            this.label1.Location = new System.Drawing.Point(612, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
             this.label1.TabIndex = 11;
@@ -190,7 +196,7 @@
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(582, 5);
+            this.dateTimePicker1.Location = new System.Drawing.Point(648, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(114, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -211,11 +217,12 @@
             // 
             // button8
             // 
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.BackColor = System.Drawing.SystemColors.Menu;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(3, 159);
+            this.button8.Location = new System.Drawing.Point(3, 167);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(356, 32);
+            this.button8.Size = new System.Drawing.Size(412, 35);
             this.button8.TabIndex = 14;
             this.button8.Text = "Record Mileage";
             this.button8.UseVisualStyleBackColor = false;
@@ -223,11 +230,12 @@
             // 
             // button9
             // 
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button9.BackColor = System.Drawing.SystemColors.Menu;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(3, 273);
+            this.button9.Location = new System.Drawing.Point(3, 290);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(356, 36);
+            this.button9.Size = new System.Drawing.Size(412, 35);
             this.button9.TabIndex = 15;
             this.button9.Text = "Referral Cases";
             this.button9.UseVisualStyleBackColor = false;
@@ -237,7 +245,7 @@
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btnRegisterStaff, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.button4, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.button9, 0, 7);
@@ -246,18 +254,18 @@
             this.tableLayoutPanel1.Controls.Add(this.button2, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.button5, 0, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(178, 82);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(211, 88);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.37681F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.62319F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(365, 313);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 328);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
             // tableLayoutPanel2
@@ -268,7 +276,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(536, 401);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(602, 442);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -313,7 +321,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(719, 37);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(785, 37);
             this.tableLayoutPanel4.TabIndex = 20;
             // 
             // tableLayoutPanel5
@@ -331,7 +339,7 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(722, 30);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(788, 30);
             this.tableLayoutPanel5.TabIndex = 21;
             // 
             // Doctor
@@ -339,7 +347,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(743, 431);
+            this.ClientSize = new System.Drawing.Size(809, 472);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);

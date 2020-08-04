@@ -12,7 +12,7 @@
                 <Value>Report Per Facility</Value>
                 <Style>
                   <FontFamily>times New Roman</FontFamily>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                   <TextDecoration>Underline</TextDecoration>
                 </Style>
@@ -22,9 +22,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Left>2.10292in</Left>
+        <Top>0.375in</Top>
+        <Left>3.27542in</Left>
         <Height>0.25in</Height>
-        <Width>1.48958in</Width>
+        <Width>1.84375in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -402,10 +403,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.50917in</Top>
-        <Left>0.10292in</Left>
+        <Top>1.00917in</Top>
+        <Left>0.11396in</Left>
         <Height>0.5in</Height>
-        <Width>8.16667in</Width>
+        <Width>8.16666in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -413,6 +414,40 @@
           </Border>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Kericho County Referral Hospital </Value>
+                <Style>
+                  <FontFamily>times New Roman</FontFamily>
+                  <FontSize>16pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Left>2.53974in</Left>
+        <Height>0.32292in</Height>
+        <Width>3.3151in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>2in</Height>
     <Style />

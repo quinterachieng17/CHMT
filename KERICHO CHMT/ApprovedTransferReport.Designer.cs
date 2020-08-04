@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.referralRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbloginDataSet7 = new KERICHO_CHMT.cmbloginDataSet7();
-            this.referralRegisterApprovedTableAdapter = new KERICHO_CHMT.cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cmbloginDataSet11 = new KERICHO_CHMT.cmbloginDataSet11();
-            this.referralRegisterApprovedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.referralRegisterApprovedTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet11TableAdapters.ReferralRegisterApprovedTableAdapter();
             this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.patientNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,17 +46,27 @@
             this.transferStatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.commentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.referralRegisterApprovedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet11 = new KERICHO_CHMT.cmbloginDataSet11();
+            this.referralRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet7 = new KERICHO_CHMT.cmbloginDataSet7();
+            this.referralRegisterApprovedTableAdapter = new KERICHO_CHMT.cmbloginDataSet7TableAdapters.ReferralRegisterApprovedTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.referralRegisterApprovedTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet11TableAdapters.ReferralRegisterApprovedTableAdapter();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Location = new System.Drawing.Point(1366, 534);
+            this.btnBack.Location = new System.Drawing.Point(12, 64);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 0;
@@ -74,7 +77,10 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patientIDDataGridViewTextBoxColumn,
@@ -93,50 +99,10 @@
             this.timeDataGridViewTextBoxColumn,
             this.commentsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.referralRegisterApprovedBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 93);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 93);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1493, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(1502, 476);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // referralRegisterApprovedBindingSource
-            // 
-            this.referralRegisterApprovedBindingSource.DataMember = "ReferralRegisterApproved";
-            this.referralRegisterApprovedBindingSource.DataSource = this.cmbloginDataSet7;
-            // 
-            // cmbloginDataSet7
-            // 
-            this.cmbloginDataSet7.DataSetName = "cmbloginDataSet7";
-            this.cmbloginDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // referralRegisterApprovedTableAdapter
-            // 
-            this.referralRegisterApprovedTableAdapter.ClearBeforeFill = true;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(598, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(288, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Transfer Cases Approved";
-            // 
-            // cmbloginDataSet11
-            // 
-            this.cmbloginDataSet11.DataSetName = "cmbloginDataSet11";
-            this.cmbloginDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // referralRegisterApprovedBindingSource1
-            // 
-            this.referralRegisterApprovedBindingSource1.DataMember = "ReferralRegisterApproved";
-            this.referralRegisterApprovedBindingSource1.DataSource = this.cmbloginDataSet11;
-            // 
-            // referralRegisterApprovedTableAdapter1
-            // 
-            this.referralRegisterApprovedTableAdapter1.ClearBeforeFill = true;
             // 
             // patientIDDataGridViewTextBoxColumn
             // 
@@ -163,7 +129,6 @@
             this.reasonForReferralDataGridViewTextBoxColumn.DataPropertyName = "ReasonForReferral";
             this.reasonForReferralDataGridViewTextBoxColumn.HeaderText = "Reason For Referral";
             this.reasonForReferralDataGridViewTextBoxColumn.Name = "reasonForReferralDataGridViewTextBoxColumn";
-            this.reasonForReferralDataGridViewTextBoxColumn.Width = 200;
             // 
             // facilityDataGridViewTextBoxColumn
             // 
@@ -231,25 +196,81 @@
             this.commentsDataGridViewTextBoxColumn.HeaderText = "Comments/ Delays";
             this.commentsDataGridViewTextBoxColumn.Name = "commentsDataGridViewTextBoxColumn";
             // 
+            // referralRegisterApprovedBindingSource1
+            // 
+            this.referralRegisterApprovedBindingSource1.DataMember = "ReferralRegisterApproved";
+            this.referralRegisterApprovedBindingSource1.DataSource = this.cmbloginDataSet11;
+            // 
+            // cmbloginDataSet11
+            // 
+            this.cmbloginDataSet11.DataSetName = "cmbloginDataSet11";
+            this.cmbloginDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // referralRegisterApprovedBindingSource
+            // 
+            this.referralRegisterApprovedBindingSource.DataMember = "ReferralRegisterApproved";
+            this.referralRegisterApprovedBindingSource.DataSource = this.cmbloginDataSet7;
+            // 
+            // cmbloginDataSet7
+            // 
+            this.cmbloginDataSet7.DataSetName = "cmbloginDataSet7";
+            this.cmbloginDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // referralRegisterApprovedTableAdapter
+            // 
+            this.referralRegisterApprovedTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 29);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Transfer Cases Approved";
+            // 
+            // referralRegisterApprovedTableAdapter1
+            // 
+            this.referralRegisterApprovedTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(575, 12);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(365, 40);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
             // ApprovedTransferReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1514, 581);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnBack);
             this.Name = "ApprovedTransferReport";
             this.Text = "ApprovedTransferReport";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ApprovedTransferReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -279,5 +300,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn transferStatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn commentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

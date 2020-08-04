@@ -23,18 +23,16 @@ namespace KERICHO_CHMT
 
         private void Reports_Load(object sender, EventArgs e)
         {    
-            reportViewer1.Hide();
+            reportViewer1.Show();
             reportViewer2.Hide();
             reportViewer3.Hide();
-            
-            chartTransfers.Show();
-            chartReferrals.Show();           
+                                  
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ApprovedReferralReport rr = new ApprovedReferralReport();
+            ApprovedReferralReport rr = new ApprovedReferralReport(label2.Text);
             rr.ShowDialog();
         }
 
@@ -47,9 +45,18 @@ namespace KERICHO_CHMT
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ChiefNurse cn = new ChiefNurse();
-            cn.ShowDialog();
+            if (label2.Text == "Nurse")
+            {
+                this.Hide();
+                Nurse cn = new Nurse(label2.Text);
+                cn.ShowDialog();
+            }
+            else if (label2.Text == "Chief Nurse")
+            {
+                this.Hide();
+                ChiefNurse cn = new ChiefNurse(label2.Text);
+                cn.ShowDialog();
+            }
         }
 
         private void chart2_Click(object sender, EventArgs e)

@@ -18,7 +18,9 @@ namespace KERICHO_CHMT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Reports rr = new Reports();
+            rr.ShowDialog();
         }
 
         private void ApprovedTransferReport_Load(object sender, EventArgs e)

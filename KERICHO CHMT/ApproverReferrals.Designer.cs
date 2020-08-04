@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -122,6 +123,16 @@
             // dgvAllCasesApproved
             // 
             this.dgvAllCasesApproved.AllowUserToAddRows = false;
+            this.dgvAllCasesApproved.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllCasesApproved.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllCasesApproved.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllCasesApproved.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllCasesApproved.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PatientID,
@@ -164,42 +175,36 @@
             this.PatientName.DataPropertyName = "PatientName";
             this.PatientName.HeaderText = "Patient Name";
             this.PatientName.Name = "PatientName";
-            this.PatientName.Width = 150;
             // 
             // ReasonForReferral
             // 
             this.ReasonForReferral.DataPropertyName = "ReasonForReferral";
             this.ReasonForReferral.HeaderText = "Reason For Referral";
             this.ReasonForReferral.Name = "ReasonForReferral";
-            this.ReasonForReferral.Width = 200;
             // 
             // Facility
             // 
             this.Facility.DataPropertyName = "Facility";
             this.Facility.HeaderText = "From Facility";
             this.Facility.Name = "Facility";
-            this.Facility.Width = 150;
             // 
             // NurseAttending
             // 
             this.NurseAttending.DataPropertyName = "NurseReceiving";
             this.NurseAttending.HeaderText = "Receiving Nurse";
             this.NurseAttending.Name = "NurseAttending";
-            this.NurseAttending.Width = 150;
             // 
             // NurseOnTransit
             // 
             this.NurseOnTransit.DataPropertyName = "NurseOnTransit";
             this.NurseOnTransit.HeaderText = "Nurse On Transit";
             this.NurseOnTransit.Name = "NurseOnTransit";
-            this.NurseOnTransit.Width = 150;
             // 
             // DriverIncharge
             // 
             this.DriverIncharge.DataPropertyName = "DriverIncharge";
             this.DriverIncharge.HeaderText = "Driver In Charge";
             this.DriverIncharge.Name = "DriverIncharge";
-            this.DriverIncharge.Width = 150;
             // 
             // DriverNo
             // 
@@ -224,7 +229,6 @@
             this.TimeOfCall.DataPropertyName = "TimeOfCall";
             this.TimeOfCall.HeaderText = "Time of Call";
             this.TimeOfCall.Name = "TimeOfCall";
-            this.TimeOfCall.Width = 70;
             // 
             // ApprovalStatus
             // 

@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
@@ -58,9 +52,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartReferrals = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartTransfers = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cmbloginDataSet13 = new KERICHO_CHMT.cmbloginDataSet13();
             this.referralRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.referralRegisterApprovedTableAdapter = new KERICHO_CHMT.cmbloginDataSet13TableAdapters.ReferralRegisterApprovedTableAdapter();
@@ -76,6 +67,8 @@
             this.AddByFacilityTableAdapter = new KERICHO_CHMT.cmbloginDataSet19TableAdapters.AddByFacilityTableAdapter();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AddByFacilityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddByNursesBindingSource)).BeginInit();
@@ -87,9 +80,6 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartReferrals)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
@@ -140,10 +130,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(571, 4);
+            this.label1.Font = new System.Drawing.Font("Trebuchet MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(605, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 25);
+            this.label1.Size = new System.Drawing.Size(362, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "PATIENT AND AMBULANCE REPORTS ";
             // 
@@ -151,40 +141,48 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(5, 216);
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 278);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 39);
+            this.button1.Size = new System.Drawing.Size(312, 37);
             this.button1.TabIndex = 3;
             this.button1.Text = "All Approved Referral Cases";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(7, 262);
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(12, 343);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(186, 37);
+            this.button2.Size = new System.Drawing.Size(312, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "All Approved Transferred Cases";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button3.Location = new System.Drawing.Point(1370, 3);
+            this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1361, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(84, 32);
             this.button3.TabIndex = 5;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = true;
@@ -217,141 +215,88 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1448, 29);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1448, 42);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.button8, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.button5, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button6, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 5);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1257, 159);
+            this.tableLayoutPanel3.Controls.Add(this.button6, 0, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(30, 131);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.28572F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.71428F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 302);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(336, 397);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.Location = new System.Drawing.Point(5, 110);
+            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(12, 146);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(190, 39);
+            this.button8.Size = new System.Drawing.Size(312, 37);
             this.button8.TabIndex = 12;
             this.button8.Text = "Driver/ Vehicle";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button8_MouseClick);
             // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.Location = new System.Drawing.Point(3, 56);
+            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(12, 80);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(193, 43);
+            this.button5.Size = new System.Drawing.Size(312, 37);
             this.button5.TabIndex = 6;
             this.button5.Text = "Nurses";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button5_MouseClick);
             // 
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.Location = new System.Drawing.Point(5, 9);
+            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(12, 14);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 34);
+            this.button4.Size = new System.Drawing.Size(312, 37);
             this.button4.TabIndex = 5;
             this.button4.Text = " Facility";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button4_MouseClick);
             // 
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.Location = new System.Drawing.Point(4, 164);
+            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(12, 212);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(191, 40);
+            this.button6.Size = new System.Drawing.Size(312, 37);
             this.button6.TabIndex = 7;
             this.button6.Text = "Ambulance Report";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.chartReferrals, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.chartTransfers, 0, 1);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(30, 69);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(346, 459);
-            this.tableLayoutPanel5.TabIndex = 10;
-            // 
-            // chartReferrals
-            // 
-            this.chartReferrals.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chartReferrals.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chartReferrals.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
-            this.chartReferrals.BorderlineColor = System.Drawing.Color.Gray;
-            chartArea1.Name = "ChartArea1";
-            this.chartReferrals.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            legend1.Title = "Referrals Chart";
-            this.chartReferrals.Legends.Add(legend1);
-            this.chartReferrals.Location = new System.Drawing.Point(23, 3);
-            this.chartReferrals.Name = "chartReferrals";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartReferrals.Series.Add(series1);
-            this.chartReferrals.Size = new System.Drawing.Size(300, 223);
-            this.chartReferrals.TabIndex = 0;
-            this.chartReferrals.Text = "Referrals";
-            // 
-            // chartTransfers
-            // 
-            this.chartTransfers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chartTransfers.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.chartTransfers.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            this.chartTransfers.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            chartArea2.Name = "ChartArea1";
-            this.chartTransfers.ChartAreas.Add(chartArea2);
-            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
-            legend2.Name = "Legend1";
-            legend2.Title = "Transfer Chart";
-            this.chartTransfers.Legends.Add(legend2);
-            this.chartTransfers.Location = new System.Drawing.Point(23, 232);
-            this.chartTransfers.Name = "chartTransfers";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.IsXValueIndexed = true;
-            series2.Legend = "Legend1";
-            series2.Name = "Cases Vs Facility";
-            series2.XValueMember = "ReasonForReferral";
-            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.chartTransfers.Series.Add(series2);
-            this.chartTransfers.Size = new System.Drawing.Size(300, 224);
-            this.chartTransfers.TabIndex = 1;
-            this.chartTransfers.Text = "Transfers";
-            this.chartTransfers.Click += new System.EventHandler(this.chart2_Click);
             // 
             // cmbloginDataSet13
             // 
@@ -376,27 +321,28 @@
             this.tableLayoutPanel6.Controls.Add(this.lblFacility, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.button7, 2, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(442, 72);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(492, 61);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(727, 34);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(727, 41);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // lblFacility
             // 
             this.lblFacility.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblFacility.AutoSize = true;
-            this.lblFacility.Location = new System.Drawing.Point(176, 10);
+            this.lblFacility.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacility.Location = new System.Drawing.Point(159, 10);
             this.lblFacility.Name = "lblFacility";
-            this.lblFacility.Size = new System.Drawing.Size(39, 13);
+            this.lblFacility.Size = new System.Drawing.Size(56, 20);
             this.lblFacility.TabIndex = 0;
             this.lblFacility.Text = "Facility";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(221, 7);
+            this.textBox1.Location = new System.Drawing.Point(221, 10);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(284, 20);
             this.textBox1.TabIndex = 1;
@@ -404,9 +350,10 @@
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button7.Location = new System.Drawing.Point(511, 5);
+            this.button7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(511, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.Size = new System.Drawing.Size(88, 32);
             this.button7.TabIndex = 2;
             this.button7.Text = "Preview";
             this.button7.UseVisualStyleBackColor = true;
@@ -431,9 +378,9 @@
             reportDataSource1.Value = this.AddByFacilityBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByFacility.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(427, 142);
+            this.reportViewer1.Location = new System.Drawing.Point(427, 151);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(778, 386);
+            this.reportViewer1.Size = new System.Drawing.Size(930, 377);
             this.reportViewer1.TabIndex = 11;
             // 
             // AddByNursesTableAdapter
@@ -458,9 +405,9 @@
             reportDataSource2.Value = this.AddByNursesBindingSource;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByNurses.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(427, 139);
+            this.reportViewer2.Location = new System.Drawing.Point(427, 132);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(778, 386);
+            this.reportViewer2.Size = new System.Drawing.Size(930, 397);
             this.reportViewer2.TabIndex = 12;
             // 
             // reportViewer3
@@ -473,26 +420,51 @@
             reportDataSource3.Value = this.AddByDriversBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByDriver.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(427, 140);
+            this.reportViewer3.Location = new System.Drawing.Point(427, 131);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.Size = new System.Drawing.Size(778, 386);
+            this.reportViewer3.Size = new System.Drawing.Size(930, 397);
             this.reportViewer3.TabIndex = 13;
+            // 
+            // button9
+            // 
+            this.button9.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.Location = new System.Drawing.Point(-6, 603);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(1485, 15);
+            this.button9.TabIndex = 52;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.Location = new System.Drawing.Point(-6, 582);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(1485, 16);
+            this.button10.TabIndex = 53;
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1472, 609);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.reportViewer3);
             this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.tableLayoutPanel6);
-            this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Reports";
             this.Text = "Reports";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddByFacilityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet19)).EndInit();
@@ -506,9 +478,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chartReferrals)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTransfers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
@@ -532,9 +501,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartReferrals;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartTransfers;
         private cmbloginDataSet12 cmbloginDataSet12;
         private System.Windows.Forms.BindingSource patientRegisterApprovedBindingSource;
         private cmbloginDataSet12TableAdapters.PatientRegisterApprovedTableAdapter patientRegisterApprovedTableAdapter;
@@ -559,5 +525,7 @@
         private cmbloginDataSet19TableAdapters.AddByFacilityTableAdapter AddByFacilityTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer3;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
