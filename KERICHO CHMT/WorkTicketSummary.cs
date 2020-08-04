@@ -22,6 +22,12 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public WorkTicketSummary(string username)
+        {
+            InitializeComponent();
+            label2.Text = username;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -46,7 +52,7 @@ namespace KERICHO_CHMT
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords();
+            TrackRecords ss = new TrackRecords(label2.Text);
             ss.Show();
         }
 

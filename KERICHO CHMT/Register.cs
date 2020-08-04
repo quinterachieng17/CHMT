@@ -57,41 +57,7 @@ namespace KERICHO_CHMT
         {
 
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            VehicleRegistration ss = new VehicleRegistration();
-            ss.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-           Driver ss = new Driver();
-            ss.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            EditVehicle ss = new EditVehicle();
-            ss.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            StaffDetails ss = new StaffDetails();
-            ss.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            TrackRecords ss = new TrackRecords();
-            ss.Show();
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -179,6 +145,66 @@ namespace KERICHO_CHMT
             {
                 e.Handled = true;
             }
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StaffDetails ss = new StaffDetails(label6.Text);
+            ss.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            VehicleRegistration ss = new VehicleRegistration();
+            ss.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditVehicle ss = new EditVehicle();
+            ss.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Driver ss = new Driver();
+            ss.Show();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkTicketSummary ss = new WorkTicketSummary();
+            ss.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TrackRecords ss = new TrackRecords();
+            ss.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Nurse nn = new Nurse(label2.Text);
+            nn.ShowDialog();
         }
     }
 }

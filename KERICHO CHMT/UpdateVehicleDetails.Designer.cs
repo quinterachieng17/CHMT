@@ -36,6 +36,7 @@
             this.txtChasisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtEngineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicleUpdate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.txtChasisNo,
             this.txtEngineNo,
             this.txtPlateNo});
-            this.dgvVehicleUpdate.Location = new System.Drawing.Point(12, 12);
+            this.dgvVehicleUpdate.Location = new System.Drawing.Point(12, 53);
             this.dgvVehicleUpdate.Name = "dgvVehicleUpdate";
             this.dgvVehicleUpdate.Size = new System.Drawing.Size(1279, 487);
             this.dgvVehicleUpdate.TabIndex = 0;
@@ -108,17 +109,28 @@
             this.txtPlateNo.Name = "txtPlateNo";
             this.txtPlateNo.Width = 200;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // UpdateVehicleDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1303, 552);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvVehicleUpdate);
             this.Name = "UpdateVehicleDetails";
             this.Text = "Update Vehicle Details";
             this.Load += new System.EventHandler(this.UpdateVehicleDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicleUpdate)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -132,5 +144,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtChasisNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtEngineNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtPlateNo;
+        private System.Windows.Forms.Label label1;
     }
 }

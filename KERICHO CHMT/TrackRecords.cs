@@ -23,10 +23,16 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public TrackRecords(string username)
+        {
+            InitializeComponent();
+            label3.Text = username;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label3.Text);
             ss.Show();
         }
 

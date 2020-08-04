@@ -18,6 +18,12 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public UpdateVehicleDetails(string username)
+        {
+            InitializeComponent();
+            label1.Text = username;
+        }
+
         void PopulateDataGridView()
         {
             using (SqlConnection sqlCon = new SqlConnection(connectionString))

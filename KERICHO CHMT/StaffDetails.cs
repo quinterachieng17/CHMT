@@ -22,10 +22,16 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public StaffDetails(string username)
+        {
+            InitializeComponent();
+            label4.Text = username;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label4.Text);
             ss.Show();
         }
 
@@ -39,42 +45,40 @@ namespace KERICHO_CHMT
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register ss = new Register();
+            Register ss = new Register(label4.Text);
             ss.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Driver ss = new Driver();
+            Driver ss = new Driver(label4.Text);
             ss.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VehicleRegistration ss = new VehicleRegistration();
+            VehicleRegistration ss = new VehicleRegistration(label4.Text);
             ss.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditVehicle ss = new EditVehicle();
+            EditVehicle ss = new EditVehicle(label4.Text);
             ss.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            StaffDetails ss = new StaffDetails();
-            ss.Show();
+            this.Show();            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords();
+            TrackRecords ss = new TrackRecords(label4.Text);
             ss.Show();
         }
         void PopulateDesignationComboBox()
@@ -147,10 +151,7 @@ namespace KERICHO_CHMT
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //Officers ss = new Officers();
-            //ss.Show();
-
+            
         }
 
         //To export the dataGridView to pdf
@@ -249,6 +250,20 @@ namespace KERICHO_CHMT
                 dataGridView1.DataSource = dtbl;
 
             }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkTicketSummary ss = new WorkTicketSummary(label4.Text);
+            ss.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Nurse nn = new Nurse(label4.Text);
+            nn.ShowDialog();
         }
     }
 }

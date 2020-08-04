@@ -59,6 +59,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).BeginInit();
@@ -145,13 +146,13 @@
             // 
             this.lblHead.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHead.AutoSize = true;
-            this.lblHead.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHead.ForeColor = System.Drawing.Color.White;
-            this.lblHead.Location = new System.Drawing.Point(275, 1);
+            this.lblHead.Location = new System.Drawing.Point(264, 4);
             this.lblHead.Name = "lblHead";
-            this.lblHead.Size = new System.Drawing.Size(365, 32);
+            this.lblHead.Size = new System.Drawing.Size(386, 26);
             this.lblHead.TabIndex = 16;
-            this.lblHead.Text = "KERICHO COUNTY TIMS";
+            this.lblHead.Text = "RECORD INDIVIDUAL MILEAGE";
             // 
             // btnSubmit
             // 
@@ -340,7 +341,7 @@
             this.tableLayoutPanel1.Controls.Add(this.cmbRegNo, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMileage, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 79);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 98);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -356,7 +357,7 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.lblHead, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 6);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(24, 24);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -371,7 +372,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel3.Controls.Add(this.lblDate, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(625, 41);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(625, 59);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -386,7 +387,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.1634F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtDestination, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 188);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 207);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -408,6 +409,15 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(244, 32);
             this.tableLayoutPanel5.TabIndex = 47;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 8);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 48;
+            this.label5.Text = "label5";
+            // 
             // Driver
             // 
             this.AcceptButton = this.btnSubmit;
@@ -416,6 +426,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(969, 316);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
@@ -440,6 +451,7 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -474,5 +486,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Label label5;
     }
 }

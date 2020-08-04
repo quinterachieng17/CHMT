@@ -18,7 +18,13 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
-     
+        public Driver(string username)
+        {
+            InitializeComponent();
+            label5.Text = username;
+        }
+
+
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             if (cmbDriverNo.Text == "" || txtMileage.Text == "")
@@ -102,12 +108,13 @@ namespace KERICHO_CHMT
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label5.Text);
             ss.Show();
         }
 
         private void Driver_Load(object sender, EventArgs e)
         {
+            label5.Hide();
             // TODO: This line of code loads data into the 'cmbloginDataSet21.VehicleRegistration' table. You can move, or remove it, as needed.
             this.vehicleRegistrationTableAdapter.Fill(this.cmbloginDataSet21.VehicleRegistration);
             // TODO: This line of code loads data into the 'cmbloginDataSet20.UserRegister' table. You can move, or remove it, as needed.

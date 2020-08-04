@@ -18,6 +18,12 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public VehicleRegistration(string username)
+        {
+            InitializeComponent();
+            label11.Text = username;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -62,7 +68,7 @@ namespace KERICHO_CHMT
         {
 
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label11.Text);
             ss.Show();
         }
 
@@ -92,6 +98,31 @@ namespace KERICHO_CHMT
             {
                 e.Handled = true;
             }
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

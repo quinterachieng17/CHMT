@@ -22,6 +22,12 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public EditVehicle(string username)
+        {
+            InitializeComponent();
+            label4.Text = username;
+        }
+
         private void label8_Click(object sender, EventArgs e)
         {
 
@@ -30,56 +36,77 @@ namespace KERICHO_CHMT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label4.Text);
             ss.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label4.Text);
             ss.Show();
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register ss = new Register();
+            Register ss = new Register(label4.Text);
             ss.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-           Driver ss = new Driver();
+           Driver ss = new Driver(label4.Text);
             ss.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VehicleRegistration ss = new VehicleRegistration();
+            VehicleRegistration ss = new VehicleRegistration(label4.Text);
             ss.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditVehicle ss = new EditVehicle();
+            EditVehicle ss = new EditVehicle(label4.Text);
             ss.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StaffDetails ss = new StaffDetails();
+            StaffDetails ss = new StaffDetails(label4.Text);
             ss.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords();
+            TrackRecords ss = new TrackRecords(label4.Text);
+            ss.Show();
+        }
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Nurse nn = new Nurse(label4.Text);
+            nn.ShowDialog();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            WorkTicketSummary ss = new WorkTicketSummary(label4.Text);
+            ss.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UpdateVehicleDetails ss = new UpdateVehicleDetails(label4.Text);
             ss.Show();
         }
 
@@ -165,13 +192,6 @@ namespace KERICHO_CHMT
         private void button9_Click(object sender, EventArgs e)
         {
             exportgridviewtopdf(dgvVehicle, "KTIMS Motor Vehicle Details");
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            UpdateVehicleDetails ss = new UpdateVehicleDetails();
-            ss.Show();
-        }
+        }        
     }
 }

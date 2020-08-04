@@ -31,7 +31,7 @@ namespace KERICHO_CHMT
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords();
+            TrackRecords ss = new TrackRecords(label2.Text);
             ss.Show();
         }
 
@@ -52,14 +52,14 @@ namespace KERICHO_CHMT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VehicleRegistration ss = new VehicleRegistration();
+            VehicleRegistration ss = new VehicleRegistration(label2.Text);
             ss.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            WorkTicketSummary ss = new WorkTicketSummary();
+            WorkTicketSummary ss = new WorkTicketSummary(label2.Text);
             ss.Show();
         }
 
@@ -71,21 +71,21 @@ namespace KERICHO_CHMT
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditVehicle ss = new EditVehicle();
+            EditVehicle ss = new EditVehicle(label2.Text);
             ss.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StaffDetails ss = new StaffDetails();
+            StaffDetails ss = new StaffDetails(label2.Text);
             ss.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords();
+            TrackRecords ss = new TrackRecords(label2.Text);
             ss.Show();
         }
 
@@ -93,7 +93,7 @@ namespace KERICHO_CHMT
         {
 
             this.Hide();
-            Driver ss = new Driver();
+            Driver ss = new Driver(label2.Text);
             ss.Show();
         }
 
