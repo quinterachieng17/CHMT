@@ -128,6 +128,19 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
+            {
+                MessageBox.Show("Please Contact super user for Account Reset.");
+            }
+            else
+            {
+                MessageBox.Show("Please Contact the transport Officer or super user for Account Reset.");
+            }
+                
+        }
     }
 
 }
