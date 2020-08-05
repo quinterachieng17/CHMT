@@ -85,7 +85,8 @@ namespace KERICHO_CHMT
                 }
                 else
                 {
-                    MessageBox.Show("Try again. " + attempt, "Information", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information);
+                    MessageBox.Show("Incorrect login details." + attempt);
+                    //MessageBox.Show("Try again. " + attempt, "Information", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information);
                 }
             }else if(attempt ==4)
             {

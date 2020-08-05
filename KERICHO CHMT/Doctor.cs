@@ -104,5 +104,12 @@ namespace KERICHO_CHMT
             Nurse nn = new Nurse(label2.Text);
             nn.ShowDialog();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AccountInfo cs = new AccountInfo(label2.Text);
+            cs.Show();
+        }
     }
 }

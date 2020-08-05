@@ -70,6 +70,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInfo.Designer.cs">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDataMsg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet34.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet36.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -450,6 +466,9 @@
     <Compile Include="WorkTicketSummary.Designer.cs">
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountInfo.resx">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDataMsg.resx">
       <DependentUpon>AddDataMsg.cs</DependentUpon>
     </EmbeddedResource>
@@ -894,6 +913,28 @@
     </None>
     <None Include="cmbloginDataSet34.xss">
       <DependentUpon>cmbloginDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet35.xsc">
+      <DependentUpon>cmbloginDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet35.xss">
+      <DependentUpon>cmbloginDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet36.xsc">
+      <DependentUpon>cmbloginDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet36.xss">
+      <DependentUpon>cmbloginDataSet36.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet4.xsc">
       <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>

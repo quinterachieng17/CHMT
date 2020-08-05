@@ -39,49 +39,49 @@ namespace KERICHO_CHMT
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-           TrackRecords ss = new TrackRecords();
+           TrackRecords ss = new TrackRecords(label3.Text);
             ss.Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Doctor ss = new Doctor();
+            Doctor ss = new Doctor(label3.Text);
             ss.Show();
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register ss = new Register();
+            Register ss = new Register(label3.Text);
             ss.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Driver ss = new Driver();
+            Driver ss = new Driver(label3.Text);
             ss.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             this.Hide();
-            VehicleRegistration ss = new VehicleRegistration();
+            VehicleRegistration ss = new VehicleRegistration(label3.Text);
             ss.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EditVehicle ss = new EditVehicle();
+            EditVehicle ss = new EditVehicle(label3.Text);
             ss.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Hide();
-            StaffDetails ss = new StaffDetails();
+            StaffDetails ss = new StaffDetails(label3.Text);
             ss.Show();
         }
 

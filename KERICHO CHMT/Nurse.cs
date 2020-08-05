@@ -77,7 +77,8 @@ namespace KERICHO_CHMT
 
             if (label3.Text == "Nurse" || label3.Text == "Chief Nurse")
             {
-                pictureBoxBack.Hide();               
+                pictureBoxBack.Hide();
+                             
             }
             
             //Loading to the dataGridView                    

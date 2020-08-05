@@ -50,3 +50,4 @@ D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\RdlCompile.comp
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.LPG.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.LPGStations.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.EditPatientDetails.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.AccountInfo.resources

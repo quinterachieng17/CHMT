@@ -52,13 +52,13 @@ namespace KERICHO_CHMT
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TrackRecords ss = new TrackRecords(label2.Text);
-            ss.Show();
+            Doctor dd = new Doctor(label2.Text);
+            dd.Show();
         }
 
         private void WorkTicketSummary_Load(object sender, EventArgs e)
         {
-
+            label2.Hide();
         }
 
         //To export the dataGridView to pdf
@@ -111,6 +111,16 @@ namespace KERICHO_CHMT
         private void button10_Click(object sender, EventArgs e)
         {
             exportgridviewtopdf(dgv2, "KTIMS WorkTicket Summary");
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
