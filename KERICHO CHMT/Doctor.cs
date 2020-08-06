@@ -112,5 +112,10 @@ namespace KERICHO_CHMT
             AccountInfo cs = new AccountInfo(label2.Text);
             cs.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

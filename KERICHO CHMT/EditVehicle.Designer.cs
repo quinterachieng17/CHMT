@@ -33,7 +33,6 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgvVehicle = new System.Windows.Forms.DataGridView();
             this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +49,18 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.button12 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
@@ -92,11 +91,12 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1157, 8);
+            this.label6.Location = new System.Drawing.Point(1359, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 28;
             this.label6.Text = "Date";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnSave
             // 
@@ -133,15 +133,6 @@
             this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 18;
             this.label2.Text = "Menu Items";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePicker1.Location = new System.Drawing.Point(1193, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 20);
-            this.dateTimePicker1.TabIndex = 16;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dgvVehicle
             // 
@@ -323,15 +314,25 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1585, 92);
             this.tableLayoutPanel2.TabIndex = 43;
             // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(628, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(328, 26);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "MOTOR VEHICLE DETAILS";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.7563F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.2437F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 201F));
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(45, 111);
@@ -341,6 +342,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1392, 29);
             this.tableLayoutPanel3.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 16);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "label4";
             // 
             // tableLayoutPanel4
             // 
@@ -418,17 +430,6 @@
             this.button1.Text = "Preview";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 16);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "label4";
-            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.ColumnCount = 1;
@@ -482,18 +483,6 @@
             this.button17.Text = "View Work Ticket";
             this.button17.UseVisualStyleBackColor = false;
             this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(628, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(328, 26);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "MOTOR VEHICLE DETAILS";
             // 
             // tableLayoutPanel1
             // 
@@ -593,7 +582,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dgvVehicle;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;

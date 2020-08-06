@@ -117,7 +117,7 @@ namespace KERICHO_CHMT
 
         private void EditVehicle_Load(object sender, EventArgs e)
         {
-
+            label6.Text = DateTime.Now.ToLongDateString();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -192,6 +192,11 @@ namespace KERICHO_CHMT
         private void button9_Click(object sender, EventArgs e)
         {
             exportgridviewtopdf(dgvVehicle, "KTIMS Motor Vehicle Details");
-        }        
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

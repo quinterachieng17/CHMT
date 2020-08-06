@@ -45,7 +45,7 @@ namespace KERICHO_CHMT
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+            label13.Text = DateTime.Now.ToLongDateString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -205,6 +205,11 @@ namespace KERICHO_CHMT
             this.Hide();
             Nurse nn = new Nurse(label2.Text);
             nn.ShowDialog();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

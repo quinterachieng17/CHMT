@@ -163,5 +163,10 @@ namespace KERICHO_CHMT
                 e.Handled = true;
             }
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

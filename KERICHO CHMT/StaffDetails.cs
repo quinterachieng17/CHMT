@@ -140,11 +140,7 @@ namespace KERICHO_CHMT
 
         private void StaffDetails_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cmbloginDataSet25.StaffRegister' table. You can move, or remove it, as needed.
-          //  this.staffRegisterTableAdapter.Fill(this.cmbloginDataSet25.StaffRegister);
-
-            // TODO: This line of code loads data into the 'cmbloginDataSet.RegisterStaff' table. You can move, or remove it, as needed.
-            //this.registerStaffTableAdapter.Fill(this.cmbloginDataSet.RegisterStaff);
+            label6.Text = DateTime.Now.ToLongDateString();
             PopulateDesignationComboBox();
             PopulateRegionComboBox();
         }
@@ -264,6 +260,11 @@ namespace KERICHO_CHMT
             this.Hide();
             Nurse nn = new Nurse(label4.Text);
             nn.ShowDialog();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -89,7 +89,7 @@ namespace KERICHO_CHMT
 
         private void VehicleRegistration_Load(object sender, EventArgs e)
         {
-
+            label6.Text = DateTime.Now.ToLongDateString();
         }
 
         private void txtRegNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,6 +123,11 @@ namespace KERICHO_CHMT
         private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -45,7 +45,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,13 +55,13 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -294,14 +293,6 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Staff Details";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.dateTimePicker1.Location = new System.Drawing.Point(107, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker1.TabIndex = 25;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -415,14 +406,24 @@
             this.tableLayoutPanel1.TabIndex = 35;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(568, 49);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(331, 25);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "STAFF REGISTRATION FORM";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.49488F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.50512F));
             this.tableLayoutPanel3.Controls.Add(this.label13, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1158, 88);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -434,11 +435,12 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(71, 11);
+            this.label13.Location = new System.Drawing.Point(249, 11);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 13);
+            this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 26;
-            this.label13.Text = "Date";
+            this.label13.Text = "label13";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -515,18 +517,6 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(530, 31);
             this.tableLayoutPanel6.TabIndex = 40;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(568, 49);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(331, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "STAFF REGISTRATION FORM";
             // 
             // tableLayoutPanel8
             // 
@@ -778,7 +768,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

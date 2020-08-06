@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,11 +50,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -64,14 +63,6 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.Location = new System.Drawing.Point(671, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 0;
             // 
             // label1
             // 
@@ -202,11 +193,12 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(635, 7);
+            this.label6.Location = new System.Drawing.Point(841, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 12;
             this.label6.Text = "Date";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtEngineNo
             // 
@@ -325,7 +317,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(874, 33);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
@@ -333,12 +325,10 @@
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 205F));
             this.tableLayoutPanel3.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(12, 81);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -347,6 +337,17 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(874, 28);
             this.tableLayoutPanel3.TabIndex = 22;
             this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 16);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "label11";
             // 
             // tableLayoutPanel4
             // 
@@ -404,17 +405,6 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "NEW MOTOR VEHICLE REGISRATION FORM";
             // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 16);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "label11";
-            // 
             // VehicleRegistration
             // 
             this.AcceptButton = this.btnSave;
@@ -454,8 +444,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
