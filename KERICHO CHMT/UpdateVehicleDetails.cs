@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 namespace KERICHO_CHMT
 {
     public partial class UpdateVehicleDetails : Form
-    {
+    {       
         string connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True";
         public UpdateVehicleDetails()
         {
@@ -39,6 +39,7 @@ namespace KERICHO_CHMT
         private void UpdateVehicleDetails_Load(object sender, EventArgs e)
         {
             PopulateDataGridView();
+            
         }
 
         private void dgvVehicleUpdate_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -47,12 +48,24 @@ namespace KERICHO_CHMT
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
+                    //Insert operation
                     sqlCon.Open();
                     DataGridViewRow dgvRow = dgvVehicleUpdate.CurrentRow;
-                    SqlCommand sqlCmd = new SqlCommand("VehicleAddOrEdit", sqlCon); //Avoids sql inections
+                    SqlCommand sqlCmd = new SqlCommand("VehicleAddOrEdit", sqlCon); //Avoids sql injections
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    if (dgvRow.Cells["txtVehicleID"].Value == DBNull.Value) //Insert operation
+                    if (dgvRow.Cells["txtVehicleID"].Value == DBNull.Value)
+                    {
                         sqlCmd.Parameters.AddWithValue("@VehicleID", 0);
+                        sqlCmd.Parameters.AddWithValue("@RegNo", dgvRow.Cells["txtRegNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtRegNo"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Make", dgvRow.Cells["txtMake"].Value == DBNull.Value ? "" : dgvRow.Cells["txtMake"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Model", dgvRow.Cells["txtModel"].Value == DBNull.Value ? "" : dgvRow.Cells["txtModel"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@ChasisNo", dgvRow.Cells["txtChasisNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtChasisNo"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@EngineNo", dgvRow.Cells["txtEngineNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtEngineNo"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@PlateNo", dgvRow.Cells["txtPlateNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPlateNo"].Value.ToString());
+                        sqlCmd.ExecuteNonQuery();                       
+                        PopulateDataGridView();
+                        
+                    }                                    
                     else
                     //update operation
                     {
@@ -63,8 +76,9 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@ChasisNo", dgvRow.Cells["txtChasisNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtChasisNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@EngineNo", dgvRow.Cells["txtEngineNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtEngineNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@PlateNo", dgvRow.Cells["txtPlateNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPlateNo"].Value.ToString());
-                        sqlCmd.ExecuteNonQuery();
+                        sqlCmd.ExecuteNonQuery();                       
                         PopulateDataGridView();
+                        
                     }
                 }
             }
@@ -72,11 +86,11 @@ namespace KERICHO_CHMT
         private void dgvVehicleUpdate_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             e.Control.KeyPress -= AllowNumbersOnly; //avoids the already binded textbox keypress event
-            if (dgvVehicleUpdate.CurrentCell.ColumnIndex == 1)// Allows only numbers into the ID Number cell
-            {
+            //if (dgvVehicleUpdate.CurrentCell.ColumnIndex == 1)// Allows only numbers into the ID Number cell
+            //{
 
-                e.Control.KeyPress += AllowNumbersOnly; //Adds keypress event into the textbox
-            }
+            //    e.Control.KeyPress += AllowNumbersOnly; //Adds keypress event into the textbox
+            //}
         }
         private void AllowNumbersOnly(Object sender, KeyPressEventArgs e)
         {
@@ -90,7 +104,7 @@ namespace KERICHO_CHMT
             if (dgvVehicleUpdate.CurrentRow.Cells["txtVehicleID"].Value != DBNull.Value)
 
             //Deletes only if the user confirms by pressing "Yes"
-            {
+             {
                 if (MessageBox.Show("Are you sure to Delete this Record ?", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SqlConnection sqlCon = new SqlConnection(connectionString))
@@ -113,7 +127,14 @@ namespace KERICHO_CHMT
 
         private void dgvVehicleUpdate_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            MessageBox.Show("Please select a record to edit");
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditVehicle ev = new EditVehicle(label1.Text);
+            ev.Show();
         }
     }
     }

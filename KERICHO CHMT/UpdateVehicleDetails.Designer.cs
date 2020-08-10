@@ -37,6 +37,7 @@
             this.txtEngineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicleUpdate)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             this.txtPlateNo});
             this.dgvVehicleUpdate.Location = new System.Drawing.Point(12, 53);
             this.dgvVehicleUpdate.Name = "dgvVehicleUpdate";
-            this.dgvVehicleUpdate.Size = new System.Drawing.Size(1279, 487);
+            this.dgvVehicleUpdate.Size = new System.Drawing.Size(1279, 424);
             this.dgvVehicleUpdate.TabIndex = 0;
             this.dgvVehicleUpdate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicleUpdate_CellContentClick);
             this.dgvVehicleUpdate.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicleUpdate_CellValueChanged);
@@ -118,11 +119,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1222, 507);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UpdateVehicleDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1303, 552);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvVehicleUpdate);
             this.Name = "UpdateVehicleDetails";
@@ -137,6 +149,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvVehicleUpdate;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtVehicleID;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtMake;
@@ -144,6 +157,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtChasisNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtEngineNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtPlateNo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -18,12 +18,19 @@ namespace KERICHO_CHMT
         {
             InitializeComponent();
         }
+
+        public ApproveTransfers(string username)
+        {
+            InitializeComponent();
+            label4.Text = username;
+        }
         //Dialog Box Custom
         static ApproveTransfers MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnSave, string btnCancel)
         {
             MsgBox = new ApproveTransfers();
-            MsgBox.label1.Text = Text;            
+            MsgBox.label1.Text = Text;
+            MsgBox.label3.Text = Text;
             MsgBox.btnCancel.Text = btnCancel;
             MsgBox.btnOK.Text = btnSave;
             MsgBox.ShowDialog();
@@ -33,6 +40,9 @@ namespace KERICHO_CHMT
        
         private void ApproveTransfers_Load(object sender, EventArgs e)
         {
+            label4.Hide();
+            label1.Text = "ALL TRANSFERRED CASES APPROVED";
+            label4.Text = "Chief Nurse";
             //Loads data from ReferralRegister table
             String query = "select * from ReferralRegister,CommentsTableTransfers where ReferralRegister.PatientNo = CommentsTableTransfers.PatientNo";
             SqlCommand cmd = new SqlCommand(query, sqlcon);

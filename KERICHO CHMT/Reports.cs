@@ -39,13 +39,13 @@ namespace KERICHO_CHMT
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            ApprovedTransferReport tr = new ApprovedTransferReport();
+            ApprovedTransferReport tr = new ApprovedTransferReport(label2.Text);
             tr.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (label2.Text == "Nurse")
+            if (label2.Text == "Nurse" || label2.Text == "Transport Officer")
             {
                 this.Hide();
                 Nurse cn = new Nurse(label2.Text);
@@ -57,6 +57,7 @@ namespace KERICHO_CHMT
                 ChiefNurse cn = new ChiefNurse(label2.Text);
                 cn.ShowDialog();
             }
+            
         }
 
         private void chart2_Click(object sender, EventArgs e)
@@ -113,7 +114,16 @@ namespace KERICHO_CHMT
 
         private void button4_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            Facility ff = new Facility();
+            ff.Show();
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AllNurses ff = new AllNurses();
+            ff.Show();
         }
     }
 }

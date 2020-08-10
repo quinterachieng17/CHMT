@@ -22,13 +22,20 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public ApproverReferrals(string username)
+        {
+            InitializeComponent();
+            label2.Text = username;
+        }
+
 
         //Dialog Box Custom
         static ApproverReferrals MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnApprove, string btnCancel)
         {
             MsgBox = new ApproverReferrals();
-            MsgBox.label1.Text = Text;          
+            MsgBox.label1.Text = Text;
+            MsgBox.label3.Text = Text;
             MsgBox.btnCancel.Text = btnCancel;
             MsgBox.btnOK.Text = btnApprove;
             MsgBox.ShowDialog();
@@ -42,7 +49,11 @@ namespace KERICHO_CHMT
         }
 
         private void ApproverReferrals_Load(object sender, EventArgs e)
-        {      
+        {
+                label2.Hide();
+                label3.Text = "ALL REFERRAL CASES RECORDED";
+                label2.Text = "Chief Nurse";
+
                 //Loads data from PatientRegister table and Comments Table
                 String query = "select * from PatientRegister,CommentsTable where PatientRegister.PatientNo = CommentsTable.PatientNo";           
                 SqlCommand cmd = new SqlCommand(query, sqlcon);

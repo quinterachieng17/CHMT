@@ -19,18 +19,19 @@ namespace KERICHO_CHMT
         public ApprovedReferralReport(string username)
         {
             InitializeComponent();
-            label2.Text = username;
+            label3.Text = username;
         }
 
     private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports rr = new Reports(label2.Text);
+            Reports rr = new Reports(label3.Text);
             rr.ShowDialog();
         }
 
         private void ApprovedReferralReport_Load(object sender, EventArgs e)
         {
+            label3.Hide();
             // TODO: This line of code loads data into the 'cmbloginDataSet9.PatientRegisterApproved' table. You can move, or remove it, as needed.
             this.patientRegisterApprovedTableAdapter1.Fill(this.cmbloginDataSet9.PatientRegisterApproved);
             // TODO: This line of code loads data into the 'cmbloginDataSet6.PatientRegisterApproved' table. You can move, or remove it, as needed.
@@ -39,6 +40,16 @@ namespace KERICHO_CHMT
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

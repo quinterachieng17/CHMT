@@ -28,53 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.designationIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.regionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbloginDataSet36 = new KERICHO_CHMT.cmbloginDataSet36();
-            this.staffRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffRegisterTableAdapter = new KERICHO_CHMT.cmbloginDataSet36TableAdapters.StaffRegisterTableAdapter();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtRegionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDesignationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffRegisterBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.userIDDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.iDNumberDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.designationIDDataGridViewTextBoxColumn,
-            this.regionIDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.staffRegisterBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 100);
+            this.txtUserID,
+            this.txtFirstName,
+            this.txtLastName,
+            this.txtIDNumber,
+            this.txtPassword,
+            this.txtUserName,
+            this.txtDesignationID,
+            this.txtRegionID});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1114, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(1234, 526);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
             // label1
             // 
@@ -109,69 +106,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // iDNumberDataGridViewTextBoxColumn
-            // 
-            this.iDNumberDataGridViewTextBoxColumn.DataPropertyName = "IDNumber";
-            this.iDNumberDataGridViewTextBoxColumn.HeaderText = "IDNumber";
-            this.iDNumberDataGridViewTextBoxColumn.Name = "iDNumberDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // designationIDDataGridViewTextBoxColumn
-            // 
-            this.designationIDDataGridViewTextBoxColumn.DataPropertyName = "DesignationID";
-            this.designationIDDataGridViewTextBoxColumn.HeaderText = "DesignationID";
-            this.designationIDDataGridViewTextBoxColumn.Name = "designationIDDataGridViewTextBoxColumn";
-            // 
-            // regionIDDataGridViewTextBoxColumn
-            // 
-            this.regionIDDataGridViewTextBoxColumn.DataPropertyName = "RegionID";
-            this.regionIDDataGridViewTextBoxColumn.HeaderText = "RegionID";
-            this.regionIDDataGridViewTextBoxColumn.Name = "regionIDDataGridViewTextBoxColumn";
-            // 
-            // cmbloginDataSet36
-            // 
-            this.cmbloginDataSet36.DataSetName = "cmbloginDataSet36";
-            this.cmbloginDataSet36.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // staffRegisterBindingSource
-            // 
-            this.staffRegisterBindingSource.DataMember = "StaffRegister";
-            this.staffRegisterBindingSource.DataSource = this.cmbloginDataSet36;
-            // 
-            // staffRegisterTableAdapter
-            // 
-            this.staffRegisterTableAdapter.ClearBeforeFill = true;
             // 
             // tableLayoutPanel1
             // 
@@ -210,6 +144,68 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "label2";
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 42);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1240, 532);
+            this.tableLayoutPanel3.TabIndex = 7;
+            // 
+            // txtRegionID
+            // 
+            this.txtRegionID.DataPropertyName = "RegionID";
+            this.txtRegionID.HeaderText = "Region";
+            this.txtRegionID.Name = "txtRegionID";
+            // 
+            // txtDesignationID
+            // 
+            this.txtDesignationID.DataPropertyName = "DesignationID";
+            this.txtDesignationID.HeaderText = "Designation";
+            this.txtDesignationID.Name = "txtDesignationID";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.DataPropertyName = "UserName";
+            this.txtUserName.HeaderText = "Username";
+            this.txtUserName.Name = "txtUserName";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.DataPropertyName = "Password";
+            this.txtPassword.HeaderText = "Password";
+            this.txtPassword.Name = "txtPassword";
+            // 
+            // txtIDNumber
+            // 
+            this.txtIDNumber.DataPropertyName = "IDNumber";
+            this.txtIDNumber.HeaderText = "ID Number";
+            this.txtIDNumber.Name = "txtIDNumber";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.DataPropertyName = "LastName";
+            this.txtLastName.HeaderText = "Last Name";
+            this.txtLastName.Name = "txtLastName";
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.DataPropertyName = "FirstName";
+            this.txtFirstName.HeaderText = "Fist Name";
+            this.txtFirstName.Name = "txtFirstName";
+            // 
+            // txtUserID
+            // 
+            this.txtUserID.DataPropertyName = "UserID";
+            this.txtUserID.HeaderText = "UserID";
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Visible = false;
+            // 
             // AccountInfo
             // 
             this.AcceptButton = this.btnSave;
@@ -217,19 +213,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1240, 612);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "AccountInfo";
             this.Text = "AccountInfo";
             this.Load += new System.EventHandler(this.AccountInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffRegisterBindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,19 +236,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDNumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn designationIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn regionIDDataGridViewTextBoxColumn;
-        private cmbloginDataSet36 cmbloginDataSet36;
-        private System.Windows.Forms.BindingSource staffRegisterBindingSource;
-        private cmbloginDataSet36TableAdapters.StaffRegisterTableAdapter staffRegisterTableAdapter;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtLastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtIDNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtUserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDesignationID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtRegionID;
     }
 }
