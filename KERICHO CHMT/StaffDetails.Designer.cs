@@ -40,13 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.viewStaff = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbxDesignation = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.cbxRegion = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbloginDataSet = new KERICHO_CHMT.cmbloginDataSet();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -65,6 +58,13 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.IDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxRegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -235,53 +235,6 @@
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
-            // IDNumber
-            // 
-            this.IDNumber.DataPropertyName = "IDNumber";
-            this.IDNumber.HeaderText = "ID Number";
-            this.IDNumber.Name = "IDNumber";
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
-            // 
-            // cbxDesignation
-            // 
-            this.cbxDesignation.DataPropertyName = "DesignationID";
-            this.cbxDesignation.HeaderText = "Designation";
-            this.cbxDesignation.Name = "cbxDesignation";
-            this.cbxDesignation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cbxDesignation.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // cbxRegion
-            // 
-            this.cbxRegion.DataPropertyName = "RegionID";
-            this.cbxRegion.HeaderText = "Region";
-            this.cbxRegion.Name = "cbxRegion";
-            this.cbxRegion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cbxRegion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // UserName
-            // 
-            this.UserName.HeaderText = "Username";
-            this.UserName.Name = "UserName";
-            this.UserName.Visible = false;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.Visible = false;
-            // 
             // cmbloginDataSet
             // 
             this.cmbloginDataSet.DataSetName = "cmbloginDataSet";
@@ -322,6 +275,8 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -373,6 +328,7 @@
             this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 45;
             this.label4.Text = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -515,6 +471,51 @@
             this.button8.TabIndex = 50;
             this.button8.UseVisualStyleBackColor = false;
             // 
+            // IDNumber
+            // 
+            this.IDNumber.DataPropertyName = "IDNumber";
+            this.IDNumber.HeaderText = "ID Number";
+            this.IDNumber.Name = "IDNumber";
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            // 
+            // cbxDesignation
+            // 
+            this.cbxDesignation.DataPropertyName = "DesignationID";
+            this.cbxDesignation.HeaderText = "Designation";
+            this.cbxDesignation.Name = "cbxDesignation";
+            this.cbxDesignation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // cbxRegion
+            // 
+            this.cbxRegion.DataPropertyName = "RegionID";
+            this.cbxRegion.HeaderText = "Region";
+            this.cbxRegion.Name = "cbxRegion";
+            this.cbxRegion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "Username";
+            this.UserName.Name = "UserName";
+            this.UserName.Visible = false;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.Visible = false;
+            // 
             // StaffDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -573,13 +574,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
         private cmbloginDataSet25 cmbloginDataSet25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewComboBoxColumn cbxDesignation;
-        private System.Windows.Forms.DataGridViewComboBoxColumn cbxRegion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Button button13;
@@ -589,5 +583,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbxDesignation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbxRegion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }

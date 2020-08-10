@@ -46,6 +46,7 @@ namespace KERICHO_CHMT
         private void Register_Load(object sender, EventArgs e)
         {
             label13.Text = DateTime.Now.ToLongDateString();
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -92,7 +93,7 @@ namespace KERICHO_CHMT
 
             //Add Driver to UserRegister Table
             else if (cbxDesignation.SelectedIndex == 1)
-            {
+            {                
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();

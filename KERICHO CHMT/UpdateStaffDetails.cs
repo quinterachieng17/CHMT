@@ -19,42 +19,10 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
-        void PopulateDesignationComboBox()
+        public UpdateStaffDetails(string username)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Designation", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                //Binding combobox values to the datagridview combo
-
-                cbxDesignation.ValueMember = "DesignationID";
-                cbxDesignation.DisplayMember = "Designation";
-                DataRow topItem = dtbl.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "-Select-";
-                dtbl.Rows.InsertAt(topItem, 0);
-                cbxDesignation.DataSource = dtbl;
-            }
-        }
-
-        void PopulateRegionComboBox()
-        {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Region", sqlCon);
-                DataTable dtbl2 = new DataTable();
-                sqlDa.Fill(dtbl2);
-                cbxRegion.ValueMember = "RegionID";
-                cbxRegion.DisplayMember = "Region";
-                DataRow topItem = dtbl2.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "-Select-";
-                dtbl2.Rows.InsertAt(topItem, 0); 
-                cbxRegion.DataSource = dtbl2;
-            }
+            InitializeComponent();
+            label2.Text = username;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -64,53 +32,74 @@ namespace KERICHO_CHMT
 
         private void UpdateStaffDetails_Load(object sender, EventArgs e)
         {
-            PopulateDesignationComboBox();
-            PopulateRegionComboBox();
-            PopulateDataGridView();
-
-
+            //label2.Hide();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvEmployee.DataSource = dtbl;
+            }
+            label1.Text = "Update Driver Details";
         }
-       
+
         void PopulateDataGridView()
         {
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StaffRegister", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dgvEmployee.DataSource = dtbl;
             }
         }
-        //Update & Insert Operation
+
+       
         private void dgvEmployee_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {  
+        {
             if (dgvEmployee.CurrentRow != null)  //selects current row in focus
             {
+                //Insert Operation
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
                     DataGridViewRow dgvRow = dgvEmployee.CurrentRow;
-                    SqlCommand sqlCmd = new SqlCommand("EmployeeAddOrEdit", sqlCon); //Avoids sql inections
+                    SqlCommand sqlCmd = new SqlCommand("UserAddOrEdit", sqlCon); //Avoids sql injections
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    if (dgvRow.Cells["txtUserID"].Value == DBNull.Value) //Insert operation
+                    if (dgvRow.Cells["txtUserID"].Value == DBNull.Value)
+                    {
                         sqlCmd.Parameters.AddWithValue("@UserID", 0);
-                    else 
+                        sqlCmd.Parameters.AddWithValue("@FirstName", dgvRow.Cells["txtFirstName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtFirstName"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@LastName", dgvRow.Cells["txtLastName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtLastName"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@IDNumber", dgvRow.Cells["txtIDNumber"].Value == DBNull.Value ? "" : dgvRow.Cells["txtIDNumber"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Password", dgvRow.Cells["txtPassword"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPassword"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Username", dgvRow.Cells["txtUsername"].Value == DBNull.Value ? "" : dgvRow.Cells["txtUsername"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@DesignationID", dgvRow.Cells["txtDesignation"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDesignation"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@RegionID", dgvRow.Cells["txtRegion"].Value == DBNull.Value ? "" : dgvRow.Cells["txtRegion"].Value.ToString());
+                        sqlCmd.ExecuteNonQuery();
+                        PopulateDataGridView();
+                    }
+
+                    else
                     //update operation
                     {
                         sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgvRow.Cells["txtUserID"].Value));
-                        sqlCmd.Parameters.AddWithValue("@DesignationID", Convert.ToInt64(dgvRow.Cells["cbxDesignation"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbxDesignation"].Value.ToString()));
-                        sqlCmd.Parameters.AddWithValue("@RegionID", Convert.ToInt64(dgvRow.Cells["cbxRegion"].Value == DBNull.Value ? "0" : dgvRow.Cells["cbxRegionID"].Value.ToString()));
                         sqlCmd.Parameters.AddWithValue("@FirstName", dgvRow.Cells["txtFirstName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtFirstName"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@LastName", dgvRow.Cells["txtLastName"].Value == DBNull.Value ? "" : dgvRow.Cells["txtLastName"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@IDNumber", Convert.ToInt32(dgvRow.Cells["txtIDNumber"].Value == DBNull.Value ? "0" : dgvRow.Cells["txtIDNumber"].Value.ToString()));
-                        sqlCmd.Parameters.AddWithValue("@Username", dgvRow.Cells["txtUsername"].Value == DBNull.Value ? "" : dgvRow.Cells["txtUsername"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@IDNumber", dgvRow.Cells["txtIDNumber"].Value == DBNull.Value ? "" : dgvRow.Cells["txtIDNumber"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@Password", dgvRow.Cells["txtPassword"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPassword"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Username", dgvRow.Cells["txtUsername"].Value == DBNull.Value ? "" : dgvRow.Cells["txtUsername"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@DesignationID", dgvRow.Cells["txtDesignation"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDesignation"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@RegionID", dgvRow.Cells["txtRegion"].Value == DBNull.Value ? "" : dgvRow.Cells["txtRegion"].Value.ToString());
                         sqlCmd.ExecuteNonQuery();
                         PopulateDataGridView();
                     }
                 }
+                
             }
+
         }
 
         private void dgvEmployee_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -157,6 +146,7 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgvEmployee.CurrentRow.Cells["txtUserID"].Value));
                         sqlCmd.ExecuteNonQuery();
                     }
+                    MessageBox.Show("Record Deleted.");
                 }
                 //  Blocks the default delete operation
                 else
@@ -169,28 +159,33 @@ namespace KERICHO_CHMT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StaffRegister", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dgvEmployee.DataSource = dtbl;
-            }
-            label1.Text = "Update Staff Details";
+            //using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            //{
+            //    sqlCon.Open();
+            //    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
+            //    DataTable dtbl = new DataTable();
+            //    sqlDa.Fill(dtbl);
+            //    dgvEmployee.DataSource = dtbl;
+            //}
+            //label1.Text = "Update Staff Details";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM UserRegister", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                dgvEmployee.DataSource = dtbl;
-            }
-            label1.Text = "Update Driver Details";
+           
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StaffDetails sd = new StaffDetails(label2.Text);
+            sd.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {  
+            PopulateDataGridView();
+            MessageBox.Show("Update success");
         }
     }
 }

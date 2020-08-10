@@ -81,43 +81,43 @@ namespace KERICHO_CHMT
             TrackRecords ss = new TrackRecords(label4.Text);
             ss.Show();
         }
-        void PopulateDesignationComboBox()
-        {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Designation", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                //Binding combobox values to the datagridview combo
+        //void PopulateDesignationComboBox()
+        //{
+        //    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+        //    {
+        //        sqlCon.Open();
+        //        SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Designation", sqlCon);
+        //        DataTable dtbl = new DataTable();
+        //        sqlDa.Fill(dtbl);
+        //        //Binding combobox values to the datagridview combo
 
-                cbxDesignation.ValueMember = "DesignationID";
-                cbxDesignation.DisplayMember = "Designation";
-                DataRow topItem = dtbl.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "-Select-";
-                dtbl.Rows.InsertAt(topItem, 0);
-                cbxDesignation.DataSource = dtbl;
-            }
-        }
+        //        cbxDesignation.ValueMember = "DesignationID";
+        //        cbxDesignation.DisplayMember = "Designation";
+        //        DataRow topItem = dtbl.NewRow();
+        //        topItem[0] = 0;
+        //        topItem[1] = "-Select-";
+        //        dtbl.Rows.InsertAt(topItem, 0);
+        //        cbxDesignation.DataSource = dtbl;
+        //    }
+        //}
 
-        void PopulateRegionComboBox()
-        {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
-            {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Region", sqlCon);
-                DataTable dtbl2 = new DataTable();
-                sqlDa.Fill(dtbl2);
-                cbxRegion.ValueMember = "RegionID";
-                cbxRegion.DisplayMember = "Region";
-                DataRow topItem = dtbl2.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "-Select-";
-                dtbl2.Rows.InsertAt(topItem, 0);
-                cbxRegion.DataSource = dtbl2;
-            }
-        }
+        //void PopulateRegionComboBox()
+        //{
+        //    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+        //    {
+        //        sqlCon.Open();
+        //        SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Region", sqlCon);
+        //        DataTable dtbl2 = new DataTable();
+        //        sqlDa.Fill(dtbl2);
+        //        cbxRegion.ValueMember = "RegionID";
+        //        cbxRegion.DisplayMember = "Region";
+        //        DataRow topItem = dtbl2.NewRow();
+        //        topItem[0] = 0;
+        //        topItem[1] = "-Select-";
+        //        dtbl2.Rows.InsertAt(topItem, 0);
+        //        cbxRegion.DataSource = dtbl2;
+        //    }
+        //}
 
 
         //Displays on DataGridView for view satff
@@ -141,8 +141,8 @@ namespace KERICHO_CHMT
         private void StaffDetails_Load(object sender, EventArgs e)
         {
             label6.Text = DateTime.Now.ToLongDateString();
-            PopulateDesignationComboBox();
-            PopulateRegionComboBox();
+            //PopulateDesignationComboBox();
+            //PopulateRegionComboBox();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -215,7 +215,7 @@ namespace KERICHO_CHMT
         private void button11_Click(object sender, EventArgs e)
         {
             this.Hide();
-            UpdateStaffDetails ss = new UpdateStaffDetails();
+            UpdateStaffDetails ss = new UpdateStaffDetails(label4.Text);
             ss.Show();
         }
 
@@ -265,6 +265,11 @@ namespace KERICHO_CHMT
         private void label6_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
