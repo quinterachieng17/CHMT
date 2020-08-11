@@ -52,5 +52,12 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EditPatientDetails ep = new EditPatientDetails(label1.Text);
+            ep.Show();
+        }
     }
 }

@@ -35,8 +35,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -95,8 +95,9 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(415, 40);
             this.button2.TabIndex = 2;
-            this.button2.Text = "APPROVE AMBULANCE DATA";
+            this.button2.Text = "EDIT PATIENT DATA";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -142,19 +143,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1092, 49);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label4.Location = new System.Drawing.Point(183, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(624, 33);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
-            // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -170,6 +158,19 @@
             this.button5.Text = "Logout";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.Location = new System.Drawing.Point(183, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(624, 33);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
             // 
             // tableLayoutPanel2
             // 
