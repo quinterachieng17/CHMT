@@ -33,7 +33,7 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM RecordMileage", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -42,6 +42,39 @@ namespace KERICHO_CHMT
                 dgv2.DataSource = dtbl;
                 
             }
+            label4.Text = "Homeline Filling Station";
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Kipsigislpg", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                // Displays only the selected columns
+                dgv2.AutoGenerateColumns = false;
+                dgv2.DataSource = dtbl;
+
+            }
+            label4.Text = "Kipsigis Filling Station";
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Jumbolpg", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                // Displays only the selected columns
+                dgv2.AutoGenerateColumns = false;
+                dgv2.DataSource = dtbl;
+            }
+            label4.Text = "Jumbo Filling Station";
         }
 
         private void dgv2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -59,6 +92,18 @@ namespace KERICHO_CHMT
         private void WorkTicketSummary_Load(object sender, EventArgs e)
         {
             label2.Hide();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM RecordMileage", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                // Displays only the selected columns
+                dgv2.AutoGenerateColumns = false;
+                dgv2.DataSource = dtbl;
+
+            }
         }
 
         //To export the dataGridView to pdf
@@ -122,5 +167,7 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        
     }
 }

@@ -27,8 +27,8 @@ namespace KERICHO_CHMT
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (cmbDriverNo.Text == "" || txtMileage.Text == "")
-                MessageBox.Show("Driver's ID or Mileage cannot be blank");
+            if (cmbDriverNo.Text == "" || txtMileage.Text == "" || txtAuthorizingOfficerNo.Text == "")
+                MessageBox.Show("Driver's/Authorizing Officer's No or Mileage cannot be blank");
 
             //Jumbo lpg
             else if (cmbStation.SelectedIndex == 0)
@@ -46,6 +46,10 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@VoucherNo", txtVoucherNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", txtAuthorizingOfficerName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", txtAuthorizingOfficerNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", cmbAuthorizingOfficerDesignation.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Mileage Recorded succsessfully");
@@ -69,6 +73,10 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@VoucherNo", txtVoucherNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", txtAuthorizingOfficerName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", txtAuthorizingOfficerNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", cmbAuthorizingOfficerDesignation.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Mileage Recorded succsessfully");
@@ -92,6 +100,10 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Destination", txtDestination.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@VoucherNo", txtVoucherNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", txtAuthorizingOfficerName.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", txtAuthorizingOfficerNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", cmbAuthorizingOfficerDesignation.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Mileage Recorded succsessfully");
