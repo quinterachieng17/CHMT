@@ -111,42 +111,19 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM RecordMileage", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg", sqlCon);
+                SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg", sqlCon);
+                SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg", sqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
+                sqlDa2.Fill(dtbl);
+                sqlDa3.Fill(dtbl);
                 dgv1.DataSource = dtbl;
             }
         }
 
         private void dgv1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv1.CurrentRow != null)  //selects current row in focus
-            {
-                using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                {
-                    sqlCon.Open();
-                    DataGridViewRow dgvRow = dgv1.CurrentRow;
-                    SqlCommand sqlCmd = new SqlCommand("MileageAddOrEdit", sqlCon); //Avoids sql inections
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    if (dgvRow.Cells["txtUserID"].Value == DBNull.Value)
-                    { //Insert operation
-                        sqlCmd.Parameters.AddWithValue("@UserID", 0);
-                    }
-                    else
-                    //update operation
-                    {
-                        sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgvRow.Cells["txtUserID"].Value));
-                        sqlCmd.Parameters.AddWithValue("@DriverID", Convert.ToInt32(dgvRow.Cells["txtDriverID"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDriverID"].Value.ToString()));
-                        sqlCmd.Parameters.AddWithValue("@RegNo", dgvRow.Cells["txtRegNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtRegNo"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@MileageReading", dgvRow.Cells["txtMileageReading"].Value == DBNull.Value ? "" : dgvRow.Cells["txtMileageReading"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@OilDrawn", dgvRow.Cells["txtOilDrawn"].Value == DBNull.Value ? "" : dgvRow.Cells["txtOilDrawn"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgvRow.Cells["txtFuelDrawn"].Value == DBNull.Value ? "" : dgvRow.Cells["txtFuelDrawn"].Value.ToString());
-                        sqlCmd.Parameters.AddWithValue("@Destination", dgvRow.Cells["txtDestination"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDestination"].Value.ToString());
-                        sqlCmd.ExecuteNonQuery();
-
-                    }
-                }
-            }
         }
 
         private void dgv1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -178,7 +155,7 @@ namespace KERICHO_CHMT
         private void button9_Click(object sender, EventArgs e)
         {
             this.Hide();
-            WorkTicketSummary ss = new WorkTicketSummary();
+            WorkTicketSummary ss = new WorkTicketSummary(label3.Text);
             ss.Show();
         }
 

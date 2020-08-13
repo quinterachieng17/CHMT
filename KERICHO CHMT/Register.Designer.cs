@@ -75,6 +75,7 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -93,7 +94,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(439, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(589, 31);
@@ -296,7 +297,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.linkLabel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.linkLabel1.Location = new System.Drawing.Point(1261, 296);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(73, 13);
@@ -317,7 +318,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox1.Image = global::KERICHO_CHMT.Properties.Resources.photo_camera;
             this.pictureBox1.Location = new System.Drawing.Point(1275, 248);
             this.pictureBox1.Name = "pictureBox1";
@@ -328,7 +329,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox3.Location = new System.Drawing.Point(1157, 198);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(238, 236);
@@ -411,7 +412,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.ForeColor = System.Drawing.Color.Green;
             this.label12.Location = new System.Drawing.Point(568, 49);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(331, 25);
@@ -435,9 +436,10 @@
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(249, 11);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(242, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(48, 15);
             this.label13.TabIndex = 26;
             this.label13.Text = "label13";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -498,24 +500,25 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(191, 9);
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(100, 8);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 13);
+            this.label11.Size = new System.Drawing.Size(170, 15);
             this.label11.TabIndex = 34;
             this.label11.Text = "All these fields are Mandatory.";
             // 
             // tableLayoutPanel6
             // 
-            this.tableLayoutPanel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableLayoutPanel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.label11, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(497, 573);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(657, 573);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(530, 31);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(370, 31);
             this.tableLayoutPanel6.TabIndex = 40;
             // 
             // tableLayoutPanel8
@@ -548,7 +551,7 @@
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button8.BackColor = System.Drawing.Color.Honeydew;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(3, 3);
             this.button8.Name = "button8";
@@ -697,19 +700,33 @@
             // 
             this.button3.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.BackColor = System.Drawing.Color.Green;
             this.button3.Location = new System.Drawing.Point(3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(1553, 14);
             this.button3.TabIndex = 48;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanel7.BackColor = System.Drawing.Color.DarkGreen;
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(573, 81);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(326, 2);
+            this.tableLayoutPanel7.TabIndex = 53;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1467, 690);
+            this.Controls.Add(this.tableLayoutPanel7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tableLayoutPanel9);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -797,5 +814,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
     }
 }

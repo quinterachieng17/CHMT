@@ -64,11 +64,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtAuthorizingOfficerName = new System.Windows.Forms.TextBox();
             this.cmbAuthorizingOfficerDesignation = new System.Windows.Forms.ComboBox();
+            this.txtAuthorizingOfficerName = new System.Windows.Forms.TextBox();
+            this.txtAuthorizingOfficerNo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtAuthorizingOfficerNo = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
@@ -162,7 +162,7 @@
             this.lblHead.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHead.AutoSize = true;
             this.lblHead.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHead.ForeColor = System.Drawing.Color.White;
+            this.lblHead.ForeColor = System.Drawing.Color.Black;
             this.lblHead.Location = new System.Drawing.Point(301, 4);
             this.lblHead.Name = "lblHead";
             this.lblHead.Size = new System.Drawing.Size(313, 26);
@@ -494,14 +494,6 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "Athorizing Officer Designation";
             // 
-            // txtAuthorizingOfficerName
-            // 
-            this.txtAuthorizingOfficerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAuthorizingOfficerName.Location = new System.Drawing.Point(241, 41);
-            this.txtAuthorizingOfficerName.Name = "txtAuthorizingOfficerName";
-            this.txtAuthorizingOfficerName.Size = new System.Drawing.Size(260, 20);
-            this.txtAuthorizingOfficerName.TabIndex = 22;
-            // 
             // cmbAuthorizingOfficerDesignation
             // 
             this.cmbAuthorizingOfficerDesignation.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -514,6 +506,22 @@
             this.cmbAuthorizingOfficerDesignation.Name = "cmbAuthorizingOfficerDesignation";
             this.cmbAuthorizingOfficerDesignation.Size = new System.Drawing.Size(260, 21);
             this.cmbAuthorizingOfficerDesignation.TabIndex = 40;
+            // 
+            // txtAuthorizingOfficerName
+            // 
+            this.txtAuthorizingOfficerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAuthorizingOfficerName.Location = new System.Drawing.Point(241, 41);
+            this.txtAuthorizingOfficerName.Name = "txtAuthorizingOfficerName";
+            this.txtAuthorizingOfficerName.Size = new System.Drawing.Size(260, 20);
+            this.txtAuthorizingOfficerName.TabIndex = 22;
+            // 
+            // txtAuthorizingOfficerNo
+            // 
+            this.txtAuthorizingOfficerNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAuthorizingOfficerNo.Location = new System.Drawing.Point(241, 7);
+            this.txtAuthorizingOfficerNo.Name = "txtAuthorizingOfficerNo";
+            this.txtAuthorizingOfficerNo.Size = new System.Drawing.Size(260, 20);
+            this.txtAuthorizingOfficerNo.TabIndex = 41;
             // 
             // label8
             // 
@@ -536,14 +544,6 @@
             this.label10.Size = new System.Drawing.Size(157, 19);
             this.label10.TabIndex = 51;
             this.label10.Text = "Details of the Journey";
-            // 
-            // txtAuthorizingOfficerNo
-            // 
-            this.txtAuthorizingOfficerNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAuthorizingOfficerNo.Location = new System.Drawing.Point(241, 7);
-            this.txtAuthorizingOfficerNo.Name = "txtAuthorizingOfficerNo";
-            this.txtAuthorizingOfficerNo.Size = new System.Drawing.Size(260, 20);
-            this.txtAuthorizingOfficerNo.TabIndex = 41;
             // 
             // tableLayoutPanel7
             // 
@@ -593,7 +593,7 @@
             this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(969, 512);
             this.Controls.Add(this.txtVoucherNo);

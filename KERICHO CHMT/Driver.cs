@@ -114,7 +114,7 @@ namespace KERICHO_CHMT
         }
         void Clear()
         {
-            cmbDriverNo.Text = txtMileage.Text =  cmbRegNo.Text=cmbStation.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = "";
+            cmbDriverNo.Text = txtMileage.Text =  cmbRegNo.Text=cmbStation.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = txtVoucherNo.Text = txtAuthorizingOfficerName.Text = txtAuthorizingOfficerNo.Text = cmbAuthorizingOfficerDesignation.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

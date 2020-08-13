@@ -98,7 +98,7 @@ namespace KERICHO_CHMT
 
                         if (row.Cells["Status"].Value == null)
                         {
-
+                            MessageBox.Show("Please select a case to approve");
                         }
 
                         else if (row.Cells["Status"].Value != null)
