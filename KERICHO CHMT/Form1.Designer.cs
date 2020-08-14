@@ -94,6 +94,7 @@
             this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnExit.BackColor = System.Drawing.Color.Honeydew;
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(63, 3);
             this.btnExit.Name = "btnExit";
@@ -118,6 +119,7 @@
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnLogin.BackColor = System.Drawing.Color.Honeydew;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(144, 3);
             this.btnLogin.Name = "btnLogin";
@@ -176,6 +178,7 @@
             // comboBox1
             // 
             this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Chief Nurse",

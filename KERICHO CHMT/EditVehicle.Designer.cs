@@ -80,7 +80,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(491, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(602, 32);
@@ -89,9 +89,9 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1359, 8);
+            this.label6.Location = new System.Drawing.Point(1359, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 28;
@@ -101,24 +101,28 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSave.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Location = new System.Drawing.Point(116, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.TabIndex = 23;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancel.BackColor = System.Drawing.Color.Honeydew;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(3, 3);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 28);
             this.btnCancel.TabIndex = 22;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Text = "Back";
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
@@ -142,7 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvVehicle.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVehicle.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvVehicle.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvVehicle.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dgvVehicle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVehicle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegNo,
@@ -189,7 +193,8 @@
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.SystemColors.Menu;
+            this.button5.BackColor = System.Drawing.Color.Honeydew;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(7, 210);
             this.button5.Name = "button5";
@@ -202,7 +207,8 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.SystemColors.Menu;
+            this.button4.BackColor = System.Drawing.Color.Honeydew;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(7, 72);
             this.button4.Name = "button4";
@@ -215,7 +221,8 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.Menu;
+            this.button3.BackColor = System.Drawing.Color.Honeydew;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(7, 302);
             this.button3.Name = "button3";
@@ -228,7 +235,8 @@
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button6.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(7, 164);
             this.button6.Name = "button6";
@@ -241,7 +249,8 @@
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.BackColor = System.Drawing.SystemColors.Menu;
+            this.button7.BackColor = System.Drawing.Color.Honeydew;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(7, 118);
             this.button7.Name = "button7";
@@ -254,7 +263,8 @@
             // btnRegisterStaff
             // 
             this.btnRegisterStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnRegisterStaff.BackColor = System.Drawing.Color.Honeydew;
+            this.btnRegisterStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegisterStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterStaff.Location = new System.Drawing.Point(7, 26);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
@@ -267,12 +277,14 @@
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button8.BackColor = System.Drawing.Color.Honeydew;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Location = new System.Drawing.Point(6, 5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(115, 27);
             this.button8.TabIndex = 39;
             this.button8.Text = "View Details";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
@@ -289,12 +301,14 @@
             // button10
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button10.BackColor = System.Drawing.Color.Honeydew;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Location = new System.Drawing.Point(131, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(115, 27);
             this.button10.TabIndex = 41;
             this.button10.Text = "Update Details";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // tableLayoutPanel2
@@ -423,12 +437,14 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(351, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Preview";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel7
             // 
@@ -461,7 +477,8 @@
             // button12
             // 
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button12.BackColor = System.Drawing.SystemColors.Menu;
+            this.button12.BackColor = System.Drawing.Color.Honeydew;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(3, 352);
             this.button12.Name = "button12";
@@ -474,7 +491,8 @@
             // button17
             // 
             this.button17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button17.BackColor = System.Drawing.SystemColors.Menu;
+            this.button17.BackColor = System.Drawing.Color.Honeydew;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.Location = new System.Drawing.Point(3, 258);
             this.button17.Name = "button17";
@@ -518,10 +536,10 @@
             // 
             this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Location = new System.Drawing.Point(21, 5);
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.Location = new System.Drawing.Point(21, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(1553, 11);
+            this.button2.Size = new System.Drawing.Size(1553, 15);
             this.button2.TabIndex = 48;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -530,9 +548,9 @@
             this.button11.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button11.Location = new System.Drawing.Point(21, 26);
+            this.button11.Location = new System.Drawing.Point(21, 24);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(1553, 12);
+            this.button11.Size = new System.Drawing.Size(1553, 15);
             this.button11.TabIndex = 50;
             this.button11.UseVisualStyleBackColor = false;
             // 
@@ -541,7 +559,7 @@
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1469, 676);
             this.Controls.Add(this.tableLayoutPanel9);

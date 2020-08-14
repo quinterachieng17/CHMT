@@ -40,6 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.viewStaff = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbxRegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbloginDataSet = new KERICHO_CHMT.cmbloginDataSet();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -58,17 +65,9 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.IDNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbxDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbxRegion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet25)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -79,7 +78,8 @@
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.SystemColors.Menu;
+            this.button5.BackColor = System.Drawing.Color.Honeydew;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(3, 183);
             this.button5.Name = "button5";
@@ -92,7 +92,8 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
+            this.button4.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(3, 48);
             this.button4.Name = "button4";
@@ -105,7 +106,8 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.SystemColors.Menu;
+            this.button3.BackColor = System.Drawing.Color.Honeydew;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(3, 273);
             this.button3.Name = "button3";
@@ -118,7 +120,8 @@
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.SystemColors.Menu;
+            this.button6.BackColor = System.Drawing.Color.Honeydew;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(3, 138);
             this.button6.Name = "button6";
@@ -131,7 +134,8 @@
             // btnRegisterStaff
             // 
             this.btnRegisterStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnRegisterStaff.BackColor = System.Drawing.Color.Honeydew;
+            this.btnRegisterStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegisterStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterStaff.Location = new System.Drawing.Point(3, 3);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
@@ -144,7 +148,8 @@
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button7.BackColor = System.Drawing.SystemColors.Menu;
+            this.button7.BackColor = System.Drawing.Color.Honeydew;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(3, 93);
             this.button7.Name = "button7";
@@ -156,9 +161,9 @@
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1430, 7);
+            this.label6.Location = new System.Drawing.Point(1441, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 13);
             this.label6.TabIndex = 44;
@@ -168,23 +173,27 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.BackColor = System.Drawing.Color.Honeydew;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(122, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 29);
             this.button2.TabIndex = 43;
             this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(22, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 29);
             this.button1.TabIndex = 42;
             this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -202,12 +211,14 @@
             // viewStaff
             // 
             this.viewStaff.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.viewStaff.BackColor = System.Drawing.Color.Honeydew;
+            this.viewStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.viewStaff.Location = new System.Drawing.Point(3, 4);
             this.viewStaff.Name = "viewStaff";
             this.viewStaff.Size = new System.Drawing.Size(91, 28);
             this.viewStaff.TabIndex = 52;
             this.viewStaff.Text = "View Staff";
-            this.viewStaff.UseVisualStyleBackColor = true;
+            this.viewStaff.UseVisualStyleBackColor = false;
             this.viewStaff.Click += new System.EventHandler(this.button8_Click);
             // 
             // dataGridView1
@@ -218,6 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDNumber,
@@ -229,11 +241,56 @@
             this.Password});
             this.dataGridView1.Location = new System.Drawing.Point(347, 173);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1057, 418);
+            this.dataGridView1.Size = new System.Drawing.Size(1057, 404);
             this.dataGridView1.TabIndex = 53;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+            // 
+            // IDNumber
+            // 
+            this.IDNumber.DataPropertyName = "IDNumber";
+            this.IDNumber.HeaderText = "ID Number";
+            this.IDNumber.Name = "IDNumber";
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            // 
+            // cbxDesignation
+            // 
+            this.cbxDesignation.DataPropertyName = "DesignationID";
+            this.cbxDesignation.HeaderText = "Designation";
+            this.cbxDesignation.Name = "cbxDesignation";
+            this.cbxDesignation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // cbxRegion
+            // 
+            this.cbxRegion.DataPropertyName = "RegionID";
+            this.cbxRegion.HeaderText = "Region";
+            this.cbxRegion.Name = "cbxRegion";
+            this.cbxRegion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "Username";
+            this.UserName.Name = "UserName";
+            this.UserName.Visible = false;
+            // 
+            // Password
+            // 
+            this.Password.DataPropertyName = "Password";
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
+            this.Password.Visible = false;
             // 
             // cmbloginDataSet
             // 
@@ -254,23 +311,27 @@
             // button11
             // 
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button11.BackColor = System.Drawing.Color.Honeydew;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Location = new System.Drawing.Point(201, 4);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(113, 28);
             this.button11.TabIndex = 56;
             this.button11.Text = "Update Details";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // viewDrivers
             // 
             this.viewDrivers.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.viewDrivers.BackColor = System.Drawing.Color.Honeydew;
+            this.viewDrivers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.viewDrivers.Location = new System.Drawing.Point(100, 4);
             this.viewDrivers.Name = "viewDrivers";
             this.viewDrivers.Size = new System.Drawing.Size(95, 28);
             this.viewDrivers.TabIndex = 57;
             this.viewDrivers.Text = "View Drivers";
-            this.viewDrivers.UseVisualStyleBackColor = true;
+            this.viewDrivers.UseVisualStyleBackColor = false;
             this.viewDrivers.Click += new System.EventHandler(this.viewDrivers_Click);
             // 
             // tableLayoutPanel1
@@ -281,7 +342,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -305,25 +366,22 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Honeydew;
+            this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.23582F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.76418F));
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 103);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 110);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1463, 28);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1463, 4);
             this.tableLayoutPanel2.TabIndex = 59;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 6);
+            this.label4.Location = new System.Drawing.Point(14, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 16);
             this.label4.TabIndex = 45;
@@ -373,7 +431,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(1231, 597);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(1231, 589);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -410,7 +468,8 @@
             // button13
             // 
             this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button13.BackColor = System.Drawing.SystemColors.Menu;
+            this.button13.BackColor = System.Drawing.Color.Honeydew;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.Location = new System.Drawing.Point(3, 320);
             this.button13.Name = "button13";
@@ -423,7 +482,8 @@
             // button18
             // 
             this.button18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button18.BackColor = System.Drawing.SystemColors.Menu;
+            this.button18.BackColor = System.Drawing.Color.Honeydew;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.Location = new System.Drawing.Point(3, 230);
             this.button18.Name = "button18";
@@ -441,22 +501,22 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.Controls.Add(this.button9, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.button8, 0, 1);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(-36, 632);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(-36, 625);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(1559, 35);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1559, 42);
             this.tableLayoutPanel9.TabIndex = 64;
             // 
             // button9
             // 
             this.button9.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.BackColor = System.Drawing.Color.Green;
             this.button9.Location = new System.Drawing.Point(3, 3);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(1553, 11);
+            this.button9.Size = new System.Drawing.Size(1553, 15);
             this.button9.TabIndex = 48;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -465,64 +525,21 @@
             this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.Location = new System.Drawing.Point(3, 20);
+            this.button8.Location = new System.Drawing.Point(3, 24);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(1553, 12);
+            this.button8.Size = new System.Drawing.Size(1553, 15);
             this.button8.TabIndex = 50;
             this.button8.UseVisualStyleBackColor = false;
-            // 
-            // IDNumber
-            // 
-            this.IDNumber.DataPropertyName = "IDNumber";
-            this.IDNumber.HeaderText = "ID Number";
-            this.IDNumber.Name = "IDNumber";
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
-            // 
-            // cbxDesignation
-            // 
-            this.cbxDesignation.DataPropertyName = "DesignationID";
-            this.cbxDesignation.HeaderText = "Designation";
-            this.cbxDesignation.Name = "cbxDesignation";
-            this.cbxDesignation.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // cbxRegion
-            // 
-            this.cbxRegion.DataPropertyName = "RegionID";
-            this.cbxRegion.HeaderText = "Region";
-            this.cbxRegion.Name = "cbxRegion";
-            this.cbxRegion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // UserName
-            // 
-            this.UserName.HeaderText = "Username";
-            this.UserName.Name = "UserName";
-            this.UserName.Visible = false;
-            // 
-            // Password
-            // 
-            this.Password.DataPropertyName = "Password";
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
-            this.Password.Visible = false;
             // 
             // StaffDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1487, 661);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel9);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel5);
@@ -539,8 +556,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet25)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);

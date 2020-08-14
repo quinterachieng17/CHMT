@@ -116,6 +116,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button1.BackColor = System.Drawing.SystemColors.Menu;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(44, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 31);
@@ -263,6 +264,7 @@
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(188, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 31);
@@ -298,7 +300,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.linkLabel1.Location = new System.Drawing.Point(1261, 296);
+            this.linkLabel1.Location = new System.Drawing.Point(1240, 296);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(73, 13);
             this.linkLabel1.TabIndex = 26;
@@ -320,7 +322,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.pictureBox1.Image = global::KERICHO_CHMT.Properties.Resources.photo_camera;
-            this.pictureBox1.Location = new System.Drawing.Point(1275, 248);
+            this.pictureBox1.Location = new System.Drawing.Point(1261, 248);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 34);
             this.pictureBox1.TabIndex = 4;
@@ -526,7 +528,6 @@
             this.tableLayoutPanel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel8.ColumnCount = 1;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.button8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.button9, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.button10, 0, 7);
             this.tableLayoutPanel8.Controls.Add(this.button11, 0, 2);
@@ -534,6 +535,7 @@
             this.tableLayoutPanel8.Controls.Add(this.button13, 0, 3);
             this.tableLayoutPanel8.Controls.Add(this.button14, 0, 6);
             this.tableLayoutPanel8.Controls.Add(this.button15, 0, 5);
+            this.tableLayoutPanel8.Controls.Add(this.button8, 0, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(41, 295);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 8;
@@ -552,6 +554,7 @@
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.BackColor = System.Drawing.Color.Honeydew;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(3, 3);
             this.button8.Name = "button8";
@@ -565,6 +568,7 @@
             // 
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button9.BackColor = System.Drawing.SystemColors.Menu;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(3, 44);
             this.button9.Name = "button9";
@@ -578,6 +582,7 @@
             // 
             this.button10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button10.BackColor = System.Drawing.SystemColors.Menu;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(3, 290);
             this.button10.Name = "button10";
@@ -591,6 +596,7 @@
             // 
             this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button11.BackColor = System.Drawing.SystemColors.Menu;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.Location = new System.Drawing.Point(3, 85);
             this.button11.Name = "button11";
@@ -604,6 +610,7 @@
             // 
             this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button12.BackColor = System.Drawing.SystemColors.Menu;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Location = new System.Drawing.Point(3, 167);
             this.button12.Name = "button12";
@@ -617,6 +624,7 @@
             // 
             this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button13.BackColor = System.Drawing.SystemColors.Menu;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.Location = new System.Drawing.Point(3, 126);
             this.button13.Name = "button13";
@@ -630,6 +638,7 @@
             // 
             this.button14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button14.BackColor = System.Drawing.SystemColors.Menu;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.Location = new System.Drawing.Point(3, 249);
             this.button14.Name = "button14";
@@ -643,6 +652,7 @@
             // 
             this.button15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button15.BackColor = System.Drawing.SystemColors.Menu;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.Location = new System.Drawing.Point(3, 208);
             this.button15.Name = "button15";

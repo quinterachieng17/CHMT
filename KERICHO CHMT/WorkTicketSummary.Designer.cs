@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv2 = new System.Windows.Forms.DataGridView();
-            this.btnView = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDriverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,10 +47,26 @@
             this.txtAuthorizingOfficerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAuthorizingOfficerNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtAuthorizingOfficerDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnView = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv2
@@ -91,14 +95,14 @@
             this.txtAuthorizingOfficerDesignation});
             this.dgv2.Location = new System.Drawing.Point(36, 135);
             this.dgv2.Name = "dgv2";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv2.RowHeadersWidth = 100;
             this.dgv2.Size = new System.Drawing.Size(1426, 454);
             this.dgv2.TabIndex = 0;
@@ -106,10 +110,108 @@
             this.dgv2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv2_CellValueChanged);
             this.dgv2.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgv2_UserDeletingRow);
             // 
+            // txtUserID
+            // 
+            this.txtUserID.DataPropertyName = "UserID";
+            this.txtUserID.HeaderText = "UserID";
+            this.txtUserID.Name = "txtUserID";
+            this.txtUserID.Visible = false;
+            // 
+            // txtDate
+            // 
+            this.txtDate.DataPropertyName = "Date";
+            this.txtDate.HeaderText = "Date";
+            this.txtDate.Name = "txtDate";
+            // 
+            // txtDriverID
+            // 
+            this.txtDriverID.DataPropertyName = "DriverID";
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDriverID.DefaultCellStyle = dataGridViewCellStyle10;
+            this.txtDriverID.HeaderText = "Driver\'s  No";
+            this.txtDriverID.Name = "txtDriverID";
+            // 
+            // txtRegNo
+            // 
+            this.txtRegNo.DataPropertyName = "RegNo";
+            this.txtRegNo.HeaderText = "Reg No.";
+            this.txtRegNo.Name = "txtRegNo";
+            // 
+            // txtDestination
+            // 
+            this.txtDestination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtDestination.DataPropertyName = "Destination";
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.txtDestination.DefaultCellStyle = dataGridViewCellStyle11;
+            this.txtDestination.HeaderText = "Details of Journey and Route in full";
+            this.txtDestination.Name = "txtDestination";
+            // 
+            // txtoilConsumed
+            // 
+            this.txtoilConsumed.DataPropertyName = "OilDrawn";
+            this.txtoilConsumed.HeaderText = "Oil Drawn(Litres)";
+            this.txtoilConsumed.Name = "txtoilConsumed";
+            // 
+            // txtfuelConsumed
+            // 
+            this.txtfuelConsumed.DataPropertyName = "FuelDrawn";
+            this.txtfuelConsumed.HeaderText = "Fuel Drawn(Litres)";
+            this.txtfuelConsumed.Name = "txtfuelConsumed";
+            // 
+            // txtVoucherNo
+            // 
+            this.txtVoucherNo.DataPropertyName = "VoucherNo";
+            this.txtVoucherNo.HeaderText = "P.O.L (S 15). Voucher No. or Cash Voucher No";
+            this.txtVoucherNo.Name = "txtVoucherNo";
+            // 
+            // txtlpgStation
+            // 
+            this.txtlpgStation.DataPropertyName = "lpgStation";
+            this.txtlpgStation.HeaderText = "Station";
+            this.txtlpgStation.Name = "txtlpgStation";
+            // 
+            // txtMileageReading
+            // 
+            this.txtMileageReading.DataPropertyName = "MileageReading";
+            this.txtMileageReading.HeaderText = "Initial Speed Reading";
+            this.txtMileageReading.Name = "txtMileageReading";
+            // 
+            // txtFinalSpeedReading
+            // 
+            this.txtFinalSpeedReading.DataPropertyName = "FinalSpeedReading";
+            this.txtFinalSpeedReading.HeaderText = "Speed Reading end of journey";
+            this.txtFinalSpeedReading.Name = "txtFinalSpeedReading";
+            // 
+            // txtjourneyKilometer
+            // 
+            this.txtjourneyKilometer.DataPropertyName = "journeyKilometer";
+            this.txtjourneyKilometer.HeaderText = "Kilometer of Journey";
+            this.txtjourneyKilometer.Name = "txtjourneyKilometer";
+            // 
+            // txtAuthorizingOfficerName
+            // 
+            this.txtAuthorizingOfficerName.DataPropertyName = "AuthorizingOfficerName";
+            this.txtAuthorizingOfficerName.HeaderText = "Name of Authorizing Officer";
+            this.txtAuthorizingOfficerName.Name = "txtAuthorizingOfficerName";
+            // 
+            // txtAuthorizingOfficerNo
+            // 
+            this.txtAuthorizingOfficerNo.DataPropertyName = "AuthorizingOfficerNo";
+            this.txtAuthorizingOfficerNo.HeaderText = "Number of Authorizing Officer";
+            this.txtAuthorizingOfficerNo.Name = "txtAuthorizingOfficerNo";
+            // 
+            // txtAuthorizingOfficerDesignation
+            // 
+            this.txtAuthorizingOfficerDesignation.DataPropertyName = "AuthorizingOfficerDesignation";
+            this.txtAuthorizingOfficerDesignation.HeaderText = "Designation of the Authorizing Officer";
+            this.txtAuthorizingOfficerDesignation.Name = "txtAuthorizingOfficerDesignation";
+            // 
             // btnView
             // 
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnView.Location = new System.Drawing.Point(119, 5);
+            this.btnView.Location = new System.Drawing.Point(118, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(75, 23);
             this.btnView.TabIndex = 6;
@@ -121,7 +223,7 @@
             // 
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.Location = new System.Drawing.Point(1394, 597);
+            this.btnBack.Location = new System.Drawing.Point(1394, 589);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(65, 23);
             this.btnBack.TabIndex = 7;
@@ -146,7 +248,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.51295F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.48705F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 78F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableLayoutPanel1.Controls.Add(this.btnView, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
@@ -242,119 +344,60 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(678, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 16);
+            this.label4.Size = new System.Drawing.Size(152, 18);
             this.label4.TabIndex = 50;
             this.label4.Text = "Select a Filling Station";
             // 
-            // txtUserID
+            // tableLayoutPanel9
             // 
-            this.txtUserID.DataPropertyName = "UserID";
-            this.txtUserID.HeaderText = "UserID";
-            this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Visible = false;
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.button11, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 617);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(1506, 43);
+            this.tableLayoutPanel9.TabIndex = 66;
             // 
-            // txtDate
+            // button1
             // 
-            this.txtDate.DataPropertyName = "Date";
-            this.txtDate.HeaderText = "Date";
-            this.txtDate.Name = "txtDate";
+            this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(1500, 15);
+            this.button1.TabIndex = 48;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // txtDriverID
+            // button11
             // 
-            this.txtDriverID.DataPropertyName = "DriverID";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDriverID.DefaultCellStyle = dataGridViewCellStyle1;
-            this.txtDriverID.HeaderText = "Driver\'s  No";
-            this.txtDriverID.Name = "txtDriverID";
-            // 
-            // txtRegNo
-            // 
-            this.txtRegNo.DataPropertyName = "RegNo";
-            this.txtRegNo.HeaderText = "Reg No.";
-            this.txtRegNo.Name = "txtRegNo";
-            // 
-            // txtDestination
-            // 
-            this.txtDestination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.txtDestination.DataPropertyName = "Destination";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.txtDestination.DefaultCellStyle = dataGridViewCellStyle2;
-            this.txtDestination.HeaderText = "Details of Journey and Route in full";
-            this.txtDestination.Name = "txtDestination";
-            // 
-            // txtoilConsumed
-            // 
-            this.txtoilConsumed.DataPropertyName = "OilDrawn";
-            this.txtoilConsumed.HeaderText = "Oil Drawn(Litres)";
-            this.txtoilConsumed.Name = "txtoilConsumed";
-            // 
-            // txtfuelConsumed
-            // 
-            this.txtfuelConsumed.DataPropertyName = "FuelDrawn";
-            this.txtfuelConsumed.HeaderText = "Fuel Drawn(Litres)";
-            this.txtfuelConsumed.Name = "txtfuelConsumed";
-            // 
-            // txtVoucherNo
-            // 
-            this.txtVoucherNo.DataPropertyName = "VoucherNo";
-            this.txtVoucherNo.HeaderText = "P.O.L (S 15). Voucher No. or Cash Voucher No";
-            this.txtVoucherNo.Name = "txtVoucherNo";
-            // 
-            // txtlpgStation
-            // 
-            this.txtlpgStation.DataPropertyName = "lpgStation";
-            this.txtlpgStation.HeaderText = "Station";
-            this.txtlpgStation.Name = "txtlpgStation";
-            // 
-            // txtMileageReading
-            // 
-            this.txtMileageReading.DataPropertyName = "MileageReading";
-            this.txtMileageReading.HeaderText = "Initial Speed Reading";
-            this.txtMileageReading.Name = "txtMileageReading";
-            // 
-            // txtFinalSpeedReading
-            // 
-            this.txtFinalSpeedReading.DataPropertyName = "FinalSpeedReading";
-            this.txtFinalSpeedReading.HeaderText = "Speed Reading end of journey";
-            this.txtFinalSpeedReading.Name = "txtFinalSpeedReading";
-            // 
-            // txtjourneyKilometer
-            // 
-            this.txtjourneyKilometer.DataPropertyName = "journeyKilometer";
-            this.txtjourneyKilometer.HeaderText = "Kilometer of Journey";
-            this.txtjourneyKilometer.Name = "txtjourneyKilometer";
-            // 
-            // txtAuthorizingOfficerName
-            // 
-            this.txtAuthorizingOfficerName.DataPropertyName = "AuthorizingOfficerName";
-            this.txtAuthorizingOfficerName.HeaderText = "Name of Authorizing Officer";
-            this.txtAuthorizingOfficerName.Name = "txtAuthorizingOfficerName";
-            // 
-            // txtAuthorizingOfficerNo
-            // 
-            this.txtAuthorizingOfficerNo.DataPropertyName = "AuthorizingOfficerNo";
-            this.txtAuthorizingOfficerNo.HeaderText = "Number of Authorizing Officer";
-            this.txtAuthorizingOfficerNo.Name = "txtAuthorizingOfficerNo";
-            // 
-            // txtAuthorizingOfficerDesignation
-            // 
-            this.txtAuthorizingOfficerDesignation.DataPropertyName = "AuthorizingOfficerDesignation";
-            this.txtAuthorizingOfficerDesignation.HeaderText = "Designation of the Authorizing Officer";
-            this.txtAuthorizingOfficerDesignation.Name = "txtAuthorizingOfficerDesignation";
+            this.button11.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button11.Location = new System.Drawing.Point(3, 24);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(1500, 15);
+            this.button11.TabIndex = 50;
+            this.button11.UseVisualStyleBackColor = false;
             // 
             // WorkTicketSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1506, 660);
+            this.Controls.Add(this.tableLayoutPanel9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tableLayoutPanel3);
@@ -373,6 +416,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -408,5 +452,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerDesignation;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button11;
     }
 }
