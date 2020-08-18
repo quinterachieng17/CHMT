@@ -42,7 +42,15 @@
             this.txtMileageReading = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtOilDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFuelDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDestination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtlpgStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtVoucherNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFinalSpeedReading = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtjourneyKilometer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAuthorizingOfficerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAuthorizingOfficerNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtAuthorizingOfficerDesignation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHead = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -56,13 +64,22 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.button8 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button13 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -178,12 +195,21 @@
             this.txtMileageReading,
             this.txtOilDrawn,
             this.txtFuelDrawn,
-            this.Destination});
+            this.txtDestination,
+            this.txtlpgStation,
+            this.txtDate,
+            this.txtVoucherNo,
+            this.txtFinalSpeedReading,
+            this.txtjourneyKilometer,
+            this.txtAuthorizingOfficerName,
+            this.txtAuthorizingOfficerNo,
+            this.txtAuthorizingOfficerDesignation});
             this.dgv1.Location = new System.Drawing.Point(370, 146);
             this.dgv1.Name = "dgv1";
             this.dgv1.Size = new System.Drawing.Size(1087, 467);
             this.dgv1.TabIndex = 15;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellEndEdit);
             this.dgv1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellValueChanged);
             this.dgv1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgv1_UserDeletingRow);
             // 
@@ -203,7 +229,7 @@
             // txtRegNo
             // 
             this.txtRegNo.DataPropertyName = "RegNo";
-            this.txtRegNo.HeaderText = "Registration Number";
+            this.txtRegNo.HeaderText = "Reg No.";
             this.txtRegNo.Name = "txtRegNo";
             // 
             // txtMileageReading
@@ -224,12 +250,60 @@
             this.txtFuelDrawn.HeaderText = "Fuel Drawn";
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             // 
-            // Destination
+            // txtDestination
             // 
-            this.Destination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Destination.DataPropertyName = "Destination";
-            this.Destination.HeaderText = "Destination Details";
-            this.Destination.Name = "Destination";
+            this.txtDestination.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.txtDestination.DataPropertyName = "Destination";
+            this.txtDestination.HeaderText = "Destination Details";
+            this.txtDestination.Name = "txtDestination";
+            // 
+            // txtlpgStation
+            // 
+            this.txtlpgStation.DataPropertyName = "lpgStation";
+            this.txtlpgStation.HeaderText = "Fuel Station";
+            this.txtlpgStation.Name = "txtlpgStation";
+            // 
+            // txtDate
+            // 
+            this.txtDate.DataPropertyName = "Date";
+            this.txtDate.HeaderText = "Date";
+            this.txtDate.Name = "txtDate";
+            // 
+            // txtVoucherNo
+            // 
+            this.txtVoucherNo.DataPropertyName = "VoucherNo";
+            this.txtVoucherNo.HeaderText = "Voucher No.";
+            this.txtVoucherNo.Name = "txtVoucherNo";
+            // 
+            // txtFinalSpeedReading
+            // 
+            this.txtFinalSpeedReading.DataPropertyName = "FinalSpeedReading";
+            this.txtFinalSpeedReading.HeaderText = "Final Speed Reading";
+            this.txtFinalSpeedReading.Name = "txtFinalSpeedReading";
+            // 
+            // txtjourneyKilometer
+            // 
+            this.txtjourneyKilometer.DataPropertyName = "journeyKilometer";
+            this.txtjourneyKilometer.HeaderText = "Kilometer of Journey";
+            this.txtjourneyKilometer.Name = "txtjourneyKilometer";
+            // 
+            // txtAuthorizingOfficerName
+            // 
+            this.txtAuthorizingOfficerName.DataPropertyName = "AuthorizingOfficerName";
+            this.txtAuthorizingOfficerName.HeaderText = "Name of Authorizing Officer";
+            this.txtAuthorizingOfficerName.Name = "txtAuthorizingOfficerName";
+            // 
+            // txtAuthorizingOfficerNo
+            // 
+            this.txtAuthorizingOfficerNo.DataPropertyName = "AuthorizingOfficerNo";
+            this.txtAuthorizingOfficerNo.HeaderText = "Number of Authorizing Officer";
+            this.txtAuthorizingOfficerNo.Name = "txtAuthorizingOfficerNo";
+            // 
+            // txtAuthorizingOfficerDesignation
+            // 
+            this.txtAuthorizingOfficerDesignation.DataPropertyName = "AuthorizingOfficerDesignation";
+            this.txtAuthorizingOfficerDesignation.HeaderText = "Designation of Authorizing Officer";
+            this.txtAuthorizingOfficerDesignation.Name = "txtAuthorizingOfficerDesignation";
             // 
             // lblHead
             // 
@@ -261,11 +335,11 @@
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(122, 3);
+            this.button7.Location = new System.Drawing.Point(103, 3);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 30);
+            this.button7.Size = new System.Drawing.Size(94, 30);
             this.button7.TabIndex = 18;
-            this.button7.Text = "Save";
+            this.button7.Text = "Create Report";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -286,7 +360,7 @@
             // 
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.Location = new System.Drawing.Point(395, 619);
+            this.button10.Location = new System.Drawing.Point(370, 619);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 27);
             this.button10.TabIndex = 41;
@@ -334,6 +408,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1497, 107);
             this.tableLayoutPanel3.TabIndex = 44;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // label3
             // 
@@ -396,6 +471,7 @@
             this.button17.TabIndex = 8;
             this.button17.Text = "View Work Ticket";
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -412,17 +488,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1497, 42);
             this.tableLayoutPanel1.TabIndex = 52;
             // 
-            // button8
-            // 
-            this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.Location = new System.Drawing.Point(3, 25);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(1491, 14);
-            this.button8.TabIndex = 50;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // button11
             // 
             this.button11.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
@@ -434,12 +499,114 @@
             this.button11.TabIndex = 48;
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // button8
+            // 
+            this.button8.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button8.Location = new System.Drawing.Point(3, 25);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(1491, 14);
+            this.button8.TabIndex = 50;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 53;
+            this.label4.Text = "Reg No.";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(212, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 13);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "From";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(382, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 13);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "To";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.textBox1.Location = new System.Drawing.Point(62, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(139, 20);
+            this.textBox1.TabIndex = 56;
+            // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button13.Location = new System.Drawing.Point(550, 4);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(53, 23);
+            this.button13.TabIndex = 57;
+            this.button13.Text = "Search";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePicker1.Location = new System.Drawing.Point(248, 5);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(117, 20);
+            this.dateTimePicker1.TabIndex = 58;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePicker2.Location = new System.Drawing.Point(408, 5);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(134, 20);
+            this.dateTimePicker2.TabIndex = 59;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanel5.ColumnCount = 7;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.tableLayoutPanel5.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.button13, 6, 0);
+            this.tableLayoutPanel5.Controls.Add(this.dateTimePicker2, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.dateTimePicker1, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label6, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label5, 2, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(445, 113);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(606, 31);
+            this.tableLayoutPanel5.TabIndex = 60;
+            // 
             // TrackRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1497, 697);
+            this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -459,6 +626,8 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,13 +648,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtDriverID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtRegNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtMileageReading;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtOilDrawn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtFuelDrawn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -496,5 +658,28 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDriverID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtRegNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtMileageReading;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtOilDrawn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFuelDrawn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDestination;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtlpgStation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtVoucherNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFinalSpeedReading;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtjourneyKilometer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtAuthorizingOfficerDesignation;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }

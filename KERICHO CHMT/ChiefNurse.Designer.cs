@@ -258,7 +258,7 @@
             this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.Location = new System.Drawing.Point(-155, 610);
+            this.button4.Location = new System.Drawing.Point(-155, 605);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(1505, 15);
             this.button4.TabIndex = 52;

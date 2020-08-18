@@ -17,11 +17,11 @@ namespace KERICHO_CHMT
         }
         //Dialog Box Custom
         static LPG MsgBox; static DialogResult result = DialogResult.No;
-        public static DialogResult Show(string Text, string Caption, string btnOK, string btnCancel)
+        public static DialogResult Show(string Text, string Caption, string btnOK, string btnBack)
         {
             MsgBox = new LPG();
             MsgBox.label1.Text = Text;
-            MsgBox.btnCancel.Text = btnCancel;
+            MsgBox.btnCancel.Text = btnBack;
             MsgBox.btnOK.Text = btnOK;
             MsgBox.ShowDialog();
             return result;
@@ -37,20 +37,20 @@ namespace KERICHO_CHMT
         {
             if (cmbLPG.SelectedIndex == 0)
             {
-                LPGStations.Show("ALL AMBULANCES FUELING AT JUMBO  PETROL STATION", "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Back"); MsgBox.Close();
 
             }
             else if (cmbLPG.SelectedIndex == 1)
             {
-                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Back"); MsgBox.Close();
             }
             else if (cmbLPG.SelectedIndex == 2)
             {
-                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Back"); MsgBox.Close();
             }
             else if (cmbLPG.SelectedIndex == 3)
             {
-                LPGStations.Show(cmbLPG.Text, "", "Download", "Cancel"); MsgBox.Close();
+                LPGStations.Show(cmbLPG.Text, "", "Download", "Back"); MsgBox.Close();
             }
 
             else

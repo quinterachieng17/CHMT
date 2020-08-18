@@ -45,9 +45,35 @@ namespace KERICHO_CHMT
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Doctor ss = new Doctor(label3.Text);
-            ss.Show();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                foreach (DataGridViewRow row in dgv1.Rows)
+                {
+                    for (int i = 0; i < dgv1.Rows.Count; i++)                        
+                        {                           
+                            sqlCon.Open();
+                            SqlCommand sqlCmd = new SqlCommand("MileageAdd", sqlCon);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
+                            sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                            sqlCmd.Parameters.AddWithValue("@DriverID", dgv1.Rows[i].Cells["txtDriverID"].Value);
+                            sqlCmd.Parameters.AddWithValue("@RegNo", dgv1.Rows[i].Cells["txtRegNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@MileageReading", dgv1.Rows[i].Cells["txtMileageReading"].Value);
+                            sqlCmd.Parameters.AddWithValue("@OilDrawn", dgv1.Rows[i].Cells["txtOilDrawn"].Value);
+                            sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgv1.Rows[i].Cells["txtFuelDrawn"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Destination", dgv1.Rows[i].Cells["txtDestination"].Value);
+                            sqlCmd.Parameters.AddWithValue("@lpgStation", dgv1.Rows[i].Cells["txtlpgStation"].Value);
+                            sqlCmd.Parameters.AddWithValue("@Date", dgv1.Rows[i].Cells["txtDate"].Value);                            
+                            sqlCmd.Parameters.AddWithValue("@VoucherNo", dgv1.Rows[i].Cells["txtVoucherNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@FinalSpeedReading", dgv1.Rows[i].Cells["txtFinalSpeedReading"].Value);
+                            sqlCmd.Parameters.AddWithValue("@journeyKilometer", dgv1.Rows[i].Cells["txtjourneyKilometer"].Value);
+                            sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", dgv1.Rows[i].Cells["txtAuthorizingOfficerName"].Value);
+                            sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", dgv1.Rows[i].Cells["txtAuthorizingOfficerNo"].Value);
+                            sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", dgv1.Rows[i].Cells["txtAuthorizingOfficerDesignation"].Value);
+                            sqlCmd.ExecuteNonQuery();
+                            sqlCon.Close(); 
+                    }
+                    }                
+            }
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
@@ -213,6 +239,37 @@ namespace KERICHO_CHMT
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgv1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where date between '"+dateTimePicker1.Value.ToString()+"' and '"+ dateTimePicker2.Value.ToString() + "'", sqlCon);
+                //SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
+                //SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                //sqlDa2.Fill(dtbl);
+                //sqlDa3.Fill(dtbl);
+                dgv1.DataSource = dtbl;
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
         {
 
         }

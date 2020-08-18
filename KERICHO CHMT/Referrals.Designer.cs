@@ -68,23 +68,29 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(1369, 612);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDownload
             // 
+            this.btnDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDownload.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDownload.Location = new System.Drawing.Point(1266, 612);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(75, 23);
             this.btnDownload.TabIndex = 5;
             this.btnDownload.Text = "Print";
-            this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.UseVisualStyleBackColor = false;
             this.btnDownload.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
@@ -99,6 +105,7 @@
             // 
             // dgvSpecificSearch
             // 
+            this.dgvSpecificSearch.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgvSpecificSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSpecificSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PatientID,
@@ -187,6 +194,7 @@
             this.AcceptButton = this.btnDownload;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1500, 659);
             this.Controls.Add(this.dgvSpecificSearch);

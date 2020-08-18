@@ -256,5 +256,15 @@ namespace KERICHO_CHMT
             LOGIN lg = new LOGIN();
             lg.Show();
         }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

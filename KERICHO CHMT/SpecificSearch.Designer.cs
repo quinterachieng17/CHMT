@@ -67,24 +67,28 @@
             // btnOK
             // 
             this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnOK.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOK.Location = new System.Drawing.Point(158, 5);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 5;
             this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(3, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // button3
@@ -101,7 +105,7 @@
             // button2
             // 
             this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.BackColor = System.Drawing.Color.Green;
             this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button2.Location = new System.Drawing.Point(0, 727);
             this.button2.Name = "button2";
@@ -142,6 +146,7 @@
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1499, 742);
             this.Controls.Add(this.tableLayoutPanel2);

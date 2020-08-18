@@ -563,6 +563,7 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkTicket.rdlc" />
     <EmbeddedResource Include="ReportByRegNoH.rdlc" />
     <EmbeddedResource Include="ReportByRegNoK.rdlc" />
     <EmbeddedResource Include="ReportByRegNo.rdlc" />

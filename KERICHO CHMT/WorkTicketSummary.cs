@@ -460,7 +460,48 @@ namespace KERICHO_CHMT
         {
 
         }
+        //Filtering using the selected date range
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if(label4.Text == "Jumbo Filling Station")
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                }
+            }
 
-        
+            else if (label4.Text == "Kipsigis Filling Station")
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);                   
+                }
+                
+            }
+            else if (label4.Text == "Homeline Filling Station")
+            {
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                }
+                
+            }
+            else
+            {
+
+            }
+            
+            
+        }
     }
 }

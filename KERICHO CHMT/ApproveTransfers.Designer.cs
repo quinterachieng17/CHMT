@@ -54,6 +54,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTransfersApprove)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
@@ -68,34 +70,39 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel2.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnOK, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1312, 559);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1312, 528);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(272, 41);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(68, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Back";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOK.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOK.Location = new System.Drawing.Point(204, 15);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(65, 23);
             this.btnOK.TabIndex = 6;
             this.btnOK.Text = "Approve";
-            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label1
@@ -103,7 +110,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(565, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(463, 26);
@@ -284,7 +291,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(495, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(602, 30);
@@ -300,11 +307,36 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "label4";
             // 
+            // button4
+            // 
+            this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button4.BackColor = System.Drawing.Color.Green;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button4.Location = new System.Drawing.Point(0, 570);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(1593, 15);
+            this.button4.TabIndex = 54;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button6.Location = new System.Drawing.Point(0, 585);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(1593, 15);
+            this.button6.TabIndex = 55;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // ApproveTransfers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1593, 600);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
@@ -351,5 +383,7 @@
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
     }
 }

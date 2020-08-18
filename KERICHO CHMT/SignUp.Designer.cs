@@ -59,7 +59,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
             this.panel1.Controls.Add(this.UserName);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label9);
@@ -151,7 +151,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(258, 405);
@@ -183,12 +183,14 @@
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCreate.Location = new System.Drawing.Point(377, 498);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(85, 29);
             this.btnCreate.TabIndex = 14;
             this.btnCreate.Text = "Create";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
@@ -292,12 +294,14 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(258, 498);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(88, 29);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtFirstName
@@ -323,6 +327,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(535, 620);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

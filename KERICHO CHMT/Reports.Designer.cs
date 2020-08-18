@@ -70,6 +70,7 @@
             this.reportViewer3 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AddByFacilityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddByNursesBindingSource)).BeginInit();
@@ -151,12 +152,12 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.BackColor = System.Drawing.SystemColors.Menu;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 278);
+            this.button1.Location = new System.Drawing.Point(3, 176);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(312, 37);
+            this.button1.Size = new System.Drawing.Size(262, 37);
             this.button1.TabIndex = 3;
             this.button1.Text = "All Approved Referral Cases";
             this.button1.UseVisualStyleBackColor = false;
@@ -165,12 +166,12 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.BackColor = System.Drawing.SystemColors.Menu;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(12, 343);
+            this.button2.Location = new System.Drawing.Point(3, 221);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(312, 40);
+            this.button2.Size = new System.Drawing.Size(262, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "All Approved Transferred Cases";
             this.button2.UseVisualStyleBackColor = false;
@@ -179,13 +180,14 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button3.BackColor = System.Drawing.SystemColors.Menu;
             this.button3.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(1361, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 32);
             this.button3.TabIndex = 5;
             this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tableLayoutPanel1
@@ -239,41 +241,42 @@
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.button2, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.button6, 0, 3);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(30, 131);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(21, 196);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(336, 397);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.16541F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.66165F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.91729F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.29323F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.16541F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.04511F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(268, 266);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button8.BackColor = System.Drawing.SystemColors.Menu;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(12, 146);
+            this.button8.Location = new System.Drawing.Point(3, 86);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(312, 37);
+            this.button8.Size = new System.Drawing.Size(262, 37);
             this.button8.TabIndex = 12;
-            this.button8.Text = "Driver/ Vehicle";
+            this.button8.Text = "Work Ticket";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             this.button8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button8_MouseClick);
             // 
             // button5
             // 
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button5.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button5.BackColor = System.Drawing.SystemColors.Menu;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(12, 80);
+            this.button5.Location = new System.Drawing.Point(3, 46);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(312, 37);
+            this.button5.Size = new System.Drawing.Size(262, 33);
             this.button5.TabIndex = 6;
             this.button5.Text = "Nurses";
             this.button5.UseVisualStyleBackColor = false;
@@ -283,12 +286,12 @@
             // button4
             // 
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.BackColor = System.Drawing.SystemColors.Menu;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(12, 14);
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(312, 37);
+            this.button4.Size = new System.Drawing.Size(262, 37);
             this.button4.TabIndex = 5;
             this.button4.Text = " Facility";
             this.button4.UseVisualStyleBackColor = false;
@@ -298,12 +301,12 @@
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button6.BackColor = System.Drawing.SystemColors.Menu;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(12, 212);
+            this.button6.Location = new System.Drawing.Point(3, 131);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(312, 37);
+            this.button6.Size = new System.Drawing.Size(262, 37);
             this.button6.TabIndex = 7;
             this.button6.Text = "Ambulance Report";
             this.button6.UseVisualStyleBackColor = false;
@@ -361,13 +364,14 @@
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button7.BackColor = System.Drawing.SystemColors.Menu;
             this.button7.Font = new System.Drawing.Font("Trebuchet MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(511, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(88, 32);
             this.button7.TabIndex = 2;
             this.button7.Text = "Preview";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // CaseByPatient
@@ -391,7 +395,7 @@
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByFacility.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(427, 151);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(930, 377);
+            this.reportViewer1.Size = new System.Drawing.Size(930, 335);
             this.reportViewer1.TabIndex = 11;
             // 
             // AddByNursesTableAdapter
@@ -416,9 +420,9 @@
             reportDataSource2.Value = this.AddByNursesBindingSource;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByNurses.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(427, 132);
+            this.reportViewer2.Location = new System.Drawing.Point(427, 151);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(930, 397);
+            this.reportViewer2.Size = new System.Drawing.Size(930, 355);
             this.reportViewer2.TabIndex = 12;
             // 
             // reportViewer3
@@ -427,21 +431,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer3.AutoSize = true;
+            this.reportViewer3.BackColor = System.Drawing.Color.Honeydew;
             reportDataSource3.Name = "DataSet1";
             reportDataSource3.Value = this.AddByDriversBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByDriver.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(427, 131);
+            this.reportViewer3.Location = new System.Drawing.Point(427, 151);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.Size = new System.Drawing.Size(930, 397);
+            this.reportViewer3.Size = new System.Drawing.Size(930, 355);
             this.reportViewer3.TabIndex = 13;
             // 
             // button9
             // 
             this.button9.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
             this.button9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.Location = new System.Drawing.Point(-6, 603);
+            this.button9.BackColor = System.Drawing.Color.Green;
+            this.button9.Location = new System.Drawing.Point(-6, 595);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(1485, 15);
             this.button9.TabIndex = 52;
@@ -458,12 +463,24 @@
             this.button10.TabIndex = 53;
             this.button10.UseVisualStyleBackColor = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(118, 175);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 18);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "Reports";
+            // 
             // Reports
             // 
+            this.AcceptButton = this.button7;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1472, 609);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
@@ -540,5 +557,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

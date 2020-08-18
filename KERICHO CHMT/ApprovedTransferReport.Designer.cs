@@ -66,13 +66,15 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.Menu;
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBack.Location = new System.Drawing.Point(12, 83);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
@@ -82,6 +84,7 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patientIDDataGridViewTextBoxColumn,
@@ -275,6 +278,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1514, 581);
             this.Controls.Add(this.label3);
