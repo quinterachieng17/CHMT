@@ -117,5 +117,12 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Accounts acc = new Accounts(label2.Text);
+            acc.Show();
+        }
     }
 }

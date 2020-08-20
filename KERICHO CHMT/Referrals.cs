@@ -41,7 +41,7 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegisterApproved", sqlCon);
                 dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -54,6 +54,7 @@ namespace KERICHO_CHMT
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            //Filtering data using PatientNo
             DataView DV = new DataView(dtbl);
             DV.RowFilter = string.Format("PatientNo LIKE '%{0}'", txtPatientNo.Text);
             dgvSpecificSearch.DataSource = DV;

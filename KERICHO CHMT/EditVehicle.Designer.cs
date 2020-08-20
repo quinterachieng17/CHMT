@@ -34,11 +34,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvVehicle = new System.Windows.Forms.DataGridView();
-            this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChasisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EngineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -65,6 +60,12 @@
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChasisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EngineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVehicle)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -153,42 +154,13 @@
             this.Make,
             this.ChasisNo,
             this.EngineNo,
-            this.PlateNo});
+            this.PlateNo,
+            this.Date});
             this.dgvVehicle.Location = new System.Drawing.Point(410, 238);
             this.dgvVehicle.Name = "dgvVehicle";
             this.dgvVehicle.Size = new System.Drawing.Size(978, 358);
             this.dgvVehicle.TabIndex = 32;
             this.dgvVehicle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicle_CellContentClick);
-            // 
-            // RegNo
-            // 
-            this.RegNo.DataPropertyName = "RegNo";
-            this.RegNo.HeaderText = "Reg No.";
-            this.RegNo.Name = "RegNo";
-            // 
-            // Make
-            // 
-            this.Make.DataPropertyName = "Make";
-            this.Make.HeaderText = "Make";
-            this.Make.Name = "Make";
-            // 
-            // ChasisNo
-            // 
-            this.ChasisNo.DataPropertyName = "ChasisNo";
-            this.ChasisNo.HeaderText = "Chasis No";
-            this.ChasisNo.Name = "ChasisNo";
-            // 
-            // EngineNo
-            // 
-            this.EngineNo.DataPropertyName = "EngineNo";
-            this.EngineNo.HeaderText = "Engine No.";
-            this.EngineNo.Name = "EngineNo";
-            // 
-            // PlateNo
-            // 
-            this.PlateNo.DataPropertyName = "PlateNo";
-            this.PlateNo.HeaderText = "Plate No.";
-            this.PlateNo.Name = "PlateNo";
             // 
             // button5
             // 
@@ -554,6 +526,42 @@
             this.button11.TabIndex = 50;
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // RegNo
+            // 
+            this.RegNo.DataPropertyName = "RegNo";
+            this.RegNo.HeaderText = "Reg No.";
+            this.RegNo.Name = "RegNo";
+            // 
+            // Make
+            // 
+            this.Make.DataPropertyName = "Make";
+            this.Make.HeaderText = "Make";
+            this.Make.Name = "Make";
+            // 
+            // ChasisNo
+            // 
+            this.ChasisNo.DataPropertyName = "ChasisNo";
+            this.ChasisNo.HeaderText = "Chasis No";
+            this.ChasisNo.Name = "ChasisNo";
+            // 
+            // EngineNo
+            // 
+            this.EngineNo.DataPropertyName = "EngineNo";
+            this.EngineNo.HeaderText = "Engine No.";
+            this.EngineNo.Name = "EngineNo";
+            // 
+            // PlateNo
+            // 
+            this.PlateNo.DataPropertyName = "PlateNo";
+            this.PlateNo.HeaderText = "Plate No.";
+            this.PlateNo.Name = "PlateNo";
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            // 
             // EditVehicle
             // 
             this.AcceptButton = this.btnSave;
@@ -618,11 +626,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Make;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChasisNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EngineNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlateNo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
@@ -632,5 +635,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Make;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChasisNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EngineNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PlateNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
     }
 }

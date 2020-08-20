@@ -52,6 +52,7 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@ChasisNo", txtChasisNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@PlateNo", txtPlateNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("New Motor Vehicle Details Recorded Successfuly");
                     Clear();
@@ -89,7 +90,9 @@ namespace KERICHO_CHMT
 
         private void VehicleRegistration_Load(object sender, EventArgs e)
         {
-            label6.Text = DateTime.Now.ToLongDateString();
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            //label6.Text = DateTime.Now.ToLongDateString();
         }
 
         private void txtRegNo_KeyPress(object sender, KeyPressEventArgs e)

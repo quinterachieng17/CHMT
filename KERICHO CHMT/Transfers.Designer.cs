@@ -44,11 +44,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPatientNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSpecificSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSpecificSearch
             // 
+            this.dgvSpecificSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSpecificSearch.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgvSpecificSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSpecificSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -136,22 +141,20 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.BackColor = System.Drawing.SystemColors.Menu;
             this.btnOK.Location = new System.Drawing.Point(1255, 617);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 11;
-            this.btnOK.Text = "Print";
+            this.btnOK.Text = "Search";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Info;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(1358, 617);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -164,7 +167,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(132, 27);
+            this.label2.Location = new System.Drawing.Point(33, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 17);
             this.label2.TabIndex = 9;
@@ -173,9 +176,9 @@
             // txtPatientNo
             // 
             this.txtPatientNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatientNo.Location = new System.Drawing.Point(219, 90);
+            this.txtPatientNo.Location = new System.Drawing.Point(157, 118);
             this.txtPatientNo.Name = "txtPatientNo";
-            this.txtPatientNo.Size = new System.Drawing.Size(229, 25);
+            this.txtPatientNo.Size = new System.Drawing.Size(156, 25);
             this.txtPatientNo.TabIndex = 8;
             this.txtPatientNo.TextChanged += new System.EventHandler(this.txtPatientNo_TextChanged);
             // 
@@ -183,11 +186,33 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 93);
+            this.label1.Location = new System.Drawing.Point(33, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "Enter Patient No";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(540, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(281, 25);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Incoming Patient Records";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(411, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(624, 33);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
             // 
             // Transfers
             // 
@@ -197,6 +222,8 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1506, 658);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvSpecificSearch);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
@@ -231,5 +258,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPatientNo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -62,6 +62,7 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@ChasisNo", dgvRow.Cells["txtChasisNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtChasisNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@EngineNo", dgvRow.Cells["txtEngineNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtEngineNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@PlateNo", dgvRow.Cells["txtPlateNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPlateNo"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Date", dgvRow.Cells["txtDate"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDate"].Value.ToString());
                         sqlCmd.ExecuteNonQuery();                       
                         PopulateDataGridView();
                         
@@ -76,6 +77,7 @@ namespace KERICHO_CHMT
                         sqlCmd.Parameters.AddWithValue("@ChasisNo", dgvRow.Cells["txtChasisNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtChasisNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@EngineNo", dgvRow.Cells["txtEngineNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtEngineNo"].Value.ToString());
                         sqlCmd.Parameters.AddWithValue("@PlateNo", dgvRow.Cells["txtPlateNo"].Value == DBNull.Value ? "" : dgvRow.Cells["txtPlateNo"].Value.ToString());
+                        sqlCmd.Parameters.AddWithValue("@Date", dgvRow.Cells["txtDate"].Value == DBNull.Value ? "" : dgvRow.Cells["txtDate"].Value.ToString());
                         sqlCmd.ExecuteNonQuery();                       
                         PopulateDataGridView();
                         

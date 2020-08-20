@@ -126,6 +126,8 @@ namespace KERICHO_CHMT
 
         private void Driver_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             label5.Hide();
             // TODO: This line of code loads data into the 'cmbloginDataSet21.VehicleRegistration' table. You can move, or remove it, as needed.
             this.vehicleRegistrationTableAdapter.Fill(this.cmbloginDataSet21.VehicleRegistration);

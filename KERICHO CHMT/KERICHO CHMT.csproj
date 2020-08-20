@@ -76,6 +76,12 @@
     <Compile Include="AccountInfo.Designer.cs">
       <DependentUpon>AccountInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Accounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accounts.Designer.cs">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddDataMsg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet41.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -496,6 +512,9 @@
     <EmbeddedResource Include="AccountInfo.resx">
       <DependentUpon>AccountInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounts.resx">
+      <DependentUpon>Accounts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddDataMsg.resx">
       <DependentUpon>AddDataMsg.cs</DependentUpon>
     </EmbeddedResource>
@@ -563,7 +582,6 @@
     <EmbeddedResource Include="Referrals.resx">
       <DependentUpon>Referrals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WorkTicket.rdlc" />
     <EmbeddedResource Include="ReportByRegNoH.rdlc" />
     <EmbeddedResource Include="ReportByRegNoK.rdlc" />
     <EmbeddedResource Include="ReportByRegNo.rdlc" />
@@ -610,6 +628,7 @@
     <EmbeddedResource Include="VehicleRegistration.resx">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WorkTicketReport.rdlc" />
     <EmbeddedResource Include="WorkTicketSummary.resx">
       <DependentUpon>WorkTicketSummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -1010,6 +1029,28 @@
     </None>
     <None Include="cmbloginDataSet4.xss">
       <DependentUpon>cmbloginDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet40.xsc">
+      <DependentUpon>cmbloginDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet40.xss">
+      <DependentUpon>cmbloginDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet41.xsc">
+      <DependentUpon>cmbloginDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet41.xss">
+      <DependentUpon>cmbloginDataSet41.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet5.xsc">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>

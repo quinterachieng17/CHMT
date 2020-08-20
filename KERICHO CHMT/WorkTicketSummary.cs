@@ -30,6 +30,10 @@ namespace KERICHO_CHMT
 
         private void WorkTicketSummary_Load(object sender, EventArgs e)
         {
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             label2.Hide();
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
@@ -468,9 +472,11 @@ namespace KERICHO_CHMT
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
-                    DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' And '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    DataSet ds = new DataSet();
+                    sqlDa.Fill(ds,"Jumbolpg");
+                    dgv2.DataSource = ds.Tables["Jumbolpg"];
+                    sqlCon.Close();
                 }
             }
 
@@ -479,9 +485,11 @@ namespace KERICHO_CHMT
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
-                    DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);                   
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' And '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    DataSet ds = new DataSet();
+                    sqlDa.Fill(ds, "Kipsigislpg");
+                    dgv2.DataSource = ds.Tables["Kipsigislpg"];
+                    sqlCon.Close();
                 }
                 
             }
@@ -490,9 +498,11 @@ namespace KERICHO_CHMT
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
                     sqlCon.Open();
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where Date between '" + dateTimePicker1.Value.ToString() + "' and '" + dateTimePicker2.Value.ToString() + "'", sqlCon);
-                    DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' And '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    DataSet ds = new DataSet();
+                    sqlDa.Fill(ds, "Homelinelpg");
+                    dgv2.DataSource = ds.Tables["Homelinelpg"];
+                    sqlCon.Close();
                 }
                 
             }

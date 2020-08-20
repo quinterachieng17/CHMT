@@ -44,15 +44,17 @@
             this.DriverIncharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NurseOnTransit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DriverNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSpecificSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPatientNo
             // 
             this.txtPatientNo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPatientNo.Location = new System.Drawing.Point(230, 85);
+            this.txtPatientNo.Location = new System.Drawing.Point(187, 115);
             this.txtPatientNo.Name = "txtPatientNo";
-            this.txtPatientNo.Size = new System.Drawing.Size(229, 25);
+            this.txtPatientNo.Size = new System.Drawing.Size(146, 25);
             this.txtPatientNo.TabIndex = 1;
             this.txtPatientNo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -60,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 22);
+            this.label2.Location = new System.Drawing.Point(44, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 17);
             this.label2.TabIndex = 3;
@@ -71,7 +73,6 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.SystemColors.Menu;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Location = new System.Drawing.Point(1369, 612);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
@@ -84,7 +85,6 @@
             // 
             this.btnDownload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDownload.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnDownload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDownload.Location = new System.Drawing.Point(1266, 612);
             this.btnDownload.Name = "btnDownload";
             this.btnDownload.Size = new System.Drawing.Size(75, 23);
@@ -97,7 +97,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 88);
+            this.label1.Location = new System.Drawing.Point(44, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 0;
@@ -105,6 +105,11 @@
             // 
             // dgvSpecificSearch
             // 
+            this.dgvSpecificSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSpecificSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSpecificSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvSpecificSearch.BackgroundColor = System.Drawing.Color.Honeydew;
             this.dgvSpecificSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSpecificSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -118,9 +123,9 @@
             this.DriverIncharge,
             this.NurseOnTransit,
             this.DriverNo});
-            this.dgvSpecificSearch.Location = new System.Drawing.Point(36, 181);
+            this.dgvSpecificSearch.Location = new System.Drawing.Point(36, 155);
             this.dgvSpecificSearch.Name = "dgvSpecificSearch";
-            this.dgvSpecificSearch.Size = new System.Drawing.Size(1442, 388);
+            this.dgvSpecificSearch.Size = new System.Drawing.Size(1442, 414);
             this.dgvSpecificSearch.TabIndex = 6;
             // 
             // PatientID
@@ -134,7 +139,6 @@
             this.PatientName.DataPropertyName = "PatientName";
             this.PatientName.HeaderText = "Patient Name";
             this.PatientName.Name = "PatientName";
-            this.PatientName.Width = 150;
             // 
             // PatientNo
             // 
@@ -154,14 +158,12 @@
             this.Facility.DataPropertyName = "Facility";
             this.Facility.HeaderText = "Facility From/To";
             this.Facility.Name = "Facility";
-            this.Facility.Width = 150;
             // 
             // NurseReceiving
             // 
             this.NurseReceiving.DataPropertyName = "NurseReceiving";
             this.NurseReceiving.HeaderText = "Receiving Nurse";
             this.NurseReceiving.Name = "NurseReceiving";
-            this.NurseReceiving.Width = 150;
             // 
             // RegNo
             // 
@@ -174,20 +176,40 @@
             this.DriverIncharge.DataPropertyName = "DriverIncharge";
             this.DriverIncharge.HeaderText = "Driver In Charge";
             this.DriverIncharge.Name = "DriverIncharge";
-            this.DriverIncharge.Width = 150;
             // 
             // NurseOnTransit
             // 
             this.NurseOnTransit.DataPropertyName = "NurseOnTransit";
             this.NurseOnTransit.HeaderText = "Nurse On Transit";
             this.NurseOnTransit.Name = "NurseOnTransit";
-            this.NurseOnTransit.Width = 150;
             // 
             // DriverNo
             // 
             this.DriverNo.DataPropertyName = "DriverNo";
             this.DriverNo.HeaderText = "Driver\'s Number";
             this.DriverNo.Name = "DriverNo";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(438, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(624, 33);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(567, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(281, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Incoming Patient Records";
             // 
             // Referrals
             // 
@@ -197,6 +219,8 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(1500, 659);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvSpecificSearch);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnCancel);
@@ -231,5 +255,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverIncharge;
         private System.Windows.Forms.DataGridViewTextBoxColumn NurseOnTransit;
         private System.Windows.Forms.DataGridViewTextBoxColumn DriverNo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

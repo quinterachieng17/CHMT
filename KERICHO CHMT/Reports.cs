@@ -23,15 +23,15 @@ namespace KERICHO_CHMT
 
         private void Reports_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cmbloginDataSet16.AddByNurses' table. You can move, or remove it, as needed.
-           
+            // TODO: This line of code loads data into the 'cmbloginDataSet41.WorkTicketAdd' table. You can move, or remove it, as needed.
+            
 
-
-            //Create a work ticket report to accomodate monthly/ weekly data. ie From...... to....
             reportViewer1.Show();
             reportViewer2.Hide();
             reportViewer3.Hide();
-                                  
+            reportViewer4.Hide();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,16 +76,21 @@ namespace KERICHO_CHMT
             if (lblFacility.Text == "Facility")               
                 this.AddByFacilityTableAdapter.Fill(this.cmbloginDataSet19.AddByFacility, textBox1.Text);
                 this.reportViewer1.RefreshReport();
-            //Loads report per Nurses on clicking report by cases
 
+            //Loads report per Nurses on clicking report by cases
             if (lblFacility.Text == "Nurses")
                 this.AddByNursesTableAdapter.Fill(this.cmbloginDataSet16.AddByNurses, textBox1.Text);           
                 this.reportViewer2.RefreshReport();
 
-            //Loads report per drivers on clicking report by cases
+            //Loads report per drivers on clicking Driver report 
             if (lblFacility.Text == "Driver")               
-            this.AddByDriversTableAdapter.Fill(this.cmbloginDataSet15.AddByDrivers, textBox1.Text);
+                this.AddByDriversTableAdapter.Fill(this.cmbloginDataSet15.AddByDrivers, textBox1.Text);
                 this.reportViewer3.RefreshReport();
+
+            //Loads Workticket  report
+            if (lblFacility.Text == "Work Ticket")
+                this.WorkTicketAddTableAdapter.Fill(this.cmbloginDataSet41.WorkTicketAdd, textBox1.Text);
+                this.reportViewer4.RefreshReport();
         }
 
         private void button5_MouseClick(object sender, MouseEventArgs e)
@@ -94,7 +99,8 @@ namespace KERICHO_CHMT
             textBox1.Text = "Nurse on transit Name";
             reportViewer1.Hide();
             reportViewer2.Show();
-            reportViewer3.Hide();        
+            reportViewer3.Hide();
+            reportViewer4.Hide();
         }
 
         private void button4_MouseClick(object sender, MouseEventArgs e)
@@ -103,7 +109,8 @@ namespace KERICHO_CHMT
             textBox1.Text = "Facility Name";
             reportViewer1.Show();
             reportViewer2.Hide();
-            reportViewer3.Hide();            
+            reportViewer3.Hide();
+            reportViewer4.Hide();
         }
 
         private void button8_MouseClick(object sender, MouseEventArgs e)
@@ -112,7 +119,8 @@ namespace KERICHO_CHMT
             textBox1.Text = "Driver's No";
             reportViewer1.Hide();
             reportViewer2.Hide();
-            reportViewer3.Show();            
+            reportViewer3.Show();
+            reportViewer4.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -139,6 +147,23 @@ namespace KERICHO_CHMT
 
         private void button8_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblFacility.Text = "Work Ticket";
+            textBox1.Text = "Vehicle Reg No.";
+            reportViewer1.Hide();
+            reportViewer2.Hide(); 
+            reportViewer3.Hide();
+            reportViewer4.Show();
+            
 
         }
     }
