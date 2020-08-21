@@ -55,9 +55,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbStation = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +73,12 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtVoucherNo = new System.Windows.Forms.TextBox();
+            this.cmbDriverName = new System.Windows.Forms.ComboBox();
+            this.cmbloginDataSet20BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.userRegisterBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet42 = new KERICHO_CHMT.cmbloginDataSet42();
+            this.userRegisterBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.userRegisterTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet42TableAdapters.UserRegisterTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).BeginInit();
@@ -80,9 +86,12 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // DriverID
@@ -92,7 +101,7 @@
             this.DriverID.BackColor = System.Drawing.Color.Transparent;
             this.DriverID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DriverID.ForeColor = System.Drawing.Color.Black;
-            this.DriverID.Location = new System.Drawing.Point(3, 8);
+            this.DriverID.Location = new System.Drawing.Point(3, 10);
             this.DriverID.Name = "DriverID";
             this.DriverID.Size = new System.Drawing.Size(86, 18);
             this.DriverID.TabIndex = 29;
@@ -124,7 +133,7 @@
             // txtMileage
             // 
             this.txtMileage.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtMileage.Location = new System.Drawing.Point(232, 75);
+            this.txtMileage.Location = new System.Drawing.Point(232, 123);
             this.txtMileage.Name = "txtMileage";
             this.txtMileage.Size = new System.Drawing.Size(223, 20);
             this.txtMileage.TabIndex = 22;
@@ -138,7 +147,7 @@
             this.lblMileageReading.BackColor = System.Drawing.Color.Transparent;
             this.lblMileageReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMileageReading.ForeColor = System.Drawing.Color.Black;
-            this.lblMileageReading.Location = new System.Drawing.Point(3, 76);
+            this.lblMileageReading.Location = new System.Drawing.Point(3, 124);
             this.lblMileageReading.Name = "lblMileageReading";
             this.lblMileageReading.Size = new System.Drawing.Size(161, 18);
             this.lblMileageReading.TabIndex = 21;
@@ -151,7 +160,7 @@
             this.lblRegNo.BackColor = System.Drawing.Color.Transparent;
             this.lblRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegNo.ForeColor = System.Drawing.Color.Black;
-            this.lblRegNo.Location = new System.Drawing.Point(3, 42);
+            this.lblRegNo.Location = new System.Drawing.Point(3, 86);
             this.lblRegNo.Name = "lblRegNo";
             this.lblRegNo.Size = new System.Drawing.Size(118, 18);
             this.lblRegNo.TabIndex = 19;
@@ -201,7 +210,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(461, 42);
+            this.label1.Location = new System.Drawing.Point(461, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 18);
             this.label1.TabIndex = 33;
@@ -210,7 +219,7 @@
             // txtOilDrawn
             // 
             this.txtOilDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtOilDrawn.Location = new System.Drawing.Point(690, 41);
+            this.txtOilDrawn.Location = new System.Drawing.Point(690, 47);
             this.txtOilDrawn.Name = "txtOilDrawn";
             this.txtOilDrawn.Size = new System.Drawing.Size(225, 20);
             this.txtOilDrawn.TabIndex = 34;
@@ -219,7 +228,7 @@
             // txtFuelDrawn
             // 
             this.txtFuelDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFuelDrawn.Location = new System.Drawing.Point(690, 75);
+            this.txtFuelDrawn.Location = new System.Drawing.Point(690, 85);
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             this.txtFuelDrawn.Size = new System.Drawing.Size(225, 20);
             this.txtFuelDrawn.TabIndex = 36;
@@ -232,7 +241,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(461, 76);
+            this.label2.Location = new System.Drawing.Point(461, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 35;
@@ -240,10 +249,10 @@
             // 
             // txtDestination
             // 
-            this.txtDestination.Location = new System.Drawing.Point(230, 3);
+            this.txtDestination.Location = new System.Drawing.Point(690, 117);
             this.txtDestination.Multiline = true;
             this.txtDestination.Name = "txtDestination";
-            this.txtDestination.Size = new System.Drawing.Size(683, 44);
+            this.txtDestination.Size = new System.Drawing.Size(225, 32);
             this.txtDestination.TabIndex = 38;
             this.txtDestination.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDestination_KeyPress);
             // 
@@ -254,7 +263,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(3, 16);
+            this.label3.Location = new System.Drawing.Point(461, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 18);
             this.label3.TabIndex = 37;
@@ -266,7 +275,7 @@
             this.cmbDriverNo.DataSource = this.userRegisterBindingSource;
             this.cmbDriverNo.DisplayMember = "IDNumber";
             this.cmbDriverNo.FormattingEnabled = true;
-            this.cmbDriverNo.Location = new System.Drawing.Point(232, 6);
+            this.cmbDriverNo.Location = new System.Drawing.Point(232, 8);
             this.cmbDriverNo.Name = "cmbDriverNo";
             this.cmbDriverNo.Size = new System.Drawing.Size(223, 21);
             this.cmbDriverNo.TabIndex = 39;
@@ -288,7 +297,7 @@
             this.cmbRegNo.DataSource = this.vehicleRegistrationBindingSource;
             this.cmbRegNo.DisplayMember = "PlateNo";
             this.cmbRegNo.FormattingEnabled = true;
-            this.cmbRegNo.Location = new System.Drawing.Point(232, 40);
+            this.cmbRegNo.Location = new System.Drawing.Point(232, 84);
             this.cmbRegNo.Name = "cmbRegNo";
             this.cmbRegNo.Size = new System.Drawing.Size(223, 21);
             this.cmbRegNo.TabIndex = 40;
@@ -319,7 +328,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(461, 8);
+            this.label4.Location = new System.Drawing.Point(461, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 18);
             this.label4.TabIndex = 41;
@@ -332,8 +341,8 @@
             this.cmbStation.Items.AddRange(new object[] {
             "Jumbo",
             "Kipsigis",
-            "Homeline"});
-            this.cmbStation.Location = new System.Drawing.Point(690, 6);
+            "Omline"});
+            this.cmbStation.Location = new System.Drawing.Point(690, 8);
             this.cmbStation.Name = "cmbStation";
             this.cmbStation.Size = new System.Drawing.Size(225, 21);
             this.cmbStation.TabIndex = 42;
@@ -346,26 +355,44 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtDestination, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.DriverID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cmbStation, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblRegNo, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtFuelDrawn, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtOilDrawn, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblMileageReading, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.cmbDriverNo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.cmbRegNo, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtMileage, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblMileageReading, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtMileage, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.lblRegNo, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbRegNo, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmbStation, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtOilDrawn, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtFuelDrawn, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbDriverName, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 122);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(918, 103);
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(918, 152);
             this.tableLayoutPanel1.TabIndex = 43;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(3, 48);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 18);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Driver\'s  Name";
             // 
             // tableLayoutPanel2
             // 
@@ -395,21 +422,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(317, 32);
             this.tableLayoutPanel3.TabIndex = 45;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.8366F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.1634F));
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.txtDestination, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 224);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(918, 50);
-            this.tableLayoutPanel4.TabIndex = 46;
             // 
             // tableLayoutPanel5
             // 
@@ -590,6 +602,42 @@
             this.txtVoucherNo.Size = new System.Drawing.Size(132, 20);
             this.txtVoucherNo.TabIndex = 55;
             // 
+            // cmbDriverName
+            // 
+            this.cmbDriverName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbDriverName.DataSource = this.userRegisterBindingSource2;
+            this.cmbDriverName.DisplayMember = "FirstName";
+            this.cmbDriverName.FormattingEnabled = true;
+            this.cmbDriverName.Location = new System.Drawing.Point(232, 46);
+            this.cmbDriverName.Name = "cmbDriverName";
+            this.cmbDriverName.Size = new System.Drawing.Size(223, 21);
+            this.cmbDriverName.TabIndex = 57;
+            this.cmbDriverName.ValueMember = "FirstName";
+            // 
+            // cmbloginDataSet20BindingSource
+            // 
+            this.cmbloginDataSet20BindingSource.DataSource = this.cmbloginDataSet20;
+            this.cmbloginDataSet20BindingSource.Position = 0;
+            // 
+            // userRegisterBindingSource1
+            // 
+            this.userRegisterBindingSource1.DataMember = "UserRegister";
+            this.userRegisterBindingSource1.DataSource = this.cmbloginDataSet20BindingSource;
+            // 
+            // cmbloginDataSet42
+            // 
+            this.cmbloginDataSet42.DataSetName = "cmbloginDataSet42";
+            this.cmbloginDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userRegisterBindingSource2
+            // 
+            this.userRegisterBindingSource2.DataMember = "UserRegister";
+            this.userRegisterBindingSource2.DataSource = this.cmbloginDataSet42;
+            // 
+            // userRegisterTableAdapter1
+            // 
+            this.userRegisterTableAdapter1.ClearBeforeFill = true;
+            // 
             // Driver
             // 
             this.AcceptButton = this.btnSubmit;
@@ -607,7 +655,6 @@
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel5);
-            this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -626,11 +673,13 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,7 +714,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -681,5 +729,12 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtVoucherNo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbDriverName;
+        private System.Windows.Forms.BindingSource userRegisterBindingSource1;
+        private System.Windows.Forms.BindingSource cmbloginDataSet20BindingSource;
+        private cmbloginDataSet42 cmbloginDataSet42;
+        private System.Windows.Forms.BindingSource userRegisterBindingSource2;
+        private cmbloginDataSet42TableAdapters.UserRegisterTableAdapter userRegisterTableAdapter1;
     }
 }

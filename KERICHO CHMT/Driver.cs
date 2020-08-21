@@ -27,8 +27,8 @@ namespace KERICHO_CHMT
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (cmbDriverNo.Text == "" || txtMileage.Text == "" || txtAuthorizingOfficerNo.Text == "")
-                MessageBox.Show("Driver's/Authorizing Officer's No or Mileage cannot be blank");
+            if (cmbDriverNo.Text == "" || cmbDriverName.Text == "" || txtMileage.Text == "" || txtAuthorizingOfficerNo.Text == "")
+                MessageBox.Show("Driver's/Authorizing Officer's Details or Mileage cannot be blank");
 
             //Jumbo lpg
             else if (cmbStation.SelectedIndex == 0)
@@ -40,6 +40,7 @@ namespace KERICHO_CHMT
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
                     sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverName", cmbDriverName.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
@@ -67,6 +68,7 @@ namespace KERICHO_CHMT
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
                     sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverName", cmbDriverName.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
@@ -94,6 +96,7 @@ namespace KERICHO_CHMT
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@UserID", 0);
                     sqlCmd.Parameters.AddWithValue("@DriverID", cmbDriverNo.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@DriverName", cmbDriverName.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@MileageReading", txtMileage.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@RegNo", cmbRegNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@lpgStation", cmbStation.Text.Trim());
@@ -114,7 +117,7 @@ namespace KERICHO_CHMT
         }
         void Clear()
         {
-            cmbDriverNo.Text = txtMileage.Text =  cmbRegNo.Text=cmbStation.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = txtVoucherNo.Text = txtAuthorizingOfficerName.Text = txtAuthorizingOfficerNo.Text = cmbAuthorizingOfficerDesignation.Text = "";
+            cmbDriverNo.Text = cmbDriverNo.Text = txtMileage.Text =  cmbRegNo.Text=cmbStation.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtDestination.Text = txtVoucherNo.Text = txtAuthorizingOfficerName.Text = txtAuthorizingOfficerNo.Text = cmbAuthorizingOfficerDesignation.Text = "";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -126,6 +129,8 @@ namespace KERICHO_CHMT
 
         private void Driver_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet42.UserRegister' table. You can move, or remove it, as needed.
+            this.userRegisterTableAdapter1.Fill(this.cmbloginDataSet42.UserRegister);
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             label5.Hide();

@@ -326,6 +326,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet41.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet44.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1051,6 +1066,39 @@
     </None>
     <None Include="cmbloginDataSet41.xss">
       <DependentUpon>cmbloginDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet42.xsc">
+      <DependentUpon>cmbloginDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet42.xss">
+      <DependentUpon>cmbloginDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet43.xsc">
+      <DependentUpon>cmbloginDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet43.xss">
+      <DependentUpon>cmbloginDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet44.xsc">
+      <DependentUpon>cmbloginDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet44.xss">
+      <DependentUpon>cmbloginDataSet44.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet5.xsc">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
