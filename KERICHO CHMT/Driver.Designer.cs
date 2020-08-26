@@ -56,6 +56,9 @@
             this.cmbStation = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
+            this.cmbDriverName = new System.Windows.Forms.ComboBox();
+            this.userRegisterBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet42 = new KERICHO_CHMT.cmbloginDataSet42();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,25 +76,26 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtVoucherNo = new System.Windows.Forms.TextBox();
-            this.cmbDriverName = new System.Windows.Forms.ComboBox();
             this.cmbloginDataSet20BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userRegisterBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbloginDataSet42 = new KERICHO_CHMT.cmbloginDataSet42();
-            this.userRegisterBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.userRegisterTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet42TableAdapters.UserRegisterTableAdapter();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet21)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // DriverID
@@ -113,20 +117,21 @@
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblDate.AutoSize = true;
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(53, 7);
+            this.lblDate.Location = new System.Drawing.Point(24, 7);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(39, 18);
+            this.lblDate.Size = new System.Drawing.Size(43, 18);
             this.lblDate.TabIndex = 24;
             this.lblDate.Text = "Date";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.dateTimePicker1.Location = new System.Drawing.Point(114, 6);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(73, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(152, 22);
             this.dateTimePicker1.TabIndex = 23;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -394,6 +399,28 @@
             this.label12.TabIndex = 56;
             this.label12.Text = "Driver\'s  Name";
             // 
+            // cmbDriverName
+            // 
+            this.cmbDriverName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbDriverName.DataSource = this.userRegisterBindingSource2;
+            this.cmbDriverName.DisplayMember = "FirstName";
+            this.cmbDriverName.FormattingEnabled = true;
+            this.cmbDriverName.Location = new System.Drawing.Point(232, 46);
+            this.cmbDriverName.Name = "cmbDriverName";
+            this.cmbDriverName.Size = new System.Drawing.Size(223, 21);
+            this.cmbDriverName.TabIndex = 57;
+            this.cmbDriverName.ValueMember = "FirstName";
+            // 
+            // userRegisterBindingSource2
+            // 
+            this.userRegisterBindingSource2.DataMember = "UserRegister";
+            this.userRegisterBindingSource2.DataSource = this.cmbloginDataSet42;
+            // 
+            // cmbloginDataSet42
+            // 
+            this.cmbloginDataSet42.DataSetName = "cmbloginDataSet42";
+            this.cmbloginDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -412,15 +439,15 @@
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.14035F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.85965F));
             this.tableLayoutPanel3.Controls.Add(this.lblDate, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(625, 59);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(714, 59);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(317, 32);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(228, 32);
             this.tableLayoutPanel3.TabIndex = 45;
             // 
             // tableLayoutPanel5
@@ -431,7 +458,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.btnCancel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnSubmit, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(693, 454);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(693, 459);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -602,18 +629,6 @@
             this.txtVoucherNo.Size = new System.Drawing.Size(132, 20);
             this.txtVoucherNo.TabIndex = 55;
             // 
-            // cmbDriverName
-            // 
-            this.cmbDriverName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbDriverName.DataSource = this.userRegisterBindingSource2;
-            this.cmbDriverName.DisplayMember = "FirstName";
-            this.cmbDriverName.FormattingEnabled = true;
-            this.cmbDriverName.Location = new System.Drawing.Point(232, 46);
-            this.cmbDriverName.Name = "cmbDriverName";
-            this.cmbDriverName.Size = new System.Drawing.Size(223, 21);
-            this.cmbDriverName.TabIndex = 57;
-            this.cmbDriverName.ValueMember = "FirstName";
-            // 
             // cmbloginDataSet20BindingSource
             // 
             this.cmbloginDataSet20BindingSource.DataSource = this.cmbloginDataSet20;
@@ -624,19 +639,46 @@
             this.userRegisterBindingSource1.DataMember = "UserRegister";
             this.userRegisterBindingSource1.DataSource = this.cmbloginDataSet20BindingSource;
             // 
-            // cmbloginDataSet42
-            // 
-            this.cmbloginDataSet42.DataSetName = "cmbloginDataSet42";
-            this.cmbloginDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // userRegisterBindingSource2
-            // 
-            this.userRegisterBindingSource2.DataMember = "UserRegister";
-            this.userRegisterBindingSource2.DataSource = this.cmbloginDataSet42;
-            // 
             // userRegisterTableAdapter1
             // 
             this.userRegisterTableAdapter1.ClearBeforeFill = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.button12, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.button13, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 497);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(969, 42);
+            this.tableLayoutPanel9.TabIndex = 66;
+            // 
+            // button12
+            // 
+            this.button12.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button12.BackColor = System.Drawing.Color.Green;
+            this.button12.Location = new System.Drawing.Point(3, 3);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(963, 15);
+            this.button12.TabIndex = 48;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.Location = new System.Drawing.Point(3, 24);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(963, 15);
+            this.button13.TabIndex = 50;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // Driver
             // 
@@ -645,7 +687,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(969, 512);
+            this.ClientSize = new System.Drawing.Size(969, 539);
+            this.Controls.Add(this.tableLayoutPanel9);
             this.Controls.Add(this.txtVoucherNo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tableLayoutPanel8);
@@ -669,6 +712,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet21)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -678,8 +723,7 @@
             this.tableLayoutPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet20BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userRegisterBindingSource2)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -736,5 +780,8 @@
         private cmbloginDataSet42 cmbloginDataSet42;
         private System.Windows.Forms.BindingSource userRegisterBindingSource2;
         private cmbloginDataSet42TableAdapters.UserRegisterTableAdapter userRegisterTableAdapter1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
     }
 }

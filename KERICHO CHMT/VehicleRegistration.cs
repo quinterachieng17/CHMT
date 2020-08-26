@@ -90,6 +90,7 @@ namespace KERICHO_CHMT
 
         private void VehicleRegistration_Load(object sender, EventArgs e)
         {
+            label11.Hide();
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             //label6.Text = DateTime.Now.ToLongDateString();

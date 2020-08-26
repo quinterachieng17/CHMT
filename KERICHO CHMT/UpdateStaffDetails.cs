@@ -32,7 +32,7 @@ namespace KERICHO_CHMT
 
         private void UpdateStaffDetails_Load(object sender, EventArgs e)
         {
-            //label2.Hide();
+            label2.Hide();
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();

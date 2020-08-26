@@ -198,5 +198,18 @@ namespace KERICHO_CHMT
         {
             
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM VehicleRegistration", sqlCon);
+                DataSet ds = new DataSet();
+                sqlDa.Fill(ds, "VehicleRegistration");
+                dgvVehicle.DataSource = ds.Tables["VehicleRegistration"];
+                sqlCon.Close();
+            }
+        }
     }
 }

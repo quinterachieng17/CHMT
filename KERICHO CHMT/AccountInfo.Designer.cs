@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtRegionID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDesignationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +44,7 @@
             this.txtFirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,8 +55,7 @@
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnBack.BackColor = System.Drawing.SystemColors.Menu;
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Location = new System.Drawing.Point(1126, 7);
+            this.btnBack.Location = new System.Drawing.Point(7, 7);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 2;
@@ -67,8 +67,7 @@
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnSave.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Location = new System.Drawing.Point(1214, 7);
+            this.btnSave.Location = new System.Drawing.Point(95, 7);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 3;
@@ -84,12 +83,13 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(49, 575);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1168, 575);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1292, 37);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(173, 37);
             this.tableLayoutPanel2.TabIndex = 5;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // label2
             // 
@@ -126,6 +126,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1398, 84);
             this.tableLayoutPanel1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(566, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(265, 35);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Staff Account Reset";
             // 
             // txtRegionID
             // 
@@ -194,24 +205,26 @@
             this.txtUserName,
             this.txtDesignationID,
             this.txtRegionID});
-            this.dataGridView1.Location = new System.Drawing.Point(49, 111);
+            this.dataGridView1.Location = new System.Drawing.Point(63, 125);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1292, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(1275, 419);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
-            // label3
+            // tableLayoutPanel3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Trebuchet MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(566, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 35);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Staff Account Reset";
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(575, 78);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(247, 2);
+            this.tableLayoutPanel3.TabIndex = 7;
             // 
             // AccountInfo
             // 
@@ -221,6 +234,7 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1400, 612);
+            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel2);
@@ -255,5 +269,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtFirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

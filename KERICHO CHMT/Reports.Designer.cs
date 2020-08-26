@@ -39,6 +39,8 @@
             this.cmbloginDataSet16 = new KERICHO_CHMT.cmbloginDataSet16();
             this.AddByDriversBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet15 = new KERICHO_CHMT.cmbloginDataSet15();
+            this.WorkTicketAddBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet41 = new KERICHO_CHMT.cmbloginDataSet41();
             this.patientRegisterApprovedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet12 = new KERICHO_CHMT.cmbloginDataSet12();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button11 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -72,20 +75,23 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
             this.reportViewer4 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cmbloginDataSet40 = new KERICHO_CHMT.cmbloginDataSet40();
             this.RecordMileageBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RecordMileageTableAdapter = new KERICHO_CHMT.cmbloginDataSet40TableAdapters.RecordMileageTableAdapter();
-            this.cmbloginDataSet41 = new KERICHO_CHMT.cmbloginDataSet41();
-            this.WorkTicketAddBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.WorkTicketAddTableAdapter = new KERICHO_CHMT.cmbloginDataSet41TableAdapters.WorkTicketAddTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.AddByFacilityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddByNursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddByDriversBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkTicketAddBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterApprovedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet12)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -97,8 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CaseByPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet40)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordMileageBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WorkTicketAddBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AddByFacilityBindingSource
@@ -130,6 +134,16 @@
             // 
             this.cmbloginDataSet15.DataSetName = "cmbloginDataSet15";
             this.cmbloginDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // WorkTicketAddBindingSource
+            // 
+            this.WorkTicketAddBindingSource.DataMember = "WorkTicketAdd";
+            this.WorkTicketAddBindingSource.DataSource = this.cmbloginDataSet41;
+            // 
+            // cmbloginDataSet41
+            // 
+            this.cmbloginDataSet41.DataSetName = "cmbloginDataSet41";
+            this.cmbloginDataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patientRegisterApprovedBindingSource
             // 
@@ -268,6 +282,21 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(268, 274);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
+            // button11
+            // 
+            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button11.BackColor = System.Drawing.SystemColors.Menu;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(3, 238);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(262, 33);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Work Ticket";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_MouseClick);
+            // 
             // button8
             // 
             this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -350,7 +379,7 @@
             this.tableLayoutPanel6.Controls.Add(this.lblFacility, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.button7, 2, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(492, 87);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(492, 74);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -488,21 +517,6 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Reports";
             // 
-            // button11
-            // 
-            this.button11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button11.BackColor = System.Drawing.SystemColors.Menu;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Trebuchet MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(3, 238);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(262, 33);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "Work Ticket";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_MouseClick);
-            // 
             // reportViewer4
             // 
             this.reportViewer4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -531,19 +545,47 @@
             // 
             this.RecordMileageTableAdapter.ClearBeforeFill = true;
             // 
-            // cmbloginDataSet41
-            // 
-            this.cmbloginDataSet41.DataSetName = "cmbloginDataSet41";
-            this.cmbloginDataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // WorkTicketAddBindingSource
-            // 
-            this.WorkTicketAddBindingSource.DataMember = "WorkTicketAdd";
-            this.WorkTicketAddBindingSource.DataSource = this.cmbloginDataSet41;
-            // 
             // WorkTicketAddTableAdapter
             // 
             this.WorkTicketAddTableAdapter.ClearBeforeFill = true;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(517, 126);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 15);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "From";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(788, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 15);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "To";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.Location = new System.Drawing.Point(560, 124);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 58;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker2.Location = new System.Drawing.Point(826, 123);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 59;
             // 
             // Reports
             // 
@@ -552,6 +594,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1472, 609);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.reportViewer4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -574,6 +620,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AddByDriversBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkTicketAddBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterApprovedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet12)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -587,8 +635,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CaseByPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet40)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RecordMileageBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WorkTicketAddBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -643,5 +689,9 @@
         private System.Windows.Forms.BindingSource WorkTicketAddBindingSource;
         private cmbloginDataSet41 cmbloginDataSet41;
         private cmbloginDataSet41TableAdapters.WorkTicketAddTableAdapter WorkTicketAddTableAdapter;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

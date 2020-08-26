@@ -163,5 +163,10 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

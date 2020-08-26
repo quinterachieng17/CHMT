@@ -62,6 +62,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Make = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ChasisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EngineNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PlateNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,9 +93,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1359, 0);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1348, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 28;
             this.label6.Text = "Date";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -133,7 +135,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(102, 3);
+            this.label2.Location = new System.Drawing.Point(102, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 20);
             this.label2.TabIndex = 18;
@@ -152,13 +154,14 @@
             this.dgvVehicle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegNo,
             this.Make,
+            this.Model,
             this.ChasisNo,
             this.EngineNo,
             this.PlateNo,
             this.Date});
-            this.dgvVehicle.Location = new System.Drawing.Point(410, 238);
+            this.dgvVehicle.Location = new System.Drawing.Point(410, 264);
             this.dgvVehicle.Name = "dgvVehicle";
-            this.dgvVehicle.Size = new System.Drawing.Size(978, 358);
+            this.dgvVehicle.Size = new System.Drawing.Size(978, 332);
             this.dgvVehicle.TabIndex = 32;
             this.dgvVehicle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVehicle_CellContentClick);
             // 
@@ -168,7 +171,7 @@
             this.button5.BackColor = System.Drawing.Color.Honeydew;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(7, 210);
+            this.button5.Location = new System.Drawing.Point(7, 220);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(293, 40);
             this.button5.TabIndex = 38;
@@ -182,7 +185,7 @@
             this.button4.BackColor = System.Drawing.Color.Honeydew;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(7, 72);
+            this.button4.Location = new System.Drawing.Point(7, 76);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(293, 40);
             this.button4.TabIndex = 37;
@@ -196,7 +199,7 @@
             this.button3.BackColor = System.Drawing.Color.Honeydew;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(7, 302);
+            this.button3.Location = new System.Drawing.Point(7, 316);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(293, 40);
             this.button3.TabIndex = 36;
@@ -210,7 +213,7 @@
             this.button6.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(7, 164);
+            this.button6.Location = new System.Drawing.Point(7, 172);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(293, 40);
             this.button6.TabIndex = 35;
@@ -224,7 +227,7 @@
             this.button7.BackColor = System.Drawing.Color.Honeydew;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(7, 118);
+            this.button7.Location = new System.Drawing.Point(7, 124);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(293, 40);
             this.button7.TabIndex = 34;
@@ -238,7 +241,7 @@
             this.btnRegisterStaff.BackColor = System.Drawing.Color.Honeydew;
             this.btnRegisterStaff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegisterStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterStaff.Location = new System.Drawing.Point(7, 26);
+            this.btnRegisterStaff.Location = new System.Drawing.Point(7, 28);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
             this.btnRegisterStaff.Size = new System.Drawing.Size(293, 40);
             this.btnRegisterStaff.TabIndex = 33;
@@ -262,7 +265,7 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button9.Location = new System.Drawing.Point(410, 209);
+            this.button9.Location = new System.Drawing.Point(410, 229);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 27);
             this.button9.TabIndex = 40;
@@ -314,14 +317,13 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.7563F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.2437F));
             this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(45, 111);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(45, 105);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -348,7 +350,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.button8, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.button10, 1, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1139, 195);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(1139, 215);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -381,7 +383,7 @@
             this.tableLayoutPanel6.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.button1, 2, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(635, 200);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(635, 220);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -417,6 +419,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Preview";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // tableLayoutPanel7
             // 
@@ -431,7 +434,7 @@
             this.tableLayoutPanel7.Controls.Add(this.button7, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.button4, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.btnRegisterStaff, 0, 1);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(45, 238);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(45, 220);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 9;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
@@ -443,7 +446,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(308, 394);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(308, 412);
             this.tableLayoutPanel7.TabIndex = 49;
             // 
             // button12
@@ -452,7 +455,7 @@
             this.button12.BackColor = System.Drawing.Color.Honeydew;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(3, 352);
+            this.button12.Location = new System.Drawing.Point(3, 368);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(302, 35);
             this.button12.TabIndex = 15;
@@ -466,7 +469,7 @@
             this.button17.BackColor = System.Drawing.Color.Honeydew;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button17.Location = new System.Drawing.Point(3, 258);
+            this.button17.Location = new System.Drawing.Point(3, 270);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(302, 35);
             this.button17.TabIndex = 8;
@@ -478,14 +481,14 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.DarkGreen;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(76, 105);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-42, 137);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1316, 5);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1553, 4);
             this.tableLayoutPanel1.TabIndex = 50;
             // 
             // tableLayoutPanel9
@@ -537,6 +540,12 @@
             this.Make.DataPropertyName = "Make";
             this.Make.HeaderText = "Make";
             this.Make.Name = "Make";
+            // 
+            // Model
+            // 
+            this.Model.DataPropertyName = "Model";
+            this.Model.HeaderText = "Model";
+            this.Model.Name = "Model";
             // 
             // ChasisNo
             // 
@@ -637,6 +646,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Make;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Model;
         private System.Windows.Forms.DataGridViewTextBoxColumn ChasisNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn EngineNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PlateNo;

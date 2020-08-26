@@ -38,6 +38,7 @@ namespace KERICHO_CHMT
 
         private void UpdateVehicleDetails_Load(object sender, EventArgs e)
         {
+            label1.Hide();
             PopulateDataGridView();
             
         }

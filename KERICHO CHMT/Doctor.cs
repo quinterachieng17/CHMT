@@ -124,5 +124,15 @@ namespace KERICHO_CHMT
             Accounts acc = new Accounts(label2.Text);
             acc.Show();
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
