@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtLpoNo = new System.Windows.Forms.TextBox();
+            this.txtPayments = new System.Windows.Forms.TextBox();
+            this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.VehicleID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Station = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,14 +55,14 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.txtOthers = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtOilDrawn = new System.Windows.Forms.TextBox();
+            this.txtFuelDrawn = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMaintenance = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -71,9 +70,17 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmbStation = new System.Windows.Forms.ComboBox();
+            this.cmbVehicleNo = new System.Windows.Forms.ComboBox();
+            this.cmbloginDataSet45 = new KERICHO_CHMT.cmbloginDataSet45();
+            this.vehicleRegistrationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vehicleRegistrationTableAdapter = new KERICHO_CHMT.cmbloginDataSet45TableAdapters.VehicleRegistrationTableAdapter();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +110,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 7);
+            this.label3.Location = new System.Drawing.Point(47, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 2;
@@ -114,7 +121,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(291, 7);
+            this.label4.Location = new System.Drawing.Point(290, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
@@ -125,7 +132,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(600, 7);
+            this.label5.Location = new System.Drawing.Point(599, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -136,53 +143,37 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(933, 7);
+            this.label6.Location = new System.Drawing.Point(932, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Payment";
             // 
-            // textBox1
+            // txtLpoNo
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(82, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtLpoNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtLpoNo.Location = new System.Drawing.Point(674, 5);
+            this.txtLpoNo.Name = "txtLpoNo";
+            this.txtLpoNo.Size = new System.Drawing.Size(174, 20);
+            this.txtLpoNo.TabIndex = 9;
             // 
-            // textBox2
+            // txtPayments
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox2.Location = new System.Drawing.Point(376, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtPayments.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPayments.Location = new System.Drawing.Point(1002, 5);
+            this.txtPayments.Name = "txtPayments";
+            this.txtPayments.Size = new System.Drawing.Size(174, 20);
+            this.txtPayments.TabIndex = 10;
             // 
-            // textBox3
+            // dgvAccounts
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(675, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox4.Location = new System.Drawing.Point(1003, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 10;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvAccounts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccounts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.VehicleID,
             this.Date,
             this.Station,
@@ -191,10 +182,10 @@
             this.Payments,
             this.Expenditure,
             this.Balance});
-            this.dataGridView1.Location = new System.Drawing.Point(121, 305);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1216, 375);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvAccounts.Location = new System.Drawing.Point(121, 305);
+            this.dgvAccounts.Name = "dgvAccounts";
+            this.dgvAccounts.Size = new System.Drawing.Size(1216, 375);
+            this.dgvAccounts.TabIndex = 11;
             // 
             // VehicleID
             // 
@@ -324,30 +315,30 @@
             // 
             this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.87029F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.12971F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.59124F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.40876F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 191F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 7, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
+            this.tableLayoutPanel1.Controls.Add(this.cmbVehicleNo, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtOthers, 7, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmbStation, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label14, 6, 1);
             this.tableLayoutPanel1.Controls.Add(this.label13, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtOilDrawn, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtFuelDrawn, 5, 1);
             this.tableLayoutPanel1.Controls.Add(this.label12, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtMaintenance, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label11, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtLpoNo, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtPayments, 7, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(122, 161);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -356,81 +347,81 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1215, 63);
             this.tableLayoutPanel1.TabIndex = 20;
             // 
-            // label11
+            // txtOthers
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(12, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 17);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Services";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox5.Location = new System.Drawing.Point(82, 37);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(189, 20);
-            this.textBox5.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(342, 38);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(28, 17);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Oil";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox6.Location = new System.Drawing.Point(376, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 20);
-            this.textBox6.TabIndex = 8;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(632, 38);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 17);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Fuel";
+            this.txtOthers.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtOthers.Location = new System.Drawing.Point(1002, 37);
+            this.txtOthers.Name = "txtOthers";
+            this.txtOthers.Size = new System.Drawing.Size(174, 20);
+            this.txtOthers.TabIndex = 10;
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(943, 38);
+            this.label14.Location = new System.Drawing.Point(942, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 5;
             this.label14.Text = "Others";
             // 
-            // textBox8
+            // label13
             // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox8.Location = new System.Drawing.Point(1003, 37);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 20);
-            this.textBox8.TabIndex = 10;
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(631, 38);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 17);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Fuel";
             // 
-            // textBox7
+            // txtOilDrawn
             // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox7.Location = new System.Drawing.Point(675, 37);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 20);
-            this.textBox7.TabIndex = 9;
+            this.txtOilDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtOilDrawn.Location = new System.Drawing.Point(375, 37);
+            this.txtOilDrawn.Name = "txtOilDrawn";
+            this.txtOilDrawn.Size = new System.Drawing.Size(176, 20);
+            this.txtOilDrawn.TabIndex = 8;
+            // 
+            // txtFuelDrawn
+            // 
+            this.txtFuelDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtFuelDrawn.Location = new System.Drawing.Point(674, 37);
+            this.txtFuelDrawn.Name = "txtFuelDrawn";
+            this.txtFuelDrawn.Size = new System.Drawing.Size(174, 20);
+            this.txtFuelDrawn.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(341, 38);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(28, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Oil";
+            // 
+            // txtMaintenance
+            // 
+            this.txtMaintenance.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtMaintenance.Location = new System.Drawing.Point(106, 37);
+            this.txtMaintenance.Name = "txtMaintenance";
+            this.txtMaintenance.Size = new System.Drawing.Size(165, 20);
+            this.txtMaintenance.TabIndex = 7;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(7, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 17);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Maintenance";
             // 
             // tableLayoutPanel3
             // 
@@ -439,7 +430,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.8F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
@@ -518,12 +509,64 @@
             this.button6.TabIndex = 55;
             this.button6.UseVisualStyleBackColor = false;
             // 
+            // cmbStation
+            // 
+            this.cmbStation.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbStation.FormattingEnabled = true;
+            this.cmbStation.Items.AddRange(new object[] {
+            "Kipsigis",
+            "Jumbo",
+            "Omline"});
+            this.cmbStation.Location = new System.Drawing.Point(106, 5);
+            this.cmbStation.Name = "cmbStation";
+            this.cmbStation.Size = new System.Drawing.Size(165, 21);
+            this.cmbStation.TabIndex = 56;
+            // 
+            // cmbVehicleNo
+            // 
+            this.cmbVehicleNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbVehicleNo.DataSource = this.vehicleRegistrationBindingSource;
+            this.cmbVehicleNo.DisplayMember = "RegNo";
+            this.cmbVehicleNo.FormattingEnabled = true;
+            this.cmbVehicleNo.Location = new System.Drawing.Point(375, 5);
+            this.cmbVehicleNo.Name = "cmbVehicleNo";
+            this.cmbVehicleNo.Size = new System.Drawing.Size(176, 21);
+            this.cmbVehicleNo.TabIndex = 57;
+            this.cmbVehicleNo.ValueMember = "RegNo";
+            // 
+            // cmbloginDataSet45
+            // 
+            this.cmbloginDataSet45.DataSetName = "cmbloginDataSet45";
+            this.cmbloginDataSet45.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vehicleRegistrationBindingSource
+            // 
+            this.vehicleRegistrationBindingSource.DataMember = "VehicleRegistration";
+            this.vehicleRegistrationBindingSource.DataSource = this.cmbloginDataSet45;
+            // 
+            // vehicleRegistrationTableAdapter
+            // 
+            this.vehicleRegistrationTableAdapter.ClearBeforeFill = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(1343, 168);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(129, 48);
+            this.button5.TabIndex = 56;
+            this.button5.Text = "Compute Balance";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Accounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1474, 757);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
@@ -535,18 +578,20 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAccounts);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Accounts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accounts";
             this.Load += new System.EventHandler(this.Accounts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -560,11 +605,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtLpoNo;
+        private System.Windows.Forms.TextBox txtPayments;
+        private System.Windows.Forms.DataGridView dgvAccounts;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -575,13 +618,13 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtMaintenance;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtOilDrawn;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtOthers;
+        private System.Windows.Forms.TextBox txtFuelDrawn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DataGridViewTextBoxColumn VehicleID;
@@ -597,5 +640,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox cmbStation;
+        private System.Windows.Forms.ComboBox cmbVehicleNo;
+        private cmbloginDataSet45 cmbloginDataSet45;
+        private System.Windows.Forms.BindingSource vehicleRegistrationBindingSource;
+        private cmbloginDataSet45TableAdapters.VehicleRegistrationTableAdapter vehicleRegistrationTableAdapter;
+        private System.Windows.Forms.Button button5;
     }
 }
