@@ -346,6 +346,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet45.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet46.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1115,6 +1120,17 @@
     </None>
     <None Include="cmbloginDataSet45.xss">
       <DependentUpon>cmbloginDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet46.xsc">
+      <DependentUpon>cmbloginDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet46.xss">
+      <DependentUpon>cmbloginDataSet46.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet5.xsc">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>

@@ -26,10 +26,12 @@ namespace KERICHO_CHMT
 
         private void Accounts_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet46.StatementOfAccounts' table. You can move, or remove it, as needed.
+            this.statementOfAccountsTableAdapter.Fill(this.cmbloginDataSet46.StatementOfAccounts);
+
             // TODO: This line of code loads data into the 'cmbloginDataSet45.VehicleRegistration' table. You can move, or remove it, as needed.
             this.vehicleRegistrationTableAdapter.Fill(this.cmbloginDataSet45.VehicleRegistration);
-            // TODO: This line of code loads data into the 'cmbloginDataSet21.VehicleRegistration' table. You can move, or remove it, as needed.
-            
+            //Custom date formats
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -37,6 +39,7 @@ namespace KERICHO_CHMT
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.CustomFormat = "dd-MM-yyyy";
             label7.Hide();
+            PopulateDataGridView();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,12 +49,23 @@ namespace KERICHO_CHMT
             doc.Show();
         }
 
+        void PopulateDataGridView()
+        {
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StatementOfAccounts", sqlCon);                
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);               
+                dgvAccounts.DataSource = dtbl;
+            }
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             if (cmbStation.Text == "" || cmbVehicleNo.Text == "" || txtLpoNo.Text == "" || txtMaintenance.Text == "" || txtFuelDrawn.Text=="" || txtOilDrawn.Text=="" )
-                MessageBox.Show("Driver's/Authorizing Officer's Details or Mileage cannot be blank");
-
-            
+                MessageBox.Show("Payment Details or Expenditures cannot be blank");
+            else
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
@@ -67,7 +81,9 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@Maintenance", txtMaintenance.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@FuelDrawn", txtFuelDrawn.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@OilDrawn", txtOilDrawn.Text.Trim());
-                    sqlCmd.Parameters.AddWithValue("@Others", txtOthers.Text.Trim());                 
+                    sqlCmd.Parameters.AddWithValue("@Others", txtOthers.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Expenses", txtTotalExpenses.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@Balance", txtBalance.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Recorded succsessful");
                     Clear();
@@ -77,7 +93,56 @@ namespace KERICHO_CHMT
         }
         void Clear()
         {
-            cmbVehicleNo.Text = cmbStation.Text = txtLpoNo.Text = txtPayments.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtMaintenance.Text = txtOthers.Text = "";
+            cmbVehicleNo.Text = cmbStation.Text = txtLpoNo.Text = txtPayments.Text = txtOilDrawn.Text = txtFuelDrawn.Text = txtMaintenance.Text = txtOthers.Text = txtTotalExpenses.Text = txtBalance.Text= "";
+        }
+
+        private void dgvAccounts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            double a1, b1, c1, d1, s;
+            double.TryParse(txtMaintenance.Text, out a1);
+            double.TryParse(txtOilDrawn.Text, out b1);
+            double.TryParse(txtFuelDrawn.Text, out c1);
+            double.TryParse(txtOthers.Text, out d1);
+            s = a1 + b1 + c1 + d1;
+            if (s > 0)
+                txtTotalExpenses.Text = s.ToString("c").Remove(0, 1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StatementOfAccounts where date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);                
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvAccounts.DataSource = dtbl;
+
+                // Displays only the selected columns
+                dgvAccounts.AutoGenerateColumns = false;
+                dgvAccounts.DataSource = dtbl;
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            double e1, f1, g;
+            double.TryParse(txtPayments.Text, out e1);
+            double.TryParse(txtTotalExpenses.Text, out f1);
+            g = e1 - f1;
+            if (g > 0)
+                txtBalance.Text = g.ToString("c").Remove(0, 1);
+
         }
     }
 }
