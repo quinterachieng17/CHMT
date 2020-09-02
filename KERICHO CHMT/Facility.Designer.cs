@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Facility));
             this.dgvFacilityTo = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFacilityFrom = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.patientRegisterApprovedBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacilityTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacilityFrom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterApprovedBindingSource1)).BeginInit();
@@ -97,6 +98,7 @@
             this.Controls.Add(this.dgvFacilityFrom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFacilityTo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Facility";
             this.Text = "Facility";
             this.Load += new System.EventHandler(this.Facility_Load);

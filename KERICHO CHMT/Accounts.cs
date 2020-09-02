@@ -39,7 +39,7 @@ namespace KERICHO_CHMT
             dateTimePicker3.Format = DateTimePickerFormat.Custom;
             dateTimePicker3.CustomFormat = "dd-MM-yyyy";
             label7.Hide();
-            PopulateDataGridView();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,6 +86,7 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@Balance", txtBalance.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("Recorded succsessful");
+                    PopulateDataGridView();
                     Clear();
                 }
 

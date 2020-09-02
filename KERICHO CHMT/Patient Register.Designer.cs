@@ -58,6 +58,8 @@
             this.cmbDriverNo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.cmbloginDataSet22 = new KERICHO_CHMT.cmbloginDataSet22();
             this.cmbloginDataSet23 = new KERICHO_CHMT.cmbloginDataSet23();
             this.cmbloginDataSet24 = new KERICHO_CHMT.cmbloginDataSet24();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -355,9 +355,9 @@
             this.cmbFacility.Items.AddRange(new object[] {
             "Incoming Referral",
             "Outgoing Referral"});
-            this.cmbFacility.Location = new System.Drawing.Point(263, 6);
+            this.cmbFacility.Location = new System.Drawing.Point(262, 6);
             this.cmbFacility.Name = "cmbFacility";
-            this.cmbFacility.Size = new System.Drawing.Size(218, 21);
+            this.cmbFacility.Size = new System.Drawing.Size(217, 21);
             this.cmbFacility.TabIndex = 27;
             this.cmbFacility.SelectedIndexChanged += new System.EventHandler(this.cmbFacility_SelectedIndexChanged);
             // 
@@ -434,6 +434,28 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1025, 34);
             this.tableLayoutPanel2.TabIndex = 34;
             // 
+            // button4
+            // 
+            this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.Color.Green;
+            this.button4.Location = new System.Drawing.Point(3, -3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(1019, 14);
+            this.button4.TabIndex = 54;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Location = new System.Drawing.Point(3, 17);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(1019, 14);
+            this.button6.TabIndex = 55;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -456,7 +478,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.73494F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.26506F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
             this.tableLayoutPanel4.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmbFacility, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label15, 2, 0);
@@ -474,7 +496,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(634, 8);
+            this.label15.Location = new System.Drawing.Point(632, 8);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(80, 17);
             this.label15.TabIndex = 30;
@@ -483,7 +505,7 @@
             // txtTimeOfCall
             // 
             this.txtTimeOfCall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTimeOfCall.Location = new System.Drawing.Point(720, 7);
+            this.txtTimeOfCall.Location = new System.Drawing.Point(718, 7);
             this.txtTimeOfCall.Name = "txtTimeOfCall";
             this.txtTimeOfCall.Size = new System.Drawing.Size(225, 20);
             this.txtTimeOfCall.TabIndex = 31;
@@ -587,28 +609,6 @@
             // 
             this.cmbloginDataSet24.DataSetName = "cmbloginDataSet24";
             this.cmbloginDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button4
-            // 
-            this.button4.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.Location = new System.Drawing.Point(3, -3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(1019, 14);
-            this.button4.TabIndex = 54;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.Location = new System.Drawing.Point(3, 17);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(1019, 14);
-            this.button6.TabIndex = 55;
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // Patient_Register
             // 

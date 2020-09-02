@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Msg1));
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.txtArrivalTime = new System.Windows.Forms.TextBox();
             this.txtCommentsDelays = new System.Windows.Forms.TextBox();
             this.cmbPatientNo = new System.Windows.Forms.ComboBox();
-            this.cmbloginDataSet8 = new KERICHO_CHMT.cmbloginDataSet8();
             this.patientRegisterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbloginDataSet8 = new KERICHO_CHMT.cmbloginDataSet8();
             this.patientRegisterTableAdapter = new KERICHO_CHMT.cmbloginDataSet8TableAdapters.PatientRegisterTableAdapter();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -92,15 +93,15 @@
             this.cmbPatientNo.TabIndex = 7;
             this.cmbPatientNo.ValueMember = "PatientNo";
             // 
-            // cmbloginDataSet8
-            // 
-            this.cmbloginDataSet8.DataSetName = "cmbloginDataSet8";
-            this.cmbloginDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // patientRegisterBindingSource
             // 
             this.patientRegisterBindingSource.DataMember = "PatientRegister";
             this.patientRegisterBindingSource.DataSource = this.cmbloginDataSet8;
+            // 
+            // cmbloginDataSet8
+            // 
+            this.cmbloginDataSet8.DataSetName = "cmbloginDataSet8";
+            this.cmbloginDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // patientRegisterTableAdapter
             // 
@@ -151,11 +152,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Msg1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Msg1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientRegisterBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

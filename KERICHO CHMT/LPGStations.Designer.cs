@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource10 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource11 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource12 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LPGStations));
             this.AddByRegNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet33 = new KERICHO_CHMT.cmbloginDataSet33();
             this.AddByRegNoKBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -156,7 +157,7 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Location = new System.Drawing.Point(324, 3);
+            this.button1.Location = new System.Drawing.Point(323, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 21);
             this.button1.TabIndex = 5;
@@ -211,9 +212,9 @@
             this.reportViewerJumbo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource10.Name = "DataSet1";
-            reportDataSource10.Value = this.AddByRegNoBindingSource;
-            this.reportViewerJumbo.LocalReport.DataSources.Add(reportDataSource10);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.AddByRegNoBindingSource;
+            this.reportViewerJumbo.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerJumbo.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByRegNo.rdlc";
             this.reportViewerJumbo.Location = new System.Drawing.Point(144, 122);
             this.reportViewerJumbo.Name = "reportViewerJumbo";
@@ -229,9 +230,9 @@
             this.reportViewerKipsigis.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource11.Name = "DataSet1";
-            reportDataSource11.Value = this.AddByRegNoKBindingSource;
-            this.reportViewerKipsigis.LocalReport.DataSources.Add(reportDataSource11);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.AddByRegNoKBindingSource;
+            this.reportViewerKipsigis.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerKipsigis.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByRegNoK.rdlc";
             this.reportViewerKipsigis.Location = new System.Drawing.Point(144, 123);
             this.reportViewerKipsigis.Name = "reportViewerKipsigis";
@@ -244,9 +245,9 @@
             this.reportViewerHomeline.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource12.Name = "DataSet1";
-            reportDataSource12.Value = this.AddByRegNoHBindingSource;
-            this.reportViewerHomeline.LocalReport.DataSources.Add(reportDataSource12);
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.AddByRegNoHBindingSource;
+            this.reportViewerHomeline.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewerHomeline.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByRegNoH.rdlc";
             this.reportViewerHomeline.Location = new System.Drawing.Point(144, 123);
             this.reportViewerHomeline.Name = "reportViewerHomeline";
@@ -414,7 +415,7 @@
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBox1.Location = new System.Drawing.Point(143, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
+            this.textBox1.Size = new System.Drawing.Size(174, 20);
             this.textBox1.TabIndex = 18;
             // 
             // label2
@@ -443,7 +444,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.61371F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.38629F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button1, 2, 0);
@@ -482,6 +483,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblStation);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LPGStations";
             this.Text = "LPGStations";
             this.Load += new System.EventHandler(this.LPGStations_Load);

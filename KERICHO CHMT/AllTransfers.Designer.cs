@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllTransfers));
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.dgvAllTransfers = new System.Windows.Forms.DataGridView();
@@ -233,7 +234,9 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.dgvAllTransfers);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AllTransfers";
+            this.Text = "Transfer Cases";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AllTransfers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllTransfers)).EndInit();

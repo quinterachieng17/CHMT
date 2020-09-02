@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorkTicketSummary));
             this.dgv2 = new System.Windows.Forms.DataGridView();
             this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,8 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -234,7 +235,7 @@
             this.btnView.BackColor = System.Drawing.SystemColors.Menu;
             this.btnView.Location = new System.Drawing.Point(111, 5);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(74, 23);
+            this.btnView.Size = new System.Drawing.Size(73, 23);
             this.btnView.TabIndex = 6;
             this.btnView.Text = "Homeline";
             this.btnView.UseVisualStyleBackColor = false;
@@ -270,7 +271,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.51295F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.48705F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Controls.Add(this.btnView, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
@@ -346,15 +347,6 @@
             this.label8.TabIndex = 45;
             this.label8.Text = "TRANSPORT - DAILY WORK TICKET";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 123);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 46;
-            this.label2.Text = "label2";
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -365,6 +357,15 @@
             this.label3.Size = new System.Drawing.Size(589, 31);
             this.label3.TabIndex = 45;
             this.label3.Text = "KERICHO COUNTY REFERRAL HOSPITAL";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 123);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "label2";
             // 
             // label4
             // 
@@ -509,6 +510,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.dgv2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WorkTicketSummary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Work  Ticket  Summary";

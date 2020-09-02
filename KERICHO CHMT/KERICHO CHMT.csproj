@@ -546,6 +546,9 @@
     <EmbeddedResource Include="AllCases.resx">
       <DependentUpon>AllCases.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllNurses.resx">
+      <DependentUpon>AllNurses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllTransfers.resx">
       <DependentUpon>AllTransfers.cs</DependentUpon>
     </EmbeddedResource>

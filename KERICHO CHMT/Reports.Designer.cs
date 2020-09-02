@@ -33,6 +33,7 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.AddByFacilityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cmbloginDataSet19 = new KERICHO_CHMT.cmbloginDataSet19();
             this.AddByNursesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -610,6 +611,7 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Reports";
             this.Text = "Reports";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
