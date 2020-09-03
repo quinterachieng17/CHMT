@@ -80,7 +80,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRegNo = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
@@ -142,7 +142,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(309, 7);
+            this.label4.Location = new System.Drawing.Point(308, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
@@ -153,7 +153,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(629, 7);
+            this.label5.Location = new System.Drawing.Point(628, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -164,7 +164,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(939, 7);
+            this.label6.Location = new System.Drawing.Point(938, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 5;
@@ -173,7 +173,7 @@
             // txtLpoNo
             // 
             this.txtLpoNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtLpoNo.Location = new System.Drawing.Point(704, 5);
+            this.txtLpoNo.Location = new System.Drawing.Point(703, 5);
             this.txtLpoNo.Name = "txtLpoNo";
             this.txtLpoNo.Size = new System.Drawing.Size(163, 20);
             this.txtLpoNo.TabIndex = 9;
@@ -358,7 +358,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(534, 7);
+            this.label9.Location = new System.Drawing.Point(533, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 15;
@@ -369,7 +369,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(266, 7);
+            this.label10.Location = new System.Drawing.Point(265, 7);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(74, 15);
             this.label10.TabIndex = 16;
@@ -379,7 +379,7 @@
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(346, 4);
+            this.dateTimePicker1.Location = new System.Drawing.Point(345, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(182, 22);
             this.dateTimePicker1.TabIndex = 17;
@@ -388,7 +388,7 @@
             // 
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(597, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(596, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(192, 22);
             this.dateTimePicker2.TabIndex = 18;
@@ -397,7 +397,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(795, 3);
+            this.button2.Location = new System.Drawing.Point(794, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 19;
@@ -416,7 +416,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
             this.tableLayoutPanel1.Controls.Add(this.cmbVehicleNo, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtOthers, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.cmbStation, 1, 0);
@@ -447,7 +447,7 @@
             this.cmbVehicleNo.DataSource = this.vehicleRegistrationBindingSource;
             this.cmbVehicleNo.DisplayMember = "RegNo";
             this.cmbVehicleNo.FormattingEnabled = true;
-            this.cmbVehicleNo.Location = new System.Drawing.Point(394, 5);
+            this.cmbVehicleNo.Location = new System.Drawing.Point(393, 5);
             this.cmbVehicleNo.Name = "cmbVehicleNo";
             this.cmbVehicleNo.Size = new System.Drawing.Size(138, 21);
             this.cmbVehicleNo.TabIndex = 57;
@@ -489,7 +489,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(956, 38);
+            this.label14.Location = new System.Drawing.Point(955, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 5;
@@ -500,7 +500,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(661, 38);
+            this.label13.Location = new System.Drawing.Point(660, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 17);
             this.label13.TabIndex = 4;
@@ -509,7 +509,7 @@
             // txtOilDrawn
             // 
             this.txtOilDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtOilDrawn.Location = new System.Drawing.Point(394, 37);
+            this.txtOilDrawn.Location = new System.Drawing.Point(393, 37);
             this.txtOilDrawn.Name = "txtOilDrawn";
             this.txtOilDrawn.Size = new System.Drawing.Size(138, 20);
             this.txtOilDrawn.TabIndex = 8;
@@ -517,7 +517,7 @@
             // txtFuelDrawn
             // 
             this.txtFuelDrawn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtFuelDrawn.Location = new System.Drawing.Point(704, 37);
+            this.txtFuelDrawn.Location = new System.Drawing.Point(703, 37);
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             this.txtFuelDrawn.Size = new System.Drawing.Size(163, 20);
             this.txtFuelDrawn.TabIndex = 9;
@@ -527,7 +527,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(360, 38);
+            this.label12.Location = new System.Drawing.Point(359, 38);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 17);
             this.label12.TabIndex = 3;
@@ -611,8 +611,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 198F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel3.Controls.Add(this.txtRegNo, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label17, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button2, 6, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker2, 5, 0);
@@ -626,13 +626,13 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(882, 30);
             this.tableLayoutPanel3.TabIndex = 22;
             // 
-            // textBox1
+            // txtRegNo
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(110, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 60;
+            this.txtRegNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtRegNo.Location = new System.Drawing.Point(110, 5);
+            this.txtRegNo.Name = "txtRegNo";
+            this.txtRegNo.Size = new System.Drawing.Size(146, 20);
+            this.txtRegNo.TabIndex = 60;
             // 
             // label17
             // 
@@ -886,7 +886,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn expensesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRegNo;
         private System.Windows.Forms.Label label17;
     }
 }

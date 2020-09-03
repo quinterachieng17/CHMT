@@ -44,6 +44,9 @@ namespace KERICHO_CHMT
                 using (SqlConnection sqlcon = new SqlConnection(connectionString))
                 {
                     sqlcon.Open();
+                    string fname = txtRegNo.Text + ".jpg";
+                    string flocation = "C:\\Users\\User\\Desktop\\DHIS2";
+                    string pathstring = System.IO.Path.Combine(flocation, fname);
                     SqlCommand sqlCmd = new SqlCommand("VehicleAdd", sqlcon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
                     sqlCmd.Parameters.AddWithValue("@RegNo", txtRegNo.Text.Trim());
@@ -53,6 +56,9 @@ namespace KERICHO_CHMT
                     sqlCmd.Parameters.AddWithValue("@EngineNo", txtEngineNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@PlateNo", txtPlateNo.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Date", dateTimePicker1.Text.Trim());
+                    sqlCmd.Parameters.AddWithValue("@pic", pathstring);
+                    Image a = pictureBox1.Image;
+                    a.Save(pathstring);
                     sqlCmd.ExecuteNonQuery();
                     MessageBox.Show("New Motor Vehicle Details Recorded Successfuly");
                     Clear();
@@ -121,7 +127,16 @@ namespace KERICHO_CHMT
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog op = new OpenFileDialog();
+            PictureBox p = sender as PictureBox;
+            if(p != null)
+            {
+                op.Filter = "(*.jpg; *.jpeg; *.png)| *.jpg; *.jpeg; *.png";
+                if(op.ShowDialog() == DialogResult.OK)
+                {
+                    p.Image = Image.FromFile(op.FileName);
+                }
+            }
         }
 
         private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
