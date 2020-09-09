@@ -39,11 +39,11 @@ namespace KERICHO_CHMT
             
             if (cmbCase2.SelectedIndex == 0)
                 {
-                Referrals.Show("Enter Patient Number", "Search Patient Details", "Print", "Cancel"); MsgBox.Close();
+                Referrals.Show("Enter Patient No.", "Search Patient Details", "Print", "Back"); MsgBox.Close();
             }
                 else if (cmbCase2.SelectedIndex == 1)
                 {
-                    Transfers.Show("Enter Patient Number", "Search Patient Details", "Print", "Cancel"); MsgBox.Close();
+                    Transfers.Show("Enter Patient No.", "Search Patient Details", "Print", "Back"); MsgBox.Close();
             }            
                 else
                 {

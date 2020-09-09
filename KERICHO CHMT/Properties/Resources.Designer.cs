@@ -73,6 +73,26 @@ namespace KERICHO_CHMT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Refferal_And_Ambulance_monitoring_System_png {
+            get {
+                object obj = ResourceManager.GetObject("Refferal-And-Ambulance-monitoring-System-png", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Refferal_And_Ambulance_monitoring_System_png2 {
+            get {
+                object obj = ResourceManager.GetObject("Refferal-And-Ambulance-monitoring-System-png2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_1_ {
             get {
                 object obj = ResourceManager.GetObject("user(1)", resourceCulture);

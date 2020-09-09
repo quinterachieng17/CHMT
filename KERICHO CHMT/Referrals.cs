@@ -19,6 +19,11 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public Referrals(string username)
+        {
+            InitializeComponent();
+            label5.Text = username;
+        }
         //dtbl is used as global variable
         DataTable dtbl;
 
@@ -63,10 +68,10 @@ namespace KERICHO_CHMT
         private void button2_Click(object sender, EventArgs e)
         {
 
-            //Search Operation goes here
+            //Print Operation goes here
             if(txtPatientNo.Text == "")
             {
-                MessageBox.Show("Please Enter Patient Number to search"); 
+                MessageBox.Show("Please Enter Patient Number to find patient details to print."); 
             }
             
         }

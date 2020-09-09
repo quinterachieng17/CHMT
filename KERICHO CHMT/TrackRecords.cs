@@ -189,18 +189,112 @@ namespace KERICHO_CHMT
             ss.Show();
         }
 
-        //To export the dataGridView to pdf
-        public void exportgridviewtopdf(DataGridView dgv1,string filename)
+       //void ExportDataTableToPdf(DataTable dtblTable, String strPdfPath,string strHeader)
+       // {
+       //     System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
+       //     Document document = new Document();
+       //     document.SetPageSize(iTextSharp.text.PageSize.A4);
+       //     PdfWriter writer = PdfWriter.GetInstance(document, fs);
+       //     document.Open();
+
+       //     //Report header
+       //     BaseFont bfnHead = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+       //     iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfnHead, 16, 1, BaseColor.GRAY);
+       //     Paragraph prgHeading = new Paragraph();
+       //     prgHeading.Alignment = Element.ALIGN_CENTER;
+       //     prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
+       //     document.Add(prgHeading);
+
+       //     //Date
+       //     Paragraph prgAuthor = new Paragraph();
+       //     BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+       //     iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 8, 2, BaseColor.GRAY);
+       //     prgAuthor.Alignment = Element.ALIGN_LEFT;
+       //     prgAuthor.Add(new Chunk("Kericho Referral Hospital", fntAuthor));
+       //     prgAuthor.Add(new Chunk("\nDate: "+DateTime.Now.ToShortDateString(), fntAuthor));
+       //     document.Add(prgAuthor);
+       //     //Linr Separation
+       //     Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT,1)));
+       //     document.Add(p);
+       //     //Line Break
+       //     document.Add(new Chunk("\n", fntHead));
+
+       //     //Table
+       //     PdfPTable table = new PdfPTable(dtblTable.Columns.Count);
+       //     //Table Header
+       //     BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+       //     iTextSharp.text.Font fntColumnHeader = new iTextSharp.text.Font(btnColumnHeader, 10, 1, BaseColor.WHITE);
+       //     for(int i = 0; i < dtblTable.Columns.Count; i++)
+       //     {
+       //         PdfPCell cell = new PdfPCell();
+       //         cell.BackgroundColor = BaseColor.GRAY;
+       //         cell.AddElement(new Chunk(dtblTable.Columns[i].ColumnName.ToUpper(), fntColumnHeader));
+       //         table.AddCell(cell);
+       //     }
+       //     //Data
+       //     for (int i = 0; i<dtblTable.Rows.Count; i++)
+       //     {
+       //         for (int j = 0; j < dtblTable.Columns.Count; j++)
+       //         {
+       //             table.AddCell(dtblTable.Rows[i][j].ToString());
+       //         }
+
+       //     }
+       //     document.Add(table);
+       //     document.Close();
+       //     writer.Close();
+       //     fs.Close();
+
+       // }
+        private void button10_Click(object sender, EventArgs e)
         {
+            exportgridviewtopdf(dgv1, "KTIMS Records");
+            //try
+            //{
+            //    DataTable dtbl = new DataTable();
+            //    ExportDataTableToPdf(dtbl, @"D:\test.pdf", "KTIMS Record");
+            //    System.Diagnostics.Process.Start(@"E:\test.pdf");
+            //    this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Erroe Message");
+            //}
+        }
+
+        //To export the dataGridView to pdf
+        public void exportgridviewtopdf(DataGridView dgv1, string filename)
+        {
+            ////Report Header
+            BaseFont head = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+            Paragraph p = new Paragraph();
+            p.Alignment = Element.ALIGN_CENTER;
+            p.Add(new Chunk("KERICHO COUNTY REFERRAL HOSPITAL"));
+            p.Add(new Chunk("\nP.O BOX 11 -20200 KERICHO"));
+            p.Add(new Chunk("\nDate: " + DateTime.Now.ToShortDateString()));
+
+             //Line Separation
+            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 2)));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+
+            //Table Head
+            p.Add(new Chunk("\nAMBULANCE RECORDS "));
+
+            //Table Data
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
             PdfPTable records = new PdfPTable(dgv1.Columns.Count);
-            records.DefaultCell.Padding = 3;
+            records.DefaultCell.Padding = 1;
             records.WidthPercentage = 100;
+            PdfPCell cells = new PdfPCell();            
             records.HorizontalAlignment = Element.ALIGN_LEFT;
             records.DefaultCell.BorderWidth = 1;
 
+
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-                //For header
+            //For header
             foreach (DataGridViewColumn column in dgv1.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
@@ -209,9 +303,9 @@ namespace KERICHO_CHMT
 
             }
             //Add datarow
-            foreach(DataGridViewRow row in dgv1.Rows)
+            foreach (DataGridViewRow row in dgv1.Rows)
             {
-                foreach(DataGridViewCell cell in row.Cells)
+                foreach (DataGridViewCell cell in row.Cells)
                 {
                     records.AddCell(new Phrase(cell.Value.ToString(), text));
 
@@ -228,6 +322,9 @@ namespace KERICHO_CHMT
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
+                    pdfdoc.Add(p);
+                    pdfdoc.Add(pra);
+                    pdfdoc.Add(new Chunk("\n"));
                     pdfdoc.Add(records);
                     pdfdoc.Close();
                     stream.Close();
@@ -237,10 +334,7 @@ namespace KERICHO_CHMT
         }
 
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            exportgridviewtopdf(dgv1, "KTIMS Records");
-        }
+
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {

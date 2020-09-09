@@ -18,6 +18,12 @@ namespace KERICHO_CHMT
             InitializeComponent();
         }
 
+        public Transfers(string username)
+        {
+            InitializeComponent();
+            label3.Text = username;
+        }
+
         //dtbl is used as global variable
         DataTable dtbl;
 
@@ -39,7 +45,7 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegisterApproved", sqlCon);
                 dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -53,6 +59,7 @@ namespace KERICHO_CHMT
 
         private void txtPatientNo_TextChanged(object sender, EventArgs e)
         {
+            //Filtering data using PatientNo
             DataView DV = new DataView(dtbl);
             DV.RowFilter = string.Format("PatientNo LIKE '%{0}'", txtPatientNo.Text);
             dgvSpecificSearch.DataSource = DV;
@@ -64,7 +71,7 @@ namespace KERICHO_CHMT
             //Search Operation goes here
             if (txtPatientNo.Text == "")
             {
-                MessageBox.Show("Please Enter Patient Number to search");
+                MessageBox.Show("Please Enter Patient Number to fint patient details to print.");
             }
         }
 

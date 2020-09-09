@@ -1213,6 +1213,12 @@
   <ItemGroup>
     <None Include="Resources\photo-camera.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refferal-And-Ambulance-monitoring-System-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refferal-And-Ambulance-monitoring-System-png2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

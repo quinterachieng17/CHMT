@@ -13,6 +13,7 @@ namespace KERICHO_CHMT
     public partial class VehicleRegistration : Form
     {
         String connectionString = @"Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True;";
+        SqlConnection con = new SqlConnection("Data Source=WIN-O8HG7K9J35G;Initial Catalog=cmblogin;Integrated Security=True");
         public VehicleRegistration()
         {
             InitializeComponent();
@@ -36,9 +37,19 @@ namespace KERICHO_CHMT
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtRegNo.Text == "" || txtMake.Text == "" || txtModel.Text == "" || txtChasisNo.Text == "" || txtEngineNo.Text == "" || txtPlateNo.Text == "")
-                MessageBox.Show("All fields MUST be filled");
+            //SqlDataAdapter da = new SqlDataAdapter("Select * from VehicleRegistration where RegNo = '" + txtRegNo + "'", con);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //if(dt.Rows.Count > 0)
+            //{
+            //    MessageBox.Show("A Vehicle with registration No" + txtRegNo.Text+ "already exists");
+            //}
 
+             if (txtRegNo.Text == "" || txtMake.Text == "" || txtModel.Text == "" || txtChasisNo.Text == "" || txtEngineNo.Text == "" || txtPlateNo.Text == "" )
+            {
+                MessageBox.Show("All fields MUST be filled");
+            }
+            
             else
             {
                 using (SqlConnection sqlcon = new SqlConnection(connectionString))

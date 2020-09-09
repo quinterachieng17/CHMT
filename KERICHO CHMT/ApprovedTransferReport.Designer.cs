@@ -57,6 +57,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.referralRegisterApprovedBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet11)).BeginInit();
@@ -70,7 +73,7 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.Menu;
             this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBack.Location = new System.Drawing.Point(12, 83);
+            this.btnBack.Location = new System.Drawing.Point(1395, 522);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 0;
@@ -106,7 +109,7 @@
             this.dataGridView1.DataSource = this.referralRegisterApprovedBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(94, 103);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1321, 476);
+            this.dataGridView1.Size = new System.Drawing.Size(1321, 405);
             this.dataGridView1.TabIndex = 1;
             // 
             // patientIDDataGridViewTextBoxColumn
@@ -275,6 +278,40 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
             // 
+            // button2
+            // 
+            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.Location = new System.Drawing.Point(0, 551);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1514, 15);
+            this.button2.TabIndex = 64;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button6.Location = new System.Drawing.Point(0, 566);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(1514, 15);
+            this.button6.TabIndex = 65;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Menu;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(1314, 522);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Print";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // ApprovedTransferReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,6 +319,9 @@
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1514, 581);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
@@ -332,5 +372,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }

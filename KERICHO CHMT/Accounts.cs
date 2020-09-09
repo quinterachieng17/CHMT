@@ -24,6 +24,9 @@ namespace KERICHO_CHMT
             label7.Text = username;
         }
 
+        //dtbl is used as global variable
+        DataTable dtbl;
+
         private void Accounts_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'cmbloginDataSet46.StatementOfAccounts' table. You can move, or remove it, as needed.
@@ -40,6 +43,14 @@ namespace KERICHO_CHMT
             dateTimePicker3.CustomFormat = "dd-MM-yyyy";
             label7.Hide();
            
+        }
+
+        private void txtRegNo_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering data using RegNo
+            //DataView DV = new DataView(dtbl);
+            //DV.RowFilter = string.Format("VehicleNo LIKE '%{0}'", txtRegNo.Text);
+            //dgvAccounts.DataSource = DV;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -124,9 +135,9 @@ namespace KERICHO_CHMT
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StatementOfAccounts where date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);                
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM StatementOfAccounts where date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);                           
                 DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
+                sqlDa.Fill(dtbl);               
                 dgvAccounts.DataSource = dtbl;
 
                 // Displays only the selected columns
@@ -145,5 +156,7 @@ namespace KERICHO_CHMT
                 txtBalance.Text = g.ToString("c").Remove(0, 1);
 
         }
+
+        
     }
 }

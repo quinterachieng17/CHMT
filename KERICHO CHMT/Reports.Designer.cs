@@ -438,9 +438,9 @@
             reportDataSource1.Value = this.AddByFacilityBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByFacility.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(427, 151);
+            this.reportViewer1.Location = new System.Drawing.Point(427, 199);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(930, 335);
+            this.reportViewer1.Size = new System.Drawing.Size(930, 271);
             this.reportViewer1.TabIndex = 11;
             // 
             // AddByNursesTableAdapter
@@ -465,9 +465,9 @@
             reportDataSource2.Value = this.AddByNursesBindingSource;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByNurses.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(427, 151);
+            this.reportViewer2.Location = new System.Drawing.Point(427, 199);
             this.reportViewer2.Name = "reportViewer2";
-            this.reportViewer2.Size = new System.Drawing.Size(930, 355);
+            this.reportViewer2.Size = new System.Drawing.Size(930, 271);
             this.reportViewer2.TabIndex = 12;
             // 
             // reportViewer3
@@ -481,9 +481,9 @@
             reportDataSource3.Value = this.AddByDriversBindingSource;
             this.reportViewer3.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer3.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.ReportByDriver.rdlc";
-            this.reportViewer3.Location = new System.Drawing.Point(427, 151);
+            this.reportViewer3.Location = new System.Drawing.Point(427, 199);
             this.reportViewer3.Name = "reportViewer3";
-            this.reportViewer3.Size = new System.Drawing.Size(930, 355);
+            this.reportViewer3.Size = new System.Drawing.Size(930, 271);
             this.reportViewer3.TabIndex = 13;
             // 
             // button9
@@ -527,9 +527,9 @@
             reportDataSource4.Value = this.WorkTicketAddBindingSource;
             this.reportViewer4.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer4.LocalReport.ReportEmbeddedResource = "KERICHO_CHMT.WorkTicketReport.rdlc";
-            this.reportViewer4.Location = new System.Drawing.Point(327, 151);
+            this.reportViewer4.Location = new System.Drawing.Point(427, 199);
             this.reportViewer4.Name = "reportViewer4";
-            this.reportViewer4.Size = new System.Drawing.Size(1133, 355);
+            this.reportViewer4.Size = new System.Drawing.Size(930, 271);
             this.reportViewer4.TabIndex = 55;
             // 
             // cmbloginDataSet40

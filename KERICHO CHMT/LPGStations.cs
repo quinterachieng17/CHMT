@@ -127,5 +127,10 @@ namespace KERICHO_CHMT
             Reports rr = new Reports(label4.Text);
             rr.Show();
         }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
