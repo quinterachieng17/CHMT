@@ -140,7 +140,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(305, 7);
+            this.label4.Location = new System.Drawing.Point(304, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
@@ -151,7 +151,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(625, 7);
+            this.label5.Location = new System.Drawing.Point(624, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -162,7 +162,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(935, 7);
+            this.label6.Location = new System.Drawing.Point(934, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 5;
@@ -171,7 +171,7 @@
             // txtLpoNo
             // 
             this.txtLpoNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtLpoNo.Location = new System.Drawing.Point(700, 5);
+            this.txtLpoNo.Location = new System.Drawing.Point(699, 5);
             this.txtLpoNo.Name = "txtLpoNo";
             this.txtLpoNo.Size = new System.Drawing.Size(163, 20);
             this.txtLpoNo.TabIndex = 9;
@@ -356,7 +356,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(292, 7);
+            this.label9.Location = new System.Drawing.Point(291, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 15;
@@ -386,7 +386,7 @@
             // 
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(355, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(354, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(162, 22);
             this.dateTimePicker2.TabIndex = 18;
@@ -395,7 +395,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(523, 3);
+            this.button2.Location = new System.Drawing.Point(522, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 23);
             this.button2.TabIndex = 19;
@@ -414,7 +414,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel1.Controls.Add(this.cmbVehicleNo, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtOthers, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.cmbStation, 1, 0);
@@ -445,7 +445,7 @@
             this.cmbVehicleNo.DataSource = this.vehicleRegistrationBindingSource;
             this.cmbVehicleNo.DisplayMember = "RegNo";
             this.cmbVehicleNo.FormattingEnabled = true;
-            this.cmbVehicleNo.Location = new System.Drawing.Point(390, 5);
+            this.cmbVehicleNo.Location = new System.Drawing.Point(389, 5);
             this.cmbVehicleNo.Name = "cmbVehicleNo";
             this.cmbVehicleNo.Size = new System.Drawing.Size(138, 21);
             this.cmbVehicleNo.TabIndex = 57;
@@ -487,7 +487,7 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(952, 38);
+            this.label14.Location = new System.Drawing.Point(951, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 5;
@@ -498,7 +498,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(657, 38);
+            this.label13.Location = new System.Drawing.Point(656, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 17);
             this.label13.TabIndex = 4;
@@ -507,7 +507,7 @@
             // txtOilDrawn
             // 
             this.txtOilDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtOilDrawn.Location = new System.Drawing.Point(390, 37);
+            this.txtOilDrawn.Location = new System.Drawing.Point(389, 37);
             this.txtOilDrawn.Name = "txtOilDrawn";
             this.txtOilDrawn.Size = new System.Drawing.Size(138, 20);
             this.txtOilDrawn.TabIndex = 8;
@@ -515,7 +515,7 @@
             // txtFuelDrawn
             // 
             this.txtFuelDrawn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtFuelDrawn.Location = new System.Drawing.Point(700, 37);
+            this.txtFuelDrawn.Location = new System.Drawing.Point(699, 37);
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             this.txtFuelDrawn.Size = new System.Drawing.Size(163, 20);
             this.txtFuelDrawn.TabIndex = 9;
@@ -525,7 +525,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(356, 38);
+            this.label12.Location = new System.Drawing.Point(355, 38);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 17);
             this.label12.TabIndex = 3;
@@ -607,7 +607,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.96774F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
@@ -663,6 +663,7 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "Print";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

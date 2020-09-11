@@ -137,19 +137,26 @@ namespace KERICHO_CHMT
 
         void PopulateDataGridView()
         {
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            try
             {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg", sqlCon);
-                SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg", sqlCon);
-                SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                sqlDa2.Fill(dtbl);
-                sqlDa3.Fill(dtbl);
-                dgv1.DataSource = dtbl;
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg", sqlCon);
+                    SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg", sqlCon);
+                    SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg", sqlCon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                    sqlDa2.Fill(dtbl);
+                    sqlDa3.Fill(dtbl);
+                    dgv1.DataSource = dtbl;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
+            }
+                      
         }
 
         private void dgv1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -158,28 +165,36 @@ namespace KERICHO_CHMT
 
         private void dgv1_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            if (dgv1.CurrentRow.Cells["txtUserID"].Value != DBNull.Value)
-
-            //Deletes only if the user confirms by pressing "Yes"
+            try
             {
-                if (MessageBox.Show("Are you sure to Delete this Record ?", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (dgv1.CurrentRow.Cells["txtUserID"].Value != DBNull.Value)
+
+                //Deletes only if the user confirms by pressing "Yes"
                 {
-                    using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                    if (MessageBox.Show("Are you sure to Delete this Record ?", "DataGridView", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("MileageDeleteByID", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgv1.CurrentRow.Cells["txtUserID"].Value));
-                        sqlCmd.ExecuteNonQuery();
+                        using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                        {
+                            sqlCon.Open();
+                            SqlCommand sqlCmd = new SqlCommand("MileageDeleteByID", sqlCon);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
+                            sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(dgv1.CurrentRow.Cells["txtUserID"].Value));
+                            sqlCmd.ExecuteNonQuery();
+                        }
                     }
+                    //  Blocks the default delete operation
+                    else
+                        e.Cancel = true;
                 }
-                //  Blocks the default delete operation
+
                 else
                     e.Cancel = true;
             }
-
-            else
-                e.Cancel = true;
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
+            }
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -259,7 +274,7 @@ namespace KERICHO_CHMT
             //}
             //catch (Exception ex)
             //{
-            //    MessageBox.Show(ex.Message, "Erroe Message");
+            //    MessageBox.Show(ex.Message, "Error Message");
             //}
         }
 
@@ -275,13 +290,15 @@ namespace KERICHO_CHMT
             p.Add(new Chunk("\nDate: " + DateTime.Now.ToShortDateString()));
 
              //Line Separation
-            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 2)));
+            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 2)));
             p.Add(new Chunk("\n"));
             p.Add(new Chunk("\n"));
             p.Add(new Chunk("\n"));
 
             //Table Head
-            p.Add(new Chunk("\nAMBULANCE RECORDS "));
+            Paragraph p2 = new Paragraph();
+            p2.Alignment = Element.ALIGN_CENTER;
+            p2.Add(new Chunk("Daily Record of Ambulances"));
 
             //Table Data
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
@@ -324,6 +341,7 @@ namespace KERICHO_CHMT
                     pdfdoc.Open();
                     pdfdoc.Add(p);
                     pdfdoc.Add(pra);
+                    pdfdoc.Add(p2);
                     pdfdoc.Add(new Chunk("\n"));
                     pdfdoc.Add(records);
                     pdfdoc.Close();
@@ -353,17 +371,25 @@ namespace KERICHO_CHMT
 
         private void button13_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            try
             {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where date between '"+dateTimePicker1.Value.ToString("dd/MM/yyyy")+"' and '"+ dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
-                SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
-                SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill(dtbl);
-                sqlDa2.Fill(dtbl);
-                sqlDa3.Fill(dtbl);
-                dgv1.DataSource = dtbl;
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    sqlCon.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM Homelinelpg where date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    SqlDataAdapter sqlDa2 = new SqlDataAdapter("SELECT * FROM Kipsigislpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    SqlDataAdapter sqlDa3 = new SqlDataAdapter("SELECT * FROM Jumbolpg where Date between '" + dateTimePicker1.Value.ToString("dd/MM/yyyy") + "' and '" + dateTimePicker2.Value.ToString("dd/MM/yyyy") + "'", sqlCon);
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                    sqlDa2.Fill(dtbl);
+                    sqlDa3.Fill(dtbl);
+                    dgv1.DataSource = dtbl;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Message");
             }
         }
 

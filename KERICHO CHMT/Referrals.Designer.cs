@@ -135,7 +135,7 @@
             this.dgvSpecificSearch.Location = new System.Drawing.Point(56, 199);
             this.dgvSpecificSearch.Name = "dgvSpecificSearch";
             this.dgvSpecificSearch.ReadOnly = true;
-            this.dgvSpecificSearch.Size = new System.Drawing.Size(1411, 405);
+            this.dgvSpecificSearch.Size = new System.Drawing.Size(1411, 452);
             this.dgvSpecificSearch.TabIndex = 6;
             // 
             // PatientID

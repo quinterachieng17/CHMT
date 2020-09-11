@@ -132,5 +132,10 @@ namespace KERICHO_CHMT
         {
 
         }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

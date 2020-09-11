@@ -283,6 +283,9 @@ namespace KERICHO_CHMT
                 e.Cancel = true;
         }
 
-        
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

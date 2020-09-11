@@ -67,9 +67,9 @@ namespace KERICHO_CHMT
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+           
             //Print Operation goes here
-            if(txtPatientNo.Text == "")
+            if (txtPatientNo.Text == "")
             {
                 MessageBox.Show("Please Enter Patient Number to find patient details to print."); 
             }

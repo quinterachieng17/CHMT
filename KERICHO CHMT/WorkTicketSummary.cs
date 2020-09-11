@@ -406,12 +406,34 @@ namespace KERICHO_CHMT
         //To export the dataGridView to pdf
         public void exportgridviewtopdf(DataGridView dgv2, string filename)
         {
+            ////Report Header
+            BaseFont head = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+            Paragraph p = new Paragraph();
+            p.Alignment = Element.ALIGN_CENTER;
+            p.Add(new Chunk("KERICHO COUNTY REFERRAL HOSPITAL"));
+            p.Add(new Chunk("\nP.O BOX 11 -20200 KERICHO"));
+            p.Add(new Chunk("\nDate: " + DateTime.Now.ToShortDateString()));
+
+            //Line Separation
+            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 2)));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+
+            //Table Head
+            Paragraph p2 = new Paragraph();
+            p2.Alignment = Element.ALIGN_CENTER;
+            p2.Add(new Chunk("Transport - Daily Work Ticket"));
+
+            //Table Data
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-            PdfPTable pdftable2 = new PdfPTable(dgv2.Columns.Count);
-            pdftable2.DefaultCell.Padding = 3;
-            pdftable2.WidthPercentage = 100;
-            pdftable2.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdftable2.DefaultCell.BorderWidth = 1;
+            PdfPTable records = new PdfPTable(dgv2.Columns.Count);
+            records.DefaultCell.Padding = 1;
+            records.WidthPercentage = 100;
+            PdfPCell cells = new PdfPCell();
+            records.HorizontalAlignment = Element.ALIGN_LEFT;
+            records.DefaultCell.BorderWidth = 1;
+
 
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
             //For header
@@ -419,7 +441,7 @@ namespace KERICHO_CHMT
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-                pdftable2.AddCell(cell);
+                records.AddCell(cell);
 
             }
             //Add datarow
@@ -427,7 +449,7 @@ namespace KERICHO_CHMT
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdftable2.AddCell(new Phrase(cell.Value?.ToString(), text));
+                    records.AddCell(new Phrase(cell.Value.ToString(), text));
 
                 }
             }
@@ -442,7 +464,11 @@ namespace KERICHO_CHMT
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    pdfdoc.Add(pdftable2);
+                    pdfdoc.Add(p);
+                    pdfdoc.Add(pra);
+                    pdfdoc.Add(p2);
+                    pdfdoc.Add(new Chunk("\n"));
+                    pdfdoc.Add(records);
                     pdfdoc.Close();
                     stream.Close();
 
@@ -452,7 +478,7 @@ namespace KERICHO_CHMT
 
         private void button10_Click(object sender, EventArgs e)
         {
-            exportgridviewtopdf(dgv2, "KTIMS WorkTicket Summary");
+            exportgridviewtopdf(dgv2, "Daily Work Ticket");
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)

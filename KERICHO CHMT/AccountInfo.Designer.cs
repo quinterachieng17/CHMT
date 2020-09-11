@@ -46,6 +46,8 @@
             this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,7 +86,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1168, 575);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1168, 582);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -208,7 +210,7 @@
             this.txtRegionID});
             this.dataGridView1.Location = new System.Drawing.Point(63, 125);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1275, 419);
+            this.dataGridView1.Size = new System.Drawing.Size(1275, 430);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -227,6 +229,28 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(247, 2);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
+            // button2
+            // 
+            this.button2.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button2.Location = new System.Drawing.Point(0, 622);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1400, 15);
+            this.button2.TabIndex = 64;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineItem;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button6.Location = new System.Drawing.Point(0, 637);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(1400, 15);
+            this.button6.TabIndex = 65;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
             // AccountInfo
             // 
             this.AcceptButton = this.btnSave;
@@ -234,7 +258,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.CancelButton = this.btnBack;
-            this.ClientSize = new System.Drawing.Size(1400, 612);
+            this.ClientSize = new System.Drawing.Size(1400, 652);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
@@ -272,5 +298,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
     }
 }

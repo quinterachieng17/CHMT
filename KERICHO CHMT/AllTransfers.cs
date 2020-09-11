@@ -50,36 +50,54 @@ namespace KERICHO_CHMT
             }
         }
         //To export the dataGridView to pdf
-        public void exportgridviewtopdf(DataGridView dgvPatientDetails, string filename)
+        public void exportgridviewtopdf(DataGridView dgvAllTransfers, string filename)
         {
+            ////Report Header
+            BaseFont head = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+            Paragraph p = new Paragraph();
+            p.Alignment = Element.ALIGN_CENTER;
+            p.Add(new Chunk("KERICHO COUNTY REFERRAL HOSPITAL"));
+            p.Add(new Chunk("\nP.O BOX 11 -20200 KERICHO"));
+            p.Add(new Chunk("\nDate: " + DateTime.Now.ToShortDateString()));
+
+            //Line Separation
+            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 1)));
+            p.Add(new Chunk("\n"));
+
+            //Table Head
+            Paragraph p2 = new Paragraph();
+            p2.Alignment = Element.ALIGN_CENTER;
+            p2.Add(new Chunk("All Patients Referred from Kericho County Referral Hospital between "));
+
+            //Table Data
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+            PdfPTable records = new PdfPTable(dgvAllTransfers.Columns.Count);
+            records.DefaultCell.Padding = 1;
+            records.WidthPercentage = 100;
+            PdfPCell cells = new PdfPCell();
+            records.HorizontalAlignment = Element.ALIGN_LEFT;
+            records.DefaultCell.BorderWidth = 1;
 
-            PdfPTable referrals = new PdfPTable(dgvPatientDetails.Columns.Count);
-            referrals.DefaultCell.Padding = 3;
-            referrals.WidthPercentage = 100;
-            referrals.HorizontalAlignment = Element.ALIGN_LEFT;
-            referrals.DefaultCell.BorderWidth = 1;
+
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-
-            //For cell header
-            foreach (DataGridViewColumn column in dgvPatientDetails.Columns)
+            //For header
+            foreach (DataGridViewColumn column in dgvAllTransfers.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
-                cell.BackgroundColor = new iTextSharp.text.BaseColor(230, 238, 255);
-                referrals.AddCell(cell);
-            }
+                cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
+                records.AddCell(cell);
 
+            }
             //Add datarow
-            foreach (DataGridViewRow row in dgvPatientDetails.Rows)
+            foreach (DataGridViewRow row in dgvAllTransfers.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    referrals.AddCell(new Phrase(cell.Value?.ToString(), text));
+                    records.AddCell(new Phrase(cell.Value.ToString(), text));
 
                 }
             }
 
-            //For save Dialog
             var savefiledialoge = new SaveFileDialog();
             savefiledialoge.FileName = filename;
             savefiledialoge.DefaultExt = ".pdf";
@@ -90,7 +108,11 @@ namespace KERICHO_CHMT
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    pdfdoc.Add(referrals);
+                    pdfdoc.Add(p);
+                    pdfdoc.Add(pra);
+                    pdfdoc.Add(p2);
+                    pdfdoc.Add(new Chunk("\n"));
+                    pdfdoc.Add(records);
                     pdfdoc.Close();
                     stream.Close();
 
@@ -100,7 +122,7 @@ namespace KERICHO_CHMT
 
         private void btnOK_Click(object sender, EventArgs e)
         {
-            exportgridviewtopdf(dgvAllTransfers, "All Transfer Referral Cases");
+            exportgridviewtopdf(dgvAllTransfers, "All Referral Cases From KCRH");
         }
 
         private void label1_Click(object sender, EventArgs e)

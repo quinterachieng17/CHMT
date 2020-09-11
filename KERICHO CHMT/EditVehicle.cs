@@ -118,6 +118,17 @@ namespace KERICHO_CHMT
         private void EditVehicle_Load(object sender, EventArgs e)
         {
             label6.Text = DateTime.Now.ToLongDateString();
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM VehicleRegistration", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                // Displays only the selected columns
+                dgvVehicle.AutoGenerateColumns = false;
+                dgvVehicle.DataSource = dtbl;
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -145,20 +156,42 @@ namespace KERICHO_CHMT
         //To export the dataGridView to pdf
         public void exportgridviewtopdf(DataGridView dgvVehicle, string filename)
         {
+            ////Report Header
+            BaseFont head = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
+            Paragraph p = new Paragraph();
+            p.Alignment = Element.ALIGN_CENTER;
+            p.Add(new Chunk("KERICHO COUNTY REFERRAL HOSPITAL"));
+            p.Add(new Chunk("\nP.O BOX 11 -20200 KERICHO"));
+            p.Add(new Chunk("\nDate: " + DateTime.Now.ToShortDateString()));
+
+            //Line Separation
+            Paragraph pra = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(1.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT, 2)));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+            p.Add(new Chunk("\n"));
+
+            //Table Head
+            Paragraph p2 = new Paragraph();
+            p2.Alignment = Element.ALIGN_CENTER;
+            p2.Add(new Chunk("Motor Vehicle Details at Kericho County Referral Hospital"));
+
+            //Table Data
             BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
-            PdfPTable pdftable = new PdfPTable(dgvVehicle.Columns.Count);
-            pdftable.DefaultCell.Padding = 3;
-            pdftable.WidthPercentage = 100;
-            pdftable.HorizontalAlignment = Element.ALIGN_LEFT;
-            pdftable.DefaultCell.BorderWidth = 1;
-            
+            PdfPTable records = new PdfPTable(dgvVehicle.Columns.Count);
+            records.DefaultCell.Padding = 1;
+            records.WidthPercentage = 100;
+            PdfPCell cells = new PdfPCell();
+            records.HorizontalAlignment = Element.ALIGN_LEFT;
+            records.DefaultCell.BorderWidth = 1;
+
+
             iTextSharp.text.Font text = new iTextSharp.text.Font(bf, 10, iTextSharp.text.Font.NORMAL);
-            //For Cell header
+            //For header
             foreach (DataGridViewColumn column in dgvVehicle.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText, text));
                 cell.BackgroundColor = new iTextSharp.text.BaseColor(240, 240, 240);
-                pdftable.AddCell(cell);
+                records.AddCell(cell);
 
             }
             //Add datarow
@@ -166,7 +199,7 @@ namespace KERICHO_CHMT
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    pdftable.AddCell(new Phrase(cell.Value.ToString(), text));
+                    records.AddCell(new Phrase(cell.Value.ToString(), text));
 
                 }
             }
@@ -181,7 +214,11 @@ namespace KERICHO_CHMT
                     Document pdfdoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
                     PdfWriter.GetInstance(pdfdoc, stream);
                     pdfdoc.Open();
-                    pdfdoc.Add(pdftable);
+                    pdfdoc.Add(p);
+                    pdfdoc.Add(pra);
+                    pdfdoc.Add(p2);
+                    pdfdoc.Add(new Chunk("\n"));
+                    pdfdoc.Add(records);
                     pdfdoc.Close();
                     stream.Close();
 
