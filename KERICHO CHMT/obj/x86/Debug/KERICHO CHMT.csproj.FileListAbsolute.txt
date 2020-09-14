@@ -54,3 +54,4 @@ D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Ac
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Facility.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Accounts.resources
 D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.AllNurses.resources
+D:\Project\Visual Studio\KERICHO CHMT\KERICHO CHMT\obj\x86\Debug\KERICHO_CHMT.Entries.resources

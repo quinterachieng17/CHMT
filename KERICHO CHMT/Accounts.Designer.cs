@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accounts));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,7 +93,38 @@
             this.label16 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.statementOfAccountsTableAdapter = new KERICHO_CHMT.cmbloginDataSet46TableAdapters.StatementOfAccountsTableAdapter();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvAccounts2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAccounts3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbloginDataSet47 = new KERICHO_CHMT.cmbloginDataSet47();
+            this.statementOfAccounts2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statementOfAccounts2TableAdapter = new KERICHO_CHMT.cmbloginDataSet47TableAdapters.StatementOfAccounts2TableAdapter();
+            this.cmbloginDataSet48 = new KERICHO_CHMT.cmbloginDataSet48();
+            this.statementOfAccounts3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.statementOfAccounts3TableAdapter = new KERICHO_CHMT.cmbloginDataSet48TableAdapters.StatementOfAccounts3TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statementOfAccountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet46)).BeginInit();
@@ -99,7 +132,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.vehicleRegistrationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet45)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statementOfAccounts2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statementOfAccounts3BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -140,7 +178,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(304, 7);
+            this.label4.Location = new System.Drawing.Point(302, 7);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 17);
             this.label4.TabIndex = 3;
@@ -151,7 +189,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(624, 7);
+            this.label5.Location = new System.Drawing.Point(622, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
@@ -162,7 +200,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(934, 7);
+            this.label6.Location = new System.Drawing.Point(932, 7);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 17);
             this.label6.TabIndex = 5;
@@ -171,7 +209,7 @@
             // txtLpoNo
             // 
             this.txtLpoNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtLpoNo.Location = new System.Drawing.Point(699, 5);
+            this.txtLpoNo.Location = new System.Drawing.Point(697, 5);
             this.txtLpoNo.Name = "txtLpoNo";
             this.txtLpoNo.Size = new System.Drawing.Size(163, 20);
             this.txtLpoNo.TabIndex = 9;
@@ -223,6 +261,7 @@
             this.dgvAccounts.Size = new System.Drawing.Size(1225, 342);
             this.dgvAccounts.TabIndex = 11;
             this.dgvAccounts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccounts_CellContentClick);
+            this.dgvAccounts.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccounts_CellEndEdit);
             // 
             // vehicleIDDataGridViewTextBoxColumn
             // 
@@ -356,7 +395,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(291, 7);
+            this.label9.Location = new System.Drawing.Point(289, 7);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 15);
             this.label9.TabIndex = 15;
@@ -386,7 +425,7 @@
             // 
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(354, 4);
+            this.dateTimePicker2.Location = new System.Drawing.Point(352, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(162, 22);
             this.dateTimePicker2.TabIndex = 18;
@@ -395,7 +434,7 @@
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.button2.BackColor = System.Drawing.SystemColors.Menu;
-            this.button2.Location = new System.Drawing.Point(522, 3);
+            this.button2.Location = new System.Drawing.Point(520, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(67, 23);
             this.button2.TabIndex = 19;
@@ -414,7 +453,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 166F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 169F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 192F));
             this.tableLayoutPanel1.Controls.Add(this.cmbVehicleNo, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtOthers, 7, 1);
             this.tableLayoutPanel1.Controls.Add(this.cmbStation, 1, 0);
@@ -445,7 +484,7 @@
             this.cmbVehicleNo.DataSource = this.vehicleRegistrationBindingSource;
             this.cmbVehicleNo.DisplayMember = "RegNo";
             this.cmbVehicleNo.FormattingEnabled = true;
-            this.cmbVehicleNo.Location = new System.Drawing.Point(389, 5);
+            this.cmbVehicleNo.Location = new System.Drawing.Point(387, 5);
             this.cmbVehicleNo.Name = "cmbVehicleNo";
             this.cmbVehicleNo.Size = new System.Drawing.Size(138, 21);
             this.cmbVehicleNo.TabIndex = 57;
@@ -477,17 +516,18 @@
             "Kipsigis",
             "Jumbo",
             "Omline"});
-            this.cmbStation.Location = new System.Drawing.Point(104, 5);
+            this.cmbStation.Location = new System.Drawing.Point(103, 5);
             this.cmbStation.Name = "cmbStation";
             this.cmbStation.Size = new System.Drawing.Size(168, 21);
             this.cmbStation.TabIndex = 56;
+            this.cmbStation.SelectedIndexChanged += new System.EventHandler(this.cmbStation_SelectedIndexChanged);
             // 
             // label14
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(951, 38);
+            this.label14.Location = new System.Drawing.Point(949, 38);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 17);
             this.label14.TabIndex = 5;
@@ -498,7 +538,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(656, 38);
+            this.label13.Location = new System.Drawing.Point(654, 38);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(37, 17);
             this.label13.TabIndex = 4;
@@ -507,7 +547,7 @@
             // txtOilDrawn
             // 
             this.txtOilDrawn.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtOilDrawn.Location = new System.Drawing.Point(389, 37);
+            this.txtOilDrawn.Location = new System.Drawing.Point(387, 37);
             this.txtOilDrawn.Name = "txtOilDrawn";
             this.txtOilDrawn.Size = new System.Drawing.Size(138, 20);
             this.txtOilDrawn.TabIndex = 8;
@@ -515,7 +555,7 @@
             // txtFuelDrawn
             // 
             this.txtFuelDrawn.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtFuelDrawn.Location = new System.Drawing.Point(699, 37);
+            this.txtFuelDrawn.Location = new System.Drawing.Point(697, 37);
             this.txtFuelDrawn.Name = "txtFuelDrawn";
             this.txtFuelDrawn.Size = new System.Drawing.Size(163, 20);
             this.txtFuelDrawn.TabIndex = 9;
@@ -525,7 +565,7 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(355, 38);
+            this.label12.Location = new System.Drawing.Point(353, 38);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(28, 17);
             this.label12.TabIndex = 3;
@@ -534,7 +574,7 @@
             // txtMaintenance
             // 
             this.txtMaintenance.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtMaintenance.Location = new System.Drawing.Point(104, 37);
+            this.txtMaintenance.Location = new System.Drawing.Point(103, 37);
             this.txtMaintenance.Name = "txtMaintenance";
             this.txtMaintenance.Size = new System.Drawing.Size(168, 20);
             this.txtMaintenance.TabIndex = 7;
@@ -552,36 +592,36 @@
             // 
             // txtBalance
             // 
-            this.txtBalance.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtBalance.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBalance.Location = new System.Drawing.Point(505, 5);
+            this.txtBalance.Location = new System.Drawing.Point(845, 253);
             this.txtBalance.Multiline = true;
             this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(161, 30);
+            this.txtBalance.Size = new System.Drawing.Size(163, 30);
             this.txtBalance.TabIndex = 60;
-            this.txtBalance.Text = "Balance";
             this.txtBalance.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBalance.TextChanged += new System.EventHandler(this.txtBalance_TextChanged);
             // 
             // txtTotalExpenses
             // 
-            this.txtTotalExpenses.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtTotalExpenses.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTotalExpenses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalExpenses.Location = new System.Drawing.Point(160, 5);
+            this.txtTotalExpenses.Location = new System.Drawing.Point(250, 257);
             this.txtTotalExpenses.Multiline = true;
             this.txtTotalExpenses.Name = "txtTotalExpenses";
-            this.txtTotalExpenses.Size = new System.Drawing.Size(152, 30);
+            this.txtTotalExpenses.Size = new System.Drawing.Size(168, 30);
             this.txtTotalExpenses.TabIndex = 61;
-            this.txtTotalExpenses.Text = "Total Expenses";
             this.txtTotalExpenses.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalExpenses.TextChanged += new System.EventHandler(this.txtTotalExpenses_TextChanged);
             // 
             // button7
             // 
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button7.BackColor = System.Drawing.Color.Honeydew;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(3, 5);
+            this.button7.Location = new System.Drawing.Point(147, 245);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(151, 30);
+            this.button7.Size = new System.Drawing.Size(96, 47);
             this.button7.TabIndex = 59;
             this.button7.Text = "Compute Expenses";
             this.button7.UseVisualStyleBackColor = false;
@@ -589,12 +629,12 @@
             // 
             // button5
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button5.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(706, 5);
+            this.button5.Location = new System.Drawing.Point(1169, 249);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 30);
+            this.button5.Size = new System.Drawing.Size(173, 30);
             this.button5.TabIndex = 56;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = false;
@@ -607,7 +647,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.96774F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dateTimePicker1, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label9, 2, 0);
@@ -718,12 +758,12 @@
             // 
             // button8
             // 
-            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button8.BackColor = System.Drawing.Color.Honeydew;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(338, 5);
+            this.button8.Location = new System.Drawing.Point(730, 241);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(161, 30);
+            this.button8.Size = new System.Drawing.Size(109, 47);
             this.button8.TabIndex = 59;
             this.button8.Text = "Compute Balance";
             this.button8.UseVisualStyleBackColor = false;
@@ -733,26 +773,282 @@
             // 
             this.statementOfAccountsTableAdapter.ClearBeforeFill = true;
             // 
-            // tableLayoutPanel5
+            // dgvAccounts2
             // 
-            this.tableLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tableLayoutPanel5.ColumnCount = 5;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.40668F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.53028F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.11496F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.59827F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.2262F));
-            this.tableLayoutPanel5.Controls.Add(this.button7, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button8, 2, 0);
-            this.tableLayoutPanel5.Controls.Add(this.txtBalance, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button5, 4, 0);
-            this.tableLayoutPanel5.Controls.Add(this.txtTotalExpenses, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(342, 251);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(809, 40);
-            this.tableLayoutPanel5.TabIndex = 59;
+            this.dgvAccounts2.AllowUserToAddRows = false;
+            this.dgvAccounts2.AllowUserToDeleteRows = false;
+            this.dgvAccounts2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAccounts2.AutoGenerateColumns = false;
+            this.dgvAccounts2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccounts2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccounts2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvAccounts2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccounts2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dgvAccounts2.DataSource = this.statementOfAccounts2BindingSource;
+            this.dgvAccounts2.Location = new System.Drawing.Point(121, 396);
+            this.dgvAccounts2.Name = "dgvAccounts2";
+            this.dgvAccounts2.ReadOnly = true;
+            this.dgvAccounts2.Size = new System.Drawing.Size(1225, 342);
+            this.dgvAccounts2.TabIndex = 62;
+            this.dgvAccounts2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStation2_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "VehicleID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "VehicleID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "VehicleNo";
+            this.dataGridViewTextBoxColumn2.HeaderText = "VehicleNo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "lpoNo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "lpoNo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Station";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Station";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Maintenance";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Maintenance";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "OilDrawn";
+            this.dataGridViewTextBoxColumn7.HeaderText = "OilDrawn";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "FuelDrawn";
+            this.dataGridViewTextBoxColumn8.HeaderText = "FuelDrawn";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Others";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Others";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Payments";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Payments";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Expenses";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Expenses";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Balance";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Balance";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dgvAccounts3
+            // 
+            this.dgvAccounts3.AllowUserToAddRows = false;
+            this.dgvAccounts3.AllowUserToDeleteRows = false;
+            this.dgvAccounts3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAccounts3.AutoGenerateColumns = false;
+            this.dgvAccounts3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccounts3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAccounts3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvAccounts3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccounts3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
+            this.dgvAccounts3.DataSource = this.statementOfAccounts3BindingSource;
+            this.dgvAccounts3.Location = new System.Drawing.Point(121, 395);
+            this.dgvAccounts3.Name = "dgvAccounts3";
+            this.dgvAccounts3.ReadOnly = true;
+            this.dgvAccounts3.Size = new System.Drawing.Size(1225, 342);
+            this.dgvAccounts3.TabIndex = 63;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "VehicleID";
+            this.dataGridViewTextBoxColumn13.HeaderText = "VehicleID";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "VehicleNo";
+            this.dataGridViewTextBoxColumn14.HeaderText = "VehicleNo";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "lpoNo";
+            this.dataGridViewTextBoxColumn15.HeaderText = "lpoNo";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Station";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Station";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Maintenance";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Maintenance";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "OilDrawn";
+            this.dataGridViewTextBoxColumn19.HeaderText = "OilDrawn";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "FuelDrawn";
+            this.dataGridViewTextBoxColumn20.HeaderText = "FuelDrawn";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Others";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Others";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "Payments";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Payments";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "Expenses";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Expenses";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Balance";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Balance";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            // 
+            // cmbloginDataSet47
+            // 
+            this.cmbloginDataSet47.DataSetName = "cmbloginDataSet47";
+            this.cmbloginDataSet47.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statementOfAccounts2BindingSource
+            // 
+            this.statementOfAccounts2BindingSource.DataMember = "StatementOfAccounts2";
+            this.statementOfAccounts2BindingSource.DataSource = this.cmbloginDataSet47;
+            // 
+            // statementOfAccounts2TableAdapter
+            // 
+            this.statementOfAccounts2TableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbloginDataSet48
+            // 
+            this.cmbloginDataSet48.DataSetName = "cmbloginDataSet48";
+            this.cmbloginDataSet48.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // statementOfAccounts3BindingSource
+            // 
+            this.statementOfAccounts3BindingSource.DataMember = "StatementOfAccounts3";
+            this.statementOfAccounts3BindingSource.DataSource = this.cmbloginDataSet48;
+            // 
+            // statementOfAccounts3TableAdapter
+            // 
+            this.statementOfAccounts3TableAdapter.ClearBeforeFill = true;
             // 
             // Accounts
             // 
@@ -760,7 +1056,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleGreen;
             this.ClientSize = new System.Drawing.Size(1483, 803);
-            this.Controls.Add(this.tableLayoutPanel5);
+            this.Controls.Add(this.dgvAccounts3);
+            this.Controls.Add(this.dgvAccounts2);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.txtBalance);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.txtTotalExpenses);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.button4);
@@ -792,8 +1094,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet45)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statementOfAccounts2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statementOfAccounts3BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -861,6 +1167,37 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn expensesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.DataGridView dgvAccounts2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridView dgvAccounts3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private cmbloginDataSet47 cmbloginDataSet47;
+        private System.Windows.Forms.BindingSource statementOfAccounts2BindingSource;
+        private cmbloginDataSet47TableAdapters.StatementOfAccounts2TableAdapter statementOfAccounts2TableAdapter;
+        private cmbloginDataSet48 cmbloginDataSet48;
+        private System.Windows.Forms.BindingSource statementOfAccounts3BindingSource;
+        private cmbloginDataSet48TableAdapters.StatementOfAccounts3TableAdapter statementOfAccounts3TableAdapter;
     }
 }
