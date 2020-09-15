@@ -45,48 +45,129 @@ namespace KERICHO_CHMT
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //Computing Final Speed Reading
-            //double a1, b1, c1, d1, s;
-            //double.TryParse(dgv1.Rows[0].Cells[0].Value, out a1);
-            //double.TryParse(txtOilDrawn.Index, out b1);
-            //double.TryParse(txtFuelDrawn.Text, out c1);
-            //double.TryParse(txtOthers.Text, out d1);
-            //s = a1 + b1 + c1 + d1;
-            //if (s > 0)
-            //    txtTotalExpenses.Text = s.ToString("c").Remove(0, 1);
-
-
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            if (txtFinalReading.Text == "")
             {
-                foreach (DataGridViewRow row in dgv1.Rows)
+                MessageBox.Show("Please enter final speed reading");
+            }
+            else
+            {
+
+                //Computing journey Kilometer
+                double j1, j2, z;
+                double.TryParse(txtFinalReading.Text, out j1);
+                double.TryParse(dgv1[4, dgv1.Rows.Count - 1].Value.ToString(), out j2);
+                z = j1 - j2;
+                if (z > 0)
                 {
-                    for (int i = 0; i < dgv1.Rows.Count; i++)
-                    {
-                        sqlCon.Open();
-                        SqlCommand sqlCmd = new SqlCommand("FinalEntry", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.Parameters.AddWithValue("@UserID", 0);
-                        sqlCmd.Parameters.AddWithValue("@DriverID", dgv1.Rows[i].Cells["txtDriverID"].Value);
-                        sqlCmd.Parameters.AddWithValue("@RegNo", dgv1.Rows[i].Cells["txtRegNo"].Value);
-                        sqlCmd.Parameters.AddWithValue("@MileageReading", dgv1.Rows[i].Cells["txtMileageReading"].Value);
-                        sqlCmd.Parameters.AddWithValue("@OilDrawn", dgv1.Rows[i].Cells["txtOilDrawn"].Value);
-                        sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgv1.Rows[i].Cells["txtFuelDrawn"].Value);
-                        sqlCmd.Parameters.AddWithValue("@Destination", dgv1.Rows[i].Cells["txtDestination"].Value);
-                        sqlCmd.Parameters.AddWithValue("@lpgStation", dgv1.Rows[i].Cells["txtlpgStation"].Value);
-                        sqlCmd.Parameters.AddWithValue("@Date", dgv1.Rows[i].Cells["txtDate"].Value);
-                        sqlCmd.Parameters.AddWithValue("@VoucherNo", dgv1.Rows[i].Cells["txtVoucherNo"].Value);
-                        sqlCmd.Parameters.AddWithValue("@FinalSpeedReading", dgv1.Rows[i].Cells["txtFinalSpeedReading"].Value);
-                        sqlCmd.Parameters.AddWithValue("@journeyKilometer", dgv1.Rows[i].Cells["txtjourneyKilometer"].Value);
-                        sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", dgv1.Rows[i].Cells["txtAuthorizingOfficerName"].Value);
-                        sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", dgv1.Rows[i].Cells["txtAuthorizingOfficerNo"].Value);
-                        sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", dgv1.Rows[i].Cells["txtAuthorizingOfficerDesignation"].Value);
-                        sqlCmd.ExecuteNonQuery();
-                        sqlCon.Close();
-                    }
-                    
+                    txtKm.Text = z.ToString("c").Remove(0, 1);
                 }
+
+                else if (z == 0)
+                {
+                    MessageBox.Show("The Vehicle " + cmbRegNo + "did not make a journey");
+                }
+
+
+
+                //txtPayments.Text = dgvAccounts3[11, dgvAccounts3.Rows.Count - 1].Value.ToString();
+                //double.TryParse(txtOthers.Text, out d1);
+                //s = a1 + b1 + c1 + d1;
+                //if (s > 0)
+                //    txtTotalExpenses.Text = s.ToString("c").Remove(0, 1);
+
+
+                using (SqlConnection sqlCon = new SqlConnection(connectionString))
+                {
+                    foreach (DataGridViewRow row in dgv1.Rows)
+                    {
+                        for (int i = 0; i < dgv1.Rows.Count; i++)
+                        {
+                            if (cmbSatation.SelectedIndex == 0)
+                            {
+                                sqlCon.Open();
+                                SqlCommand sqlCmd = new SqlCommand("FinalEntry", sqlCon);
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                                sqlCmd.Parameters.AddWithValue("@DriverID", dgv1.Rows[i].Cells["txtDriverID"].Value);
+                                sqlCmd.Parameters.AddWithValue("@DriverName", dgv1.Rows[i].Cells["txtDriverName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@RegNo", dgv1.Rows[i].Cells["txtRegNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@MileageReading", dgv1.Rows[i].Cells["txtMileageReading"].Value);
+                                sqlCmd.Parameters.AddWithValue("@OilDrawn", dgv1.Rows[i].Cells["txtOilDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgv1.Rows[i].Cells["txtFuelDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Destination", dgv1.Rows[i].Cells["txtDestination"].Value);
+                                sqlCmd.Parameters.AddWithValue("@lpgStation", dgv1.Rows[i].Cells["txtlpgStation"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Date", dgv1.Rows[i].Cells["txtDate"].Value);
+                                sqlCmd.Parameters.AddWithValue("@VoucherNo", dgv1.Rows[i].Cells["txtVoucherNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@@FinalSpeedReading", txtFinalReading.Text.Trim());
+                                sqlCmd.Parameters.AddWithValue("@journeyKilometer", txtKm.Text.Trim()); ;
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", dgv1.Rows[i].Cells["txtAuthorizingOfficerName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", dgv1.Rows[i].Cells["txtAuthorizingOfficerNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", dgv1.Rows[i].Cells["txtAuthorizingOfficerDesignation"].Value);
+                                sqlCmd.ExecuteNonQuery();
+                                sqlCon.Close();
+                            }
+
+                            if (cmbSatation.SelectedIndex == 1)
+                            {
+                                sqlCon.Open();
+                                SqlCommand sqlCmd = new SqlCommand("FinalEntry2", sqlCon);
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                                sqlCmd.Parameters.AddWithValue("@DriverID", dgv1.Rows[i].Cells["txtDriverID"].Value);
+                                sqlCmd.Parameters.AddWithValue("@DriverName", dgv1.Rows[i].Cells["txtDriverName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@RegNo", dgv1.Rows[i].Cells["txtRegNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@MileageReading", dgv1.Rows[i].Cells["txtMileageReading"].Value);
+                                sqlCmd.Parameters.AddWithValue("@OilDrawn", dgv1.Rows[i].Cells["txtOilDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgv1.Rows[i].Cells["txtFuelDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Destination", dgv1.Rows[i].Cells["txtDestination"].Value);
+                                sqlCmd.Parameters.AddWithValue("@lpgStation", dgv1.Rows[i].Cells["txtlpgStation"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Date", dgv1.Rows[i].Cells["txtDate"].Value);
+                                sqlCmd.Parameters.AddWithValue("@VoucherNo", dgv1.Rows[i].Cells["txtVoucherNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@FinalSpeedReading", txtFinalReading.Text.Trim());
+                                sqlCmd.Parameters.AddWithValue("@journeyKilometer", txtKm.Text.Trim()); ;
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", dgv1.Rows[i].Cells["txtAuthorizingOfficerName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", dgv1.Rows[i].Cells["txtAuthorizingOfficerNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", dgv1.Rows[i].Cells["txtAuthorizingOfficerDesignation"].Value);
+                                sqlCmd.ExecuteNonQuery();
+                                sqlCon.Close();
+                            }
+
+                            if (cmbSatation.SelectedIndex == 2)
+                            {
+                                sqlCon.Open();
+                                SqlCommand sqlCmd = new SqlCommand("FinalEntry3", sqlCon);
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCmd.Parameters.AddWithValue("@UserID", 0);
+                                sqlCmd.Parameters.AddWithValue("@DriverID", dgv1.Rows[i].Cells["txtDriverID"].Value);
+                                sqlCmd.Parameters.AddWithValue("@DriverName", dgv1.Rows[i].Cells["txtDriverName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@RegNo", dgv1.Rows[i].Cells["txtRegNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@MileageReading", dgv1.Rows[i].Cells["txtMileageReading"].Value);
+                                sqlCmd.Parameters.AddWithValue("@OilDrawn", dgv1.Rows[i].Cells["txtOilDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@FuelDrawn", dgv1.Rows[i].Cells["txtFuelDrawn"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Destination", dgv1.Rows[i].Cells["txtDestination"].Value);
+                                sqlCmd.Parameters.AddWithValue("@lpgStation", dgv1.Rows[i].Cells["txtlpgStation"].Value);
+                                sqlCmd.Parameters.AddWithValue("@Date", dgv1.Rows[i].Cells["txtDate"].Value);
+                                sqlCmd.Parameters.AddWithValue("@VoucherNo", dgv1.Rows[i].Cells["txtVoucherNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@@FinalSpeedReading", txtFinalReading.Text.Trim());
+                                sqlCmd.Parameters.AddWithValue("@journeyKilometer", txtKm.Text.Trim()); ;
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerName", dgv1.Rows[i].Cells["txtAuthorizingOfficerName"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerNo", dgv1.Rows[i].Cells["txtAuthorizingOfficerNo"].Value);
+                                sqlCmd.Parameters.AddWithValue("@AuthorizingOfficerDesignation", dgv1.Rows[i].Cells["txtAuthorizingOfficerDesignation"].Value);
+                                sqlCmd.ExecuteNonQuery();
+                                sqlCon.Close();
+                            }
+
+                        }
+
+                    }
+                }
+
+                this.Hide();
+                WorkTicketSummary ss = new WorkTicketSummary(label3.Text);
+                ss.Show();
             }
         }
+                
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
@@ -125,6 +206,11 @@ namespace KERICHO_CHMT
 
         private void TrackRecords_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cmbloginDataSet50.RecordMileage' table. You can move, or remove it, as needed.
+            this.recordMileageTableAdapter1.Fill(this.cmbloginDataSet50.RecordMileage);
+            label11.Hide();
+            txtKm.Hide();
+            
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
@@ -216,63 +302,7 @@ namespace KERICHO_CHMT
             ss.Show();
         }
 
-       //void ExportDataTableToPdf(DataTable dtblTable, String strPdfPath,string strHeader)
-       // {
-       //     System.IO.FileStream fs = new FileStream(strPdfPath, FileMode.Create, FileAccess.Write, FileShare.None);
-       //     Document document = new Document();
-       //     document.SetPageSize(iTextSharp.text.PageSize.A4);
-       //     PdfWriter writer = PdfWriter.GetInstance(document, fs);
-       //     document.Open();
-
-       //     //Report header
-       //     BaseFont bfnHead = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-       //     iTextSharp.text.Font fntHead = new iTextSharp.text.Font(bfnHead, 16, 1, BaseColor.GRAY);
-       //     Paragraph prgHeading = new Paragraph();
-       //     prgHeading.Alignment = Element.ALIGN_CENTER;
-       //     prgHeading.Add(new Chunk(strHeader.ToUpper(), fntHead));
-       //     document.Add(prgHeading);
-
-       //     //Date
-       //     Paragraph prgAuthor = new Paragraph();
-       //     BaseFont btnAuthor = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-       //     iTextSharp.text.Font fntAuthor = new iTextSharp.text.Font(btnAuthor, 8, 2, BaseColor.GRAY);
-       //     prgAuthor.Alignment = Element.ALIGN_LEFT;
-       //     prgAuthor.Add(new Chunk("Kericho Referral Hospital", fntAuthor));
-       //     prgAuthor.Add(new Chunk("\nDate: "+DateTime.Now.ToShortDateString(), fntAuthor));
-       //     document.Add(prgAuthor);
-       //     //Linr Separation
-       //     Paragraph p = new Paragraph(new Chunk(new iTextSharp.text.pdf.draw.LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_LEFT,1)));
-       //     document.Add(p);
-       //     //Line Break
-       //     document.Add(new Chunk("\n", fntHead));
-
-       //     //Table
-       //     PdfPTable table = new PdfPTable(dtblTable.Columns.Count);
-       //     //Table Header
-       //     BaseFont btnColumnHeader = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.NOT_EMBEDDED);
-       //     iTextSharp.text.Font fntColumnHeader = new iTextSharp.text.Font(btnColumnHeader, 10, 1, BaseColor.WHITE);
-       //     for(int i = 0; i < dtblTable.Columns.Count; i++)
-       //     {
-       //         PdfPCell cell = new PdfPCell();
-       //         cell.BackgroundColor = BaseColor.GRAY;
-       //         cell.AddElement(new Chunk(dtblTable.Columns[i].ColumnName.ToUpper(), fntColumnHeader));
-       //         table.AddCell(cell);
-       //     }
-       //     //Data
-       //     for (int i = 0; i<dtblTable.Rows.Count; i++)
-       //     {
-       //         for (int j = 0; j < dtblTable.Columns.Count; j++)
-       //         {
-       //             table.AddCell(dtblTable.Rows[i][j].ToString());
-       //         }
-
-       //     }
-       //     document.Add(table);
-       //     document.Close();
-       //     writer.Close();
-       //     fs.Close();
-
-       // }
+       
         private void button10_Click(object sender, EventArgs e)
         {
             exportgridviewtopdf(dgv1, "KTIMS Records");
@@ -420,6 +450,22 @@ namespace KERICHO_CHMT
             {
                 MessageBox.Show("Please insert end of journey Kilometer");
             }
+        }
+
+        private void button14_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFinalReading_TextChanged(object sender, EventArgs e)
+        {
+            label11.Show();
+            txtKm.Show();
         }
     }
 }

@@ -361,10 +361,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet48.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cmbloginDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet49.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cmbloginDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbloginDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbloginDataSet50.xsd</DependentUpon>
     </Compile>
     <Compile Include="cmbloginDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1176,6 +1186,17 @@
     <None Include="cmbloginDataSet48.xss">
       <DependentUpon>cmbloginDataSet48.xsd</DependentUpon>
     </None>
+    <None Include="cmbloginDataSet49.xsc">
+      <DependentUpon>cmbloginDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet49.xss">
+      <DependentUpon>cmbloginDataSet49.xsd</DependentUpon>
+    </None>
     <None Include="cmbloginDataSet5.xsc">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
     </None>
@@ -1186,6 +1207,17 @@
     </None>
     <None Include="cmbloginDataSet5.xss">
       <DependentUpon>cmbloginDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet50.xsc">
+      <DependentUpon>cmbloginDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="cmbloginDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbloginDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbloginDataSet50.xss">
+      <DependentUpon>cmbloginDataSet50.xsd</DependentUpon>
     </None>
     <None Include="cmbloginDataSet6.xsc">
       <DependentUpon>cmbloginDataSet6.xsd</DependentUpon>

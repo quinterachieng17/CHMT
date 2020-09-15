@@ -28,11 +28,11 @@ namespace KERICHO_CHMT
         }
 
         //dtbl is used as global variable
-        DataTable dtbl;
+        //DataTable dtbl;
         //k2-expenses
         //k3-Payments
         //s1-deducting payment balance
-        double k1, k2, k3, s1;
+        //double k1, k2, k3, s1;
 
 
         private void Accounts_Load(object sender, EventArgs e)
@@ -322,6 +322,8 @@ namespace KERICHO_CHMT
             s = a1 + b1 + c1 + d1;
             if (s > 0)
                 txtTotalExpenses.Text = s.ToString("c").Remove(0, 1);
+            if (s == 0)
+                txtTotalExpenses.Text = "00";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -373,17 +375,30 @@ namespace KERICHO_CHMT
         //Balance
         private void button8_Click(object sender, EventArgs e)
         {
-            
+            //dgvAccounts.Rows[dgvAccounts.Rows.Count - 1].Cells[11].Style.ForeColor = Color.White;
+            //dgvAccounts.Rows[dgvAccounts.Rows.Count - 1].Cells[11].Style.BackColor = Color.Red;
+
             if (cmbStation.SelectedIndex == 0)
             {
-                dgvAccounts.Rows[dgvAccounts.Rows.Count - 1].Cells[11].Style.ForeColor = Color.White;
-                dgvAccounts.Rows[dgvAccounts.Rows.Count - 1].Cells[11].Style.BackColor = Color.Red;
+                
                 txtBalance.Show();
-                button8.Text = "Balance";
+                button8.Text = "Balance at Kipsigis";
                 if (txtPayments.Text == "")
                 {
                     txtPayments.Text = dgvAccounts[11, dgvAccounts.Rows.Count - 1].Value.ToString();
                 }
+                else if(txtPayments != null)
+                {
+                    double a, b, c;
+                    double.TryParse(txtPayments.Text, out a);
+                    double.TryParse(dgvAccounts[11, dgvAccounts.Rows.Count - 1].Value.ToString(), out b);
+                    c = a + b;
+
+                    txtPayments.Text = c.ToString("c").Remove(0, 1);
+
+                }
+
+                //computing Balance
                 double e1, f1, g;
                 double.TryParse(txtPayments.Text, out e1);
                 double.TryParse(txtTotalExpenses.Text, out f1);
@@ -394,11 +409,16 @@ namespace KERICHO_CHMT
                 }
                 else if (g == 0)
                 {
-                    txtBalance.Text = g.ToString("c").Remove(0, 1); 
+                    txtBalance.Text = "00"; 
                 }
                 else if (g < 0)
                 {
-                    txtBalance.Text = g.ToString("c").Remove(0, 1); 
+                    double q1, q2, w;
+                    double.TryParse(txtTotalExpenses.Text, out q1);
+                    double.TryParse( dgvAccounts2[11, dgvAccounts2.Rows.Count - 1].Value.ToString(), out q2);
+                    w = q2 - q1;
+
+                    txtBalance.Text =w.ToString("c").Remove(0, 1); 
                     MessageBox.Show("Please top up your balance");
                 }
             }
@@ -406,11 +426,23 @@ namespace KERICHO_CHMT
             if(cmbStation.SelectedIndex == 1)
             {
                 txtBalance.Show();
-                button8.Text = "Balance";
+                button8.Text = "Balance at Jumbo";
                 if (txtPayments.Text == "")
                 {
                     txtPayments.Text = dgvAccounts2[11, dgvAccounts2.Rows.Count - 1].Value.ToString();
                 }
+                else if (txtPayments != null)
+                {
+                    double a, b, c;
+                    double.TryParse(txtPayments.Text, out a);
+                    double.TryParse(dgvAccounts[11, dgvAccounts.Rows.Count - 1].Value.ToString(), out b);
+                    c = a + b;
+
+                    txtPayments.Text = c.ToString("c").Remove(0, 1);
+
+                }
+
+                //computing Balance
                 double e1, f1, g;
                 double.TryParse(txtPayments.Text, out e1);
                 double.TryParse(txtTotalExpenses.Text, out f1);
@@ -433,11 +465,23 @@ namespace KERICHO_CHMT
             if(cmbStation.SelectedIndex == 2)
             {
                 txtBalance.Show();
-                button8.Text = "Balance";
+                button8.Text = "Balance at Omline";
                 if (txtPayments.Text == "")
                 {
                     txtPayments.Text = dgvAccounts3[11, dgvAccounts3.Rows.Count - 1].Value.ToString();
                 }
+                else if (txtPayments != null)
+                {
+                    double a, b, c;
+                    double.TryParse(txtPayments.Text, out a);
+                    double.TryParse(dgvAccounts[11, dgvAccounts.Rows.Count - 1].Value.ToString(), out b);
+                    c = a + b;
+
+                    txtPayments.Text = c.ToString("c").Remove(0, 1);
+
+                }
+
+                //computing Balance
                 double e1, f1, g;
                 double.TryParse(txtPayments.Text, out e1);
                 double.TryParse(txtTotalExpenses.Text, out f1);

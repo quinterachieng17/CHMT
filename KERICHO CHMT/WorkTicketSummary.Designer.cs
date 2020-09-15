@@ -78,6 +78,7 @@
             // 
             // dgv2
             // 
+            this.dgv2.AllowUserToAddRows = false;
             this.dgv2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -233,7 +234,7 @@
             // 
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.BackColor = System.Drawing.SystemColors.Menu;
-            this.btnView.Location = new System.Drawing.Point(111, 5);
+            this.btnView.Location = new System.Drawing.Point(110, 5);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(73, 23);
             this.btnView.TabIndex = 6;
@@ -271,7 +272,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.51295F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.48705F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
             this.tableLayoutPanel1.Controls.Add(this.btnView, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.button2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
@@ -298,7 +299,7 @@
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button3.BackColor = System.Drawing.SystemColors.Menu;
-            this.button3.Location = new System.Drawing.Point(30, 5);
+            this.button3.Location = new System.Drawing.Point(29, 5);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;

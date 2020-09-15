@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrackRecords));
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -60,8 +61,25 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtFinalReading = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbSatation = new System.Windows.Forms.ComboBox();
+            this.cmbRegNo = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cmbloginDataSet49 = new KERICHO_CHMT.cmbloginDataSet49();
+            this.recordMileageBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.recordMileageTableAdapter = new KERICHO_CHMT.cmbloginDataSet49TableAdapters.RecordMileageTableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtKm = new System.Windows.Forms.TextBox();
+            this.cmbloginDataSet50 = new KERICHO_CHMT.cmbloginDataSet50();
+            this.recordMileageBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.recordMileageTableAdapter1 = new KERICHO_CHMT.cmbloginDataSet50TableAdapters.RecordMileageTableAdapter();
             this.txtUserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDriverID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDriverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtRegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMileageReading = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtOilDrawn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +99,11 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordMileageBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordMileageBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -192,6 +215,7 @@
             this.dgv1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtUserID,
             this.txtDriverID,
+            this.txtDriverName,
             this.txtRegNo,
             this.txtMileageReading,
             this.txtOilDrawn,
@@ -245,11 +269,11 @@
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Location = new System.Drawing.Point(103, 3);
+            this.button7.Location = new System.Drawing.Point(1294, 157);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 30);
+            this.button7.Size = new System.Drawing.Size(97, 30);
             this.button7.TabIndex = 18;
-            this.button7.Text = "View Report";
+            this.button7.Text = "View Work Ticket";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -295,7 +319,6 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1289, 690);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -510,6 +533,156 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(606, 31);
             this.tableLayoutPanel5.TabIndex = 60;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tableLayoutPanel6.ColumnCount = 8;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel6.Controls.Add(this.txtKm, 7, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label11, 6, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cmbRegNo, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.cmbSatation, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.txtFinalReading, 5, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label8, 4, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label9, 2, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(430, 158);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(858, 31);
+            this.tableLayoutPanel6.TabIndex = 61;
+            // 
+            // txtFinalReading
+            // 
+            this.txtFinalReading.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtFinalReading.Location = new System.Drawing.Point(485, 5);
+            this.txtFinalReading.Name = "txtFinalReading";
+            this.txtFinalReading.Size = new System.Drawing.Size(133, 20);
+            this.txtFinalReading.TabIndex = 60;
+            this.txtFinalReading.TextChanged += new System.EventHandler(this.txtFinalReading_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(32, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 53;
+            this.label7.Text = "Station";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(413, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 26);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Final Speed Reading";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(228, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 54;
+            this.label9.Text = "Reg No.";
+            // 
+            // cmbSatation
+            // 
+            this.cmbSatation.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbSatation.FormattingEnabled = true;
+            this.cmbSatation.Items.AddRange(new object[] {
+            "Kipsigis",
+            "Jumbo",
+            "Omline"});
+            this.cmbSatation.Location = new System.Drawing.Point(78, 5);
+            this.cmbSatation.Name = "cmbSatation";
+            this.cmbSatation.Size = new System.Drawing.Size(134, 21);
+            this.cmbSatation.TabIndex = 62;
+            // 
+            // cmbRegNo
+            // 
+            this.cmbRegNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.cmbRegNo.DataSource = this.recordMileageBindingSource1;
+            this.cmbRegNo.DisplayMember = "RegNo";
+            this.cmbRegNo.FormattingEnabled = true;
+            this.cmbRegNo.Location = new System.Drawing.Point(281, 5);
+            this.cmbRegNo.Name = "cmbRegNo";
+            this.cmbRegNo.Size = new System.Drawing.Size(111, 21);
+            this.cmbRegNo.TabIndex = 62;
+            this.cmbRegNo.ValueMember = "RegNo";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(769, 120);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(169, 15);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "Record Final Speed Reading ";
+            // 
+            // cmbloginDataSet49
+            // 
+            this.cmbloginDataSet49.DataSetName = "cmbloginDataSet49";
+            this.cmbloginDataSet49.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // recordMileageBindingSource
+            // 
+            this.recordMileageBindingSource.DataMember = "RecordMileage";
+            this.recordMileageBindingSource.DataSource = this.cmbloginDataSet49;
+            // 
+            // recordMileageTableAdapter
+            // 
+            this.recordMileageTableAdapter.ClearBeforeFill = true;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(646, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 13);
+            this.label11.TabIndex = 63;
+            this.label11.Text = "Journey Kilometer";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // txtKm
+            // 
+            this.txtKm.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtKm.Location = new System.Drawing.Point(742, 5);
+            this.txtKm.Name = "txtKm";
+            this.txtKm.Size = new System.Drawing.Size(113, 20);
+            this.txtKm.TabIndex = 63;
+            // 
+            // cmbloginDataSet50
+            // 
+            this.cmbloginDataSet50.DataSetName = "cmbloginDataSet50";
+            this.cmbloginDataSet50.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // recordMileageBindingSource1
+            // 
+            this.recordMileageBindingSource1.DataMember = "RecordMileage";
+            this.recordMileageBindingSource1.DataSource = this.cmbloginDataSet50;
+            // 
+            // recordMileageTableAdapter1
+            // 
+            this.recordMileageTableAdapter1.ClearBeforeFill = true;
+            // 
             // txtUserID
             // 
             this.txtUserID.DataPropertyName = "UserID";
@@ -522,6 +695,12 @@
             this.txtDriverID.DataPropertyName = "DriverID";
             this.txtDriverID.HeaderText = "Driver ID";
             this.txtDriverID.Name = "txtDriverID";
+            // 
+            // txtDriverName
+            // 
+            this.txtDriverName.DataPropertyName = "DriverName";
+            this.txtDriverName.HeaderText = "Driver Name";
+            this.txtDriverName.Name = "txtDriverName";
             // 
             // txtRegNo
             // 
@@ -577,14 +756,12 @@
             this.txtFinalSpeedReading.DataPropertyName = "FinalSpeedReading";
             this.txtFinalSpeedReading.HeaderText = "Final Speed Reading";
             this.txtFinalSpeedReading.Name = "txtFinalSpeedReading";
-            this.txtFinalSpeedReading.Visible = false;
             // 
             // txtjourneyKilometer
             // 
             this.txtjourneyKilometer.DataPropertyName = "journeyKilometer";
             this.txtjourneyKilometer.HeaderText = "Kilometer of Journey";
             this.txtjourneyKilometer.Name = "txtjourneyKilometer";
-            this.txtjourneyKilometer.Visible = false;
             // 
             // txtAuthorizingOfficerName
             // 
@@ -610,6 +787,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
             this.ClientSize = new System.Drawing.Size(1528, 766);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
@@ -633,6 +813,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordMileageBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbloginDataSet50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordMileageBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -671,8 +857,25 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TextBox txtFinalReading;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbRegNo;
+        private System.Windows.Forms.ComboBox cmbSatation;
+        private System.Windows.Forms.Label label10;
+        private cmbloginDataSet49 cmbloginDataSet49;
+        private System.Windows.Forms.BindingSource recordMileageBindingSource;
+        private cmbloginDataSet49TableAdapters.RecordMileageTableAdapter recordMileageTableAdapter;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtKm;
+        private cmbloginDataSet50 cmbloginDataSet50;
+        private System.Windows.Forms.BindingSource recordMileageBindingSource1;
+        private cmbloginDataSet50TableAdapters.RecordMileageTableAdapter recordMileageTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtUserID;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtDriverID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDriverName;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtRegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtMileageReading;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtOilDrawn;
