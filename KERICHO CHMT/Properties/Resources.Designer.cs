@@ -63,6 +63,66 @@ namespace KERICHO_CHMT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ambulance_ {
+            get {
+                object obj = ResourceManager.GetObject("Ambulance+", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ambulance_ministry_of_public_health {
+            get {
+                object obj = ResourceManager.GetObject("ambulance-ministry-of-public-health", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ambulance_ministry_of_public_health_fire_engine_hospital_emergency_ambulance {
+            get {
+                object obj = ResourceManager.GetObject("ambulance-ministry-of-public-health-fire-engine-hospital-emergency-ambulance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ministry_of_health_emblem {
+            get {
+                object obj = ResourceManager.GetObject("ministry of health emblem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nurse {
+            get {
+                object obj = ResourceManager.GetObject("nurse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nurse2 {
+            get {
+                object obj = ResourceManager.GetObject("nurse2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap photo_camera {
             get {
                 object obj = ResourceManager.GetObject("photo-camera", resourceCulture);

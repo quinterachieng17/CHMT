@@ -554,6 +554,12 @@
     <Compile Include="VehicleRegistration.Designer.cs">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="WorkTicketSummary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -684,6 +690,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VehicleRegistration.resx">
       <DependentUpon>VehicleRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkTicketReport.rdlc" />
     <EmbeddedResource Include="WorkTicketSummary.resx">
@@ -1291,6 +1300,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Refferal-And-Ambulance-monitoring-System-png2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ambulance+.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nurse2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance-ministry-of-public-health-fire-engine-hospital-emergency-ambulance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance-ministry-of-public-health.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ministry of health emblem.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace KERICHO_CHMT
 {
@@ -15,10 +16,18 @@ namespace KERICHO_CHMT
         int attempt = 1;
         public LOGIN()
         {
+            Thread t = new Thread(new ThreadStart(SplashStart));
+            t.Start();
+            Thread.Sleep(7000);
+            
             InitializeComponent();
-           
+            t.Abort();
         }
 
+        public void SplashStart()
+        {
+            Application.Run(new Welcome());
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

@@ -102,12 +102,41 @@ namespace KERICHO_CHMT
             rr.Show();
         }
 
+        //For incoming referrals
+        void PopulateDataGridView()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvPatientDetails.DataSource = dtbl;
+                
+            }
+        }
+
+        //For outgoing transfers
+        void PopulateDataGridView2()
+        {
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM ReferralRegister", sqlCon);
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+                dgvPatientDetails.DataSource = dtbl;
+
+            }
+        }
+
+
         private void button2_Click(object sender, EventArgs e)
         {
               using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                 //Hides column referring nurse
-                //dgvPatientDetails.Columns["NurseReferring"].Visible = false;
+                dgvPatientDetails.Columns["NurseReferring"].Visible = false;
 
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM PatientRegister", sqlCon);
@@ -117,7 +146,7 @@ namespace KERICHO_CHMT
                 // Displays only the selected columns
                 dgvPatientDetails.AutoGenerateColumns = false;
                 dgvPatientDetails.DataSource = dtbl;
-
+                PopulateDataGridView();
 
             }
 
@@ -139,6 +168,7 @@ namespace KERICHO_CHMT
                 // Displays only the selected columns
                 dgvPatientDetails.AutoGenerateColumns = false;
                 dgvPatientDetails.DataSource = dtbl;
+                PopulateDataGridView2();
 
             }
             label2.Text = "Outgoing Referral cases";

@@ -23,6 +23,10 @@ namespace KERICHO_CHMT
             InitializeComponent();
             label3.Text = username;
         }
+
+        //dtbl is used as global variable
+        DataTable dtbl;
+
         //Dialog Box Custom
         static EditPatientDetails MsgBox; static DialogResult result = DialogResult.No;
         public static DialogResult Show(string Text, string Caption, string btnEdit, string btnCancel)
@@ -286,6 +290,19 @@ namespace KERICHO_CHMT
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //Filtering data using PatientNo
+            DataView DV = new DataView(dtbl);
+            DV.RowFilter = string.Format("PatientNo LIKE '%{0}'", textBox1.Text);
+            dataGridView2.DataSource = DV;
         }
     }
 }
